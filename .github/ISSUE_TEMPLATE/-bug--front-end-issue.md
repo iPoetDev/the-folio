@@ -2,7 +2,8 @@
 name: ":bug: Front End Issue"
 about: ":bug: ISSUES: "
 title: ":bug: [ISSUE] #  : "
-labels: ''
+labels: '06.0: Build, 06.1: ⭸ Issues, 06.1.1: ⭸ front end issue: html, 06.1.2: ⭸ front
+  end issue: aria, 06.1.3: ⭸ front end issue: css, 06.2: ⭸ bug'
 assignees: iPoetDev
 
 ---
