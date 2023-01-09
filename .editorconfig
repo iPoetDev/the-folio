@@ -1,0 +1,26 @@
+# This file is for unifying the coding style for different editors and IDEs
+# editorconfig.org
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = true
+max_line_length = 100
+trim_trailing_whitespace = true
+
+# 1 space indentation
+[*.html]
+indent_style = space
+indent_size = 1
+
+# 2 space indentation
+[*.css]
+indent_style = space
+indent_size = 2
+
+[*{md,mdx,markdown}]
+trim_trailing_whitespace = false

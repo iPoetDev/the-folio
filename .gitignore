@@ -1,0 +1,170 @@
+##
+## Run https://www.toptal.com/developers/gitignore
+## GitIgnore.io CLI: https://docs.gitignore.io/install/command-line
+## Github's gitignore's repo: https://github.com/github/gitignore
+
+## SECURITY
+
+### Repo
+## Folder
+
+.vscode/*
+scripts/*
+features/*
+
+## Specific Files
+.bash*
+.gitmoijrc.json
+.zshrc
+.pnpm*
+.shell.sh
+
+# .github/*
+# .vscode/*
+
+## OpenSSL
+
+# OpenSSL-related files best not committed
+
+## Certificate Authority
+*.ca
+
+## Certificate
+*.crt
+
+## Certificate Sign Request
+*.csr
+
+## Certificate
+*.der
+
+## Key database file
+*.kdb
+
+## OSCP request data
+*.org
+
+## PKCS #12
+*.p12
+
+## PEM-encoded certificate data
+*.pem
+
+## Random number seed
+*.rnd
+
+## SSLeay data
+*.ssleay
+
+## S/MIME message
+*.smime
+
+# GPG
+secring.*
+
+## PuTTY
+# Private key
+*.ppk
+
+# Backup
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
+
+## JAVASCRIPT & NODE
+dist
+.cache
+node_modules
+pnpm-debug.log
+.DS_Store
+# use pnpm
+package-lock.json
+yarn.lock
+
+# dotenv environment variables file
+.env
+.env.test
+
+## NPM
+# Optional npm cache directory
+.npm
+
+# Dependency directories
+#node_modules/
+#jspm_packages/
+
+# Output of 'npm pack'
+*.tgz
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# node-waf configuration
+.lock-wscript
+
+# Bower dependency directory (https://bower.io/)
+#bower_components
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+## Operating System
+# Linux
+*~
+
+## Windows
+# MS Office
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Word Auto Backup File
+Backup of *.doc*
+
+# Excel temporary
+~$*.xls*
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+# Dump file
+*.stackdump
+# Folder config file
+[Dd]esktop.ini
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+# Windows shortcuts
+*.lnk
+# Excel Backup File
+*.xlk
+# PowerPoint temporary
+~$*.ppt*
+# Visio autosave temporary files
+*.~vsd*

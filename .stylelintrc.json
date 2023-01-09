@@ -1,0 +1,16 @@
+{
+  "defaultSeverity": "warning",
+  "extends": ["stylelint-config-standard"],
+  "ignoreDisables": false,
+  "overrides": [
+    {
+      "customSyntax": "",
+      "files": []
+    }
+  ],
+  "plugins": [""],
+  "reportDescriptionlessDisables": null,
+  "reportInvalidScopeDisables": null,
+  "reportNeedlessDisables": null,
+  "rules": {}
+}

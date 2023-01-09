@@ -1,0 +1,6 @@
+trailingComma: all
+tabWidth: 1
+semi: false
+singleQuote: false
+arrowParens: always
+endOfLine: lf
