@@ -20,9 +20,6 @@ symlinks = true
 precomposeUnicode = true
 [init]
 defaultBranch = main
-[push]
-default = current
-autoSetupRemote = true
 [status]
 submoduleSummary = true
 showStash = true
