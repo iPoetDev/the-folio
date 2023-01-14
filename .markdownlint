@@ -1,8 +1,8 @@
 default: true
 MD003:
- style: atx
+  style: setext_with_atx
 MD007:
- indent: 2
+  indent: 2
 # Allow arbitrary line length
 #
 # Reason: We apply the one-sentence-per-line rule. A sentence may get longer than 80 characters, especially if links are contained.
@@ -11,12 +11,15 @@ MD007:
 MD013: false
 MD033: false
 no-inline-html:
- allowed_elements:
-  - br
-  - img
-  - picture
-  - video
-  - small
-  - strong
+  allowed_elements:
+    - br
+    - img
+    - picture
+    - video
+    - small
+    - strong
+    - em
+    - details
+    - summary
 no-hard-tabs: false
 whitespace: false

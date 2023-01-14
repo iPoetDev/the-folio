@@ -3,11 +3,16 @@
 ## GitIgnore.io CLI: https://docs.gitignore.io/install/command-line
 ## Github's gitignore's repo: https://github.com/github/gitignore
 
+## Deploy / Commit Hide
+
+assets/styles/core.css
+assets/styles/utilities.css
+the-folio.code-workspace
 ## SECURITY
 
 ### Repo
 ## Folder
-
+src/*
 .vscode/*
 scripts/*
 features/*
@@ -23,6 +28,7 @@ features/*
 # .github/*
 # .vscode/*
 
+.github/dependabot.yml
 ## OpenSSL
 
 # OpenSSL-related files best not committed
