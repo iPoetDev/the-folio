@@ -1,0 +1,29 @@
+/* ==========================================================================
+  Layers: Order of Impact: Low/Weakest to High/Powerfull
+  -: From: reset, globals, core, utilities, blocks, except (variants) <- To.
+  -: Local Styles (this file) overides any in layers
+  ========================================================================== */
+/* layer globals ,folio,utilities,blocks,except
+
+@import "assets/styles/reset.css" layer(reset); */
+
+/* @import url(/assets/styles/globals.css) layer(globals);
+
+@import url(assets/styles/folio.css) layer(folio);
+
+@import url(assets/styles/utilities.css) layer(utilities);
+
+@import url(assets/styles/blocks.css) layer(blocks);
+
+@import url(assets/styles/except.css) layer(except); */
+
+/* layer reset, */
+
+/* Root Variable Test */
+:root {
+  --bdycolor: #646464;
+}
+
+body {
+  background-color: var(--bdycolor);
+}

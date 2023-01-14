@@ -1,0 +1,177 @@
+/* ==========================================================================
+      THE DIGITAL FOLIO: CI SUBMISSION: 3RD PARTY RESETS: CODE SEPARATION OF CONCERNS
+  [0] Author: Charles Fowler (Own decisions and adjustments)
+  [1] Base Reset: Kevin Powell: URL:https://www.youtube.com/watch?v=2lyDv0wOQuQ,
+      Last Accessed: 2023-01-11
+  [2] A modern css reset: Elly Loel: URL https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522 ✮✮✮
+      Last Accessed: 2023-01-11:
+      Credits: Josh W Comau, Andy Bell, Adam Argyle
+      Assessment: I rewrote these resets as-is for greater learning and customisation/selection.
+      Reference: These are strictly referenced and itemised. Compare to orginal.
+                 Where is a difference, Author has concieously omitted, or changed due to
+                 [a] scope or [b] lack of understanding/familiarity [c] Own opinon.
+      Criterion: Code separation of 3rd Party concerns, utilising Layers and Imports.
+  Rating: ✮: Minimal, ✮✮: More Opinionated, ✮✮✮: Highly Opinionated
+  ========================================================================== */
+layer reset {
+  // [1] Keep/shrink all content box inside element's border. [✮]
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  // [1] Resets margin, padding for explicit. [✮✮]
+  // [1] Reset font sizes, font weights. [✮✮]
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  }
+
+  // [2] On all Except fieldset, progress, meter [✮✮✮]
+  // [2] Removed Border [✮✮]
+  // [2] Defaults for backgrounds [✮✮]
+  *:where(:not(fieldset, progress, meter)) {
+    border-width: 0;
+    border-style: solid;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+  }
+
+  // [0] Defaults for backgrounds of fieldset,progress, meter[✮✮]
+  *:where(fieldset, progress, meter) {
+    background-origin: padding-box;
+    /* background-origin: content-box; */
+  }
+
+  // [1] Sets a default dark mode; follows User Control preference. [✮✮]
+  // [2] Font-size is only control of text size [✮✮]
+  // [2] Allow %sizes on Blocks [✮✮]
+  html {
+    color-scheme: dark light;
+    -webkit-text-size-adjust: none;
+    block-size: 100%;
+  }
+
+  // [2] A11y: Smooth Scrolling to reduce motion: Credit: Adam Argyle [✮✮]
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+  }
+
+  // [1] Sets a minimum height on body [✮✮]
+  // [2] Allow &sizes on blocks.[✮✮]
+  body {
+    min-height: 100vh;
+    min-block-size: 100%;
+  }
+
+  // MEDIA
+  // [1,2] Ensure all media is responsive, with low specificity. [✮✮]
+  :where(img, picture, svg, video, embed, object, cavnas) {
+    display: block;
+    max-width: 100%;
+  }
+
+  // [2] Ensure key media has improved defaults. [✮✮]
+  :where(img, svg, video) {
+    block-size: auto;
+    max-inline-size: 100%;
+  }
+
+  // [2] Not Yet: SVG's without a fill attribute. [✮✮]
+  // [2] Not Yet: Set a size for SVGs without a width attribute . [✮✮]
+
+  // FORMS
+  // [1,2] Standardised forms typograghpy [✮,✮✮✮]
+  :where(input, textarea, button, select) {
+    color: inherit; /*[2]*/
+    font: inherit; /*[1]*/
+    font-size: inherit; /*[2]*/
+    letter-spacing: inherit;
+    word-spacing: inherit;
+  }
+
+  // [2] Textarea to Vertical [✮✮✮]
+  // [2] Textaarea to block if browser supports. [✮✮✮]
+  :where(textarea) {
+    resize: vertical;
+  }
+  @supports (resize: block) {
+    :where(textarea) {
+      resize: block;
+    }
+  }
+
+  // HEADERS
+  // [2] Headers, all, no text overflow. [✮✮]
+  :where(p, h1, h2, h3, h4, h5, h6) {
+    overflow-wrap: break-word;
+  }
+
+  // 2 Default H1 to 2em inside semantic content. [✮✮✮]
+  :where(article, nav, aside, section) h1 {
+    font-size: 2em;
+  }
+
+  // LISTS, MENU (Navigations)
+  // [2,0] Position list marker inside [✮✮✮]
+  :where(menu, ul, ol) {
+    list-style-position: outside; /*[0]*/
+  }
+  // [2] ARIA Menu: remove List Style [✮✮✮],
+  // [0] Change Role to menu, was "List" [2], being more specific for a11y navigation patterns.
+  :where(menu, ul, ol)[role="menu"] {
+    list-style: none;
+  }
+
+  // INTERACTIVE
+  // [2] Anchor tags, no class, readability.
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  // [2] Assure interactive elements are interactive.
+  // [2] Not Yet: Not including File inputs. Not in scope. #Exception.
+  :where(
+      a[href],
+      area,
+      button,
+      input,
+      label[for],
+      select,
+      summary,
+      textarea,
+      [tabindex]:not([tabindex*="-"])
+    ) {
+    appearance: auto;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  // ANIMATE
+  // [2] Form focus Outlines
+  // [2] A11y: Reduce motion for transitions
+  @media (prefers-reduced-motion: no-preference) {
+    :focus-visible {
+      transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
+    }
+    :where(:not(:active)):focus-visible {
+      transition-duration: 0.25s;
+    }
+  }
+  // [2] Use offset to highlight visible interactive focus.
+  :where(:not(:active)):focus-visible {
+    outline-offset: 5px;
+  }
+
+  // NO INTERACTION
+  // [2] Disable Button Text Selection
+  // [0] Removed: File & Webkit Selectors
+  :where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+}

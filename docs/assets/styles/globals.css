@@ -1,0 +1,214 @@
+/* ==========================================================================
+  THE DIGITAL FOLIO: CI SUBMISSION: GLOBAL VARIABLES / DEFAULTS FOR THE DIGITAL FOLIO.
+  - The Folio default design tokens: for colors: schemes/modes, visual elements, text, background.
+  - The Folio default design tokens: for Typograpghy: Font Size, Font Weight, Text Decorations.
+  - The Folio default design tokens: for Numerics: Scales, Ordinal, Zoom, Aspect Ratio, Speed, Levels.
+  [0] Author: Charles Fowler (Own decisions and adjustments)
+  [ ]
+  DEVELOPMENT NOTE: This section is my universial library for all my websites, prject and future. DRY is the principle behind developing these global values and defaults. These can be adjusted by locally scoped variables on a component basis.
+  ========================================================================== */
+
+layer globals {
+  layer root {
+    :root {
+    }
+  }
+  layer palette {
+    // General pallete colors for visual aspects: borders, frames, lines, decordations
+    :root {
+      --col-prime: hsla();
+      --col-second: hsla();
+      --col-teritary: hsla();
+      --col-quartary: hsla();
+      --col-qinary: hsla();
+    }
+    layer color {
+      // General pallete colors for typoograpghy.
+      :root {
+        --txt-prime: hsla();
+        --txt-second: hsla();
+        --txt-teritary: hsla();
+        --txt-quartary: hsla();
+        --txt-quinary: hsla();
+      }
+    }
+    layer back-color {
+      // General pallete colors backgrounds.
+      :root {
+        --bck-prime: hsla();
+        --bck-second: hsla();
+        --bck-teritary: hsla();
+        --bck-quartary: hsla();
+        --bck-quinary: hsla();
+      }
+    }
+    layer scheme {
+      // General pallete colors backgrounds.
+      :root {
+        --scheme-darkpref: dark light;
+        --scheme-lightpref: light dark;
+      }
+    }
+    later contrast {
+      :root {
+        --txt-high-cont-light: hsla();
+        --txt-high-cont-dark: hsla();
+        --bck-high-cont-dark: hsla();
+        --bck-high-cont-light: hsla();
+      }
+    }
+    layer visuals {
+      :root {
+        --bord-col-dark: hsla();
+        --bord-col-light: hsla();
+        --bord-col: hsla();
+        --outl-col-dark: hsla();
+        --outl-col-light: hsla();
+        --outl-col: hsla();
+        --emph-col-dark: hsla();
+        --emph-col-light: hsla();
+        --emph-col: hsla();
+        --shadow-col-dark: hsla();
+        --shadow-col-light: hsla();
+        --shadow-col: hsla();
+        --caret-col-dark: hsla();
+        --caret-col-light: hsla();
+        --caret-col: hsla();
+      }
+    }
+  } /* End of Color Palette */
+  // Font Sizing Defaults
+  layer font-size {
+    :root {
+      --fsz-subcopy: 0.8rem;
+      --fsz-copy: 1rem;
+      --fsz-subhead: 1.5rem;
+      --fsz-head: 1.8rem;
+      --fsz-subtitle: 2.2rem;
+      --fsz-title: 3rem;
+    }
+  }
+  layer font-weight {
+    :root {
+      --thin: 200;
+      --regular: 450;
+      --medium: 600;
+      --bold: 750;
+      --heavy: 900;
+    }
+  }
+  layer formatting {
+    :root {
+      --under-style: dotted;
+      --under-col-dark: hsla();
+      --under-col-light: hsla();
+      --under-position: under;
+      --line-decorate: none;
+      --skip-ink: all;
+      --line-thick: from font;
+      --legibility: optimizeLegibility;
+      --perform: optimizeSpeed;
+      --render: auto;
+      --text-align: start;
+      --parent-align: match-parent;
+      --align-last: start;
+    }
+  }
+  layer breaks {
+    :root {
+      --word-break: break-all;
+      --line-break: loose;
+      --whitesp-break: break-space;
+      --region-inside: auto;
+      --region-before: region;
+      --region-after: avoid-region;
+      --page-inside: auto;
+      --page-before: page;
+      --page-after: avoid-page;
+      --box-fragment: clone;
+    }
+  }
+  layer copy {
+    --justify-word: inter-word;
+    --whitesp-code: pre-wrap;
+    --whitesp-line: pre-line;
+    --wordsp-inuse: 0.15ch;
+    --wordsp-normal: normal;
+    --wordsp-expand: 0.15ch;
+    --wordsp-spacious: 0.35ch;
+    --wordsp-default: 0.2ch;
+    --justify-letter: inter-character;
+    --lttrsp-normal: normal;
+    --lttrsp-rem: 0.2rem;
+    --lttrsp-em: 0.2em;
+    --lttrsp-ch: 0.2ch;
+    --lttrsp-vw: 0.2vw;
+    --lttrsp-vh: 0.2vh;
+  }
+  layer space {
+    :root {
+      --space-word: 0.5em;
+      --space-pad: 0.5rem;
+      --space-bord: 0.5rem;
+      --space-lnhght: 1.5rem;
+      --space-gap: 2rem;
+      --space-row: 2rem;
+      --space-col: 2rem;
+    }
+  }
+  layer scale {
+    :root {
+      --25X-down: 25%;
+      --50X-down: 50%;
+      --75X-down: 75%;
+      --100X-normal: 100%;
+      --125X-up: 125%;
+      --150X-up: 150%;
+      --175X-up: 175%;
+      --200X-up: 200%;
+      --250X-up: 250%;
+      --300X-up: 300%;
+      --400X-up: 400%;
+      --500X-up: 500%;
+      --scale-small: 50%;
+      --scale-normal: 100%;
+      --scale-medium: 150%;
+      --scale-large: 200%;
+    }
+  }
+  layer aspect {
+    :root {
+      --aspect-ratio-std: 1 / 1;
+      --aspect-port-16x9: 16 / 9;
+      --aspect-land-9x16: 9 / 16;
+      --aspect-port-4x3: 4 / 3;
+      --aspect-land-3x4: 3 / 4;
+      --aspect-port-2x1: 2 / 1;
+      --aspect-port-1x2: 1 / 2;
+    }
+  }
+  layer speed {
+    :root {
+      --slow: 0.25s;
+      --average: 0.33s;
+      --deliberate: 0.5s;
+      --speed-smooth: smooth;
+      --speed-auto: auto;
+      --speed-contain: contain;
+    }
+  }
+  layer depth {
+    :root {
+      --flow-hide: -999;
+      --flow-inuse: auto;
+      --flow-lvl0: 0;
+      --fore-lv1: 1;
+      --fore-lv2: 2;
+      --fore-lv3: 3;
+      --back-lv1: -1;
+      --back-lv2: -2;
+      --back-lv3: -3;
+    }
+  }
+  /* End of Globals */
+}

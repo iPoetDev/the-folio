@@ -1,0 +1,8 @@
+/* Root Variable Test */
+:root {
+  --bdycolor: #646464;
+}
+
+body {
+  background-color: var(--bdycolor);
+}

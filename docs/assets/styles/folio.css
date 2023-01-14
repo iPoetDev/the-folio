@@ -1,0 +1,96 @@
+/* ==========================================================================
+  THE DIGITAL FOLIO: CI SUBMISSION: FOLIO THEME FOR THE DIGITAL FOLIO.
+  - The Folio themes: for Typograpghy: Font Size, Font Weight, Text Decorations.
+  - The Folio themes: for Icongraphy: Icon Size, Icon Styleing, Icon positions (before, after etc).
+  []
+  ========================================================================== */
+
+layer folio {
+  layer typograpghy {
+    layer font {
+    }
+
+    layer format {
+      .fo-underl-dark {
+        text-decoration: underline var(--under-style) var(--under-col-dark) var(--skip-ink);
+      }
+      .fo-underl-light {
+        text-decoration: underline var(--under-style) var(--under-col-light) var(--skip-ink);
+      }
+      .fo-just {
+        text-align: justify;
+        text-justify: auto;
+      }
+
+      .fo-just-word {
+        text-align: justify;
+        text-justify: var(--justify-word);
+      }
+
+      .fo-just-lttr {
+        text-align: justify;
+        text-justify: var(--justify-letter);
+      }
+
+      layer optimise {
+        @media (prefers-reduced-data: no-preference) {
+          .fo-render,
+          .fo-legible {
+            /* contain: content;
+            content-visibility: visible; */
+            text-rendering: var(--legibility);
+          }
+        }
+        // Privacy Concerns: Fingerprinting: https://github.com/w3c/csswg-drafts/issues/4832
+        @media (prefers-reduced-data: reduce) {
+          .fo-render,
+          .fo-perform {
+            text-rendering: var(--perform);
+          }
+        }
+      }
+
+      layer present {
+        .fo-whitespace {
+          white-space: normal;
+        }
+        .fo-codespace {
+          white-space: var(--whitesp-code);
+        }
+        .fo-read-default {
+          letter-spacing: var(--lttrsp-normal);
+          word-spacing: var(--wordsp-normal);
+        }
+        .fo-read-easy,
+        .fo-read-inuse {
+          letter-spacing: var(--lttrsp-vw);
+          word-spacing: var(--wordsp-expand);
+        }
+        .fo-read-impair {
+          letter-spacing: var(--lttrsp-em);
+          word-spacing: var(--wordsp-spacious);
+        }
+        .fo-break-copy {
+          hyphenate-character: auto;
+          hyphenate-limit-chars: auto auto auto;
+          hyphens: auto;
+          line-break: var(--line-break);
+          word-break: var(--word-break);
+        }
+      }
+      layer writing {
+        .fo-write-l2r-tb {
+          direction: ltr;
+          line-height: var(--space-lnhght);
+          text-align: var(--text-align);
+          text-align-last: var(--align-last);
+          writing-mode: horizontal-tb;
+        }
+      }
+    }
+    layer iconography {
+      layer icon {
+      }
+    }
+  }
+}
