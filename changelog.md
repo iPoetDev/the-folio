@@ -12,8 +12,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 - Added to Main.css: a secondary :root for CSS Custom Properties. .
 - Added to Main.css: Translocated piror work from a workspace/prototype repository into project repository, on advice from Mentor; commit histories.
 
-- Note: Separating out application of multiple root elements for code organsiation. Technically feasible, as the casade will merge these declarations as one in the computed styles.
-- Given distinct purposes, this will not cause cascade and specificity conflicts.
+- Note: Separating out application of multiple root elements for code organsiation. Technically feasible, as the casade will merge these declarations as one in the computed browser styles.
+- Given distinct purposes, it is not anticpated to not cause cascade and specificity conflicts.
 
 ### Changed:
 
