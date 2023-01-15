@@ -156,10 +156,31 @@
   }
 }
 
-/* Root Variables: As Strictly needed */
+/* Wireframe : Prototype*/
 :root {
+  /* Border Colors*/
+  --w-red: rgb(247, 13, 13);
+  --w-yel: rgb(219, 200, 31);
+  --w-blu: rgb(28, 48, 220);
+  --w-gre: rgb(24, 202, 33);
+  --w-pin: rgb(242, 19, 119);
+  --w-pur: rgb(139, 21, 193);
+  --w-gre: rgb(33, 28, 28);
+  /*Border Style*/
+  --w-dash: dashed;
+  --w-line: solid;
+  /*Border Width*/
+  --w-1: 1px;
+  --w-2: 2px;
+  --w-3: 3px;
 }
 
-body {
-  background-color: var(--bdycolor);
+/* Root Variables: As Strictly needed */
+:root {
+  //Page Colors
+  --fo-bgcolor: hsl(240, 33%, 8%);Colors--fo-bgcolor;
+}
+
+body.canvas {
+  background-color: var(--fo-bgcolor);
 }
