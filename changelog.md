@@ -4,7 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and adheres to [Semantic Versioning](http://semver.org/).
 
-## 0.0.4 - 2022-01-14
+## Changelog: v0.0.5.01, 2023.01.15
+
+### Added: 0.0.5.01 @
+
+- Added Wireframe Vars for protoyping. To be removed later.
+- Added FO Canvas Color to Body.
+- Added Updated Body's Role: Document & Title.
+
+## 0.0.4 - 2023-01-14
 
 ### Added:
 
@@ -21,7 +29,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 - Changed folder: public to docs as Github Pages builds from root (./) or (./docs/). Implements Change for Now.
 - Changed .
 
-## 0.0.2 - 2022-01-08
+## 0.0.2 - 2023-01-08
 
 ### Added: 12:30 - 18:00
 

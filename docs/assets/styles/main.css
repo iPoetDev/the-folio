@@ -181,6 +181,6 @@
   --fo-bgcolor: hsl(240, 33%, 8%);Colors--fo-bgcolor;
 }
 
-body.canvas {
+body.fo-canvas {
   background-color: var(--fo-bgcolor);
 }
