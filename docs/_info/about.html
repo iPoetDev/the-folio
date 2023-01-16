@@ -108,7 +108,67 @@
     title="Body Section of Learn About Me Page"
     aria-details="Main Body of Learn About Me Page"
     aria-label="Body Section">
-    <div class="fo-grid" role="presentation"></div>
+    <div class="fo-grid" role="presentation">
+     <div class="fo-grid-cell fo-about-row" id="about-col-1" role="none">
+      <section>
+       <p><span>I'm</span></p>
+       <header>
+        <h1 class="fo-heroname">CJ</h1>
+        <h2 class="fo-nametag">a UX & Front-End Developer</h2>
+        <h3 class="fo-nametag">and delivery manager</h3>
+       </header>
+       <p><span> focused on websites & project delivery services </span></p>
+      </section>
+     </div>
+     <div class="fo-grid-cell fo-about-row" id="about-col-2" role="none">
+      <div
+       class="fo-about-imgholder"
+       role="img"
+       aria-label="An image of Charles on a graphic background."
+       aria-labelledby="About me: CJ, Charles J Fowler"
+       aria-describedby="About me: CJ for UX, UI, Web and Project Development: Available for freelancing and contracting delivery. folio-enquiry@the-folio.digital">
+       <!-- Mobile: about-self-hero-mobile.jpg  -->
+       <!-- Desktop about-self-hero-desktop.jpg (min-width: 720px) 720px,  -->
+       <!-- Tablet about-self-hero-tablet.jpg (min-width: 800px) 860px,  -->
+       <!-- Viewport width x2; pixel-device-ratio:2 (mobile |tablet), content 50%, image is 50% of 1620 => 860, min-->
+       <!-- https://medium.com/@woutervanderzee/responsive-images-with-srcset-and-sizes-fc434845e948 -->
+       <img
+        src="/assets/img/about-self-hero-desktop.jpg"
+        alt="About Me: Self: CJ, Charlie Fowler, folio-enquiry@the-folio.digital on a graphic background."
+        srcset="about-self-hero-mobile.jpg 360w, about-self-hero-desktop.jpg 720w, about-self-hero-tablet.jpg 860w"
+        sizes="
+       (min-width: 1440px) 720px,
+       (min-width: 1620px) 860px,
+       100vw
+       "
+        aria-label="An image of Charles and a graphic background."
+        aria-labelledby="About me: CJ, Charles J Fowler"
+        aria-describedby="About me: CJ for UX, UI, Web and Project Development: Available for freelancing and contracting delivery. folio-enquiry@the-folio.digital" />
+      </div>
+     </div>
+    </div>
+    <div>
+     <header>
+      <h1>About Me</h1>
+     </header>
+     <section>
+      <p><span></span></p>
+     </section>
+     <section>
+      <p><span class="fo-label"> Resume </span></p>
+      <p>
+       <a
+        class="fo-button fo-download"
+        id="download-resume"
+        type="application/pdf"
+        href="assets/files/cv.pdf"
+        title="Download a copy of CJ's CV [PDF]"
+        download="download"
+        target="_blank">
+       </a>
+      </p>
+     </section>
+    </div>
    </main>
   </div>
  </body>
