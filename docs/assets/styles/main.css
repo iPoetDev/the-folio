@@ -1,6 +1,6 @@
 /* Root Resets */
 :root {
-  /* ==========================================================================
+ /* ==========================================================================
       THE DIGITAL FOLIO: CI SUBMISSION: 3RD PARTY RESETS: CODE SEPARATION OF CONCERNS
   [0] Author: Charles Fowler (Own decisions and adjustments)
   [1] Base Reset: Kevin Powell: URL:https://www.youtube.com/watch?v=2lyDv0wOQuQ,
@@ -16,373 +16,384 @@
   Rating: ✮: Minimal, ✮✮: More Opinionated, ✮✮✮: Highly Opinionated
   ========================================================================== */
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+ *,
+ *::before,
+ *::after {
+  box-sizing: border-box;
+ }
 
-  // [1] Resets margin, padding for explicit. [✮✮]
-  // [1] Reset font sizes, font weights. [✮✮]
-  * {
-    font: inherit;
-    margin: 0;
-    padding: 0;
-  }
+ // [1] Resets margin, padding for explicit. [✮✮]
+ // [1] Reset font sizes, font weights. [✮✮]
+ * {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+ }
 
-  // [1] Sets a default dark mode; follows User Control preference. [✮✮]
-  // [2] Font-size is only control of text size [✮✮]
-  // [2] Allow %sizes on Blocks [✮✮]
-  html {
-    block-size: 100%;
-    color-scheme: dark light;
-    -webkit-text-size-adjust: none;
-  }
+ // [1] Sets a default dark mode; follows User Control preference. [✮✮]
+ // [2] Font-size is only control of text size [✮✮]
+ // [2] Allow %sizes on Blocks [✮✮]
+ html {
+  block-size: 100%;
+  color-scheme: dark light;
+  -webkit-text-size-adjust: none;
+ }
 
-  // [2] A11y: Smooth Scrolling to reduce motion: Credit: Adam Argyle [✮✮]
-  @media (prefers-reduced-motion: no-preference) {
-    html:focus-within {
-      scroll-behavior: smooth;
-    }
+ // [2] A11y: Smooth Scrolling to reduce motion: Credit: Adam Argyle [✮✮]
+ @media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+   scroll-behavior: smooth;
   }
+ }
 
-  // [1] Sets a minimum height on body [✮✮]
-  // [2] Allow &sizes on blocks.[✮✮]
-  body {
-    min-block-size: 100%;
-    min-height: 100vh;
-  }
+ // [1] Sets a minimum height on body [✮✮]
+ // [2] Allow &sizes on blocks.[✮✮]
+ body {
+  min-block-size: 100%;
+  min-height: 100vh;
+ }
 
-  // MEDIA
-  // [1,2] Ensure all media is responsive, with low specificity. [✮✮]
-  :where(img, picture, svg, video, embed, object, cavnas) {
-    display: block;
-    max-width: 100%;
-  }
+ // MEDIA
+ // [1,2] Ensure all media is responsive, with low specificity. [✮✮]
+ :where(img, picture, svg, video, embed, object, cavnas) {
+  display: block;
+  max-width: 100%;
+ }
 
-  // [2] Ensure key media has improved defaults. [✮✮]
-  :where(img, svg, video) {
-    block-size: auto;
-    max-inline-size: 100%;
-  }
+ // [2] Ensure key media has improved defaults. [✮✮]
+ :where(img, svg, video) {
+  block-size: auto;
+  max-inline-size: 100%;
+ }
 
-  // FORMS
-  // [1,2] Standardised forms typograghpy [✮,✮✮✮]
-  :where(input, textarea, button, select) {
-    color: inherit; /*[2]*/
-    font: inherit; /*[1]*/
-    font-size: inherit; /*[2]*/
-    letter-spacing: inherit;
-    word-spacing: inherit;
-  }
+ // FORMS
+ // [1,2] Standardised forms typograghpy [✮,✮✮✮]
+ :where(input, textarea, button, select) {
+  color: inherit; /*[2]*/
+  font: inherit; /*[1]*/
+  font-size: inherit; /*[2]*/
+  letter-spacing: inherit;
+  word-spacing: inherit;
+ }
 
-  // [2] Textarea to Vertical [✮✮✮]
-  // [2] Textaarea to block if browser supports. [✮✮✮]
+ // [2] Textarea to Vertical [✮✮✮]
+ // [2] Textaarea to block if browser supports. [✮✮✮]
+ :where(textarea) {
+  resize: vertical;
+ }
+ @supports (resize: block) {
   :where(textarea) {
-    resize: vertical;
+   resize: block;
   }
-  @supports (resize: block) {
-    :where(textarea) {
-      resize: block;
-    }
-  }
-  // HEADERS
-  // [2] Headers, all, no text overflow. [✮✮]
-  :where(p, h1, h2, h3, h4, h5, h6) {
-    overflow-wrap: break-word;
-  }
+ }
+ // HEADERS
+ // [2] Headers, all, no text overflow. [✮✮]
+ :where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+ }
 
-  // 2 Default H1 to 2em inside semantic content. [✮✮✮]
-  :where(article, nav, aside, section) h1 {
-    font-size: 2em;
-  }
+ // 2 Default H1 to 2em inside semantic content. [✮✮✮]
+ :where(article, nav, aside, section) h1 {
+  font-size: 2em;
+ }
 
-  // LISTS, MENU (Navigations)
-  // [2,0] Position list marker inside [✮✮✮]
-  :where(menu, ul, ol) {
-    list-style-position: outside; /*[0]*/
+ // LISTS, MENU (Navigations)
+ // [2,0] Position list marker inside [✮✮✮]
+ :where(menu, ul, ol) {
+  list-style-position: outside; /*[0]*/
+ }
+ // [2] ARIA Menu: remove List Style [✮✮✮],
+ // [0] Change Role to menu, was "List" [2], being more specific for a11y navigation patterns.
+ :where(menu, ul, ol)[role="menu"] {
+  list-style: none;
+ }
+ // INTERACTIVE
+ // [2] Anchor tags, no class, readability.
+ a:not([class]) {
+  text-decoration-skip-ink: auto;
+ }
+ // [2] Assure interactive elements are interactive.
+ // [2] Not Yet: Not including File inputs. Not in scope. #Exception.
+ :where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+  appearance: auto;
+  cursor: pointer;
+  touch-action: manipulation;
+ }
+ // ANIMATE
+ // [2] Form focus Outlines
+ // [2] A11y: Reduce motion for transitions
+ @media (prefers-reduced-motion: no-preference) {
+  :focus-visible {
+   transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
   }
-  // [2] ARIA Menu: remove List Style [✮✮✮],
-  // [0] Change Role to menu, was "List" [2], being more specific for a11y navigation patterns.
-  :where(menu, ul, ol)[role="menu"] {
-    list-style: none;
-  }
-  // INTERACTIVE
-  // [2] Anchor tags, no class, readability.
-  a:not([class]) {
-    text-decoration-skip-ink: auto;
-  }
-  // [2] Assure interactive elements are interactive.
-  // [2] Not Yet: Not including File inputs. Not in scope. #Exception.
-  :where(
-      a[href],
-      area,
-      button,
-      input,
-      label[for],
-      select,
-      summary,
-      textarea,
-      [tabindex]:not([tabindex*="-"])
-    ) {
-    appearance: auto;
-    cursor: pointer;
-    touch-action: manipulation;
-  }
-  // ANIMATE
-  // [2] Form focus Outlines
-  // [2] A11y: Reduce motion for transitions
-  @media (prefers-reduced-motion: no-preference) {
-    :focus-visible {
-      transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
-    }
-    :where(:not(:active)):focus-visible {
-      transition-duration: 0.25s;
-    }
-  }
-  // [2] Use offset to highlight visible interactive focus.
   :where(:not(:active)):focus-visible {
-    outline-offset: 5px;
+   transition-duration: 0.25s;
   }
+ }
+ // [2] Use offset to highlight visible interactive focus.
+ :where(:not(:active)):focus-visible {
+  outline-offset: 5px;
+ }
 
-  // NO INTERACTION
-  // [2] Disable Button Text Selection
-  // [0] Removed: File & Webkit Selectors
-  :where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
-    -webkit-tap-highlight-color: transparent;
-    text-align: center;
-    -webkit-touch-callout: none;
-    user-select: none;
-  }
+ // NO INTERACTION
+ // [2] Disable Button Text Selection
+ // [0] Removed: File & Webkit Selectors
+ :where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
+  -webkit-tap-highlight-color: transparent;
+  text-align: center;
+  -webkit-touch-callout: none;
+  user-select: none;
+ }
 }
 
 /* Wireframe : Prototype*/
 :root {
-  /* Border Colors*/
-  --w-red: rgb(247, 13, 13);
-  --w-yel: rgb(219, 200, 31);
-  --w-blu: rgb(28, 48, 220);
-  --w-gre: rgb(24, 202, 33);
-  --w-pin: rgb(242, 19, 119);
-  --w-pur: rgb(139, 21, 193);
-  --w-gre: rgb(33, 28, 28);
-  /*Border Style*/
-  --w-dash: dashed;
-  --w-line: solid;
-  /*Border Width*/
-  --w-1: 1px;
-  --w-2: 2px;
-  --w-3: 3px;
+ /* Border Colors*/
+ --w-red: rgb(247, 13, 13);
+ --w-yel: rgb(219, 200, 31);
+ --w-blu: rgb(3, 137, 254);
+ --w-gre: rgb(24, 202, 33);
+ --w-pin: rgb(242, 19, 119);
+ --w-pur: rgb(160, 82, 197);
+ --w-gre: rgb(33, 28, 28);
+ /*Border Style*/
+ --w-dash: dashed;
+ --w-line: solid;
+ /*Border Width*/
+ --w-1: 1px;
+ --w-2: 2px;
+ --w-3: 3px;
 }
 
 /* Root Variables: As Strictly needed */
 :root {
-  //Page Colors
-  --fo-bgcolor: hsl(240, 33%, 8%);Colors--fo-bgcolorColors--fo-bgcolor;
-}
-
-body.fo-canvas {
-  background-color: var(--fo-bgcolor);
+ --body-color: hsla(0, 0%, 84%, 0.9);
+ /* Layout */
+ --layout-color: transparent;
+ --layout-inside-pad: 2rem;
+ --layout-block-pad: 1rem;
+ /* Navigation */
+ /* Hero */
 }
 
 body {
+ background-color: var(--body-color);
+ height: 100vh;
+}
+
+// Wireframes
+section,
+main,
+footer {
+ border: var(--w-2px);
+ border-style: var(--w-dash);
 }
 
 section {
+ border-color: var(--w-blu);
 }
 
 main {
+ border-color: var(--w-gre);
 }
 
 main section {
+ border-color: var(--w-pur);
 }
 
 main section header {
+ border-color: var(--w-yel);
 }
 
-header h1,
-header h2,
-header h3,
-header h4 {
+main section section {
+ border-color: var(--w-pin);
 }
+ //
 
-section section > p {
-}
+ header h1,
+ header h2,
+ header h3,
+ header h4 {
+ }
 
-footer {
-}
+ section section > p {
+ }
 
-/* Navigation */
-nav {
-}
+ footer {
+ }
 
-menu {
-}
+ /* Navigation */
+ nav {
+ }
 
-label {
-}
+ menu {
+ }
 
-input[type="checkbox"] {
-}
+ label {
+ }
 
-/* Menu Item */
+ input[type="checkbox"] {
+ }
 
-ul,
-ol {
-}
+ /* Menu Item */
 
-ul li,
-ol li {
-}
+ ul,
+ ol {
+ }
 
-ul li {
-}
+ ul li,
+ ol li {
+ }
 
-ol li {
-}
+ ul li {
+ }
 
-li {
-}
+ ol li {
+ }
 
-/* ==========================================================================
+ li {
+ }
+
+ /* ==========================================================================
   Folio Namespace: a) Index, b) Info, c) Folio, d) Work
   ========================================================================== */
 
-fo-canvas {
-}
+ fo-canvas {
+ }
 
-fo-layout {
-}
+ fo-layout {
+ }
 
-fo-nav {
-}
+ fo-nav {
+ }
 
-fo-grid-bar {
-}
+ fo-grid-bar {
+ }
 
-fo-flex-box {
-}
+ fo-flex-box {
+ }
 
-fo-menu-holder {
-}
+ fo-menu-holder {
+ }
 
-fo-menu-holder label[hidden="hidden"],
-fo-menu-holder input[type="checkbox"] {
-}
+ fo-menu-holder label[hidden="hidden"],
+ fo-menu-holder input[type="checkbox"] {
+ }
 
-/* Menu / Nav Classes for A11y and Site */
-fo-menu {
-}
+ /* Menu / Nav Classes for A11y and Site */
+ fo-menu {
+ }
 
-fo-a11-ctrl {
-}
+ fo-a11-ctrl {
+ }
 
-fo-a11y-menu {
-}
+ fo-a11y-menu {
+ }
 
-fo-menu-site {
-}
+ fo-menu-site {
+ }
 
-fo-nav-site {
-}
+ fo-nav-site {
+ }
 
-/* Logo */
+ /* Logo */
 
-fo-logo-holder {
-}
+ fo-logo-holder {
+ }
 
-img.fo-logo {
-}
+ img.fo-logo {
+ }
 
-fo-logo {
-}
+ fo-logo {
+ }
 
-/* Layout | Hero */
-fo-grid {
-}
+ /* Layout | Hero */
+ fo-grid {
+ }
 
-fo-hero {
-}
+ fo-hero {
+ }
 
-fo-hero-title {
-}
+ fo-hero-title {
+ }
 
-fo-subcont {
-}
+ fo-subcont {
+ }
 
-fo-sub {
-}
+ fo-sub {
+ }
 
-/* Type & Text */
-fo-typog {
-}
+ /* Type & Text */
+ fo-typog {
+ }
 
-fo-text-head {
-}
+ fo-text-head {
+ }
 
-fo-content {
-}
+ fo-content {
+ }
 
-fo-content p {
-}
+ fo-content p {
+ }
 
-fo-text-para {
-}
+ fo-text-para {
+ }
 
-fo-text-inline {
-}
+ fo-text-inline {
+ }
 
-fo-cta {
-}
+ fo-cta {
+ }
 
-fo-link-internal {
-}
+ fo-link-internal {
+ }
 
-fo-links {
-}
+ fo-links {
+ }
 
-fo-linkstyle {
-}
+ fo-linkstyle {
+ }
 
-/* Responsive: Hero Grids */
+ /* Responsive: Hero Grids */
 
-fo-folio-grid,
-fo-about-grid,
-fo-work-grid,
-fo-contact-grid {
-}
+ fo-folio-grid,
+ fo-about-grid,
+ fo-work-grid,
+ fo-contact-grid {
+ }
 
-fo-folio-grid {
-}
-fo-about-grid {
-}
-fo-work-grid {
-}
-fo-contact-grid {
-}
+ fo-folio-grid {
+ }
+ fo-about-grid {
+ }
+ fo-work-grid {
+ }
+ fo-contact-grid {
+ }
 
-fo-folio-cell,
-fo-about-cell,
-fo-work-cell,
-fo-contact-cell {
-}
+ fo-folio-cell,
+ fo-about-cell,
+ fo-work-cell,
+ fo-contact-cell {
+ }
 
-fo-folio-cell {
-}
-fo-about-cell {
-}
-fo-work-cell {
-}
-fo-contact-cell {
-}
+ fo-folio-cell {
+ }
+ fo-about-cell {
+ }
+ fo-work-cell {
+ }
+ fo-contact-cell {
+ }
 
-/* Responsive Rows: Flexbox */
+ /* Responsive Rows: Flexbox */
 
-fo-folio-flex {
-}
+ fo-folio-flex {
+ }
 
-fo-folio-flex header {
-}
+ fo-folio-flex header {
+ }
 
-fo-head-frame {
+ fo-head-frame {
+ }
 }

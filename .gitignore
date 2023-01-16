@@ -4,10 +4,22 @@
 ## Github's gitignore's repo: https://github.com/github/gitignore
 
 ## Deploy / Commit Hide
-
-assets/styles/core.css
+docs/assets/styles/
+docs/assets/styles/_main.css
+docs/assets/styles/_folio.css
+docs/assets/styles/reset.css
+docs/assets/styles/globals.css
+docs/assets/styles/blocks.css
+docs/assets/styles/utilities.css
+docs/_info/_detail
+docs/_work/_detail
+docs/_folio/_clients
+docs/_component
 assets/styles/utilities.css
 the-folio.code-workspace
+
+## Exclude Files
+
 ## SECURITY
 
 ### Repo
