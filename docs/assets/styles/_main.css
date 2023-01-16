@@ -21,9 +21,296 @@
 
 /* Root Variable Test */
 :root {
-  --bdycolor: #646464;
+ --bdycolor: #646464;
 }
 
+/* ==========================================================================
+  Base Styles
+  ========================================================================== */
+
 body {
-  background-color: var(--bdycolor);
 }
+
+section {
+}
+
+main {
+}
+
+main section {
+}
+
+main section header {
+}
+
+header h1,
+header h2,
+header h3,
+header h4 {
+}
+
+section section > p {
+}
+
+footer {
+}
+
+/* Navigation */
+nav {
+}
+
+menu {
+}
+
+label {
+}
+
+input[type="checkbox"] {
+}
+
+/* Menu Item */
+
+ul,
+ol {
+}
+
+ul li,
+ol li {
+}
+
+ul li {
+}
+
+ol li {
+}
+
+li {
+}
+
+/* ==========================================================================
+  Folio Namespace: a) Index, b) Info, c) Folio, d) Work
+  ========================================================================== */
+
+fo-canvas {
+}
+
+fo-layout {
+}
+
+fo-nav {
+}
+
+fo-grid-bar {
+}
+
+fo-flex-box {
+}
+
+fo-menu-holder {
+}
+
+fo-menu-holder label[hidden="hidden"],
+fo-menu-holder input[type="checkbox"] {
+}
+
+/* Menu / Nav Classes for A11y and Site */
+fo-menu {
+}
+
+fo-a11-ctrl {
+}
+
+fo-a11y-menu {
+}
+
+fo-menu-site {
+}
+
+fo-nav-site {
+}
+
+/* Logo */
+
+fo-logo-holder {
+}
+
+img.fo-logo {
+}
+
+fo-logo {
+}
+
+/* Layout | Hero */
+fo-grid {
+}
+
+fo-hero {
+}
+
+fo-hero-title {
+}
+
+fo-subcont {
+}
+
+fo-sub {
+}
+
+/* Type & Text */
+fo-typog {
+}
+
+fo-text-head {
+}
+
+fo-content {
+}
+
+fo-content p {
+}
+
+fo-text-para {
+}
+
+fo-text-inline {
+}
+
+fo-cta {
+}
+
+fo-link-internal {
+}
+
+fo-links {
+}
+
+fo-linkstyle {
+}
+
+/* Responsive: Hero Grids */
+
+fo-folio-grid,
+fo-about-grid,
+fo-work-grid,
+fo-contact-grid {
+}
+
+fo-folio-grid {
+}
+fo-about-grid {
+}
+fo-work-grid {
+}
+fo-contact-grid {
+}
+
+fo-folio-cell,
+fo-about-cell,
+fo-work-cell,
+fo-contact-cell {
+}
+
+fo-folio-cell {
+}
+fo-about-cell {
+}
+fo-work-cell {
+}
+fo-contact-cell {
+}
+
+/* Responsive Rows: Flexbox */
+
+fo-folio-flex {
+}
+
+fo-folio-flex header {
+}
+
+fo-head-frame {
+}
+
+/* ==========================================================================
+  Folio Identifers: Semantic Eelements Only
+  Identifiers primarily used for Aria descriptors, and page/element specific styling
+  Remove Unused Styles
+  Indenifier Inventory and Planning
+  ========================================================================== */
+
+// Canvas Ids
+#land-canvas,
+#about-canvas,
+#contact-canvas,
+#work-canvas,
+#folio-canvas {
+}
+
+// Layout Ids
+#land-layout,
+#about-layout,
+#contact-layout,
+#work-layout,
+#folio-layout {
+}
+
+//Nav Block Ids
+#land-nav-block,
+#about-nav-block,
+#contact-nav-block,
+#work-nav-block,
+#folio-nav-block {
+}
+//A11y Ids
+#land-a11y,
+#about-a11y,
+#contact-a11y,
+#work-a11y,
+#folio-a11y {
+}
+//Logo Ids
+#land-logo,
+#about-logo,
+#contact-logo,
+#work-logo,
+#folio-logo {
+}
+// Menu Ids
+#land-menu,
+#about-menu,
+#contact-menu,
+#work-menu,
+#folio-menu {
+}
+
+/* Landing: Hero Identifers */
+
+//Panels
+#hero-folio,
+#hero-about,
+#hero-work,
+#hero-contact {
+}
+// Panels Headers
+#hero-foliohead,
+#hero-abouthead,
+#hero-workhead,
+#hero-contacthead {
+}
+// Clients
+#hero-clients {
+}
+// Panel's Subheading
+#hero-foliosub,
+#hero-aboutsub,
+#hero-worksub,
+#hero-contactsub {
+}
+// Panel's Headshots
+#hero-self-img {
+}
+
+/* Info Pages Identifers */
+
+/* Folio Pages Identifers */
+
+/* Work Pages Identifers */
