@@ -41,11 +41,7 @@
 
   <!-- Body: contact: Home: Magazine 2x2 Box Layout-->
  </head>
- <body
-  class="fo-canvas"
-  id="contact-canvas"
-  title="Digital Folio's Contact: Contact Options for CJ | Charles"
-  role="document">
+ <body class="fo-canvas" id="contact-canvas" role="document">
   <div class="fo-layout" id="contact-layout" role="presentation">
    <!-- Section: Site Navigation -->
    <section
@@ -77,8 +73,7 @@
         id="contact-logo"
         title="The Digital Folio's Logo: Location: Page Center"
         role="document"
-        aria-describedby="Logo: The Digital Folio (a meaningful image)"
-        aria-details="The Digital Folio's Logo: Location: Page Center">
+        aria-describedby="The Digital Folio's Logo: Location: Page Center">
         <img
          class="fo-logo"
          id="fo-contact-logo"
@@ -108,11 +103,149 @@
      </div>
     </nav>
    </section>
-   <main
-    title="Body Section of Contact Options for CJ | Charles"
-    aria-details="Main Body of Landing Contact Options for CJ | Charles"
-    aria-label="Body Section">
-    <div class="fo-grid" role="presentation"></div>
+   <main aria-describedby="Main Body of Landing Contact Options for CJ | Charles" aria-label="Body Section">
+    <div class="fo-grid" role="presentation">
+     <div class="fo-grid-cell fo-contact-row" id="contact-col-1" role="none">
+      <header class="fo-grid-header">
+       <h1 class="fo-formhead" title="Contact Header: Contact Options">Contact Me</h1>
+       <h2 class="fo-byline" title="Contact Form Byline: Call to action to complete form">
+        Send a design a request or work enquiry or a personalised message
+       </h2>
+      </header>
+      <section class="fo-form-sub" id="Contact Form">
+       <form
+        class="fo-form"
+        id="contact-form"
+        name="contact-form"
+        action="/"
+        rel="opener"
+        target="_blank"
+        method="post"
+        aria-label="contact form"
+        aria-describedby="The Digital Folio's Contact Form"
+        aria-roledescription="form">
+        <div class="fo-form-flex" role="none">
+         <div class="fo-form-item" role="none">
+          <p><span>All inputs are required</span></p>
+          <label for="full-name">
+           <span class="fo-label" id="contact-full" aria-describedby="Your Full Name or Company name"
+            >Your Full Name</span
+           ><br />
+           <input
+            class="fo-input fo-name fo-valid"
+            id="full-name"
+            type="text"
+            placeholder="Add Full Name, or Company Name"
+            required="required"
+            aria-label="input name"
+            aria-labelledby="contact-full"
+            aria-required="true"
+            aria-placeholder="Add full name"
+            aria-roledescription="form-input" />
+           <p hidden="hidden"><span>A full name is a good choice: please supply first and last name</span></p>
+          </label>
+         </div>
+         <div class="fo-form-item" role="none">
+          <label for="send-email">
+           <span class="fo-label" id="contact-email" aria-describedby="Your Email:">Your Email:</span><br />
+           <input
+            class="fo-input fo-email fo-valid"
+            id="send-email"
+            type="email"
+            placeholder="Add Email Hint:'@'"
+            required="required"
+            aria-label="input email"
+            aria-labelledby="contact-email"
+            aria-required="true"
+            aria-placeholder="Add an email address"
+            aria-roledescription="form-input" />
+           <p hidden="hidden"><span>A proper email address is essential</span></p>
+          </label>
+         </div>
+         <div class="fo-form-item" role="none">
+          <label for="add-subject">
+           <span class="fo-label" id="contact-subject" aria-describedby="Add a Subject">Add a Subject:</span><br />
+           <input
+            class="fo-input fo-topic fo-valid"
+            id="add-subject"
+            type="subject"
+            placeholder="Add a Subject"
+            required="required"
+            aria-label="input subject"
+            aria-labelledby="contact-subject"
+            aria-required="true"
+            aria-placeholder="Add a subject to the message"
+            aria-roledescription="form-input" />
+          </label>
+          <p hidden="hidden"><span>Please supply a informative subject</span></p>
+         </div>
+         <div class="fo-form-item" role="none">
+          <label for="body-message">
+           <span
+            class="fo-label fo-newline"
+            id="contact-message"
+            aria-describedby="Create a: Design Request | Work Enquiry | Direct Message"
+            >Create a: Design Request | Work Enquiry | Direct Message</span
+           ><br />
+           <textarea
+            class="fo-input fo-message fo-valid"
+            id="body-message"
+            name="contact-message"
+            type="textarea"
+            autocorrect="on"
+            spellcheck="true"
+            cols="70"
+            row="15"
+            minlength="100"
+            maxlength="350"
+            placeholder="Create a brief request, more than 100, less than 350 characters"
+            required="required"
+            wrap="soft"
+            aria-label="textarea"
+            aria-labelledby="contact-message"
+            aria-describedby="Add a Your Request, Enquiry or Message into this textarea"
+            aria-multiline="true"
+            aria-required="true"
+            aria-placeholder="Create a brief request, more than 100, less than 350 characters"
+            aria-roledescription="form-input-textarea"></textarea>
+          </label>
+          <p hidden="hidden"><span>Please have a detailed message of at least 100 characters (Max: 350)</span></p>
+         </div>
+         <div class="fo-form-item" role="none">
+          <label for="submit-send">
+           <input
+            class="fo-input fo-button"
+            id="submit-send"
+            type="submit"
+            required="required"
+            aria-label="submit button"
+            aria-describedby="Submit your valid and validated message and a response will be forthcoming"
+            aria-roledescription="form-submit" />
+           <span class="fo-hint"> or press Enter</span>
+          </label>
+         </div>
+        </div>
+       </form>
+      </section>
+     </div>
+     <div class="fo-grid-cell" id="contact-col-2" role="none">
+      <section class="fo-form-sub" id="Contact Card">
+       <div class="fo-card-flex" role="none">
+        <ul class="fo-card-holder" role="none">
+         <li class="fo-card-line">Dublin, Ireland; Europe</li>
+         <li class="fo-card-line" title="Easter Egg: 25-36546 spells out CJ-Folio">+353 81 25-36546</li>
+         <li class="fo-card-line">
+          <a
+           href="mailto:#?subject=A%20Digital%20Folio%20initial%20contact"
+           title="Send CJ, of The Digital Folio, a request, or an enquiry or a message"
+           >folio-enquire@the-folio.digital
+          </a>
+         </li>
+        </ul>
+       </div>
+      </section>
+     </div>
+    </div>
    </main>
   </div>
  </body>
