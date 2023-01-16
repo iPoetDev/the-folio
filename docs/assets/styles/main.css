@@ -177,7 +177,7 @@
 }
 
 body {
- background-color: var(--body-color);
+ background-color: var(--body-color, rgba(21, 21, 21, 0.90));
  height: 100vh;
 }
 
@@ -262,6 +262,7 @@ main section section {
  }
 
  fo-layout {
+  background-color: var(--layout-color);
  }
 
  fo-nav {
