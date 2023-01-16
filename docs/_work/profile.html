@@ -1,17 +1,113 @@
 <!DOCTYPE html>
 <html lang="en-GB">
- <head title="Welcome to the Digital Folio">
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+ <!-- Head: Viewport Scaling; b) External Stylesheet; c) Favicons-->
+
+ <head title="Welcome to the Digital Folio. By CJ, an inclusive Digital Developer's Portfolio">
+  <!-- Meta Tags-->
+  <meta name="origin" content="https://ipoetdev.github.io/the-folio/" />
+  <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028" />
+  <meta name="author" content="Charles J Fowler, @iPoetDev.github.com" />
+  <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com" />
+  <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com" />
+  <meta name="contact" content="Github: @iPoetDev" />
+  <meta name="geo.lmk" content="Dublin, Ireland; Europe" />
+  <meta name="geo.country" content="Ireland" />
+  <meta name="revision" content="#CommitShortHashOfSubmission" />
+  <meta name="semver" content="0.0.5.01 | 2023.01.15" />
+  <meta name="color-scheme" content="dark light" />
+  <meta
+   name="keywords"
+   content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS" />
+  <meta name="description" content="lorem5" />
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
-  <link href="assets/styles/main.css" rel="stylesheet" />
-  <title>Welcome to the Digital Folio:|</title>
-  <!--  0] Namespace F: Folio: Namespace for The Digital Folio.
+  <!-- Link: External Resources-->
+  <link type="text/css" href="assets/styles/main.css" rel="stylesheet" />
+  <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon" />
+  <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon" />
+  <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon" />
+
+  <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest" />
+  <!-- Page: Home-->
+  <title
+   title="Welcome to the Digital Folio. Work: Professional Profile, by CJ, an includive Digital Developer's Portfolio">
+   Welcome to the Digital Folio. Work: Professional Profile, by CJ, am inclusive Digital Developer's Portfolio
+  </title>
+  <!--  0] Namespace F: Folio: Namespace for The Digital Folio. Alias: fo-.
       1] Alias:    C: Composition Comment -> Semantics & Layout
       2] Alias:    U: Utility Comment     -  Core Styling, Typography
       3] Alias:    B: Block/Component/Widget Comment
-      2] Alias:    E: Exception/Variant Comment
--->
- </head>
+      4] Alias:    E: Exception/Variant Comment
+  -->
 
- <body class="|-core-base body-container"></body>
+  <!-- Body: Work: Home: Magazine 2x2 Box Layout-->
+ </head>
+ <body class="fo-canvas" id="work-canvas" title="Digital Folio's Work: Work Profile" role="document">
+  <div class="fo-layout" id="work-layout" role="presentation">
+   <!-- Section: Site Navigation -->
+   <section
+    id="work-nav-block"
+    title="Site Navigation"
+    role="group"
+    aria-describedby="Top Navigation area containing A11y control sand Sitewide naviation">
+    <nav class="fo-nav" aria-describedby="Top Navigation: Horizontal, Top of Page">
+     <div class="fo-grid-bar" role="presentation">
+      <div class="fo-flex-row" role="presentation">
+       <div class="fo-menu-holder fo-ally-ctrl" role="menu">
+        <menu
+         class="fo-menu fo-a11y-ctrl"
+         id="work-a11y"
+         title="A11y Accessibility Controls"
+         aria-describedby="Adjust the accessibility controls: Contrast, Color, Zoom"
+         aria-label="Accessibility Control">
+         <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
+
+         <input id="fo-toggle-a11y" type="checkbox" />
+
+         <div></div>
+         <!-- A11y Controls -->
+        </menu>
+       </div>
+
+       <div
+        class="fo-logo-holder"
+        id="work-logo"
+        title="The Digital Folio's Logo: Location: Page Center"
+        role="document"
+        aria-describedby="Logo: The Digital Folio (a meaningful image)"
+        aria-details="The Digital Folio's Logo: Location: Page Center">
+        <img
+         class="fo-logo"
+         id="fo-work-logo"
+         src="assets/img/"
+         title="Logo of The Digital Folio"
+         alt="Digital Folio Logo & Brand"
+         aria-label="Site Logo,Company Brand" />
+       </div>
+       <!-- Site Logo-->
+
+       <div class="fo-menu-holder fo-menu-site" id="work-nav" role="menu">
+        <menu
+         class="fo-nav-site"
+         id="work-menu"
+         title="Site Navigation Menu"
+         aria-describedby="Browse the site by choosing one of 5 menu options"
+         aria-label="Site Nav Menu">
+         <label for="fo-toggle-site" hidden="hidden"></label>
+
+         <input id="fo-toggle-site" type="checkbox" />
+
+         <div></div>
+        </menu>
+        <!-- Site Menu -->
+       </div>
+      </div>
+     </div>
+    </nav>
+   </section>
+   <main title="Body Section of Work Profile" aria-details="Main Body of Work Profile" aria-label="Body Section">
+    <div class="fo-grid" role="presentation"></div>
+   </main>
+  </div>
+ </body>
 </html>
