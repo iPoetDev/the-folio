@@ -1,0 +1,62 @@
+/* ==========================================================================
+  Base Styles
+  ========================================================================== */
+
+body {
+}
+
+section {
+}
+
+main {
+}
+
+main section {
+}
+
+main section header {
+}
+
+header h1,
+header h2,
+header h3,
+header h4 {
+}
+
+section section > p {
+}
+
+footer {
+}
+
+/* Navigation */
+nav {
+}
+
+menu {
+}
+
+label {
+}
+
+input[type="checkbox"] {
+}
+
+/* Menu Item */
+
+ul,
+ol {
+}
+
+ul li,
+ol li {
+}
+
+ul li {
+}
+
+ol li {
+}
+
+li {
+}

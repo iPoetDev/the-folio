@@ -1,96 +1,142 @@
 /* ==========================================================================
-  THE DIGITAL FOLIO: CI SUBMISSION: FOLIO THEME FOR THE DIGITAL FOLIO.
-  - The Folio themes: for Typograpghy: Font Size, Font Weight, Text Decorations.
-  - The Folio themes: for Icongraphy: Icon Size, Icon Styleing, Icon positions (before, after etc).
-  []
+  Folio Namespace: a) Index, b) Info, c) Folio, d) Work
   ========================================================================== */
 
-layer folio {
-  layer typograpghy {
-    layer font {
-    }
+fo-canvas {
+}
 
-    layer format {
-      .fo-underl-dark {
-        text-decoration: underline var(--under-style) var(--under-col-dark) var(--skip-ink);
-      }
-      .fo-underl-light {
-        text-decoration: underline var(--under-style) var(--under-col-light) var(--skip-ink);
-      }
-      .fo-just {
-        text-align: justify;
-        text-justify: auto;
-      }
+fo-layout {
+}
 
-      .fo-just-word {
-        text-align: justify;
-        text-justify: var(--justify-word);
-      }
+fo-nav {
+}
 
-      .fo-just-lttr {
-        text-align: justify;
-        text-justify: var(--justify-letter);
-      }
+fo-grid-bar {
+}
 
-      layer optimise {
-        @media (prefers-reduced-data: no-preference) {
-          .fo-render,
-          .fo-legible {
-            /* contain: content;
-            content-visibility: visible; */
-            text-rendering: var(--legibility);
-          }
-        }
-        // Privacy Concerns: Fingerprinting: https://github.com/w3c/csswg-drafts/issues/4832
-        @media (prefers-reduced-data: reduce) {
-          .fo-render,
-          .fo-perform {
-            text-rendering: var(--perform);
-          }
-        }
-      }
+fo-flex-box {
+}
 
-      layer present {
-        .fo-whitespace {
-          white-space: normal;
-        }
-        .fo-codespace {
-          white-space: var(--whitesp-code);
-        }
-        .fo-read-default {
-          letter-spacing: var(--lttrsp-normal);
-          word-spacing: var(--wordsp-normal);
-        }
-        .fo-read-easy,
-        .fo-read-inuse {
-          letter-spacing: var(--lttrsp-vw);
-          word-spacing: var(--wordsp-expand);
-        }
-        .fo-read-impair {
-          letter-spacing: var(--lttrsp-em);
-          word-spacing: var(--wordsp-spacious);
-        }
-        .fo-break-copy {
-          hyphenate-character: auto;
-          hyphenate-limit-chars: auto auto auto;
-          hyphens: auto;
-          line-break: var(--line-break);
-          word-break: var(--word-break);
-        }
-      }
-      layer writing {
-        .fo-write-l2r-tb {
-          direction: ltr;
-          line-height: var(--space-lnhght);
-          text-align: var(--text-align);
-          text-align-last: var(--align-last);
-          writing-mode: horizontal-tb;
-        }
-      }
-    }
-    layer iconography {
-      layer icon {
-      }
-    }
-  }
+fo-menu-holder {
+}
+
+fo-menu-holder label[hidden="hidden"],
+fo-menu-holder input[type="checkbox"] {
+}
+
+/* Menu / Nav Classes for A11y and Site */
+fo-menu {
+}
+
+fo-a11-ctrl {
+}
+
+fo-a11y-menu {
+}
+
+fo-menu-site {
+}
+
+fo-nav-site {
+}
+
+/* Logo */
+
+fo-logo-holder {
+}
+
+img.fo-logo {
+}
+
+fo-logo {
+}
+
+/* Layout | Hero */
+fo-grid {
+}
+
+fo-hero {
+}
+
+fo-hero-title {
+}
+
+fo-subcont {
+}
+
+fo-sub {
+}
+
+/* Type & Text */
+fo-typog {
+}
+
+fo-text-head {
+}
+
+fo-content {
+}
+
+fo-content p {
+}
+
+fo-text-para {
+}
+
+fo-text-inline {
+}
+
+fo-cta {
+}
+
+fo-link-internal {
+}
+
+fo-links {
+}
+
+fo-linkstyle {
+}
+
+/* Responsive: Hero Grids */
+
+fo-folio-grid,
+fo-about-grid,
+fo-work-grid,
+fo-contact-grid {
+}
+
+fo-folio-grid {
+}
+fo-about-grid {
+}
+fo-work-grid {
+}
+fo-contact-grid {
+}
+
+fo-folio-cell,
+fo-about-cell,
+fo-work-cell,
+fo-contact-cell {
+}
+
+fo-folio-cell {
+}
+fo-about-cell {
+}
+fo-work-cell {
+}
+fo-contact-cell {
+}
+
+/* Responsive Rows: Flexbox */
+
+fo-folio-flex {
+}
+
+fo-folio-flex header {
+}
+
+fo-head-frame {
 }
