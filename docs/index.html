@@ -42,21 +42,21 @@
  </head>
  <!-- Body: Landing: Home: Magazine 2x2 Box Layout-->
 
- <body class="fo-canvas" id="landing-canvas" title="Digital Folio's Landing: Home Page" role="document">
-  <div class="fo-layout" id="landing-layout" role="presentation">
+ <body class="fo-canvas" id="hero-canvas" title="Digital Folio's Landing: Home Page" role="document">
+  <div class="fo-layout" id="hero-layout" role="presentation">
    <!-- Section: Site Navigation -->
 
    <section
-    id="land-nav-block"
+    id="hero-nav-block"
     title="Site Navigation"
     role="group"
     aria-describedby="Top Navigation area containing A11y control sand Sitewide naviation">
     <nav class="fo-nav" aria-describedby="Top Navigation: Horizontal, Top of Page">
      <div class="fo-grid-bar" role="presentation">
       <div class="fo-flex-row" role="presentation">
-       <div class="fo-menu-holder fo-ally-ctrl" role="menu">
+       <div class="fo-menu-holder fo-a11y-ctrl" role="menu">
         <menu
-         class="fo-menu fo-a11y-ctrl"
+         class="fo-menu fo-a11y-menu"
          id="landing-a11y"
          title="A11y Accessibility Controls"
          aria-describedby="Adjust the accessibility controls: Contrast, Color, Zoom"
@@ -79,7 +79,7 @@
         aria-details="The Digital Folio's Logo: Location: Page Center">
         <img
          class="fo-logo"
-         id="fo-land-logo"
+         id="fo-hero-logo"
          src="assets/img/"
          title="Logo of The Digital Folio"
          alt="Digital Folio Logo & Brand"
@@ -109,6 +109,7 @@
    <!-- Top Nav Bar -->
    <main title="Body Section of Home Page" aria-details="Main Body of Landing Home Page" aria-label="Body Section">
     <div class="fo-grid" role="presentation">
+          <!-- Hero: Folio| Client-->
      <section
       class="fo-hero"
       id="hero-folio"
@@ -116,32 +117,49 @@
       role="group"
       aria-details="Landing: Client Showcase Panel"
       aria-label="About Panel">
-      <h1 class="fo-hero-title" id="land-foliohead" title="Welcome to the Digital Folio's Showcase">
-       <span class="fo-typog fo-text-head" role="document">Client Works</span>
-      </h1>
-      <section
-       class="fo-content"
-       id="hero-client"
-       role="document"
-       aria-details="Recent client on show: summary"
-       aria-label="Recent Client">
-       <p role="document" aria-label="Recent Summary">
-        <span class="fo-typog fo-text-para" role="document">Lorem ipsum dolor sit.</span>
-       </p>
-
-       <section class="fo-subcont" id="hero-1st-subcont" aria-label="Top Left: Hero Pane: Tag Line">
-        <div class="fo-sub fo-cta fo-link-internal" role="presentation">
-         <p role="document" aria-label="Recent Summary">
-          <!-- <a class="fo-links" href="docs/_folio/porfolio.html"
-             title="Folio: See more of client's projects" role="link"
-             aria-label="Link to Folio Section: Client Projects" " target="_blank">
-              <span class="fo-linkstyle">Folio See more of Cliengt projects</span>
-           </a> -->
-         </p>
+      <div class="fo-about-grid" role="none">
+       <div class="fo-folio-flex" role="none">
+        <!-- Client: Client Thumb -->
+        <div class="fo-folio-cell" role="none">
+         <header>
+          <h1 class="fo-hero-title" id="hero-foliohead" title="Welcome to the Digital Folio's Showcase">
+           <span class="fo-typog fo-text-head" role="document">Client Works</span>
+          </h1>
+         </header>
         </div>
-       </section>
-      </section>
-     </section>
+        <!-- Client: Details Column -->
+        <div class="fo-folio-cell" role="none">
+         <section
+          class="fo-content"
+          id="hero-clients"
+          role="document"
+          aria-details="Recent client on show: summary"
+          aria-label="Recent Client">
+          <section class="fo-folio-subcont">
+           <p class="fo-text-para" role="document" aria-label="Recent Summary">
+            <span class="fo-typog fo-text-inline" role="document">Lorem ipsum dolor sit.</span>
+           </p>
+          </section>
+          <section class="fo-folio-subcont">
+           <p class="fo-text-para" role="document" aria-label="Recent Summary">
+            <span class="fo-typog fo-text-inline" role="document">Lorem ipsum dolor sit.</span>
+           </p>
+          </section>
+          <section class="fo-subcont" id="hero-foliosub" aria-label="Top Left: Hero Pane: Tag Line">
+           <div class="fo-sub fo-cta fo-link-internal" role="presentation">
+            <p role="document" aria-label="Recent Summary">
+             <a class="fo-links" href="docs/_folio/porfolio.html"
+                title="Folio: See more of client's projects" role="link"
+                aria-label="Link to Folio Section: Client Projects" target="_blank">
+                 <span class="fo-linkstyle">Folio See more of Cliengt projects</span>
+              </a>
+            </p>
+           </div>
+          </section>
+         </section>
+        </div>
+       </div>
+      </div>
      <!-- Hero: About-->
      <section
       class="fo-hero"
@@ -152,7 +170,7 @@
       aria-label="About Panel">
       <div class="fo-about-grid" role="presentation">
        <div class="fo-about-cell" role="none">
-        <header id="land-abouthead" title="Heading: About Me: A brief heading about CJ, Charles J as human">
+        <header id="hero-abouthead" title="Heading: About Me: A brief heading about CJ, Charles J as human">
          <h2 class="fo-hero-title">
           <span class="fo-typog fo-text-head" role="document">About Me</span>
          </h2>
@@ -161,11 +179,11 @@
        <!-- Grid: Image: Rightmost-->
 
        <div class="fo-about-cell fo-head-frame" role="none">
-        <img alt="Headshot" aria-label="Headshot, Circle" />
+        <img id="hero-self-img" alt="Headshot" aria-label="Headshot, Circle" />
        </div>
        <!--Grid: Span: About me: Summary Introduction-->
        <div class="fo-about-cell fo-about-span" role="none">
-        <section class="fo-about-content" title="Landing: About Me Content" role="group">
+        <section class="fo-about-content" id="hero-aboutsub" title="Landing: About Me Content" role="group">
          <p>Brief synopis on Charles, by CJ.</p>
 
          <div class="fo-sub fo-cta fo-link-internal" role="presentation">
@@ -193,7 +211,7 @@
       role="group"
       aria-details="Landing: About Charles Panel"
       aria-label="About Panel">
-      <header id="land-workhead" title="Heading: Work experience of CJ, Charles J as human">
+      <header id="hero-workhead" title="Heading: Work experience of CJ, Charles J as human">
        <h3 class="fo-hero-title">
         <span class="fo-typog fo-text-head" role="document">Profile</span>
        </h3>
@@ -202,7 +220,7 @@
       <section class="fo-work" role="group">
        <p>Work Profile Summary</p>
        <!-- Land: Work Content-->
-       <section class="fo-subcont" id="land-work-sub" role="group" aria-label="">
+       <section class="fo-subcont" id="hero-worksub" role="group" aria-label="">
         <div class="fo-sub fo-cta fo-link-internal" role="presentation">
          <p role="document" aria-label="Recent Experience Call to Action">
           <a
@@ -223,7 +241,7 @@
       <!-- land: Contact: Card + Grid-->
       <div class="fo-grid fo-card" role="none">
        <div class="fo-card-cell" role="none">
-        <header id="land-contacthead" title="Heading: Contac: Contact options: 10 Send a Quik message or a longer one">
+        <header id="hero-contacthead" title="Heading: Contac: Contact options: 10 Send a Quik message or a longer one">
          <h4 class="fo-hero-title">
           <span class="fo-typog fo-text-head" role="document">Contact Me</span>
          </h4>
@@ -238,7 +256,7 @@
          <input id="fo-toggle-qik" type="checkbox" />
          <div class="fo-card-modal">
           <form class="fo-form-card"></form>
-          <section class="fo-subcont" id="hero-client-subcont" aria-label="Contact Card Links">
+          <section class="fo-subcont" id="hero-contactsub" aria-label="Contact Card Links">
            <p class="fo-link-block" role="document" aria-label="Jump to Contact Form">
             <a
              class="fo-links"

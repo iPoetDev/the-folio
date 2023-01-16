@@ -6,11 +6,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 
 ## Changelog: v0.0.5.01, 2023.01.15
 
-### Added: 0.0.5.01 @
+### Added: 0.0.5.01
 
 - Added Wireframe Vars for protoyping. To be removed later.
 - Added FO Canvas Color to Body.
 - Added Updated Body's Role: Document & Title.
+- Added series of meta tags for page declarations and consistency.
+- Added HTML: Page Navigation Section
+- Added HTML: Main Body 2x2 Hero Panels.
+- Added ARIA detaling to all semantic tags and raoles of group, document,link,menu etc
+- Added ARIA role none to all divs (as divs are used for layout and containment)
+- Added Each Hero panel semantic markup: i.e. sub-sections, headers, headings, paragraphs
+- ### Changed:
+
+- Changed File and Folder names.
+- Updated CSS Class naming with the fo- namespace prefix.
+- Changed .
 
 ## 0.0.4 - 2023-01-14
 
@@ -23,7 +34,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 - Note: Separating out application of multiple root elements for code organsiation. Technically feasible, as the casade will merge these declarations as one in the computed browser styles.
 - Given distinct purposes, it is not anticpated to not cause cascade and specificity conflicts.
 
-### Changed:
+### Changed: 0.0.4
 
 - Changed folder: docs to \_documentation
 - Changed folder: public to docs as Github Pages builds from root (./) or (./docs/). Implements Change for Now.
@@ -62,8 +73,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 - Changed .markdownlint - minor update.
 - Changed Changelog.md - Major update (this).
 
-> <small>Decided to not locate, for now, the website's html in the root of the repository.
-> Not yet known if Jenkins/Gitub Pages can take this config or require all html and css in root of repoistory | and if this complies with CI Assessment expectations.</small>
+> <small>Decided to not locate, for now, the website's html in the root of the repository. Not yet known if Jenkins/Gitub Pages can take this config or require all html and css in root of repoistory | and if this complies with CI Assessment expectations.</small>
 
 ### Changed: 12:00pm
 

@@ -30,9 +30,10 @@
   padding: 0;
  }
 
- // [1] Sets a default dark mode; follows User Control preference. [✮✮]
- // [2] Font-size is only control of text size [✮✮]
- // [2] Allow %sizes on Blocks [✮✮]
+ /* ==========================================================================
+  Section Comment Block
+  ========================================================================== */
+
  html {
   block-size: 100%;
   color-scheme: dark light;
@@ -169,7 +170,7 @@
 :root {
  --body-color: hsla(0, 0%, 84%, 0.9);
  /* Layout */
- --layout-color: transparent;
+ /* --layout-color: transparent; */
  --layout-inside-pad: 2rem;
  --layout-block-pad: 1rem;
  /* Navigation */
@@ -177,224 +178,250 @@
 }
 
 body {
- background-color: var(--body-color, rgba(21, 21, 21, 0.90));
+ background-color: var(--body-color, rgba(21, 21, 21, 0.9));
  height: 100vh;
 }
 
 // Wireframes
+div.fo-layout {
+ border: var(--w-2);
+ border-color: var(--w-red);
+ border-style: var(--w-dash);
+}
+
 section,
 main,
 footer {
- border: var(--w-2px);
+ border: var(--w-2);
  border-style: var(--w-dash);
 }
 
 section {
  border-color: var(--w-blu);
+ display: block;
 }
 
 main {
  border-color: var(--w-gre);
+ display: inline-block;
 }
 
 main section {
  border-color: var(--w-pur);
+ display: inline-block;
 }
 
 main section header {
  border-color: var(--w-yel);
+ display: block;
 }
 
 main section section {
  border-color: var(--w-pin);
+ display: block;
 }
- //
+//
 
- header h1,
- header h2,
- header h3,
- header h4 {
- }
+header h1,
+header h2,
+header h3,
+header h4 {
+ display: inline-block;
+}
 
- section section > p {
- }
+section section > p {
+ display: block;
+}
 
- footer {
- }
+footer {
+ display: inline-block;
+}
 
- /* Navigation */
- nav {
- }
+/* Navigation */
+nav {
+}
 
- menu {
- }
+menu {
+}
 
- label {
- }
+label {
+}
 
- input[type="checkbox"] {
- }
+input[type="checkbox"] {
+}
 
- /* Menu Item */
+/* Menu Item */
 
- ul,
- ol {
- }
+ul,
+ol {
+}
 
- ul li,
- ol li {
- }
+ul li,
+ol li {
+}
 
- ul li {
- }
+ul li {
+}
 
- ol li {
- }
+ol li {
+}
 
- li {
- }
+li {
+}
 
- /* ==========================================================================
+/* ==========================================================================
   Folio Namespace: a) Index, b) Info, c) Folio, d) Work
   ========================================================================== */
 
- fo-canvas {
- }
+fo-canvas {
+}
 
- fo-layout {
-  background-color: var(--layout-color);
- }
+fo-layout {
+ background-color: var(--layout-color);
+ display: block;
+}
 
- fo-nav {
- }
+fo-layout {
+ background-color: var(--layout-color);
+ display: block;
+}
 
- fo-grid-bar {
- }
+fo-nav {
+ display: block;
+}
 
- fo-flex-box {
- }
+fo-grid-bar {
+ display: grid;
+}
 
- fo-menu-holder {
- }
+fo-flex-box {
+ display: flex;
+ flex: 1 0 auto;
+}
 
- fo-menu-holder label[hidden="hidden"],
- fo-menu-holder input[type="checkbox"] {
- }
+fo-menu-holder {
+ display: block;
+}
 
- /* Menu / Nav Classes for A11y and Site */
- fo-menu {
- }
+fo-menu-holder label[hidden="hidden"],
+fo-menu-holder input[type="checkbox"] {
+ display: inline-flex;
+ flex: 0 0 auto;
+}
 
- fo-a11-ctrl {
- }
+/* Menu / Nav Classes for A11y and Site */
+fo-menu {
+}
 
- fo-a11y-menu {
- }
+fo-a11-ctrl {
+}
 
- fo-menu-site {
- }
+fo-a11y-menu {
+}
 
- fo-nav-site {
- }
+fo-menu-site {
+}
 
- /* Logo */
+fo-nav-site {
+}
 
- fo-logo-holder {
- }
+/* Logo */
 
- img.fo-logo {
- }
+fo-logo-holder {
+}
 
- fo-logo {
- }
+img.fo-logo {
+}
 
- /* Layout | Hero */
- fo-grid {
- }
+fo-logo {
+}
 
- fo-hero {
- }
+/* Layout | Hero */
+fo-grid {
+}
 
- fo-hero-title {
- }
+fo-hero {
+}
 
- fo-subcont {
- }
+fo-hero-title {
+}
 
- fo-sub {
- }
+fo-subcont {
+}
 
- /* Type & Text */
- fo-typog {
- }
+fo-sub {
+}
 
- fo-text-head {
- }
+/* Type & Text */
+fo-typog {
+}
 
- fo-content {
- }
+fo-text-head {
+}
 
- fo-content p {
- }
+fo-content {
+}
 
- fo-text-para {
- }
+fo-content p {
+}
 
- fo-text-inline {
- }
+fo-text-para {
+}
 
- fo-cta {
- }
+fo-text-inline {
+}
 
- fo-link-internal {
- }
+fo-cta {
+}
 
- fo-links {
- }
+fo-link-internal {
+}
 
- fo-linkstyle {
- }
+fo-links {
+}
 
- /* Responsive: Hero Grids */
+fo-linkstyle {
+}
 
- fo-folio-grid,
- fo-about-grid,
- fo-work-grid,
- fo-contact-grid {
- }
+/* Responsive: Hero Grids */
 
- fo-folio-grid {
- }
- fo-about-grid {
- }
- fo-work-grid {
- }
- fo-contact-grid {
- }
+fo-folio-grid,
+fo-about-grid,
+fo-work-grid,
+fo-contact-grid {
+}
 
- fo-folio-cell,
- fo-about-cell,
- fo-work-cell,
- fo-contact-cell {
- }
+fo-folio-grid {
+}
+fo-about-grid {
+}
+fo-work-grid {
+}
+fo-contact-grid {
+}
 
- fo-folio-cell {
- }
- fo-about-cell {
- }
- fo-work-cell {
- }
- fo-contact-cell {
- }
+fo-folio-cell,
+fo-about-cell,
+fo-work-cell,
+fo-contact-cell {
+}
 
- /* Responsive Rows: Flexbox */
+fo-folio-cell {
+}
+fo-about-cell {
+}
+fo-work-cell {
+}
+fo-contact-cell {
+}
 
- fo-folio-flex {
- }
+/* Responsive Rows: Flexbox */
 
- fo-folio-flex header {
- }
+fo-folio-flex {
+}
 
- fo-head-frame {
- }
+fo-folio-flex header {
+}
+
+fo-head-frame {
 }
