@@ -4,6 +4,49 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and adheres to [Semantic Versioning](http://semver.org/).
 
+## Changelog: v0.0.0,7 2023.17.01
+
+### Changed: 0.0.7.01
+
+- Updated (this) changelog for 2023.01.16 .
+
+No planned work today due to a private appointment/engagement.
+
+## Changelog: v0.0.0,6 2023.01.16
+
+### Added: 0.0.6.01, 0.0.6.03, 0.0.6.04, 0.0.6.06, 0.0.6.07, 0.0.6.08
+
+- Added by expanding Home.html panels (01).
+- Added top navigation component to all pages (.03)
+- Added css declarations (elements, classes, idenitifers) as a Bill of Materials to main.css (04).
+- Added the reorgansied & renamed files from 04 to the repos1tory.
+- Added renamed files from \_info/ \_work/ and \_folio.
+- Added page scaffold to about.html. (07)
+- Added page scaffold to contact.html. (07)
+- Added page scaffold to portfolio.html. (08)**\***
+- Added page scaffold to work.html. (08)**\***
+- **\***Added, by accidently, all changed files in one git push, was meant to be incremental, file by file. 5 files changed, 379 addtions, 183 deletions.
+
+> **\***<small>End of day user error by inattention</small>
+
+### Issues:0.0.6.07, 0.0.6.08
+
+- Issue: Github Pages workflow failed. Reason not investigate. (07,08)
+
+### Changed: 0.0.6.05, 0.0.6.06 (2nd)
+
+- Changed separated as copy, the (04) BoM into distinct files for potential code separation and organisation. (04)
+- Changed updated main.css (06 1sr, 06, 2nd)
+
+> <small>Thinking I may apply these css files as "layers" via the ordered link files (from most general to most specifc) </small>
+
+### Removed: 0..0.6.02
+
+- Removed surplus Developer QoL files: .editorconfig, prettier.yml, prettierigore by file level +1 move.
+- Removed surplus /\_folio/ files by .gitignore
+- Removed surplus /\_info/ files by .gitignore
+- Removed surplus /\_work/ files by .gitignore
+
 ## Changelog: v0.0.5.01, 2023.01.15
 
 ### Added: 0.0.5.01
