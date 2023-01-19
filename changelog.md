@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
   - Reference: Input Checkbox without JS to open Menu:
   - URL: [Pure CSS DropDown Menu](https://codepen.io/bradtraversy/pen/vMGBjQ "CodePen: Pure CSS DropDown Menu") (01)
 - Added Added Site menu to all pages
-- Added
+- Added Content Type of text/html and UTF-8 to all html files as external W3C validator complained.
 
 ### Change: 0.0.9.01, 0.0.9.03,
 
