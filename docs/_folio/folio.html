@@ -42,8 +42,8 @@
 
   <!-- Body: Folio:  Home: Magazine 2x2 Box Layout-->
  </head>
- <body class="fo-canvas" id="about-canvas" title="Digital Folio's Clients: Portfolio Page" role="document">
-  <div class="fo-layout" id="about-layout" role="presentation">
+ <body class="fo-canvas" id="folio-canvas" title="Digital Folio's Clients: Portfolio Page">
+  <div class="fo-layout" id="folio-layout" role="presentation">
 
    <!-- Nav: Site Navigation -->
 
@@ -52,7 +52,7 @@
      <div class="fo-grid-bar" role="presentation">
       <div class="fo-flex-row" role="presentation">
        <div class="fo-menu-holder fo-a11y-ctrl" role="group">
-        <nav class="fo-menu fo-a11y-menu" id="landing-a11y" title="A11y Accessibility Controls" role="menu">
+        <nav class="fo-menu fo-a11y-menu" id="site-a11y" title="A11y Accessibility Controls" role="menu">
          <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
 
          <input id="fo-toggle-a11y" type="checkbox">
@@ -70,7 +70,7 @@
 
        <div
         class="fo-logo-holder"
-        id="landing-logo"
+        id="site-logo"
         title="The Digital Folio's Logo: Location: Page Center"
         role="region"
        >
@@ -84,11 +84,11 @@
        </div>
        <!-- Site Logo-->
 
-       <div class="fo-menu-holder" id="landing-nav" role="menu">
+       <div class="fo-menu-holder" id="site-nav-anchor" role="menu">
         <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
         <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
 
-        <nav class="fo-nav-site" id="landing-menu" title="Site Navigation Menu" aria-label="Site Nav Menu">
+        <nav class="fo-nav-site" id="site-menu-nav" title="Site Navigation Menu" aria-label="Site Nav Menu">
          <label for="fo-toggle-site" hidden="hidden"></label>
          <input id="fo-toggle-site" type="checkbox">
          <!-- Open a full viewport overlay and list the menu options; in large strong text -->
@@ -175,14 +175,14 @@
 
    <!-- Top Nav Bar -->
 
-   <main title="Body Section of Portfolio Page" aria-details="Main Body of Portfolio Page" aria-label="Body Section">
-    <hr class="fo-separator" id="client-div-top" role="separator">
+   <main>
+    <hr class="fo-separator" id="client-div-top">
     <div class="fo-grid" id="client-first" role="presentation">
      <div class="fo-grid-cell fo-folio-col1" id="client-first-thumbnail">
-      <div class="fo-folio-imgholder" role="img" aria-label="." aria-labelledby="." aria-describedby=".">
+      <div class="fo-folio-imgholder" role="img" aria-label=".">
        <img class="fo-client-image" id="client-first-shots" src="/assets/img/clients/client-first.jpg" alt="."
        srcset="client-first.jpg 360w, client-first.jpg 720w, client-first.jpg 860w" sizes=" (min-width: 1440px) 720px,
-       (min-width: 1620px) 860px, 100vw aria-label="." aria-labelledby="." aria-describedby=".">
+       (min-width: 1620px) 860px, 100vw">
       </div>
      </div>
      <div class="fo-grid-cell fo-folio-col2 fo-client" id="client-first-detail">
@@ -191,23 +191,27 @@
        <h2>Project</h2>
       </header>
       <section>
+       <h2 title="" hidden="hidden">:</h2>
        <p><strong class="fo-client-label">Brief:</strong></p>
       </section>
       <section>
+       <h2 title="" hidden="hidden">:</h2>
        <p><strong class="fo-client-label">Outline:</strong></p>
       </section>
       <section>
+       <h2 title="" hidden="hidden">:</h2>
        <p><strong class="fo-client-label">URL:</strong><a href="">Client 1 URL </a></p>
       </section>
       <section>
+       <h2 title="" hidden="hidden">:</h2>
        <p><strong class="fo-client-label">Delivery:</strong></p>
       </section>
      </div>
     </div>
-    <hr class="fo-separator" id="client-div-middle" role="separator">
+    <hr class="fo-separator" id="client-div-middle">
     <div class="fo-grid" id="client-second" role="presentation">
      <div class="fo-grid-cell fp-folio-col1" id="client-second-thumbnail">
-      <div class="fo-folio-imgholder" role="img" aria-label="." aria-labelledby="." aria-describedby=".">
+      <div class="fo-folio-imgholder" role="img" aria-label=".">
        <img
         class="fo-client-image"
         id="client-second-shots"
@@ -219,9 +223,7 @@
        (min-width: 1620px) 860px,
        100vw
        "
-        aria-label="."
-        aria-labelledby="."
-        aria-describedby=".">
+        aria-label=".">
       </div>
      </div>
      <div class="fo-grid-cell fo-folio-col2 fo-client" id="client-second-detail">
@@ -230,20 +232,24 @@
        <h2>Project2</h2>
       </header>
       <section>
+       <h2 title="" hidden="hidden">:</h2>
        <p><strong class="fo-client-label">Brief:</strong></p>
       </section>
       <section>
+       <h2 title="" hidden="hidden">:</h2>
        <p><strong class="fo-client-label">Outline:</strong></p>
       </section>
       <section>
+       <h2 title="" hidden="hidden">:</h2>
        <p><strong class="fo-client-label">URL:</strong><a href="">Client 2 URL </a></p>
       </section>
       <section>
+       <h2 title="" hidden="hidden">:</h2>
        <p><strong class="fo-client-label">Delivery:</strong></p>
       </section>
      </div>
     </div>
-    <hr class="fo-separator" id="client-div-bottom" role="separator">
+    <hr class="fo-separator" id="client-div-bottom">
    </main>
   </div>
  </body>

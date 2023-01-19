@@ -14,7 +14,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 - Added Added Site menu to all pages
 - Added
 
-### Change: 0.0.9.02
+### Change: 0.0.9.01, 0.0.9.03,
 
 - Change the VSCode formater from Prettier to HTMLHint due to prettier enforcing xhtml self closing tags.
 - Changed: porfolio.html renamed to folio.html.
@@ -22,11 +22,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 ### Validated: 0.0.9.02
 
 - Validate: W3C in VSCode: Removed all warnings and erros in VSCode
-  > - index.html valid (2023-01-19 @13:31): _52 warnings and 27 errors removed_.
-  > - about.html . _warnings and errors removed_.
-  > - contact.html . _warnings and errors removed_.
-  > - folio.html . _warnings and errors removed_.
-  > - profile.html . _warnings and errors removed_.
+  > - index.html valid (2023-01-19 @13:31): _52 warnings and 27 errors removed_. (01)
+  > - about.html (2023-01-19 @14:49): _4 warnings and 21 ~~or 49~~ errors removed_.
+  > - contact.html (2023-01-19 @ 15:28). _10 warnings and 72 errors removed_.
+  > - folio.html (2023-01-19 @ 13:56). _13 warnings and 13 errors removed_. (03)
+  > - profile.html (2023-01-19 @ 15:12) . _4v warnings and 1 error removed_.
 
 ## Changelog: v0.0.8 2023.18.01
 

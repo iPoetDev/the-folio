@@ -42,7 +42,7 @@
 
   <!-- Body: Work: Home: Magazine 2x2 Box Layout-->
  </head>
- <body class="fo-canvas" id="work-canvas" title="Digital Folio's Work: Work Profile" role="document">
+ <body class="fo-canvas" id="work-canvas">
   <div class="fo-layout" id="work-layout" role="presentation">
 
    <!-- Nav: Site Navigation -->
@@ -52,7 +52,7 @@
      <div class="fo-grid-bar" role="presentation">
       <div class="fo-flex-row" role="presentation">
        <div class="fo-menu-holder fo-a11y-ctrl" role="group">
-        <nav class="fo-menu fo-a11y-menu" id="landing-a11y" title="A11y Accessibility Controls" role="menu">
+        <nav class="fo-menu fo-a11y-menu" id="site-a11y" title="A11y Accessibility Controls" role="menu">
          <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
 
          <input id="fo-toggle-a11y" type="checkbox">
@@ -70,7 +70,7 @@
 
        <div
         class="fo-logo-holder"
-        id="landing-logo"
+        id="site-logo"
         title="The Digital Folio's Logo: Location: Page Center"
         role="region"
        >
@@ -84,11 +84,11 @@
        </div>
        <!-- Site Logo-->
 
-       <div class="fo-menu-holder" id="landing-nav" role="menu">
+       <div class="fo-menu-holder" id="site-nav-anchor" role="menu">
         <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
         <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
 
-        <nav class="fo-nav-site" id="landing-menu" title="Site Navigation Menu" aria-label="Site Nav Menu">
+        <nav class="fo-nav-site" id="site-menu-nav" title="Site Navigation Menu" aria-label="Site Nav Menu">
          <label for="fo-toggle-site" hidden="hidden"></label>
          <input id="fo-toggle-site" type="checkbox">
          <!-- Open a full viewport overlay and list the menu options; in large strong text -->
@@ -175,25 +175,26 @@
 
    <!-- Top Nav Bar -->
 
-   <main title="Body Section of Work Profile" aria-details="Main Body of Work Profile" aria-label="Body Section">
+   <main id="work-main">
     <div class="fo-grid fo-work" role="presentation">
      <div class="fo-flex-row" id="profile-summary">
       <div class="fo-grid-inner">
        <div class="fo-column fo-col1 fo-work-label">
         <aside>
-         <h1>
-          <strong></strong><br>
+         <h1>Experiences<br>
           <small></small>
          </h1>
         </aside>
        </div>
        <div class="fo-column fo-col2">
         <section>
+         <h2 title="" hidden="hidden">:</h2>
          <p><strong></strong></p>
         </section>
        </div>
        <div class="fo-column fo-col3">
         <section>
+         <h2 title="Work: CJ's Experiences" hidden="hidden">Work: CJ's Experiences</h2>
          <p></p>
         </section>
        </div>
@@ -203,8 +204,7 @@
       <div class="fo-grid-inner">
        <div class="fo-col1 fo-work-label">
         <aside>
-         <h1>
-          <strong></strong><br>
+         <h1>Education<br>
           <small></small>
          </h1>
         </aside>
@@ -216,6 +216,7 @@
        </div>
        <div class="fo-col3">
         <section>
+         <h2 title="Work: CJ's Education Bio" hidden="hidden">CJ's Education Bio</h2>
          <p></p>
         </section>
        </div>
@@ -225,9 +226,8 @@
       <div class="fo-grid-inner">
        <div class="fo-col1 fo-profile-label">
         <aside>
-         <h1>
-          <strong></strong><br>
-          <small></small>
+         <h1>Tooling<br>
+          <small></small>.
          </h1>
         </aside>
        </div>
@@ -238,6 +238,7 @@
        </div>
        <div class="fo-col3">
         <section>
+         <h2 title="Work: CJ's Preferred Tooling" hidden="hidden">Preferred Tooling</h2>
          <p></p>
         </section>
        </div>
