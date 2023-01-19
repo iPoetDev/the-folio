@@ -30,8 +30,8 @@
   <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest">
   <!-- Page: Home-->
   <title
-   title="Welcome to the Digital Folio. Work: Professional Profile, by CJ, an includive Digital Developer's Portfolio">
-   Welcome to the Digital Folio. Work: Professional Profile, by CJ, am inclusive Digital Developer's Portfolio
+   title="Welcome to the Digital Folio. Folio: Portfolio of Clients, by CJ, an includive Digital Developer's Portfolio">
+   Welcome to the Digital Folio. Folio: Portfolio of Clients, by CJ, am inclusive Digital Developer's Portfolio
   </title>
   <!--  0] Namespace F: Folio: Namespace for The Digital Folio. Alias: fo-.
       1] Alias:    C: Composition Comment -> Semantics & Layout
@@ -40,10 +40,10 @@
       4] Alias:    E: Exception/Variant Comment
   -->
 
-  <!-- Body: Work: Home: Magazine 2x2 Box Layout-->
+  <!-- Body: Folio:  Home: Magazine 2x2 Box Layout-->
  </head>
- <body class="fo-canvas" id="work-canvas" title="Digital Folio's Work: Work Profile" role="document">
-  <div class="fo-layout" id="work-layout" role="presentation">
+ <body class="fo-canvas" id="about-canvas" title="Digital Folio's Clients: Portfolio Page" role="document">
+  <div class="fo-layout" id="about-layout" role="presentation">
 
    <!-- Nav: Site Navigation -->
 
@@ -175,75 +175,75 @@
 
    <!-- Top Nav Bar -->
 
-   <main title="Body Section of Work Profile" aria-details="Main Body of Work Profile" aria-label="Body Section">
-    <div class="fo-grid fo-work" role="presentation">
-     <div class="fo-flex-row" id="profile-summary">
-      <div class="fo-grid-inner">
-       <div class="fo-column fo-col1 fo-work-label">
-        <aside>
-         <h1>
-          <strong></strong><br>
-          <small></small>
-         </h1>
-        </aside>
-       </div>
-       <div class="fo-column fo-col2">
-        <section>
-         <p><strong></strong></p>
-        </section>
-       </div>
-       <div class="fo-column fo-col3">
-        <section>
-         <p></p>
-        </section>
-       </div>
+   <main title="Body Section of Portfolio Page" aria-details="Main Body of Portfolio Page" aria-label="Body Section">
+    <hr class="fo-separator" id="client-div-top" role="separator">
+    <div class="fo-grid" id="client-first" role="presentation">
+     <div class="fo-grid-cell fo-folio-col1" id="client-first-thumbnail">
+      <div class="fo-folio-imgholder" role="img" aria-label="." aria-labelledby="." aria-describedby=".">
+       <img class="fo-client-image" id="client-first-shots" src="/assets/img/clients/client-first.jpg" alt="."
+       srcset="client-first.jpg 360w, client-first.jpg 720w, client-first.jpg 860w" sizes=" (min-width: 1440px) 720px,
+       (min-width: 1620px) 860px, 100vw aria-label="." aria-labelledby="." aria-describedby=".">
       </div>
      </div>
-     <div class="fo-flex-row" id="profile-education">
-      <div class="fo-grid-inner">
-       <div class="fo-col1 fo-work-label">
-        <aside>
-         <h1>
-          <strong></strong><br>
-          <small></small>
-         </h1>
-        </aside>
-       </div>
-       <div class="fo-col2">
-        <aside>
-         <p><strong></strong></p>
-        </aside>
-       </div>
-       <div class="fo-col3">
-        <section>
-         <p></p>
-        </section>
-       </div>
-      </div>
-     </div>
-     <div class="fo-flex-row" id="profile-tooling">
-      <div class="fo-grid-inner">
-       <div class="fo-col1 fo-profile-label">
-        <aside>
-         <h1>
-          <strong></strong><br>
-          <small></small>
-         </h1>
-        </aside>
-       </div>
-       <div class="fo-col2">
-        <aside>
-         <p><strong></strong></p>
-        </aside>
-       </div>
-       <div class="fo-col3">
-        <section>
-         <p></p>
-        </section>
-       </div>
-      </div>
+     <div class="fo-grid-cell fo-folio-col2 fo-client" id="client-first-detail">
+      <header>
+       <h1>Client</h1>
+       <h2>Project</h2>
+      </header>
+      <section>
+       <p><strong class="fo-client-label">Brief:</strong></p>
+      </section>
+      <section>
+       <p><strong class="fo-client-label">Outline:</strong></p>
+      </section>
+      <section>
+       <p><strong class="fo-client-label">URL:</strong><a href="">Client 1 URL </a></p>
+      </section>
+      <section>
+       <p><strong class="fo-client-label">Delivery:</strong></p>
+      </section>
      </div>
     </div>
+    <hr class="fo-separator" id="client-div-middle" role="separator">
+    <div class="fo-grid" id="client-second" role="presentation">
+     <div class="fo-grid-cell fp-folio-col1" id="client-second-thumbnail">
+      <div class="fo-folio-imgholder" role="img" aria-label="." aria-labelledby="." aria-describedby=".">
+       <img
+        class="fo-client-image"
+        id="client-second-shots"
+        src="/assets/img/clients/client-second.jpg"
+        alt="."
+        srcset="client-second.jpg 360w, client-second.jpg 720w, client-second.jpg 860w"
+        sizes="
+       (min-width: 1440px) 720px,
+       (min-width: 1620px) 860px,
+       100vw
+       "
+        aria-label="."
+        aria-labelledby="."
+        aria-describedby=".">
+      </div>
+     </div>
+     <div class="fo-grid-cell fo-folio-col2 fo-client" id="client-second-detail">
+      <header>
+       <h1>Client2</h1>
+       <h2>Project2</h2>
+      </header>
+      <section>
+       <p><strong class="fo-client-label">Brief:</strong></p>
+      </section>
+      <section>
+       <p><strong class="fo-client-label">Outline:</strong></p>
+      </section>
+      <section>
+       <p><strong class="fo-client-label">URL:</strong><a href="">Client 2 URL </a></p>
+      </section>
+      <section>
+       <p><strong class="fo-client-label">Delivery:</strong></p>
+      </section>
+     </div>
+    </div>
+    <hr class="fo-separator" id="client-div-bottom" role="separator">
    </main>
   </div>
  </body>

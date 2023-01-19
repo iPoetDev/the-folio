@@ -4,30 +4,30 @@
 
  <head title="Welcome to the Digital Folio. By CJ, an inclusive Digital Developer's Portfolio">
   <!-- Meta Tags-->
-  <meta name="origin" content="https://ipoetdev.github.io/the-folio/" />
-  <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028" />
-  <meta name="author" content="Charles J Fowler, @iPoetDev.github.com" />
-  <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com" />
-  <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com" />
-  <meta name="contact" content="Github: @iPoetDev" />
-  <meta name="geo.lmk" content="Dublin, Ireland; Europe" />
-  <meta name="geo.country" content="Ireland" />
-  <meta name="revision" content="#CommitShortHashOfSubmission" />
-  <meta name="semver" content="0.0.5.01 | 2023.01.15" />
-  <meta name="color-scheme" content="dark light" />
+  <meta name="origin" content="https://ipoetdev.github.io/the-folio/">
+  <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028">
+  <meta name="author" content="Charles J Fowler, @iPoetDev.github.com">
+  <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com">
+  <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com">
+  <meta name="contact" content="Github: @iPoetDev">
+  <meta name="geo.lmk" content="Dublin, Ireland; Europe">
+  <meta name="geo.country" content="Ireland">
+  <meta name="revision" content="#CommitShortHashOfSubmission">
+  <meta name="semver" content="0.0.5.01 | 2023.01.15">
+  <meta name="color-scheme" content="dark light">
   <meta
    name="keywords"
-   content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS" />
-  <meta name="description" content="lorem5" />
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
+   content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS">
+  <meta name="description" content="lorem5">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
   <!-- Link: External Resources-->
-  <link type="text/css" href="assets/styles/main.css" rel="stylesheet" />
-  <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon" />
-  <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon" />
-  <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon" />
+  <link type="text/css" href="assets/styles/main.css" rel="stylesheet">
+  <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon">
+  <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon">
+  <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon">
 
-  <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest" />
+  <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest">
   <!-- Page: Home-->
   <title title="Welcome to the Digital Folio. Info: About Me, by CJ, an includive Digital Developer's Portfolio">
    Welcome to the Digital Folio. Info: About Me, by CJ, am inclusive Digital Developer's Portfolio
@@ -43,67 +43,137 @@
  </head>
  <body class="fo-canvas" id="about-canvas" title="Digital Folio's about: Learn About Me Page" role="document">
   <div class="fo-layout" id="about-layout" role="presentation">
-   <!-- Section: Site Navigation -->
-   <section
-    id="about-nav-block"
-    title="Site Navigation"
-    role="group"
-    aria-describedby="Top Navigation area containing A11y control sand Sitewide naviation">
-    <nav class="fo-nav" aria-describedby="Top Navigation: Horizontal, Top of Page">
+
+   <!-- Nav: Site Navigation -->
+
+   <nav id="hero-nav-block" title="Site Navigation">
+    <div class="fo-nav">
      <div class="fo-grid-bar" role="presentation">
       <div class="fo-flex-row" role="presentation">
-       <div class="fo-menu-holder fo-ally-ctrl" role="menu">
-        <menu
-         class="fo-menu fo-a11y-ctrl"
-         id="about-a11y"
-         title="A11y Accessibility Controls"
-         aria-describedby="Adjust the accessibility controls: Contrast, Color, Zoom"
-         aria-label="Accessibility Control">
+       <div class="fo-menu-holder fo-a11y-ctrl" role="group">
+        <nav class="fo-menu fo-a11y-menu" id="landing-a11y" title="A11y Accessibility Controls" role="menu">
          <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
 
-         <input id="fo-toggle-a11y" type="checkbox" />
+         <input id="fo-toggle-a11y" type="checkbox">
 
-         <div></div>
+         <div class="fo-a11y-menu" id="site-menu" role="none">
+          <div class="fo-a11y-overlay" role="none">
+           <div class="fo-a11y-layout" role="none">
+            <ul role="menu" aria-label="Menu A11y Controls"></ul>
+           </div>
+          </div>
+         </div>
          <!-- A11y Controls -->
-        </menu>
+        </nav>
        </div>
 
        <div
         class="fo-logo-holder"
-        id="about-logo"
+        id="landing-logo"
         title="The Digital Folio's Logo: Location: Page Center"
-        role="document"
-        aria-describedby="Logo: The Digital Folio (a meaningful image)"
-        aria-details="The Digital Folio's Logo: Location: Page Center">
+        role="region"
+       >
         <img
          class="fo-logo"
-         id="fo-about-logo"
+         id="fo-hero-logo"
          src="assets/img/"
          title="Logo of The Digital Folio"
          alt="Digital Folio Logo & Brand"
-         aria-label="Site Logo,Company Brand" />
+         aria-label="Site Logo,Company Brand">
        </div>
        <!-- Site Logo-->
 
-       <div class="fo-menu-holder fo-menu-site" id="about-nav" role="menu">
-        <menu
-         class="fo-nav-site"
-         id="about-menu"
-         title="Site Navigation Menu"
-         aria-describedby="Browse the site by choosing one of 5 menu options"
-         aria-label="Site Nav Menu">
+       <div class="fo-menu-holder" id="landing-nav" role="menu">
+        <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
+        <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
+
+        <nav class="fo-nav-site" id="landing-menu" title="Site Navigation Menu" aria-label="Site Nav Menu">
          <label for="fo-toggle-site" hidden="hidden"></label>
-
-         <input id="fo-toggle-site" type="checkbox" />
-
-         <div></div>
-        </menu>
+         <input id="fo-toggle-site" type="checkbox">
+         <!-- Open a full viewport overlay and list the menu options; in large strong text -->
+         <div class="fo-site-menu" role="none">
+          <div class="fo-menu-overlay" role="none">
+           <div class="fo-menu-layout" role="none">
+            <ul role="menu" aria-label="Menu List">
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-home"
+                href="index.html"
+                title="The Digital Folio: Home page by CJ"
+                aria-label="Navigation Home"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >Home</a
+               ></span
+              >
+             </li>
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-folio"
+                href="_folio/folio.html"
+                title="The Digital Folio: Folio & Clients | Portfolio  by CJ"
+                aria-label="Navigation  Portfolio"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >Portfolio</a
+               ></span
+              >
+             </li>
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-work"
+                href="_work/profile.html"
+                title="The Digital Folio: Work & Profile | Journey by CJ"
+                aria-label="Navigation Profile"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >Journey</a
+               ></span
+              >
+             </li>
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-about"
+                href="_info/about.html"
+                title="The Digital Folio: Info & More | About Me by CJ"
+                aria-label="Navigation About Me"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >About</a
+               ></span
+              >
+             </li>
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-contact"
+                href="_info/contact.html"
+                title="The Digital Folio: Info & More | Contact by CJ"
+                aria-label="Navigation Contact Options"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >Contact</a
+               ></span
+              >
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </nav>
         <!-- Site Menu -->
        </div>
       </div>
      </div>
-    </nav>
-   </section>
+    </div>
+   </nav>
+
+   <!-- Top Nav Bar -->
+
    <main
     title="Body Section of Learn About Me Page"
     aria-details="Main Body of Learn About Me Page"
@@ -133,6 +203,7 @@
        <!-- Viewport width x2; pixel-device-ratio:2 (mobile |tablet), content 50%, image is 50% of 1620 => 860, min-->
        <!-- https://medium.com/@woutervanderzee/responsive-images-with-srcset-and-sizes-fc434845e948 -->
        <img
+        id="about-img-self"
         src="/assets/img/about-self-hero-desktop.jpg"
         alt="About Me: Self: CJ, Charlie Fowler, folio-enquiry@the-folio.digital on a graphic background."
         srcset="about-self-hero-mobile.jpg 360w, about-self-hero-desktop.jpg 720w, about-self-hero-tablet.jpg 860w"
@@ -143,11 +214,11 @@
        "
         aria-label="An image of Charles and a graphic background."
         aria-labelledby="About me: CJ, Charles J Fowler"
-        aria-describedby="About me: CJ for UX, UI, Web and Project Development: Available for freelancing and contracting delivery. folio-enquiry@the-folio.digital" />
+        aria-describedby="About me: CJ for UX, UI, Web and Project Development: Available for freelancing and contracting delivery. folio-enquiry@the-folio.digital">
       </div>
      </div>
     </div>
-    <div>
+    <div class="fo-grid">
      <header>
       <h1>About Me</h1>
      </header>

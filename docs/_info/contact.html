@@ -4,30 +4,30 @@
 
  <head title="Welcome to the Digital Folio. By CJ, an inclusive Digital Developer's Portfolio">
   <!-- Meta Tags-->
-  <meta name="origin" content="https://ipoetdev.github.io/the-folio/" />
-  <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028" />
-  <meta name="author" content="Charles J Fowler, @iPoetDev.github.com" />
-  <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com" />
-  <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com" />
-  <meta name="contact" content="Github: @iPoetDev" />
-  <meta name="geo.lmk" content="Dublin, Ireland; Europe" />
-  <meta name="geo.country" content="Ireland" />
-  <meta name="revision" content="#CommitShortHashOfSubmission" />
-  <meta name="semver" content="0.0.5.01 | 2023.01.15" />
-  <meta name="color-scheme" content="dark light" />
+  <meta name="origin" content="https://ipoetdev.github.io/the-folio/">
+  <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028">
+  <meta name="author" content="Charles J Fowler, @iPoetDev.github.com">
+  <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com">
+  <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com">
+  <meta name="contact" content="Github: @iPoetDev">
+  <meta name="geo.lmk" content="Dublin, Ireland; Europe">
+  <meta name="geo.country" content="Ireland">
+  <meta name="revision" content="#CommitShortHashOfSubmission">
+  <meta name="semver" content="0.0.5.01 | 2023.01.15">
+  <meta name="color-scheme" content="dark light">
   <meta
    name="keywords"
-   content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS" />
-  <meta name="description" content="lorem5" />
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
+   content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS">
+  <meta name="description" content="lorem5">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
   <!-- Link: External Resources-->
-  <link type="text/css" href="assets/styles/main.css" rel="stylesheet" />
-  <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-  <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon" />
-  <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon" />
-  <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon" />
+  <link type="text/css" href="assets/styles/main.css" rel="stylesheet">
+  <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon">
+  <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon">
+  <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon">
 
-  <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest" />
+  <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest">
   <!-- Page: Home-->
   <title title="Welcome to the Digital Folio. Info: Contact Options, by CJ, an includive Digital Developer's Portfolio">
    Welcome to the Digital Folio. Info: Contact Options, by CJ, an inclusive Digital Developer's Portfolio
@@ -43,66 +43,137 @@
  </head>
  <body class="fo-canvas" id="contact-canvas" role="document">
   <div class="fo-layout" id="contact-layout" role="presentation">
-   <!-- Section: Site Navigation -->
-   <section
-    id="contact-nav-block"
-    title="Site Navigation"
-    role="group"
-    aria-describedby="Top Navigation area containing A11y control sand Sitewide naviation">
-    <nav class="fo-nav" aria-describedby="Top Navigation: Horizontal, Top of Page">
+
+   <!-- Nav: Site Navigation -->
+
+   <nav id="hero-nav-block" title="Site Navigation">
+    <div class="fo-nav">
      <div class="fo-grid-bar" role="presentation">
       <div class="fo-flex-row" role="presentation">
-       <div class="fo-menu-holder fo-ally-ctrl" role="menu">
-        <menu
-         class="fo-menu fo-a11y-ctrl"
-         id="contact-a11y"
-         title="A11y Accessibility Controls"
-         aria-describedby="Adjust the accessibility controls: Contrast, Color, Zoom"
-         aria-label="Accessibility Control">
+       <div class="fo-menu-holder fo-a11y-ctrl" role="group">
+        <nav class="fo-menu fo-a11y-menu" id="landing-a11y" title="A11y Accessibility Controls" role="menu">
          <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
 
-         <input id="fo-toggle-a11y" type="checkbox" />
+         <input id="fo-toggle-a11y" type="checkbox">
 
-         <div></div>
+         <div class="fo-a11y-menu" id="site-menu" role="none">
+          <div class="fo-a11y-overlay" role="none">
+           <div class="fo-a11y-layout" role="none">
+            <ul role="menu" aria-label="Menu A11y Controls"></ul>
+           </div>
+          </div>
+         </div>
          <!-- A11y Controls -->
-        </menu>
+        </nav>
        </div>
 
        <div
         class="fo-logo-holder"
-        id="contact-logo"
+        id="landing-logo"
         title="The Digital Folio's Logo: Location: Page Center"
-        role="document"
-        aria-describedby="The Digital Folio's Logo: Location: Page Center">
+        role="region"
+       >
         <img
          class="fo-logo"
-         id="fo-contact-logo"
+         id="fo-hero-logo"
          src="assets/img/"
          title="Logo of The Digital Folio"
          alt="Digital Folio Logo & Brand"
-         aria-label="Site Logo,Company Brand" />
+         aria-label="Site Logo,Company Brand">
        </div>
        <!-- Site Logo-->
 
-       <div class="fo-menu-holder fo-menu-site" id="contact-nav" role="menu">
-        <menu
-         class="fo-nav-site"
-         id="contact-menu"
-         title="Site Navigation Menu"
-         aria-describedby="Browse the site by choosing one of 5 menu options"
-         aria-label="Site Nav Menu">
+       <div class="fo-menu-holder" id="landing-nav" role="menu">
+        <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
+        <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
+
+        <nav class="fo-nav-site" id="landing-menu" title="Site Navigation Menu" aria-label="Site Nav Menu">
          <label for="fo-toggle-site" hidden="hidden"></label>
-
-         <input id="fo-toggle-site" type="checkbox" />
-
-         <div></div>
-        </menu>
+         <input id="fo-toggle-site" type="checkbox">
+         <!-- Open a full viewport overlay and list the menu options; in large strong text -->
+         <div class="fo-site-menu" role="none">
+          <div class="fo-menu-overlay" role="none">
+           <div class="fo-menu-layout" role="none">
+            <ul role="menu" aria-label="Menu List">
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-home"
+                href="index.html"
+                title="The Digital Folio: Home page by CJ"
+                aria-label="Navigation Home"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >Home</a
+               ></span
+              >
+             </li>
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-folio"
+                href="_folio/folio.html"
+                title="The Digital Folio: Folio & Clients | Portfolio  by CJ"
+                aria-label="Navigation  Portfolio"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >Portfolio</a
+               ></span
+              >
+             </li>
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-work"
+                href="_work/profile.html"
+                title="The Digital Folio: Work & Profile | Journey by CJ"
+                aria-label="Navigation Profile"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >Journey</a
+               ></span
+              >
+             </li>
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-about"
+                href="_info/about.html"
+                title="The Digital Folio: Info & More | About Me by CJ"
+                aria-label="Navigation About Me"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >About</a
+               ></span
+              >
+             </li>
+             <li role="menuitem">
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"
+               ><a
+                id="site-contact"
+                href="_info/contact.html"
+                title="The Digital Folio: Info & More | Contact by CJ"
+                aria-label="Navigation Contact Options"
+                target="_blank"
+                rel="noreferrer,noopener"
+                >Contact</a
+               ></span
+              >
+             </li>
+            </ul>
+           </div>
+          </div>
+         </div>
+        </nav>
         <!-- Site Menu -->
        </div>
       </div>
      </div>
-    </nav>
-   </section>
+    </div>
+   </nav>
+
+   <!-- Top Nav Bar -->
+
    <main aria-describedby="Main Body of Landing Contact Options for CJ | Charles" aria-label="Body Section">
     <div class="fo-grid" role="presentation">
      <div class="fo-grid-cell fo-contact-row" id="contact-col-1" role="none">
@@ -112,7 +183,8 @@
         Send a design a request or work enquiry or a personalised message
        </h2>
       </header>
-      <section class="fo-form-sub" id="Contact Form">
+      <section class="fo-form-sub" id="contact-form-section">
+       <h2  title="The Digital Folio's Contact Form" hidden="hidden">Contact Form</h2>
        <form
         class="fo-form"
         id="contact-form"
@@ -130,7 +202,7 @@
           <label for="full-name">
            <span class="fo-label" id="contact-full" aria-describedby="Your Full Name or Company name"
             >Your Full Name</span
-           ><br />
+           ><br>
            <input
             class="fo-input fo-name fo-valid"
             id="full-name"
@@ -141,13 +213,13 @@
             aria-labelledby="contact-full"
             aria-required="true"
             aria-placeholder="Add full name"
-            aria-roledescription="form-input" />
+            aria-roledescription="form-input">
            <p hidden="hidden"><span>A full name is a good choice: please supply first and last name</span></p>
           </label>
          </div>
          <div class="fo-form-item" role="none">
           <label for="send-email">
-           <span class="fo-label" id="contact-email" aria-describedby="Your Email:">Your Email:</span><br />
+           <span class="fo-label" id="contact-email" aria-describedby="Your Email:">Your Email:</span><br>
            <input
             class="fo-input fo-email fo-valid"
             id="send-email"
@@ -158,13 +230,13 @@
             aria-labelledby="contact-email"
             aria-required="true"
             aria-placeholder="Add an email address"
-            aria-roledescription="form-input" />
+            aria-roledescription="form-input">
            <p hidden="hidden"><span>A proper email address is essential</span></p>
           </label>
          </div>
          <div class="fo-form-item" role="none">
           <label for="add-subject">
-           <span class="fo-label" id="contact-subject" aria-describedby="Add a Subject">Add a Subject:</span><br />
+           <span class="fo-label" id="contact-subject" aria-describedby="Add a Subject">Add a Subject:</span><br>
            <input
             class="fo-input fo-topic fo-valid"
             id="add-subject"
@@ -175,7 +247,7 @@
             aria-labelledby="contact-subject"
             aria-required="true"
             aria-placeholder="Add a subject to the message"
-            aria-roledescription="form-input" />
+            aria-roledescription="form-input">
           </label>
           <p hidden="hidden"><span>Please supply a informative subject</span></p>
          </div>
@@ -186,7 +258,7 @@
             id="contact-message"
             aria-describedby="Create a: Design Request | Work Enquiry | Direct Message"
             >Create a: Design Request | Work Enquiry | Direct Message</span
-           ><br />
+           ><br>
            <textarea
             class="fo-input fo-message fo-valid"
             id="body-message"
@@ -220,7 +292,7 @@
             required="required"
             aria-label="submit button"
             aria-describedby="Submit your valid and validated message and a response will be forthcoming"
-            aria-roledescription="form-submit" />
+            aria-roledescription="form-submit">
            <span class="fo-hint"> or press Enter</span>
           </label>
          </div>
@@ -233,7 +305,18 @@
        <div class="fo-card-flex" role="none">
         <ul class="fo-card-holder" role="none">
          <li class="fo-card-line">Dublin, Ireland; Europe</li>
-         <li class="fo-card-line" title="Easter Egg: 25-36546 spells out CJ-Folio">+353 81 25-36546</li>
+         <!-- Source: Article: hidden - Examples (MDN): last accessed: 2023-01-18 : URL: https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden#examples  -->
+         <!-- Rattional for inclusion: I am a very data privacy centered developer, so privacy occulsion technqiues like this appeal. JS is outside of the course, the technique is part of my ethos and I add this as a current functionality or future feature.   -->
+         <!-- Alternatively could use css ::before or :;after and content to generate, but is not very accessible-->
+         <!-- Includeed a fall back call to action to email me-->
+         <script type="text/javascript">
+          const untilFound = document.querySelector("#show-mobile");
+          untilFound.addEventListener("beforematch", () => (untilFound.textContent = "81 25-36546"));
+         </script>
+         <li class="fo-card-line fo-show-content" title="Easter Egg: 25-36546 spells out CJ-Folio">
+          +353 <span id="show-mobile" hidden="until-found">Mobile, or Email CJ</span> |
+          <a href="#show-mobile">Show number</a>
+         </li>
          <li class="fo-card-line">
           <a
            href="mailto:#?subject=A%20Digital%20Folio%20initial%20contact"
