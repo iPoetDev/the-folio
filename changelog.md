@@ -4,15 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and adheres to [Semantic Versioning](http://semver.org/). Modified, by incrementing and counting the index of commits on a daily basis (Major.Minor.Patch.CommitIndex) (By CJ)
 
+## Changelog: v0.1.0, 2023.19.01
+
+### Patch version: Bump to version 0.1.0:
+
+- Patch: HTML composition of skeleton/layout/semantics is bumped to 0.1.0. Use 0.1.0 for HTML composition version of MVP.
+- Next: CSS Layout & Composition with Responsiveness (Basics-first, Progressive enchancement and graceful degradtion). THe C of the CUBE methodology.
+
 ## Changelog: v0.0.9, 2023.19.01
 
-### Added: 0.0.9.01
+### Added: 0.0.9.01, 0.0.9.05
 
 - Added navigation and drop down controls. (01)
   - Reference: Input Checkbox without JS to open Menu:
   - URL: [Pure CSS DropDown Menu](https://codepen.io/bradtraversy/pen/vMGBjQ "CodePen: Pure CSS DropDown Menu") (01)
 - Added Added Site menu to all pages
-- Added Content Type of text/html and UTF-8 to all html files as external W3C validator complained.
+- Added Content Type of text/html and UTF-8 to all html files as external W3C validator complained. (05)
 
 ### Change: 0.0.9.01, 0.0.9.03,
 
