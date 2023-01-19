@@ -2,9 +2,49 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/) and adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [Keep a Changelog](http://keepachangelog.com/) and adheres to [Semantic Versioning](http://semver.org/). Modified, by incrementing and counting the index of commits on a daily basis (Major.Minor.Patch.CommitIndex) (By CJ)
 
-## Changelog: v0.0.0,7 2023.17.01
+## Changelog: v0.0.9, 2023.19.01
+
+### Added: 0.0.9.01
+
+- Added navigation and drop down controls. (01)
+  - Reference: Input Checkbox without JS to open Menu:
+  - URL: [Pure CSS DropDown Menu](https://codepen.io/bradtraversy/pen/vMGBjQ "CodePen: Pure CSS DropDown Menu") (01)
+- Added Added Site menu to all pages
+- Added
+
+### Change: 0.0.9.02
+
+- Change the VSCode formater from Prettier to HTMLHint due to prettier enforcing xhtml self closing tags.
+- Changed: porfolio.html renamed to folio.html.
+
+### Validated: 0.0.9.02
+
+- Validate: W3C in VSCode: Removed all warnings and erros in VSCode
+  > - index.html valid (2023-01-19 @13:31): _52 warnings and 27 errors removed_.
+  > - about.html . _warnings and errors removed_.
+  > - contact.html . _warnings and errors removed_.
+  > - folio.html . _warnings and errors removed_.
+  > - profile.html . _warnings and errors removed_.
+
+## Changelog: v0.0.8 2023.18.01
+
+### Changed: v0.0.8.01
+
+- Changed with minor edits to about.html and contact.html (01)
+- Changed / updated the main.css with the BoM for Classes, Id, pseudo-selectors and elements declarations across all files currently (02)
+- Changed / updated profile.html class and id for consistency. (05)
+- Changed portfolio,html to folio.html (04)
+- Moved #id css to identifers file.
+
+> Identifers.css is intended for a intermeidatary css libray for high specufied styles and aria identification.
+
+### Removed:
+
+- Remomved: portfolio.html
+
+## Changelog: v0.0.0,7 2023.01.17
 
 ### Changed: 0.0.7.01
 
