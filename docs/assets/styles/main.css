@@ -244,12 +244,6 @@ nav {
 menu {
 }
 
-label {
-}
-
-input[type="checkbox"] {
-}
-
 /* Menu Item */
 
 ul,
@@ -269,159 +263,454 @@ ol li {
 li {
 }
 
+li:checked {
+}
+
+/* Anchors*/
+
+a[href] {
+}
+
+a:anylink {
+}
+
+a:hover a:link {
+}
+
+a:active {
+}
+
+a:visited {
+}
+
+:target {
+}
+
+/* Forms */
+
+form {
+}
+
+label {
+}
+
+input[type="checkbox"] {
+}
+
+input:focus {
+}
+
+input:focus-visible {
+}
+
+input:focus-within {
+}
+
+input:required {
+}
+
+input:valid,
+textarea:valid {
+}
+
+input:invalid,
+textarea:invalid {
+}
+
+input:placeholder-shown {
+}
+
+// Separators
+
+hr
+
 /* ==========================================================================
   Folio Namespace: a) Index, b) Info, c) Folio, d) Work
   ========================================================================== */
 
-fo-canvas {
+.fo-canvas {
 }
 
-fo-layout {
+.fo-layout {
  background-color: var(--layout-color);
  display: block;
 }
 
-fo-layout {
+.fo-layout {
  background-color: var(--layout-color);
  display: block;
 }
 
-fo-nav {
+.fo-nav {
  display: block;
 }
 
-fo-grid-bar {
+.fo-grid-bar {
  display: grid;
 }
 
-fo-flex-box {
+.fo-flex-box {
  display: flex;
  flex: 1 0 auto;
 }
 
-fo-menu-holder {
+.fo-menu-holder {
  display: block;
 }
 
-fo-menu-holder label[hidden="hidden"],
-fo-menu-holder input[type="checkbox"] {
+.fo-menu-holder label[hidden="hidden"],
+.fo-menu-holder input[type="checkbox"] {
  display: inline-flex;
  flex: 0 0 auto;
 }
 
 /* Menu / Nav Classes for A11y and Site */
-fo-menu {
+.fo-menu {
 }
 
-fo-a11-ctrl {
+.fo-a11-ctrl {
 }
 
-fo-a11y-menu {
+.fo-a11y-menu {
 }
 
-fo-menu-site {
+.fo-menu-site {
 }
 
-fo-nav-site {
+.fo-nav-site {
 }
 
 /* Logo */
 
-fo-logo-holder {
+.fo-logo-holder {
 }
 
 img.fo-logo {
 }
 
-fo-logo {
+.fo-logo {
 }
 
 /* Layout | Hero */
-fo-grid {
+.fo-grid {
 }
 
-fo-hero {
+.fo-hero {
 }
 
-fo-hero-title {
+.fo-hero-title {
 }
 
-fo-subcont {
+.fo-subcont {
 }
 
-fo-sub {
+.fo-sub {
 }
 
 /* Type & Text */
-fo-typog {
+.fo-typog {
 }
 
-fo-text-head {
+.fo-text-head {
 }
 
-fo-content {
+.fo-content {
 }
 
-fo-content p {
+.fo-content p {
 }
 
-fo-text-para {
+.fo-text-para {
 }
 
-fo-text-inline {
+.fo-text-inline {
 }
 
-fo-cta {
+.fo-cta {
 }
 
-fo-link-internal {
+.fo-link-internal {
 }
 
-fo-links {
+.fo-links {
 }
 
-fo-linkstyle {
+.fo-linkstyle {
 }
 
 /* Responsive: Hero Grids */
 
-fo-folio-grid,
-fo-about-grid,
-fo-work-grid,
-fo-contact-grid {
+.fo-folio-grid,
+.fo-about-grid,
+.fo-work-grid,
+.fo-contact-grid {
 }
 
-fo-folio-grid {
+.fo-folio-grid {
 }
-fo-about-grid {
+.fo-about-grid {
 }
-fo-work-grid {
+.fo-work-grid {
 }
-fo-contact-grid {
-}
-
-fo-folio-cell,
-fo-about-cell,
-fo-work-cell,
-fo-contact-cell {
+.fo-contact-grid {
 }
 
-fo-folio-cell {
+.fo-folio-cell,
+.fo-about-cell,
+.fo-work-cell,
+.fo-contact-cell {
 }
-fo-about-cell {
+
+.fo-folio-cell {
 }
-fo-work-cell {
+.fo-about-cell {
 }
-fo-contact-cell {
+.fo-work-cell {
+}
+.fo-contact-cell {
 }
 
 /* Responsive Rows: Flexbox */
 
-fo-folio-flex {
+.fo-folio-flex {
 }
 
-fo-folio-flex header {
+.fo-folio-flex header {
 }
 
-fo-head-frame {
+.fo-head-frame {
+}
+
+/* ==========================================================================
+  Tier 1 Classes
+  ========================================================================== */
+
+.fo-grid {
+}
+
+.fo-grid-cell {
+}
+
+.fo-grid-cell section header {
+}
+
+.fo-grid-cell section {
+}
+
+.fo-grid-cell section > header {
+}
+
+.fo-grid-cell section > p {
+}
+
+.fo-grid-cell section span {
+}
+
+.fo-grid-cell p {
+}
+
+.fo-heroname {
+}
+
+.fo-nametag {
+}
+
+.fo-label {
+}
+
+/* ==========================================================================
+About Classes
+========================================================================== */
+.fo-about-row {
+}
+
+.fo-about-imhholder {
+}
+
+.fo-about-imgholder img {
+}
+
+.fo-grid + .fo-grid {
+}
+
+.fo-grid > header {
+}
+
+.fo-grid > section {
+}
+
+.fo-grid > section p {
+}
+
+a.fo-button#download-resume {
+}
+
+a.fo-download#download-resume {
+}
+
+/* ==========================================================================
+  Info | Contact Form Classes
+  ========================================================================== */
+
+.fo-contact-row {
+}
+
+.fo-grid-header {
+}
+
+.fo-formhead {
+}
+
+.fo-byline {
+}
+
+.fo-form-sub#contact-form-section {
+}
+
+.fo-form {
+}
+
+.fo-form-flex {
+}
+
+.fo-form-item {
+}
+
+.fo-form-item p > span {
+}
+
+.fo-form-item p[hidden="hidden"] > span {
+}
+
+.fo-form-item label {
+}
+
+.fo-form-item label input {
+}
+
+.fo-form-item label span {
+}
+
+.fo-form-item input,
+.fo-form-item textarea,
+.fo-form-item submit {
+}
+
+.fo-form-item span.fo-label {
+}
+
+.fo-form-item span.fo-newline {
+}
+
+.fo-form-item > label[for="submit-send"] .fo-button {
+}
+
+.fo-form-item > label[for="submit-send"] .fo-hint {
+}
+
+.fo-input {
+}
+
+.fo-name,
+.fo-email,
+.fo-subject {
+}
+
+.fo-validate {
+}
+
+.fo-card-flex {
+}
+
+.fo-card-holder {
+}
+
+.fo-card-line {
+}
+
+.fo-show-content {
+}
+
+.fo-show-content span {
+}
+
+.fo-show-content a {
+}
+
+/* .fo-hide-content {} */
+
+/* ==========================================================================
+  Folio: Folio Classes
+  ========================================================================== */
+
+.fo-separator {
+}
+
+.fo-folio-col1 {
+}
+
+.fo-folio-col2 {
+}
+
+.fo-folio-col1,
+.fo-folio-col2 {
+}
+
+.fo-folio-imgholder {
+}
+
+.fo-client-image {
+}
+
+.fo-client-label {
+}
+
+.fo-client > header {
+}
+
+.fo-client > header > h1 {
+}
+
+.fo-client > header > h2 {
+}
+
+.fo-client section {
+}
+
+.fo-client section p {
+}
+
+.fo-client section strong {
+}
+
+/* ==========================================================================
+  Work: Profile Classes
+  ========================================================================== */
+
+.fo-flex-row {
+}
+
+.fo-grid-inner {
+}
+
+.fo-work-col1 {
+}
+
+.fo-work-label {
+}
+
+.fo-work {
+}
+
+.fo-column {
+}
+
+.fo-work.fo-col1 aside {
+}
+
+.fo-work.fo-col1 aside h1 {
+}
+
+.fo-work.fo-col2 section p,
+.fo-work.fo-col3 section p {
 }

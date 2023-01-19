@@ -77,8 +77,82 @@
 #hero-self-img {
 }
 
-/* Info Pages Identifers */
+/* ==========================================================================
+  Info: About Identifers
+  ========================================================================== */
 
-/* Folio Pages Identifers */
+#about-col-1,
+#about-col-2 {
+}
 
-/* Work Pages Identifers */
+#about-img-self {
+}
+
+#download-resume {
+}
+
+/* ==========================================================================
+  Info: Contact Identifers
+  ========================================================================== */
+
+#contact-form {
+}
+
+#contact-col-1 {
+}
+#contact-col-2 {
+}
+#contact-col-1,
+#contact-col-2 {
+}
+
+/* ==========================================================================
+  Work: Profile Identifers
+  ========================================================================== */
+
+#profile-summary {
+}
+
+#profile-education {
+}
+
+#profile-tooling {
+}
+
+/* ==========================================================================
+  Folio: Folio Identifers
+  ========================================================================== */
+
+#client-div-top {
+}
+#client-div-middle {
+}
+#client-div-bottom {
+}
+
+#client-first {
+}
+
+#client-second {
+}
+
+#client-first,
+#client-second {
+}
+
+#client-first-thumbnail {
+}
+
+#client-second-thumbnail {
+}
+
+#client-first-thumbnail,
+#client-second-thumbnail {
+}
+
+#client-first-detail {
+}
+
+#client-first-shots,
+#client-second-shots {
+}
