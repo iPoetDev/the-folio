@@ -37,6 +37,7 @@
  html {
   block-size: 100%;
   color-scheme: dark light;
+  margin: 0px;
   -webkit-text-size-adjust: none;
  }
 
@@ -50,6 +51,8 @@
  // [1] Sets a minimum height on body [✮✮]
  // [2] Allow &sizes on blocks.[✮✮]
  body {
+  margin: unset;
+  margin-top: 0px;
   min-block-size: 100%;
   min-height: 100vh;
  }
@@ -149,14 +152,28 @@
 
 /* Wireframe : Prototype*/
 :root {
+ /* Color*/
+ --w-darktext-onlight: rgba(36, 21, 31, 0.918);
+ --w-lighttext-ondark: rgba(233, 222, 230, 0.918);
+
+ /* Background Colors*/
+ --w-huecanv: rgba(34, 34, 29, 0.918);
+ --w-huelayout: rgba(248, 248, 239, 0.945);
+ --w-huebanner: rgba(183, 229, 250, 0);
+ --w-huenav: rgba(250, 183, 230, 0);
+ --w-hueholder: rgba(252, 187, 144, 0.918);
+ --w-huemenu: rgba(183, 229, 250, 0.918);
+ --w-huegrid: rgba(245, 250, 183, 0.918);
+
  /* Border Colors*/
  --w-red: rgb(247, 13, 13);
  --w-yel: rgb(219, 200, 31);
  --w-blu: rgb(3, 137, 254);
- --w-gre: rgb(24, 202, 33);
+ --w-gree: rgba(24, 202, 33, 0);
  --w-pin: rgb(242, 19, 119);
- --w-pur: rgb(160, 82, 197);
- --w-gre: rgb(33, 28, 28);
+ --w-pur: rgba(161, 82, 197, 0);
+ --w-gre: rgb(196, 196, 196);
+ --w-bla: rgb(17, 17, 17);
  /*Border Style*/
  --w-dash: dashed;
  --w-line: solid;
@@ -166,24 +183,51 @@
  --w-3: 3px;
 }
 
-/* Root Variables: As Strictly needed */
+/* Root Colors */
 :root {
- --body-color: hsla(0, 0%, 84%, 0.9);
- /* Layout */
- /* --layout-color: transparent; */
+ --body-color: hsla(0, 1%, 19%, 0.9);
+ color: var(--w-darktext-onlight);
+}
+
+// Sizings and Spacing
+:root {
+ /* Global Spacing*/
+ --global-inside-margin: 3rem;
+ --global-margin-inside: 3rem;
+ --global-base-width: 45rem;
+ --global-mobile-width: 17rem;
+ --global-tablet-width: 40rem;
+ --global-default-width: 45rem;
+ /* https://en.wikipedia.org/wiki/Line_length#Electronic_text*/
+ --global-line-len-em: 33em;
+ --global-line-len-ch: 66ch;
+ --mobile-line-len-em: 11em;
+ --mobile-line-len-ch: 22ch;
+ --tablet-line-len-em: 22em;
+ --tablet-line-len-ch: 44ch;
+ /* Spacing between Layuts*/
  --layout-inside-pad: 2rem;
  --layout-block-pad: 1rem;
+ --layout-pad-inside: 2rem;
+ --layout-pad-block: 1rem;
+ /* Navigation Spacing*/
+ --nav-height-max: 4rem;
+ /* Spacing between TB Major Semantic Blocks*/
+ --semantic-block-end: 2rem;
+ --semantic-block-start: 2rem;
+ --semantic-block-space: 4rem;
  /* Navigation */
  /* Hero */
 }
 
 body {
- background-color: var(--body-color, rgba(21, 21, 21, 0.9));
- height: 100vh;
+ /* background-color: var(--body-color, rgba(21, 21, 21, 0.9));
+ height: 100vh; */
 }
 
-// Wireframes
-div.fo-layout {
+// Wireframes & Base Element Styles
+
+.fo-layout {
  border: var(--w-2);
  border-color: var(--w-red);
  border-style: var(--w-dash);
@@ -192,33 +236,30 @@ div.fo-layout {
 section,
 main,
 footer {
- border: var(--w-2);
  border-style: var(--w-dash);
+}
+
+nav {
 }
 
 section {
  border-color: var(--w-blu);
- display: block;
 }
 
 main {
- border-color: var(--w-gre);
- display: inline-block;
+ border-color: var(--w-gree);
 }
 
 main section {
  border-color: var(--w-pur);
- display: inline-block;
 }
 
 main section header {
  border-color: var(--w-yel);
- display: block;
 }
 
 main section section {
  border-color: var(--w-pin);
- display: block;
 }
 //
 
@@ -234,24 +275,26 @@ section section > p {
 }
 
 footer {
+ display: block;
+}
+
+footer span {
  display: inline-block;
 }
 
 /* Navigation */
 nav {
 }
-
-menu {
-}
-
 /* Menu Item */
 
 ul,
 ol {
+ block-size: auto;
 }
 
 ul li,
 ol li {
+ block-size: 3rem;
 }
 
 ul li {
@@ -264,6 +307,15 @@ li {
 }
 
 li:checked {
+}
+
+/* Media */
+img,
+picture,
+video,
+embed,
+iframe {
+ border-color: var(--w-bla);
 }
 
 /* Anchors*/
@@ -289,9 +341,14 @@ a:visited {
 /* Forms */
 
 form {
+ block-size: auto;
 }
 
 label {
+ block-size: 3rem;
+}
+input {
+ block-size: 3rem;
 }
 
 input[type="checkbox"] {
@@ -322,56 +379,174 @@ input:placeholder-shown {
 
 // Separators
 
-hr
+hr {
+ block-size: 2rem;
+ margin-block: 10rem;
+ padding-block: 4rem;
+}
+
+/* ==========================================================================
+  Folio Wirefarmes: a) Index, b) Info, c) Folio, d) Work
+  ========================================================================== */
+
+.fo-canvas {
+ background-color: var(--w-huecanv);
+}
+
+.fo-layout {
+ background-color: var(--w-huelayout);
+}
+
+/* .fo-banner {
+    background-color: var(--w-huebanner);
+    } */
+
+.fo-nav {
+ background-color: var(--w-huenav);
+}
+
+.fo-nav-grid {
+ background-color: var(--w-huebanner);
+}
+
+.fo-nav-holder {
+ background-color: var(--w-hueholder);
+}
+.fo-menu {
+ background-color: var(--w-huemenu);
+}
+
+.fo-grid-bar {
+ /* background-color: var(--w-huegrid); */
+ border-width: var(--w-2);
+ color: var(--w-darktext-onlight);
+}
 
 /* ==========================================================================
   Folio Namespace: a) Index, b) Info, c) Folio, d) Work
   ========================================================================== */
 
+/* ==========================================================================
+  Compositon: Structure, Layout, Dimensions, Semantics
+  ========================================================================== */
+
 .fo-canvas {
+ /* background: ; */
+ /* background-color: var(--fo-brand-background); */
+ /* background-image: ; */
+ /* background-position: ; */
+ /* background-repeat: ; */
+ /* background-size: ; */
+ /* background-attachment: ; */
+ /* background-origin: ; */
+ /* background-blend-mode: ; */
 }
 
 .fo-layout {
- background-color: var(--layout-color);
+ align-items: center;
+ block-size: 100%;
+ box-sizing: border-box;
  display: block;
+ margin-inline: auto;
+ max-height: max-content;
+ max-width: 60rem;
+ min-height: min-content;
+ place-self: stretch stretch;
+ width: minmax(var(--global-base-width), 45rem);
 }
 
-.fo-layout {
- background-color: var(--layout-color);
- display: block;
+.fo-banner {
+ height: 4rem;
+ margin-block-end: var(--semantic-block-end, 2rem);
+ max-height: var(--nav-height-max);
+ position: relative;
 }
 
 .fo-nav {
- display: block;
+ block-size: auto;
+ box-sizing: border-box;
+ display: inline;
+ height: 4rem;
+ max-height: var(--nav-height-max);
+ min-height: 3rem;
+ min-width: 12rem;
+ position: absolute;
+ width: 100%;
 }
 
-.fo-grid-bar {
+.fo-nav-grid {
+ box-sizing: content-box;
  display: grid;
+ grid-auto-column: [bar-col] 1fr;
+ grid-auto-row: [bar-row] 1fr;
+ grid-template-areas: "menu-bar";
+ height: 4rem;
+ margin-block: 0%;
+ max-height: var(--nav-height-max);
+ padding-block: 0%;
 }
 
-.fo-flex-box {
+.fo-nav-flex {
+ box-sizing: border-box;
  display: flex;
  flex: 1 0 auto;
+ flex-direction: row;
+ flex-wrap: no-wrap;
+ justify-content: space-between;
+ margin-block: 0%;
+ max-height: 4rem;
+ padding-block: 0%;
 }
 
-.fo-menu-holder {
- display: block;
+/* Navigation Components */
+.fo-nav-holder {
+ display: inline-block;
+ height: 4rem;
+ position: relative;
+ text-align: center;
+ vertical-align: middle;
+ width: 4rem;
 }
 
-.fo-menu-holder label[hidden="hidden"],
-.fo-menu-holder input[type="checkbox"] {
+.fo-nav-holder {
+ block-size: 4rem;
+ inline-size: 4rem;
+ margin-block: 0px 0.25rem;
+ max-block-size: 4rem;
+ max-inline-size: 4rem;
+}
+
+.fo-nav-holder has(label[hidden="hidden"],input[type="checkbox"]) {
  display: inline-flex;
  flex: 0 0 auto;
 }
 
 /* Menu / Nav Classes for A11y and Site */
 .fo-menu {
+ box-sizing: border-box;
+ visibility: hidden;
+ z-index: 1;
 }
 
-.fo-a11-ctrl {
+/* Menu Components | Controls: Position in Flex row */
+div is(.fo-a11y-ctrl,
+.fo-site-ctrl) {
+ border: 0px;
+ padding: 0px;
 }
 
-.fo-a11y-menu {
+.fo-a11y-ctrl {
+ place-self: self-start auto;
+}
+
+.fo-nav-ctrl {
+ place-self: self-end auto;
+}
+
+nav is(.fo-nav-a11y,
+.fo-nav-site) {
+ border: inherit;
+ padding: inherit;
 }
 
 .fo-menu-site {
@@ -392,9 +567,72 @@ img.fo-logo {
 }
 
 /* Layout | Hero */
+main is(#home-main, #about-main,#contact-main,#work-main,#folio-main) {
+ block-size: fit-content(50%);
+ box-sizing: border-box;
+ margin-block-end: var(--semantic-block-end, 2rem);
+}
 .fo-grid {
+ display: grid;
+ grid-auto-column: [content-col] 1fr;
+ grid-auto-row: [content-row] 1fr;
+ grid-template-areas: "content";
 }
 
+#home-main .fo-grid {
+ grid-auto-column: [hero-client] 1fr [hero-about] 1fr;
+ grid-auto-row: [hero-work] 1fr [hero-contact] 1fr;
+ grid-template-areas:
+  "hero-client hero-about"
+  "hero-work hero-contact";
+}
+
+#folio-main .fo-grid {
+ grid-auto-column: [client-thb] 1fr [client-dtl] 1fr;
+ grid-auto-row: [client] 1fr;
+ grid-template-areas: "clientthb client-dtl";
+ margin-inline: auto;
+ max-width: ;
+ place-items: center auto;
+}
+
+#work-main .fo-grid {
+ grid-auto-column: [content-col] 1fr;
+ grid-auto-row: [content-row] 1fr;
+ grid-template-areas: "content";
+}
+
+#about-main .fo-grid {
+ grid-auto-column: [about-hero] 1fr [about-img] 1fr;
+ grid-auto-row: [about-row] 1fr;
+ grid-template-areas: "about-hero about-img";
+}
+
+#contact-main .fo-grid {
+ grid-auto-column: [contact-form] 1fr [contact-card] 1fr;
+ grid-auto-row: [contact] 1fr;
+ grid-template-areas: "contact-form contact-card";
+}
+
+.fo-flex-mainrow {
+ background-color: var(--w-huegrid);
+ display: flex;
+ flex: 1 0 auto;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ place-items: center auto;
+ width: 40rem;
+}
+
+.fo-grid-cell {
+ display: inline-block;
+ height: auto;
+ min-width: 11rem;
+ width: auto;
+}
+
+//
 .fo-hero {
 }
 
@@ -484,9 +722,6 @@ img.fo-logo {
 /* ==========================================================================
   Tier 1 Classes
   ========================================================================== */
-
-.fo-grid {
-}
 
 .fo-grid-cell {
 }
