@@ -22,13 +22,13 @@
   <meta name="description" content="lorem5">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
   <!-- Link: External Resources-->
-  <link type="text/css" href="assets/styles/main.css" rel="stylesheet">
-  <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-  <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon">
-  <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon">
-  <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon">
+  <link type="text/css" href="../assets/styles/main.css" rel="stylesheet">
+  <link type="image/png" href="../assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link type="image/x-icon" href="../assets/ico/favicon.ico" sizes="48x48" rel="icon">
+  <link type="image/png" href="../assets/ico/favicon-32x32.png" sizes="32x32" rel="icon">
+  <link type="image/png" href="../assets/ico/favicon-16x16.png" sizes="16x16" rel="icon">
 
-  <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest">
+  <link href="../assets/ico/site.webmanifest" title="Android Favicons" rel="manifest">
   <!-- Page: Home-->
   <title title="Welcome to the Digital Folio. Info: About Me, by CJ, an includive Digital Developer's Portfolio">
    Welcome to the Digital Folio. Info: About Me, by CJ, am inclusive Digital Developer's Portfolio
@@ -47,17 +47,17 @@
 
    <!-- Nav: Site Navigation -->
 
-   <nav id="hero-nav-block" title="Site Navigation">
+   <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
     <div class="fo-nav">
-     <div class="fo-grid-bar" role="presentation">
-      <div class="fo-flex-row" role="presentation">
-       <div class="fo-menu-holder fo-a11y" id="site-a11y-anchor" role="group">
+     <div class="fo-nav-grid" role="presentation">
+      <div class="fo-nav-flex" role="presentation">
+       <div class="fo-nav-holder fo-a11y" id="site-a11y-anchor" role="group">
         <nav class="fo-menu fo-a11y-ctrl" id="site-a11y" title="A11y Accessibility Controls" role="menu">
          <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
 
          <input id="fo-toggle-a11y" type="checkbox">
 
-         <div class="fo-a11y-menu" id="site-menu" role="none">
+         <div class="fo-nav-a11y" id="site-menu" role="none">
           <div class="fo-a11y-overlay" role="none">
            <div class="fo-a11y-layout" role="none">
             <ul role="menu" aria-label="Menu A11y Controls"></ul>
@@ -68,23 +68,13 @@
         </nav>
        </div>
 
-       <div
-        class="fo-logo-holder"
-        id="site-logo"
-        title="The Digital Folio's Logo: Location: Page Center"
-        role="region"
-       >
-        <img
-         class="fo-logo"
-         id="fo-hero-logo"
-         src="assets/img/"
-         title="Logo of The Digital Folio"
-         alt="Digital Folio Logo & Brand"
-         aria-label="Site Logo,Company Brand">
+       <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center" role="region">
+        <img class="fo-logo" id="fo-hero-logo" src="../assets/img/" title="Logo of The Digital Folio"
+         alt="Digital Folio Logo & Brand" aria-label="Site Logo,Company Brand">
        </div>
        <!-- Site Logo-->
 
-       <div class="fo-menu-holder" id="site-nav-anchor" role="menu">
+       <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
         <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
         <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
 
@@ -92,26 +82,19 @@
          <label for="fo-toggle-site" hidden="hidden"></label>
          <input id="fo-toggle-site" type="checkbox">
          <!-- Open a full viewport overlay and list the menu options; in large strong text -->
-         <div class="fo-site-menu" role="none">
+         <div class="fo-menu fo-site-menu" role="none">
           <div class="fo-menu-overlay" role="none">
            <div class="fo-menu-layout" role="none">
             <ul role="menu" aria-label="Menu List">
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
-                id="site-home"
-                href="index.html"
-                title="The Digital Folio: Home page by CJ"
-                aria-label="Navigation Home"
-                target="_blank"
-                rel="noreferrer,noopener"
-                >Home</a
-               ></span
-              >
+              <span class="fo-menu-text fo-scale-text fo-menu-typog">
+               <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
+                aria-label="Navigation Home" target="_blank" rel="noreferrer,noopener">
+                Home</a>
+              </span>
              </li>
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
                 id="site-folio"
                 href="_folio/folio.html"
                 title="The Digital Folio: Folio & Clients | Portfolio  by CJ"
@@ -123,8 +106,7 @@
               >
              </li>
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
                 id="site-work"
                 href="_work/profile.html"
                 title="The Digital Folio: Work & Profile | Journey by CJ"
@@ -136,8 +118,7 @@
               >
              </li>
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
                 id="site-about"
                 href="_info/about.html"
                 title="The Digital Folio: Info & More | About Me by CJ"
@@ -149,8 +130,7 @@
               >
              </li>
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
                 id="site-contact"
                 href="_info/contact.html"
                 title="The Digital Folio: Info & More | Contact by CJ"
@@ -178,16 +158,16 @@
    <main id="about-main">
     <div class="fo-grid" role="presentation">
      <div class="fo-grid-cell fo-about-row" id="about-col-1" role="none">
-      <section>
-       <h2 title="Hero: About CJ as UX Frontend Develope" hidden="hidden">Hero Section: About CJ as UX Frontend Developer</h2>
+      <header>
+       <h1 title="Hero: About CJ as UX Frontend Develope" hidden="hidden">Hero Section: About CJ as UX Frontend Developer</h1>
        <p><span>I'm</span></p>
-       <header>
+       <section>
         <h2 class="fo-heroname">CJ</h2>
-        <h3 class="fo-nametag">a UX & Front-End Developer</h3>
-        <h4 class="fo-nametag">and delivery manager</h4>
-       </header>
+        <h2 class="fo-nametag">a UX & Front-End Developer</h2>
+        <h3 class="fo-nametag">and delivery manager</h3>
+       </section>
        <p><span> focused on websites & project delivery services </span></p>
-      </section>
+      </header>
      </div>
      <div class="fo-grid-cell fo-about-row" id="about-col-2" role="none">
       <div
@@ -201,7 +181,7 @@
        <!-- https://medium.com/@woutervanderzee/responsive-images-with-srcset-and-sizes-fc434845e948 -->
        <img
         id="about-img-self"
-        src="/assets/img/about-self-hero-desktop.jpg"
+        src="/../assets/img/about-self-hero-desktop.jpg"
         alt="About Me: Self: CJ, Charlie Fowler, folio-enquiry@the-folio.digital on a graphic background."
         srcset="about-self-hero-mobile.jpg 360w, about-self-hero-desktop.jpg 720w, about-self-hero-tablet.jpg 860w"
         sizes="
@@ -229,7 +209,7 @@
         class="fo-button fo-download"
         id="download-resume"
         type="application/pdf"
-        href="assets/files/cv.pdf"
+        href="../assets/files/cv.pdf"
         title="Download a copy of CJ's CV [PDF]"
         download="download"
         target="_blank">

@@ -41,22 +41,22 @@
  </head>
  <!-- Body: Landing: Home: Magazine 2x2 Box Layout-->
 
- <body class="fo-canvas" id="hero-canvas" title="Digital Folio's Landing: Home Page">
-  <div class="fo-layout" id="hero-layout" role="presentation">
+ <body class="fo-canvas" id="home-canvas" title="Digital Folio's Landing: Home Page">
+  <div class="fo-layout" id="home-layout" role="presentation">
 
    <!-- Nav: Site Navigation -->
 
-   <nav id="hero-nav-block" title="Site Navigation">
+   <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
     <div class="fo-nav">
-     <div class="fo-grid-bar" role="presentation">
-      <div class="fo-flex-row" role="presentation">
-       <div class="fo-menu-holder fo-a11y-ctrl" role="group">
-        <nav class="fo-menu fo-a11y-menu" id="site-a11y" title="A11y Accessibility Controls" role="menu">
+     <div class="fo-nav-grid" role="presentation">
+      <div class="fo-nav-flex" role="presentation">
+       <div class="fo-nav-holder fo-a11y-ctrl" role="group">
+        <nav class="fo-nav-a11y" id="site-a11y" title="A11y Accessibility Controls" role="menu">
          <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
 
          <input id="fo-toggle-a11y" type="checkbox">
 
-         <div class="fo-a11y-menu" id="site-menu" role="none">
+         <div class="fo-nav-a11y" id="site-menu" role="none">
           <div class="fo-a11y-overlay" role="none">
            <div class="fo-a11y-layout" role="none">
             <ul role="menu" aria-label="Menu A11y Controls"></ul>
@@ -67,50 +67,35 @@
         </nav>
        </div>
 
-       <div
-        class="fo-logo-holder"
-        id="site-logo"
-        title="The Digital Folio's Logo: Location: Page Center"
-        role="region"
-       >
-        <img
-         class="fo-logo"
-         id="fo-hero-logo"
-         src="assets/img/"
-         title="Logo of The Digital Folio"
-         alt="Digital Folio Logo & Brand"
-         aria-label="Site Logo,Company Brand">
+       <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center" role="region">
+        <img class="fo-logo" id="fo-hero-logo" src="assets/img/" title="Logo of The Digital Folio"
+         alt="Digital Folio Logo & Brand" aria-label="Site Logo,Company Brand">
        </div>
        <!-- Site Logo-->
 
-       <div class="fo-menu-holder" id="site-nav-anchor" role="menu">
+       <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
         <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
         <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
 
-        <nav class="fo-nav-site" id="site-menu-nav" title="Site Navigation Menu" aria-label="Site Nav Menu">
+        <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu" aria-label="Site Nav Menu">
          <label for="fo-toggle-site" hidden="hidden"></label>
          <input id="fo-toggle-site" type="checkbox">
          <!-- Open a full viewport overlay and list the menu options; in large strong text -->
-         <div class="fo-site-menu" role="none">
+         <div class="fo-menu fo-site-menu" role="none">
           <div class="fo-menu-overlay" role="none">
            <div class="fo-menu-layout" role="none">
+            <!-- Menu Options -->
             <ul role="menu" aria-label="Menu List">
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
-                id="site-home"
-                href="index.html"
-                title="The Digital Folio: Home page by CJ"
-                aria-label="Navigation Home"
-                target="_blank"
-                rel="noreferrer,noopener"
-                >Home</a
-               ></span
-              >
+              <span class="fo-menu-text fo-scale-text fo-menu-typog">
+               <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
+                aria-label="Navigation Home" target="_blank" rel="noreferrer,noopener">
+                Home
+               </a>
+              </span>
              </li>
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
                 id="site-folio"
                 href="_folio/folio.html"
                 title="The Digital Folio: Folio & Clients | Portfolio  by CJ"
@@ -122,8 +107,7 @@
               >
              </li>
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
                 id="site-work"
                 href="_work/profile.html"
                 title="The Digital Folio: Work & Profile | Journey by CJ"
@@ -135,8 +119,7 @@
               >
              </li>
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
                 id="site-about"
                 href="_info/about.html"
                 title="The Digital Folio: Info & More | About Me by CJ"
@@ -148,8 +131,7 @@
               >
              </li>
              <li role="menuitem">
-              <span class="fo-menu-text fo-scale-text fo-menu-typog"
-               ><a
+              <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
                 id="site-contact"
                 href="_info/contact.html"
                 title="The Digital Folio: Info & More | Contact by CJ"
@@ -174,7 +156,7 @@
 
    <!-- Top Nav Bar -->
 
-   <main title="Body Section of Home Page" aria-label="Body Section">
+   <main id="home-main" aria-label="Body Section">
     <div class="fo-grid" role="presentation">
      <!-- Hero: Folio| Client-->
 
