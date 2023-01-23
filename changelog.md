@@ -7,9 +7,35 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 > - Modified, by incrementing and counting the index of commits on a daily basis
 > - (Major.Minor.Patch.CommitIndex) (By CJ)
 
+## Changelog: v0.3.0 2023.01.23
+
+> Version 0.3.0010 used for CSS Composition and Responsiveness Tests. Bump to 0.4.0 when all files pass CSS Validation.
+
+### Changed: 0.3.1.01 2023.01.21-22
+
+- Changed relative paths in linked files.
+- Bumped Minor version due to breaking changes in IA/UI design.
+
+> Outcome: GitHub pages deployed successfully and pages loaded successfully.
+
+### Moved: 0.3.0 2023.01.21-22
+
+- Moved all tier 1 files (Info, work, folio) from folders to root and flattended the sitemap/Infgormation architecture by links.
+
+## Changelog: v0.2.0 2023.01.23
+
+### Changed: 0.2.1.01
+
+- Changed relative paths in linked files.
+- Bumped Minor version due to breaking changes in IA/UI design.
+
+### Moved: 0.2.0
+
+- Moved files and folders from `/docs/` to `/root/` as GitHub Pages (Jenkins) was giving 404 errors on sub tiers. #BigReorganisation.
+
 ## Changelog: v0.1.2, 2023.01.22.
 
-### Added: 0.1-02: 2023.01.21-22
+### Added: 0.1.1.01-02: 2023.01.21-22
 
 - Added CSS Form Validations
 - Added CSS Form Elements.
