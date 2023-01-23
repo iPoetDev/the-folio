@@ -1,0 +1,158 @@
+/* ==========================================================================
+  Folio Identifers: Semantic Eelements Only
+  Identifiers primarily used for Aria descriptors, and page/element specific styling
+  Remove Unused Styles
+  Indenifier Inventory and Planning
+  ========================================================================== */
+
+// Canvas Ids
+#land-canvas,
+#about-canvas,
+#contact-canvas,
+#work-canvas,
+#folio-canvas {
+}
+
+// Layout Ids
+#land-layout,
+#about-layout,
+#contact-layout,
+#work-layout,
+#folio-layout {
+}
+
+//Nav Block Ids
+#land-nav-block,
+#about-nav-block,
+#contact-nav-block,
+#work-nav-block,
+#folio-nav-block {
+}
+//A11y Ids
+#land-a11y,
+#about-a11y,
+#contact-a11y,
+#work-a11y,
+#folio-a11y {
+}
+//Logo Ids
+#land-logo,
+#about-logo,
+#contact-logo,
+#work-logo,
+#folio-logo {
+}
+// Menu Ids
+#land-menu,
+#about-menu,
+#contact-menu,
+#work-menu,
+#folio-menu {
+}
+
+/* Landing: Hero Identifers */
+
+//Panels
+#hero-folio,
+#hero-about,
+#hero-work,
+#hero-contact {
+}
+// Panels Headers
+#hero-foliohead,
+#hero-abouthead,
+#hero-workhead,
+#hero-contacthead {
+}
+// Clients
+#hero-clients {
+}
+// Panel's Subheading
+#hero-foliosub,
+#hero-aboutsub,
+#hero-worksub,
+#hero-contactsub {
+}
+// Panel's Headshots
+#hero-self-img {
+}
+
+/* ==========================================================================
+  Info: About Identifers
+  ========================================================================== */
+
+#about-col-1,
+#about-col-2 {
+}
+
+#about-img-self {
+}
+
+#download-resume {
+}
+
+/* ==========================================================================
+  Info: Contact Identifers
+  ========================================================================== */
+
+#contact-form {
+}
+
+#contact-col-1 {
+}
+#contact-col-2 {
+}
+#contact-col-1,
+#contact-col-2 {
+}
+
+/* ==========================================================================
+  Work: Profile Identifers
+  ========================================================================== */
+
+#profile-summary {
+}
+
+#profile-education {
+}
+
+#profile-tooling {
+}
+
+/* ==========================================================================
+  Folio: Folio Identifers
+  ========================================================================== */
+
+#client-div-top {
+}
+#client-div-middle {
+}
+#client-div-bottom {
+}
+
+#client-first {
+}
+
+#client-second {
+}
+
+#client-first,
+#client-second {
+}
+
+#client-first-thumbnail {
+}
+
+#client-second-thumbnail {
+}
+
+#client-first-thumbnail,
+#client-second-thumbnail {
+}
+
+#client-first-detail {
+}
+
+#client-first-shots,
+#client-second-shots {
+}

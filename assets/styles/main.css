@@ -1,0 +1,902 @@
+/* Root Resets */
+:root {
+ /* ==========================================================================
+      THE DIGITAL FOLIO: CI SUBMISSION: 3RD PARTY RESETS: CODE SEPARATION OF CONCERNS
+  [0] Author: Charles Fowler (Own decisions and adjustments)
+  [1] Base Reset: Kevin Powell: URL:https://www.youtube.com/watch?v=2lyDv0wOQuQ,
+      Last Accessed: 2023-01-11
+  [2] A modern css reset: Elly Loel: URL https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522 ✮✮✮
+      Last Accessed: 2023-01-11:
+      Credits: Josh W Comau, Andy Bell, Adam Argyle
+      Assessment: I rewrote these resets as-is for greater learning and customisation/selection.
+      Reference: These are strictly referenced and itemised. Compare to orginal.
+                 Where is a difference, Author has concienciously omitted, or changed due to
+                 [a] scope or [b] lack of understanding/familiarity [c] Own opinon.
+      Criterion: Code separation of 3rd Party concerns, utilising Layers and Imports.
+  Rating: ✮: Minimal, ✮✮: More Opinionated, ✮✮✮: Highly Opinionated
+  ========================================================================== */
+
+ *,
+ *::before,
+ *::after {
+  box-sizing: border-box;
+ }
+
+ // [1] Resets margin, padding for explicit. [✮✮]
+ // [1] Reset font sizes, font weights. [✮✮]
+ * {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+ }
+
+ /* ==========================================================================
+  Section Comment Block
+  ========================================================================== */
+
+ html {
+  block-size: 100%;
+  block-size: 200vh + 1rem;
+  color-scheme: dark light;
+  font-size: 1rem;
+  margin: 0;
+  -webkit-text-size-adjust: none;
+ }
+
+ // [2] A11y: Smooth Scrolling to reduce motion: Credit: Adam Argyle [✮✮]
+ @media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+   scroll-behavior: smooth;
+  }
+ }
+
+ // [1] Sets a minimum height on body [✮✮]
+ // [2] Allow &sizes on blocks.[✮✮]
+ body {
+  margin: unset;
+  min-block-size: 100%;
+  min-block-size: 100vh;
+ }
+
+ // MEDIA
+ // [1,2] Ensure all media is responsive, with low specificity. [✮✮]
+ :where(img, picture, svg, video, embed, object, cavnas) {
+  display: block;
+  max-inline-size: 100%;
+ }
+
+ // [2] Ensure key media has improved defaults. [✮✮]
+ :where(img, svg, video) {
+  block-size: auto;
+  max-inline-size: 100%;
+ }
+
+ // FORMS
+ // [1,2] Standardised forms typograghpy [✮,✮✮✮]
+ :where(input, textarea, button, select) {
+  color: inherit; /*[2]*/
+  font: inherit; /*[1]*/
+  font-size: inherit; /*[2]*/
+  letter-spacing: inherit;
+  word-spacing: inherit;
+ }
+
+ // [2] Textarea to Vertical [✮✮✮]
+ // [2] Textaarea to block if browser supports. [✮✮✮]
+ :where(textarea) {
+  resize: vertical;
+ }
+ @supports (resize: block) {
+  :where(textarea) {
+   resize: block;
+  }
+ }
+ // HEADERS
+ // [2] Headers, all, no text overflow. [✮✮]
+ :where(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+ }
+
+ // 2 Default H1 to 2em inside semantic content. [✮✮✮]
+ :where(article, nav, aside, section) h1 {
+  font-size: 2em;
+ }
+
+ // LISTS, MENU (Navigations)
+ // [2,0] Position list marker inside [✮✮✮]
+ :where(menu, ul, ol) {
+  list-style-position: outside; /*[0]*/
+ }
+ // [2] ARIA Menu: remove List Style [✮✮✮],
+ // [0] Change Role to menu, was "List" [2], being more specific for a11y navigation patterns.
+ :where(menu, ul, ol)[role="menu"] {
+  list-style: none;
+ }
+ // INTERACTIVE
+ // [2] Anchor tags, no class, readability.
+ a:not([class]) {
+  text-decoration-skip-ink: auto;
+ }
+ // [2] Assure interactive elements are interactive.
+ // [2] Not Yet: Not including File inputs. Not in scope. #Exception.
+ :where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+  appearance: auto;
+  cursor: pointer;
+  touch-action: manipulation;
+ }
+ // ANIMATE
+ // [2] Form focus Outlines
+ // [2] A11y: Reduce motion for transitions
+ @media (prefers-reduced-motion: no-preference) {
+  :focus-visible {
+   transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
+  }
+  :where(:not(:active)):focus-visible {
+   transition-duration: 0.25s;
+  }
+ }
+ // [2] Use offset to highlight visible interactive focus.
+ :where(:not(:active)):focus-visible {
+  outline-offset: 5px;
+ }
+
+ // NO INTERACTION
+ // [2] Disable Button Text Selection
+ // [0] Removed: File & Webkit Selectors
+ :where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
+  -webkit-tap-highlight-color: transparent;
+  text-align: center;
+  -webkit-touch-callout: none;
+  user-select: none;
+ }
+
+ :where(button, fieldset, input, legend, select, textarea) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ }
+} //End of Custom and Corr Resets
+
+/* Root Colors */
+:root {
+ --col-fordark: var(--cpl-prime);
+ --col-prime: #e5ddd7;
+ --col-second: #f5e3e3;
+ --col-teritary: #bfbfb7;
+ --col-quartary: #c9bab0;
+ --col-qinary: #ffffff;
+
+ --bkg-ondark: #120707;
+ --bkg-prime: #250e0e;
+ --bkg-second: #3f2222;
+ --bkg-teritary: #413535;
+ --bkg-quartary: #947676;
+ --bkg-qinary: #7d7979;
+
+ color: var(--w-darktext-onlight);
+}
+
+// Box Model
+:root {
+ --border-model: border-box;
+ --box: var(--border-model, border-box);
+}
+
+// Sizings and Spacing
+:root {
+ /* Global Spacing*/
+ --global-inside-margin: 3rem;
+ --global-margin-inside: auto;
+ --global-base-width: 45rem;
+ --global-mobile-width: 17rem;
+ --global-tablet-width: 40rem;
+ --global-default-width: 45rem;
+ /* https://en.wikipedia.org/wiki/Line_length#Electronic_text*/
+ --global-line-len-em: 33em;
+ --global-line-len-ch: 66ch;
+ --mobile-line-len-em: 11em;
+ --mobile-line-len-ch: 22ch;
+ --tablet-line-len-em: 22em;
+ --tablet-line-len-ch: 44ch;
+ /* Spacing between Layuts*/
+ --layout-inside-pad: 2rem;
+ --layout-block-pad: 1rem;
+ --layout-pad-inside: 2rem;
+ --layout-pad-block: 1rem;
+ /* Navigation Spacing*/
+ --nav-height-max: 4rem;
+ /* Spacing between TB Major Semantic Blocks*/
+ --semantic-block-end: 2rem;
+ --semantic-block-start: 2rem;
+ --semantic-block-space: 4rem;
+}
+
+/* ==========================================================================
+  Typoggraphic Sizes: Font: Line-Hieghts, Type Scales
+  ========================================================================== */
+/**
+ * TypeScale: Last Accessed: 2023-01-22: URL: https://type-scale.com/
+ * Base: 16px (100%/1em)
+ * Scale: 1.333 Perfect Forth: 3:4          Perfect Fith
+ * Font Choice: Affects Visual Size
+ * Font Weight: 400-800
+   * 1rem/16.00px:         Basedline Font
+ * 1.333 rem/21.33px:    H4 Font           1.5rem/24.00px
+ * 1.777 rem/28.43px:    H3 Font           2.2.5/36px
+ * 2.369rem/37.90px:     H2 Font           3.75rem/54px
+ * 3.157rem/50.52px:     H1 Font           5.063/81.00px
+
+ */
+
+:root {
+ --size-default: clamp(1rem, -3vw * 10%, 1.2rem);
+ --scale-small: 1.115rem;
+ --scale-medium: 1.333rem;
+ --h1-default: 6.75vmin;
+ --h1-minpx: 54px;
+ --h1-max: 12vmax;
+ --h1-prefer: -6vw + var(--scale-medium);
+ --h2-default: 4.65vmin;
+ --h2-max: 18.9vmax;
+ --h3-default: 3.788vmin;
+ --h3-max: 2.333vmax;
+ --h3-prefer: -1.5vw + var(--scale-small);
+ --p-default: var(--size-default);
+}
+
+/* ==========================================================================
+  Root Components Block Sizing
+  ========================================================================== */
+
+:root {
+ --but-block: 1.75rem;
+ --btn-inline: 11ch;
+ --btn-width: 11ch;
+ --btn-minwidth: 16.5ch;
+ --btn-mobheight: 1.45rem;
+ --btn-mobwidth: 20ch;
+}
+
+/* ==========================================================================
+  Global Media Queries
+  ========================================================================== */
+
+/* switch to dark mode color */
+@media (prefers-color-scheme: dark) {
+ body {
+  background-color: var(--bkg-ondark);
+  color: var(--color-fordark);
+ }
+}
+
+@media (prefers-color-scheme: light) {
+ body {
+  background-color: var(--bkg-onlight);
+  color: var(--color-forlight);
+ }
+}
+
+/* ==========================================================================
+  Base Elements
+  ========================================================================== */
+
+h1 {
+ --h1-fluid: clamp(var(--h1-default), var(--h1-prefer), var(--h1-max));
+ font-size: unset;
+ font-size: var(--h1-default); /* Dfeauly/Fallback value */
+ font-size: var(--h1-fluid);
+}
+
+h2 {
+ --h2-fluid: clamp(var(--h2-default), -2vw + 1rem, var(--h2-max));
+ font-size: unset;
+ font-size: var(--h2-default); /* Dfeauly/Fallback value */
+ font-size: var(--h2-fluid);
+}
+
+h3 {
+ font-size: clamp(1.125rem, -2vw + 1rem, 1.625rem);
+ font-size: unset;
+ font-size: var(--h2-default); /* Dfeauly/Fallback value */
+ font-size: var(--h1-fluid);
+}
+
+p,
+label,
+span,
+li input::placeholder {
+ --p-fluid: clamp(0.925rem, -3vmax + var(--p-default), 1.15rem);
+ font-size: unset;
+ font-size: var(--p-default);
+ font-size: var(--p-fluid);
+}
+
+/* ==========================================================================
+  Folio Namespace: a) Index, b) Info, c) Folio, d) Work
+  ========================================================================== */
+
+/* ==========================================================================
+  Compositon: Structure, Layout, Dimensions, Semantics
+  ========================================================================== */
+
+body {
+ block-size: 100vh;
+ block-size: 100vb;
+ block-size: 100dvb;
+ inline-size: 100vw;
+ inline-size: 100vi;
+ inline-size: 100dvi;
+ max-block-size: 100vmin;
+ min-block-size: 100vmax;
+}
+
+body {
+ margin: 0 !important;
+}
+
+body {
+ box-sizing: content-box;
+ margin: unset;
+ padding-inline-start: 0.5rem;
+ place-self: start center;
+ text-align: center;
+}
+
+.fo-layout {
+ box-sizing: var(--box);
+ display: grid;
+ grid-template-columns: 1fr;
+ margin-inline-start: 1rem;
+ place-self: start stretch;
+}
+
+.fo-layout > nav {
+ block-size: 20vh;
+ block-size: 20vb;
+ block-size: 20dvb;
+ inline-size: 72vw;
+ inline-size: 72vi;
+ inline-size: 72vmin;
+ margin-block: 0 4vh;
+ margin-block: 0 4vb;
+ margin-block: 0 4dvb;
+ max-block-size: 64px;
+ max-inline-size: 1224px;
+ min-block-size: 48px;
+ min-inline-size: fit-content;
+}
+
+.fo-layout,
+main {
+ block-size: 100vh;
+ block-size: 100vb;
+ block-size: 100dvb;
+ inline-size: 72vw;
+ inline-size: 72vi;
+ inline-size: 95vmin;
+
+ max-inline-size: 1224px;
+ min-block-size: fit-content;
+ min-inline-size: max-content;
+}
+
+.fo-banner {
+ block-size: 4rem;
+ margin-block-end: 32px;
+ margin-inline: auto;
+ min-inline-size: fit-content;
+ text-align: center;
+}
+
+.fo-nav {
+ block-size: auto;
+ block-size: 4rem;
+ box-sizing: border-box;
+ inline-size: 72vw;
+ inline-size: 72vi;
+ inline-size: 72vmin;
+ max-block-size: 4rem;
+ max-inline-size: 1224px;
+ min-block-size: 3vmin;
+ min-inline-size: fit-content;
+}
+
+.fo-nav {
+ align-items: space-around];
+ display: inline;
+ text-align: justify;
+}
+
+nav input + label {
+ display: none;
+ inline-size: 1px;
+ margin: none;
+ visibility: hidden;
+}
+
+.fo-nav-grid {
+ block-size: 4rem;
+ box-sizing: var(--box, border-box);
+ inline-size: 100%;
+ max-block-size: 64px;
+ max-inline-size: inherit;
+ min-block-size: 64px;
+ min-inline-size: 288px;
+ padding-block: 0%;
+}
+
+.fo-nav-grid {
+ display: grid;
+ grid-auto-column: [bar-col] 1fr;
+ grid-auto-row: [bar-row] 1fr;
+ grid-template-areas: "menu-bar";
+}
+
+.fo-nav-flex {
+ box-sizing: var(--box-measure);
+ display: flex;
+ flex: 1 0 auto;
+ flex-direction: row;
+ flex-wrap: no-wrap;
+ justify-content: space-between;
+ margin-block: 0%;
+ max-block-size: 4rem;
+ padding-block: 0%;
+}
+
+/* Navigation Components */
+.fo-nav-holder {
+ block-size: 4rem;
+ display: inline-block;
+ inline-size: 4rem;
+ position: relative;
+ text-align: center;
+ vertical-align: middle;
+}
+
+.fo-nav-holder {
+ block-size: 4rem;
+ inline-size: 4rem;
+ margin-block: 0 0.25rem;
+ max-block-size: 4rem;
+ max-inline-size: 4rem;
+}
+
+.fo-nav-holder has(label[hidden="hidden"],input[type="checkbox"]) {
+ display: inline-flex;
+ flex: 0 0 auto;
+}
+
+/* Menu / Nav Classes for A11y and Site */
+.fo-menu {
+ box-sizing: var(--box-measure);
+ visibility: hidden;
+ z-index: 1;
+}
+
+/* Menu Components | Controls: Position in Flex row */
+div is(.fo-a11y-ctrl,
+.fo-site-ctrl) {
+ border: 0;
+ padding: 0;
+}
+
+.fo-a11y-ctrl {
+ place-self: self-start auto;
+}
+
+.fo-nav-ctrl {
+ place-self: self-end auto;
+}
+
+nav is(.fo-nav-a11y,
+.fo-nav-site) {
+ border: inherit;
+ padding: inherit;
+}
+
+.fo-menu-site {
+}
+
+.fo-nav-site {
+}
+
+/* Logo */
+
+.fo-logo-holder {
+}
+
+img.fo-logo {
+}
+
+.fo-logo {
+}
+
+/* Layout Main Content */
+main is(#home-main, #about-main,#contact-main,#work-main,#folio-main) {
+ block-size: fit-content;
+ margin-block-end: var(--semantic-block-end, 2rem);
+}
+
+/* Responsive: Grids */
+
+main {
+ display: grid;
+ /* margin-inline: 3%; */
+}
+
+#home-main .fo-grid {
+ grid-auto-column: [hero-client] 1fr [hero-about] 1fr;
+ grid-auto-row: [hero-work] 1fr [hero-contact] 1fr;
+ grid-template-areas:
+  "hero-client hero-about"
+  "hero-work hero-contact";
+}
+
+#folio-main .fo-grid {
+ grid-auto-column: [client-thb] 1fr [client-dtl] 1fr;
+ grid-auto-row: [client] 1fr;
+ grid-template-areas: "clientthb client-dtl";
+ margin-inline: auto;
+ max-inline-size: ;
+ place-items: center auto;
+}
+
+#work-main .fo-grid {
+ grid-auto-column: [content-col] 1fr;
+ grid-auto-row: [content-row] 1fr;
+ grid-template-areas: "content";
+}
+
+#about-main .fo-grid {
+ grid-auto-column: [about-hero] 1fr [about-img] 1fr;
+ grid-auto-row: [about-row] 1fr;
+ grid-template-areas: "about-hero about-img";
+}
+
+.fo-flex-mainrow {
+ display: flex;
+ flex: 1 0 auto;
+ flex-direction: row;
+ flex-wrap: wrap;
+ inline-size: 40rem;
+ justify-content: space-around;
+ place-items: center auto;
+}
+
+.fo-folio-imgholder {
+ inline-size: fit-content;
+ place-items: auto auto;
+ text-align: center;
+ vertical-align: middle;
+}
+
+/* ==========================================================================
+Info: Contact:
+========================================================================== */
+
+:root {
+ --prefer-inline: 28ch;
+}
+
+#contact-main .fo-grid {
+ align-items: start;
+ display: grid;
+ /* grid-auto-flow: column; */
+ grid-gap: 3rem;
+ grid-template-columns: repeat(minmax (540px, 2fr) 1fr);
+ /* grid-template-rows: 1fr; */
+ justify-items: center;
+}
+
+.fo-contact-form {
+ grid-column: 0 / 1;
+}
+
+.fo-contact-info {
+ grid-column: -1 / 0;
+}
+/*
+  Contact: Form: Base Elements
+  ========================================================================== */
+
+form {
+ align-items: start;
+ block-size: auto;
+ box-sizing: border-box;
+ line-height: 1.5;
+ margin-inline: 3%;
+ vertical-align: middle;
+}
+
+fieldset {
+ border: none;
+ padding-block: 1rem 0;
+ position: relative;
+}
+
+label {
+ block-size: 3rem;
+ block-size: 3rem;
+ box-sizing: border-box;
+ display: block;
+ inline-size: 28ch;
+ margin-inline: auto;
+ min-block-size: 44px;
+ min-inline-size: 28ch;
+ padding-inline: 2rem 0;
+ padding-inline: 0.5rem 0.75rem;
+ position: relative;
+}
+
+input:is([type="text"], [type="email"], [type="tel"]),
+textarea {
+ appearance: none;
+ border: none;
+ box-sizing: border-box;
+ display: block;
+ inline-size: clamp(44vw, 55rem + 1vw, 66vw);
+ line-height: 1.65;
+}
+
+textarea {
+ block-size: 20vh;
+ inline-size: clamp(44vw, 55rem + 1vw, 66vw);
+ max-inline-size: 66vw;
+ min-block-size: 8vh;
+ min-inline-size: 220px;
+ resize: both;
+}
+
+input:is([type="text"], [type="email"], [type="tel"]) {
+ block-size: 3rem;
+ border-bottom: 3px solid #ffffff;
+ border-left: 1.5px solid #ffffff;
+ outline: none;
+ transition: border-color 300ms;
+}
+input#add-subject + * + span {
+ display: none;
+ inline-size: 33vw;
+ left: 0;
+ position: absolute;
+ top: 48px;
+ visibility: hidden;
+}
+
+input#add-subject + * + span,
+input#add-subject + * + span::after {
+ display: inline;
+ inline-size: 200px;
+ overflow-y: visible;
+ visibility: visible;
+}
+
+input#add-subject,
+#add-subject:has(+ .fo-form-item) {
+ inline-size: 66vw;
+ max-inline-size: 66vw;
+}
+
+textarea {
+ border-bottom: 3px solid #ffffff;
+ border-left: 1.5px solid #ffffff;
+ padding-block: 0.5rem;
+ padding-inline: 0.5rem 0.75rem;
+ transition: border-color 3s ease-in-out;
+}
+
+input:is([type="radio"], [type="checkbox"]) {
+ block-size: initial;
+ display: initial;
+ inline-size: initial;
+}
+
+input[type="submit"] {
+ block-size: 1.75rem;
+ inline-size: 11ch;
+ min-inline-size: 16.5ch;
+}
+
+form:has(header, section) {
+ inline-size: 55%;
+}
+
+.fo-formhead {
+ text-rendering: optimizeLegibility;
+ -moz-text-size-adjust: auto;
+ -webkit-text-size-adjust: auto;
+ text-size-adjust: auto;
+}
+
+.fo-form-item > span {
+ display: inline-block;
+ max-inline-size: 33ch;
+ text-align: justify;
+ text-justify: auto;
+ text-rendering: optimizeLegibility;
+}
+/*
+  Form: Input Elements/Classes
+  ========================================================================== */
+
+// Input Placing and Positioning
+
+.fo-form-item {
+ align-items: start;
+ inline-size: max(35vw, 640px);
+ /* max-inline-size: max(55vw, 640px); */
+}
+
+.fo-form-item {
+ align-items: start;
+ margin-block: 3rem;
+ max-inline-size: max(44vw, 640px);
+ max-inline-size: fit-content;
+ position: relative;
+}
+
+// Input Sizing
+.fo-input {
+ --input-block: 3rem;
+ --input-height: 24px;
+ block-size: var(--input-block);
+ block-size: 3rem;
+ block-size: 3rem;
+ box-sizing: content-box;
+ display: block;
+ margin-inline: auto;
+ min-block-size: var(--input-height);
+ min-inline-size: var(--prefer-inline);
+ position: relative;
+}
+
+input[type="text"] + label,
+input:is([type="email"], [type="tel"]) + label {
+ left: 0;
+ opacity: 1;
+ pointer-events: none;
+ position: absolute;
+ top: 9px;
+ transform-origin: left;
+ transition: transform 1500ms;
+ z-index: 1;
+}
+
+// Input Styling
+input.fo-input,
+.fo-area {
+ padding-block: 0;
+ padding-inline: 0.5rem 0.75rem;
+}
+/*
+  Form: Interactive Design
+  ========================================================================== */
+
+// Element State
+
+// Visual Labeling
+label + .warning,
+label + .info {
+ margin-top: 1rem;
+ visibility: hidden;
+}
+
+.required {
+ border-color: hsla(110, 95%, 78%, 99.2%);
+}
+
+.optional {
+ border-color: hsla(0, 0%, 57%, 99.2%);
+}
+
+.invalid {
+ border-color: hsla(0, 100%, 68%, 99.2%);
+}
+
+// Visual Vlues
+
+input:focus {
+ outline: none;
+}
+
+input,
+textarea {
+ box-shadow: 5px 2.5px 2.5px rgba(144, 106, 106, 99.2%);
+}
+
+input::placeholder {
+ box-sizing: border-box;
+ color: #fff;
+ display: inline-box;
+ left: 3rem;
+ padding-inline-start: 3rem;
+}
+
+input#full-name::placeholder {
+ padding-inline-start: 3.35rem;
+}
+
+input#send-email::placeholder {
+ padding-inline-start: 3.2rem;
+}
+
+input#send-tel::placeholder {
+ padding-inline-start: 3.6rem;
+}
+
+input#add-subject::placeholder {
+ padding-inline-start: 4rem;
+}
+
+/* input:is([type="text"], [type="email"], [type="tel"]):focus,
+textarea:focus {
+ border-color: rgb(81, 86, 249);
+} */
+
+input:is([type="text"], [type="email"], [type="tel"]):focus + label,
+textarea:focus + label {
+ transform: scale(0.9) translateY(-35px);
+}
+
+input:is([type="text"], [type="email"], [type="tel"]):not(:placeholder-shown) + label {
+ transform: scale(0.9) translateY(-35px);
+}
+
+input:focus-within {
+ border: none;
+ outline: none;
+}
+
+input#add-subject:focus + label,
+input#add-subject:not(:placeholder-shown) + label {
+ transform: scale(0.9) translateY(-35px);
+}
+
+input#full-name:focus + label::after,
+input#full-name:not(:placeholder-shown) + label::after {
+ content: "e.g.Full or Company";
+ transition: content 7s ease-out-in;
+}
+
+input#send-email:focus + label::after,
+input#send-email:not(:placeholder-shown) + label::after {
+ content: "e.g. you@domain.com";
+ transition: content 3000ms linear;
+}
+input#send-tel:focus + label::after,
+input#send-tel:not(:placeholder-shown) + label::after {
+ content: "e.g. +353 85 1000 999";
+ transition: content 3000ms linear;
+}
+
+input#add-subject:focus + * + span::after,
+input#add-subject:not(:placeholder-shown) + * + span::after {
+ content: "Is this new business, a design request or an initial/general contact?";
+ display: inline;
+ font-size: 0.9rem;
+ overflow-y: visible;
+ transform: scale(0.9) translateY(42px);
+ transition: visibility 7s ease-in-out;
+ transition: content 3000ms ease-in-out;
+ visibility: visible;
+}
+
+// Validation States
+form:not(:focus):invalid,
+input:is(#full-name, #send-email, #send-tel):not(:focus):invalid
+/* input:is([type="text"], [type="email"], [type="tel"]):not(:focus):required,
+input:is([type="text"], [type="email"], [type="tel"]):not(:placeholder-shown):not(:focus):invalid  */ {
+ border-bottom: 3px solid hsla(0, 100%, 68%, 99.2%);
+ box-shadow: 5px 2.5px 2.5px hsla(0, 100%, 68%, 99.2%);
+ transition: all 5s ease-in-out;
+}
+
+input:is(#full-name, #send-email, #send-tel):not(:placeholder-shown):not(:focus):valid {
+ border-bottom: 3px solid hsla(110, 95%, 78%, 99.2%);
+}

@@ -22,17 +22,23 @@
   <meta name="description" content="lorem5">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
   <!-- Link: External Resources-->
+  <link type="text/css" href="../assets/styles/reset.css" rel="stylesheet">
+  <link type="text/css" href="../assets/styles/wireframe.css" rel="stylesheet">
+  <link type="text/css" href="../assets/styles/globals.css" rel="stylesheet">
+  <link type="text/css" href="../assets/styles/brand.css" rel="stylesheet">
+  <link type="text/css" href="../assets/styles/base.css" rel="stylesheet">
   <link type="text/css" href="../assets/styles/main.css" rel="stylesheet">
+  <link type="text/css" href="../assets/styles/typopgraphy.css" rel="stylesheet">
   <link type="image/png" href="../assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
   <link type="image/x-icon" href="../assets/ico/favicon.ico" sizes="48x48" rel="icon">
   <link type="image/png" href="../assets/ico/favicon-32x32.png" sizes="32x32" rel="icon">
   <link type="image/png" href="../assets/ico/favicon-16x16.png" sizes="16x16" rel="icon">
 
-  <link href="../assets/ico/site.webmanifest" title="Android Favicons" rel="manifest">
+  <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest">
   <!-- Page: Home-->
   <title
-   title="Welcome to the Digital Folio. Work: Professional Profile, by CJ, an includive Digital Developer's Portfolio">
-   Welcome to the Digital Folio. Work: Professional Profile, by CJ, am inclusive Digital Developer's Portfolio
+   title="Welcome to the Digital Folio. Folio: Portfolio of Clients, by CJ, an includive Digital Developer's Portfolio">
+   Welcome to the Digital Folio. Folio: Portfolio of Clients, by CJ, am inclusive Digital Developer's Portfolio
   </title>
   <!--  0] Namespace F: Folio: Namespace for The Digital Folio. Alias: fo-.
       1] Alias:    C: Composition Comment -> Semantics & Layout
@@ -41,10 +47,10 @@
       4] Alias:    E: Exception/Variant Comment
   -->
 
-  <!-- Body: Work: Home: Magazine 2x2 Box Layout-->
+  <!-- Body: Folio:  Home: Magazine 2x2 Box Layout-->
  </head>
- <body class="fo-canvas" id="work-canvas">
-  <div class="fo-layout" id="work-layout" role="presentation">
+ <body class="fo-canvas" id="folio-canvas" title="Digital Folio's Clients: Portfolio Page">
+  <div class="fo-layout" id="folio-layout" role="presentation">
 
    <!-- Nav: Site Navigation -->
 
@@ -54,7 +60,7 @@
       <div class="fo-nav-flex" role="presentation">
        <div class="fo-nav-holder fo-a11y-ctrl" role="group">
         <nav class="fo-nav-a11y" id="site-a11y" title="A11y Accessibility Controls" role="menu">
-         <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
+         <label for="fo-toggle-a11y" hidden="hidden"></label>
 
          <input id="fo-toggle-a11y" type="checkbox">
 
@@ -68,14 +74,23 @@
          <!-- A11y Controls -->
         </nav>
        </div>
-
-       <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center" role="region">
-        <img class="fo-logo" id="fo-hero-logo" src="../assets/img/" title="Logo of The Digital Folio"
-         alt="Digital Folio Logo & Brand" aria-label="Site Logo,Company Brand">
-       </div>
+       <!-- Site Logo-->
+        <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center" role="region">
+        <picture>
+          <source srcset=" ../assets/img/logo-placeholder135x68.png"
+             media="(max-width: 412px)">
+          <source srcset="../assets/img/logo-placeholder.png"
+             media="(max-width: 720px)">
+          <source srcset=" ../assets/img/logo-placeholder.png"
+             media="(max-width: 960px)">
+          <source srcset=" ../assets/img/logo-placeholder.png"
+             media="(max-width: 1268px)">
+          <img src="../assets/img/logo-placeholder.png" alt="Digital Folio Logo & Brand" aria-label="Site Logo,Company Brand">
+        </picture>
+        </div>
        <!-- Site Logo-->
 
-       <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
+       <div class="fo-nav-holder fo-site-ctrl" id="site-nav" role="menu">
         <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
         <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
 
@@ -91,7 +106,8 @@
               <span class="fo-menu-text fo-scale-text fo-menu-typog">
                <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
                 aria-label="Navigation Home" target="_blank" rel="noreferrer,noopener">
-                Home</a>
+                Home
+               </a>
               </span>
              </li>
              <li role="menuitem">
@@ -156,76 +172,78 @@
 
    <!-- Top Nav Bar -->
 
-   <main id="work-main">
-    <div class="fo-grid fo-work" role="presentation">
-     <div class="fo-nav-flex" id="profile-summary">
-      <div class="fo-grid-inner">
-       <div class="fo-column fo-col1 fo-work-label">
-        <aside>
-         <h1>Experiences<br>
-          <small></small>
-         </h1>
-        </aside>
-       </div>
-       <div class="fo-column fo-col2">
-        <section>
-         <h2 title="" hidden="hidden">:</h2>
-         <p><strong></strong></p>
-        </section>
-       </div>
-       <div class="fo-column fo-col3">
-        <section>
-         <h2 title="Work: CJ's Experiences" hidden="hidden">Work: CJ's Experiences</h2>
-         <p></p>
-        </section>
+   <hr class="fo-separator" id="client-div-top">
+   <main id="folio-main">
+    <div class="fo-grid" id="client-first" role="presentation">
+      <div class="fo-grid-cell" id="client-first-thumbnail">
+       <div class="fo-folio-imgholder" role="img" aria-label=".">
+        <img class="fo-client-image" id="client-first-shots" src="../assets/img/svg-client300-1-1.svg" alt=".">
+        <!--
+        srcset="../assets/img/client-first.jpg 360w, ../assets/img/client-first.jpg 720w, ../assets/img/client-first.jpg 860w" sizes=" (min-width: 1440px) 720px,
+        (min-width: 1620px) 860px, 100vw">-->
        </div>
       </div>
-     </div>
-     <div class="fo-nav-flex" id="profile-education">
-      <div class="fo-grid-inner">
-       <div class="fo-col1 fo-work-label">
-        <aside>
-         <h1>Education<br>
-          <small></small>
-         </h1>
-        </aside>
-       </div>
-       <div class="fo-col2">
-        <aside>
-         <p><strong></strong></p>
-        </aside>
-       </div>
-       <div class="fo-col3">
-        <section>
-         <h2 title="Work: CJ's Education Bio" hidden="hidden">CJ's Education Bio</h2>
-         <p></p>
-        </section>
-       </div>
+      <div class="fo-grid-cell fo-folio-col2 fo-client" id="client-first-detail">
+       <header>
+        <h1>A Running Club</h1>
+        <h2>Love Running: A club website</h2>
+       </header>
+       <section>
+        <h2 title="" hidden="hidden">:</h2>
+        <p><strong class="fo-client-label">Brief:</strong></p>
+       </section>
+       <section>
+        <h2 title="" hidden="hidden">:</h2>
+        <p><strong class="fo-client-label">Outline:</strong></p>
+       </section>
+       <section>
+        <h2 title="" hidden="hidden">:</h2>
+        <p><strong class="fo-client-label">URL:</strong><a href="">Client 1 URL </a></p>
+       </section>
+       <section>
+        <h2 title="" hidden="hidden">:</h2>
+        <p><strong class="fo-client-label">Delivery:</strong></p>
+       </section>
       </div>
-     </div>
-     <div class="fo-nav-flex" id="profile-tooling">
-      <div class="fo-grid-inner">
-       <div class="fo-col1 fo-profile-label">
-        <aside>
-         <h1>Tooling<br>
-          <small></small>.
-         </h1>
-        </aside>
-       </div>
-       <div class="fo-col2">
-        <aside>
-         <p><strong></strong></p>
-        </aside>
-       </div>
-       <div class="fo-col3">
-        <section>
-         <h2 title="Work: CJ's Preferred Tooling" hidden="hidden">Preferred Tooling</h2>
-         <p></p>
-        </section>
-       </div>
-      </div>
-     </div>
     </div>
+    <hr class="fo-separator" id="client-div-middle">
+    <div class="fo-grid" id="client-second" role="presentation">
+
+      <div class="fo-grid-cell fo-client" id="client-second-detail">
+       <header>
+        <h1>Cafe and Coffe Roaters</h1>
+        <h2>Coder's Coffee</h2>
+       </header>
+       <section>
+        <h2 title="" hidden="hidden">:</h2>
+        <p><strong class="fo-client-label">Brief:</strong></p>
+       </section>
+       <section>
+        <h2 title="" hidden="hidden">:</h2>
+        <p><strong class="fo-client-label">Outline:</strong></p>
+       </section>
+       <section>
+        <h2 title="" hidden="hidden">:</h2>
+        <p><strong class="fo-client-label">URL:</strong><a href="">Client 2 URL </a></p>
+       </section>
+       <section>
+        <h2 title="" hidden="hidden">:</h2>
+        <p><strong class="fo-client-label">Delivery:</strong></p>
+       </section>
+      </div>
+      <div class="fo-grid-cell" id="client-second-thumbnail">
+       <div class="fo-folio-imgholder" role="img" aria-label=".">
+        <img
+         class="fo-client-image"
+         id="client-second-shots"
+         src="../assets/img/svg-client300-1-1.svg" alt="." aria-label=".">
+        <!--
+        srcset="../assets/img/client-first.jpg 360w, ../assets/img/client-first.jpg 720w, ../assets/img/client-first.jpg 860w" sizes=" (min-width: 1440px) 720px,
+        (min-width: 1620px) 860px, 100vw">-->
+       </div>
+      </div>
+    </div>
+    <hr class="fo-separator" id="client-div-bottom">
    </main>
   </div>
  </body>
