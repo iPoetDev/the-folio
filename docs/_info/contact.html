@@ -22,7 +22,13 @@
   <meta name="description" content="lorem5">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
   <!-- Link: External Resources-->
+  <!-- <link type="text/css" href="../assets/styles/reset.css" rel="stylesheet">
+  <link type="text/css" href="../assets/styles/wireframe.css" rel="stylesheet"> -->
+  <!-- <link type="text/css" href="../assets/styles/globals.css" rel="stylesheet">
+  <link type="text/css" href="../assets/styles/base.css" rel="stylesheet"> -->
   <link type="text/css" href="../assets/styles/main.css" rel="stylesheet">
+  <!-- <link type="text/css" href="../assets/styles/typopgraphy.css" rel="stylesheet">
+  <link type="text/css" href="../assets/styles/brand.css" rel="stylesheet"> -->
   <link type="image/png" href="../assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
   <link type="image/x-icon" href="../assets/ico/favicon.ico" sizes="48x48" rel="icon">
   <link type="image/png" href="../assets/ico/favicon-32x32.png" sizes="32x32" rel="icon">
@@ -53,9 +59,9 @@
       <div class="fo-nav-flex" role="presentation">
        <div class="fo-nav-holder fo-a11y-ctrl" role="group">
         <nav class="fo-nav-a11y" id="site-a11y" title="A11y Accessibility Controls" role="menu">
-         <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
 
          <input id="fo-toggle-a11y" type="checkbox">
+         <label for="fo-toggle-a11y" hidden="hidden"></label>
 
          <div class="fo-nav-a11y" id="site-menu" role="none">
           <div class="fo-a11y-overlay" role="none">
@@ -69,8 +75,17 @@
        </div>
 
        <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center" role="region">
-        <img class="fo-logo" id="fo-hero-logo" src="../assets/img/" title="Logo of The Digital Folio"
-         alt="Digital Folio Logo & Brand" aria-label="Site Logo,Company Brand">
+        <picture>
+          <source srcset=" ../assets/img/logo-placeholder135x68.png"
+             media="(max-width: 412px)">
+          <source srcset="../assets/img/logo-placeholder.png"
+             media="(max-width: 720px)">
+          <source srcset=" ../assets/img/logo-placeholder.png"
+             media="(max-width: 960px)">
+          <source srcset=" ../assets/img/logo-placeholder.png"
+             media="(max-width: 1268px)">
+          <img src="../assets/img/logo-placeholder.png" alt="Digital Folio Logo & Brand" aria-label="Site Logo,Company Brand">
+        </picture>
        </div>
        <!-- Site Logo-->
 
@@ -79,8 +94,8 @@
         <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
 
         <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu" aria-label="Site Nav Menu">
-         <label for="fo-toggle-site" hidden="hidden"></label>
          <input id="fo-toggle-site" type="checkbox">
+         <label for="fo-toggle-site" hidden="hidden"></label>
          <!-- Open a full viewport overlay and list the menu options; in large strong text -->
          <div class="fo-menu fo-site-menu" role="none">
           <div class="fo-menu-overlay" role="none">
@@ -157,15 +172,15 @@
 
    <main id="contact-main">
     <div class="fo-grid" role="presentation">
-     <div class="fo-grid-cell fo-contact-form" id="contact-col-1" role="none">
+     <div class="fo-grid-cell fo-contact-form" id="contact-start" role="none">
       <header class="fo-grid-header">
        <h1 class="fo-formhead" title="Contact Header: Contact Options">Contact Me</h1>
        <h2 class="fo-byline" title="Contact Form Byline: Call to action to complete form">
         Send a design a request or work enquiry or a personalised message
        </h2>
       </header>
-      <section class="fo-form-sub" id="contact-form-section">
-       <h2  title="The Digital Folio's Contact Form" hidden="hidden">Contact Form</h2>
+      <section class="fo-grid-section" id="contact-form-section">
+       <h2 title="The Digital Folio's Contact Form" hidden="hidden">Contact Form</h2>
        <form
         class="fo-form"
         id="contact-form"
@@ -176,85 +191,115 @@
         method="post"
         aria-label="contact form">
         <div class="fo-form-flex" role="none">
-         <div class="fo-form-item" role="none">
-          <p><span>All inputs are required</span></p>
-          <label for="full-name">
-           <span class="fo-label" id="contact-full">Your Full Name</span><br>
+         <!--Name-->
+         <fieldset>
+          <!-- <p id="inputs-key"><span class="fo-label">All inputs are required</span> :
+           <span class="fo-key required"></span><span class="fo-label"> : <strong>Required</strong></span> <span class="fo-key optional"></span><span class="fo-label"> : Optional | </span> <span class="fo-key invalid"></span><span class="fo-label"> : Invalid</span><label class="fo-clear" for="reset"><input id="reset" type="reset" value="Clear"></label></p> -->
+          <div class="fo-form-item" role="none">
            <input
-            class="fo-input fo-name fo-valid"
-            id="full-name"
-            type="text"
-            placeholder="Add Full Name, or Company Name"
-            required="required"
-            aria-label="input name"
-            aria-labelledby="contact-full">
+           class="fo-input fo-name"
+           id="full-name"
+           type="text"
+           placeholder="e.g. Full or Company"
+           minlength="4"
+           maxlength="30"
+           required="required"
+           aria-label="input name"
+           aria-labelledby="contact-full">
+           <label for="full-name">
+            <span class="fo-label" id="contact-full">Name:</span>
            </label>
-           <p hidden="hidden"><span>A full name is a good choice: please supply first and last name</span></p>
-         </div>
-         <div class="fo-form-item" role="none">
-          <label for="send-email">
-           <span class="fo-label" id="contact-email">Your Email:</span><br>
+           <!-- <span hidden="hidden" class="fo-hint warning">A full name is desired.<br> Length &gt; 4 and &lt; 30</span> -->
+          </div>
+          <!--Email-->
+          <div class="fo-form-item" role="none">
            <input
-            class="fo-input fo-email fo-valid"
-            id="send-email"
-            type="email"
-            placeholder="Add Email Hint:'@'"
-            required="required"
-            aria-label="input email"
-            aria-labelledby="contact-email">
+           class="fo-input fo-email"
+           id="send-email"
+           type="email"
+           placeholder="e.g., you@domain.com"
+           pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/"
+           minlength="7"
+           required="required"
+           aria-label="input email"
+           aria-labelledby="contact-email">
+           <label for="send-email">
+            <span class="fo-label" id="contact-email">Email:</span>
            </label>
-           <p hidden="hidden"><span>A proper email address is essential</span></p>
-         </div>
-         <div class="fo-form-item" role="none">
-          <label for="add-subject">
-           <span class="fo-label" id="contact-subject">Add a Subject:</span><br>
+           <!-- <span hidden="hidden" class="fo-hint warning">Enter an email address</span> -->
+          </div>
+          <!--Phone-->
+          <div class="fo-form-item" role="none">
            <input
-            class="fo-input fo-topic fo-valid"
-            id="add-subject"
-            type="text"
-            placeholder="Add a Subject"
-            required="required"
-            aria-label="input subject"
-            aria-labelledby="contact-subject">
-          </label>
-          <p hidden="hidden"><span>Please supply a informative subject</span></p>
-         </div>
-         <div class="fo-form-item" role="none">
-          <label for="body-message">
-           <span class="fo-label fo-newline" id="contact-message">Create a: Design Request | Work Enquiry | Direct Message</span><br>
+           class="fo-input fo-email"
+           id="send-tel"
+           type="tel"
+           title="Optional: i.e. +Country Prefix Number and/or (Extension)"
+           minlength="9"
+           maxlength="18"
+           placeholder="e.g. +353 85 1000 999"
+           aria-label="input email">
+           <label for="send-tel">
+            <span class="fo-label" id="contact-tel">Phone:</span>
+           </label>
+           <!-- <span hidden="hidden"  class="fo-hint info">Option: +country & number</span> -->
+          </div>
+          <!--Subject-->
+          <div class="fo-form-item" role="none">
+           <input
+           class="fo-input fo-topic"
+           id="add-subject"
+           type="text"
+           placeholder=" ..."
+           minlength="5"
+           maxlength="35"
+           required="required"
+           aria-label="input subject">
+           <label for="add-subject">
+            <span class="fo-label" id="contact-subject">Subject:</span>
+           </label>
+           <span>Q: </span>
+           <!-- <span hidden="hidden" class="fo-hint warning">At least 5 and max of 35 in length.</span> -->
+          </div>
+          <!--Message-->
+          <div class="fo-form-item" role="none">
            <textarea
-            class="fo-input fo-message fo-valid"
+            class="fo-area fo-message"
             id="body-message"
             name="contact-message"
+            title="Please complete your message. &#10;You can resize this area for more writing space"
             spellcheck="true"
             cols="70"
-            minlength="100"
-            maxlength="350"
-            placeholder="Create a brief request, more than 100, less than 350 characters"
+            minlength="50"
+            maxlength="3000"
+            placeholder="Create a brief request:&#10; - More than 50 chars. &#10; - Less than 3000 chars"
             required="required"
             wrap="soft"
             aria-label="textarea"
             aria-labelledby="contact-message"
             aria-multiline="true"></textarea>
-          </label>
-          <p hidden="hidden"><span>Please have a detailed message of at least 100 characters (Max: 350)</span></p>
-         </div>
-         <div class="fo-form-item" role="none">
-          <label for="submit-send">
+           <label for="body-message"><br>
+            <span  class="fo-label" id="contact-message">Message:</span>
+           </label>
+           <!-- <span hidden="hidden" class="fo-hint warning">More than 50 and less than 3000.</span> -->
+          </div>
+          <div class="fo-form-item" role="none">
            <input
             class="fo-input fo-button"
             id="submit-send"
             type="submit"
             aria-label="submit button">
-           <span class="fo-hint"> or press Enter</span>
-          </label>
-         </div>
+           <label for="submit-send">
+            <span class="fo-label"> or press Enter</span>
+           </label>
+          </div>
+         </fieldset>
         </div>
        </form>
       </section>
      </div>
-     <div class="fo-grid-cell" id="contact-col-2" role="none">
-      <section class="fo-form-sub fo-contact-card" id="contact-card-block">
+     <div class="fo-grid-cell fo-contact-info" id="contact-end" role="none">
+      <section class="fo-contact-card" id="contact-card-block">
        <h2 title="Contact Card" hidden="hidden">Contact Card</h2>
        <div class="fo-card-flex" role="none">
         <ul class="fo-card-holder" role="none">

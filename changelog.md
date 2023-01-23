@@ -2,9 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/) and adheres to [Semantic Versioning](http://semver.org/). Modified, by incrementing and counting the index of commits on a daily basis (Major.Minor.Patch.CommitIndex) (By CJ)
+The format is based on [Keep a Changelog](http://keepachangelog.com/) and adheres to [Semantic Versioning](http://semver.org/).
 
-## Changelog: v0.1.0, 2023.19.01
+> - Modified, by incrementing and counting the index of commits on a daily basis
+> - (Major.Minor.Patch.CommitIndex) (By CJ)
+
+## Changelog: v0.1.2, 2023.01.22.
+
+### Added: 0.1-02: 2023.01.21-22
+
+- Added CSS Form Validations
+- Added CSS Form Elements.
+- Added .
+
+### Changed: 0.1.2.01-03:
+
+- Changed Contact.html - Improvemets to form html and element ordering.
+- Changed 2nd refactor of animated pure CSS Form inputs and Validation
+  > Mate Marsechalko:
+  >
+  > - [Advanced CSS-only Input Fields — Interactive, Animated, Validated](https://matemarschalko.medium.com/advanced-css-only-input-fields-interactive-animated-validated-d7ecff3cde8c)
+  > - [Advanced Form Validation With Only HTML and CSS](https://medium.com/better-programming/advanced-form-validation-with-only-html-and-css-e92fa3dc9b54)
+- Changed - more refactoring CSS Grid layouts using vw, vh,vmin, vmax, for fluid ayouts (Refer Ero Meyer).
+- ToDo: Mark up the code with references and log into the resume builder.
+
+## Changelog: v0.1.0, 2023.01.19
 
 ### Patch version: Bump to version 0.1.0:
 
@@ -163,7 +185,9 @@ No planned work today due to a private appointment/engagement.
 - Changed .markdownlint - minor update.
 - Changed Changelog.md - Major update (this).
 
-> <small>Decided to not locate, for now, the website's html in the root of the repository. Not yet known if Jenkins/Gitub Pages can take this config or require all html and css in root of repoistory | and if this complies with CI Assessment expectations.</small>
+> <small>Decided to not locate, for now, the website's html in the root of the repository. Not yet known if Jenkins/Gitub Pages can take this config or require all html and css in root of repoistory.
+>
+> - If this complies with CI Assessment expectations.</small>
 
 ### Changed: 12:00pm
 
@@ -191,7 +215,8 @@ No planned work today due to a private appointment/engagement.
 
 > - <small>_**Documentation as Code**_: Aims to reduce documentation bloat in the readme, and this is, exceptionally, beyond the requirements of assessment criteria.
 > - Codig Style conformity, consistent and adherence are enforced using linting and prettifying extensions and configruation files when configured for npm, or in Gitpod terms, pnpm.
-> - The Rules/Linting are a demonstratble adherence to Code Styles as per the assessment criteria _Pass_ and _Distinction_ performance levels and improve the overall build quality of my products when testing and verifying.</small>
+> - The Rules/Linting are a demonstratble adherence to Code Styles as per the assessment criteria _Pass_ and _Distinction_ performance levels.
+> - To improve the overall build quality of my products when testing and verifying.</small>
 
 ### Changed: 9pm-12:39am
 
