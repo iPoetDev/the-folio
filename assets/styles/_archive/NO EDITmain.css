@@ -1,0 +1,912 @@
+/* ==========================================================================
+  The Folio: Layer Established Ordering
+  References: http://css-tricks.com/css-cascade-layers, Last accessed: 2023-01-24
+  Why: a) Code Organisation / Ordering; b) Code Browsing using Code Folding in IDE
+  #   Cascade     Layer               Purpose
+  1)  Least:        Reset               Resets UA Styles and Asserts Weakness base styles
+  2)                  global-defaults Author Defaults and base Design Tokens
+  3)                  global-sizes     Author Core Sizes
+  4)                  brand folio       Site Branding for The Digital Folio Design
+  5)                  preferences      Site Level User Choices
+  6)                  typography      Site Type & Font Copy style
+  7)                  composite        Site Composite Styles: Canvas, Layout, Navigation, Body, Footer
+  8)                  ia                    Site IA Styles: Site Regional Style for page group styles/isolation of styles.
+  8)                  utility              Site Cross Uses styles.
+  9)                  blocks             Component specific styles for unique block level styles
+  10)                except             Exceptions / Unqiues / Variants
+  11) Powerful:  unlayer            Unlayers, most closely related / unique styles as needed.
+                                            & or most specific styles and powerful styles.
+  ========================================================================== */
+
+@layer reset,  global-defaults,  global-sizes,  brand-folio,  preferences,   typography,  responsive;
+@layer compose,  compose.canvas,   compose.layout,  compose.banner,   compose.navigation,   compose.body,   compose.footer;
+@layer ia,  ia.landing,  ia.info,  ia.clients,  ia.work;
+@layer utilities,  blocks,  except;
+
+/*
+  The Folio: Reset Layer
+  ========================================================================== */
+
+@layer reset {
+    /* Root Resets */
+    @layer root {
+        /* Global Reset
+      /* ==========================================================================
+            THE DIGITAL FOLIO: CI SUBMISSION: 3RD PARTY RESETS: CODE SEPARATION OF CONCERNS
+            [0] Author: Charles Fowler (Own decisions and adjustments)
+            [1] Base Reset: Kevin Powell: URL:https://www.youtube.com/watch?v=2lyDv0wOQuQ,
+            Last Accessed: 2023-01-11
+            [2] A modern css reset: Elly Loel: URL https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522 ✮✮✮
+            Last Accessed: 2023-01-11:
+            Credits: Josh W Comau, Andy Bell, Adam Argyle
+            Assessment: I rewrote these resets as-is for greater learning and customisation/selection.
+            Reference: These are strictly referenced and itemised. Compare to orginal.
+                      Where is a difference, Author has concienciously omitted, or changed due to
+                      [a] scope or [b] lack of understanding/familiarity [c] Own opinon.
+            Criterion: Code separation of 3rd Party concerns, utilising Layers and Imports.
+            Rating: ✮: Minimal, ✮✮: More Opinionated, ✮✮✮: Highly Opinionated
+        ========================================================================== */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* [1] Resets margin, padding for explicit. [✮✮]
+        [1] Reset font sizes, font weights. [✮✮] */
+        * {
+            font: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+        Root Resets
+        ========================================================================== */
+
+        html {
+            block-size: 100%;
+            block-size: calc(100vh + 1rem);
+            color-scheme: dark light;
+            font-size: 1rem;
+            margin: 0;
+            -webkit-text-size-adjust: none;
+        }
+    } /*root*/
+
+    /*
+    View Resets
+    ========================================================================== */
+
+    @layer view {
+        /* [1] Sets a minimum height on body [✮✮]
+        [2] Allow &sizes on blocks.[✮✮]*/
+        body {
+            margin: unset;
+            min-block-size: 100%;
+            min-block-size: 100vh;
+        }
+    } /*view*/
+
+    /*
+    Media Resets
+    ========================================================================== */
+
+    @layer media {
+        /* MEDIA
+          [1,2] Ensure all media is responsive, with low specificity. [✮✮]*/
+        :where(img, picture, svg, video, embed, object) {
+            display: block;
+            max-inline-size: 100%;
+        }
+
+        /* [2] Ensure key media has improved defaults. [✮✮]*/
+        :where(img, svg, video) {
+            block-size: auto;
+            max-inline-size: 100%;
+        }
+    } /*Media*/
+
+    /*
+    Forms Resets
+    ========================================================================== */
+
+    @layer forms {
+        /* FORMS
+          [1,2] Standardised forms typograghpy [✮,✮✮✮]*/
+        :where(input, textarea, button, select) {
+            color: inherit; /*[2]*/
+            font: inherit; /*[1]*/
+            font-size: inherit; /*[2]*/
+            letter-spacing: inherit;
+            word-spacing: inherit;
+        }
+
+        /* [2] Textarea to Vertical [✮✮✮]
+              [2] Textaarea to block if browser supports. [✮✮✮]*/
+        :where(textarea) {
+            resize: vertical;
+        }
+
+        @supports (resize: block) {
+            :where(textarea) {
+                resize: block;
+            }
+        } /*Supports Resize*/
+    } /*Forms*/
+
+    /*
+    Semantic Resets
+    ========================================================================== */
+
+    @layer semantics {
+        /* HEADERS
+          [2] Headers, all, no text overflow. [✮✮]*/
+        :where(p, h1, h2, h3, h4, h5, h6) {
+            overflow-wrap: break-word;
+        }
+
+        /* 2 Default H1 to 2em inside semantic content. [✮✮✮]*/
+        :where(article, nav, aside, section) h1 {
+            font-size: 2em;
+        }
+
+        /* LISTS, MENU (Navigations)
+        /* [2,0] Position list marker inside [✮✮✮]*/
+        :where(menu, ul, ol) {
+            list-style-position: outside; /*[0]*/
+        }
+
+        /* [2] ARIA Menu: remove List Style [✮✮✮],
+            [0] Change Role to menu, was "List" [2], being more specific for a11y navigation patterns.*/
+        :where(menu, ul, ol)[role="menu"] {
+            list-style: none;
+        }
+    } /*semantics*/
+
+    /*
+    UI Resets
+    ========================================================================== */
+
+    @layer ui {
+        /* INTERACTIVE
+          [2] Anchor tags, no class, readability.*/
+        a:not([class]) {
+            text-decoration-skip-ink: auto;
+        }
+
+        /* [2] Assure interactive elements are interactive.
+      /* [2] Not Yet: Not including File inputs. Not in scope. #Exception.*/
+        :where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
+            appearance: auto;
+            cursor: pointer;
+            touch-action: manipulation;
+        }
+    } /*ui*/
+
+    /*
+    Ineractions Resets
+    ========================================================================== */
+
+    @layer interactions {
+        /* NO INTERACTION*/
+        /* [2] Disable Button Text Selection*/
+        /* [0] Removed: File & Webkit Selectors*/
+        /* Validated:
+        */
+        :where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
+            -webkit-tap-highlight-color: transparent;
+            text-align: center;
+            -webkit-touch-callout: none;
+            user-select: none;
+        }
+
+        :where(button, fieldset, input, legend, select, textarea) {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            border: none;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    } /*interactions*/
+} /*Reset*/
+
+/*  ================================================================================
+    *   End of Reset Layer
+    *   ===============================================================================*/
+
+/*  ================================================================================
+*       Wireframes:
+*       Set Wiresframe Outlines Colors and Borders
+*   ================================================================================*/
+
+@layer wireframe {
+    :root {
+        --wf-surface1: #fff;
+        --wf-surface2: #ff94e6;
+        --wf-surface3: #87dafb;
+        --wf-surface4: #7ffeb6;
+        --wf-surface5: #e17afb;
+        --wf-surface6: #eeff6f;
+
+        --wf-border1: 2px dotted var(--wf-surface1);
+        --wf-border2: 2px dotted var(--wf-surface2);
+        --wf-border3: 2px dotted var(--wf-surface3);
+        --wf-border4: 2px dotted var(--wf-surface4);
+        --wf-border5: 3px dotted var(--wf-surface5);
+        --wf-border6: 2px dotted var(--wf-surface6);
+    }
+}
+
+/*  ================================================================================
+*   Global Defaults
+*   Defaults are not resets. Purpose: To establish site wide defaults for certain high frequent elements
+*   ================================================================================*/
+
+@layer global-default {
+    @layer boxes {
+        /* Box Model: */
+        :root {
+            --border-model: content-box;
+            --box: var(--border-model, border-box);
+        }
+    }
+
+    @layer display {
+        :root {
+            --mobile-portait: column;
+            --mobile-lanscape: row;
+            --fixed-landscape: row;
+            --fixed-portrait: column;
+            --flex-direction: column;
+        }
+    }
+} /*Defaults*/
+
+/* ================================================================================*/
+
+@layer gloabl-sizes {
+    /*
+ Root Components Block Sizing
+ ========================================================================== */
+    @layer sizing-spaces {
+        /* Sizings and Spacing */
+        :root {
+            /* Global Spacing*/
+            --global-inside-margin: 3rem;
+            --global-margin-inside: auto;
+            --global-min-width: 266px;
+            --global-max-width: 1224px;
+            /*
+    --global-mobile-width: 26.5rem;
+   --global-tablet-width: 42rem;
+   --global-default-width: 76.5
+   */
+
+            --response-min-width: initial;
+            --response-max-width: initial;
+            --response-prefer-width: 50%;
+
+            /* https://en.wikipedia.org/wiki/Line_length#Electronic_text*/
+            --global-line-len-em: 33em;
+            --global-line-len-ch: 66ch;
+            --mobile-line-len-em: 11em;
+            --mobile-line-len-ch: 22ch;
+            --tablet-line-len-em: 22em;
+            --tablet-line-len-ch: 44ch;
+
+            /* Spacing between Layots*/
+            --layout-inside-pad: 2rem;
+            --layout-block-pad: 2rem;
+            --layout-block-end: 4rem;
+            --layout-pad-inside: 2rem;
+            --layout-pad-block: 1rem;
+
+            /* Navigation Spacing*/
+            --nav-block-max: 4rem;
+            --nav-block-min: 3rem;
+
+            /* Spacing between TB Major Semantic Blocks*/
+            --semantic-block-end: 2rem;
+            --semantic-block-start: 2rem;
+            --semantic-block-space: 4rem;
+
+            /* Grids */
+            --gap-default: 4rem;
+        }
+    } /*Sizing
+
+ /*
+    Root Components Block Sizing
+    ========================================================================== */
+    @layer component-size {
+        @layer blocks {
+            :root {
+                --nav-max-ctrl: 4rem;
+                --nav-min-ctrl: 3rem;
+            }
+        }
+
+        @layer button {
+            :root {
+                --but-block: 1.75rem;
+                --btn-inline: 11ch;
+                --btn-width: 11ch;
+                --btn-minwidth: 16.5ch;
+                --btn-mobheight: 1.45rem;
+                --btn-mobwidth: 20ch;
+            }
+        } /* Button */
+    } /* Component Sizing*/
+} /*Global Sizing and Spacing*/
+
+/*
+*  The  Digital Folio : Brannding & Styles
+   ========================================================================== */
+
+@layer brand-folio {
+    /* Brand: Light Colors */
+    /* @layer brand-light {
+  } Light Mode */
+
+    /* Brand: Dark Colors */
+    @layer brand-dark {
+        /* Root Colors */
+        :root {
+            --col-fordark: var(--col-prime);
+            --col-prime: #e5ddd7;
+            --col-second: #f5e3e3;
+            --col-teritary: #bfbfb7;
+            --col-quartary: #c9bab0;
+            --col-qinary: #ffffff;
+
+            --bkg-ondark: #120707;
+            --bkg-prime: #250e0e;
+            --bkg-second: #3f2222;
+            --bkg-teritary: #413535;
+            --bkg-quartary: #947676;
+            --bkg-qinary: #7d7979;
+        }
+    } /*Dark Mode*/
+} /*Brand*/
+
+/*
+  Global Preferences
+  ========================================================================== */
+
+@layer preferences {
+    /* [2] A11y: Smooth Scrolling to reduce motion: Credit: Adam Argyle [✮✮] */
+    @media (prefers-reduced-motion: no-preference) {
+        html:focus-within {
+            scroll-behavior: smooth;
+        }
+    }
+
+    /* Color Scheme
+ [0] Dark Mode
+ [0] Light Mode */
+
+    @layer color-schemes {
+        /* switch to dark mode color */
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--bkg-ondark);
+                color: var(--col-fordark);
+            }
+        } /*Dark*/
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: var(--bkg-onlight);
+                color: var(--col-forlight);
+            }
+        } /*Light*/
+    } /*Color Schemes*/
+
+    /*
+  Animate
+  ========================================================================== */
+
+    /* ANIMATE
+    [2] Form focus Outlines
+    [2] A11y: Reduce motion for transitions
+  */
+    @layer animate {
+        @media (prefers-reduced-motion: no-preference) {
+            :focus-visible {
+                transition: outline-offset 105ms cubic-bezier(0.25, 0, 0.4, 1);
+            }
+            :where(:not(:active)):focus-visible {
+                transition-duration: 0.275s;
+            }
+        }
+        /* [2] Use offset to highlight visible interactive focus.*/
+        :where(:not(:active)):focus-visible {
+            outline-offset: 5px;
+        }
+    } /*Animate*/
+} /*Preferences*/
+
+/*
+*
+*  ================================================================= */
+
+@layer typography {
+    /* ==========================================================================
+    Typoggraphic Sizes: Font: Line-Hieghts, Type Scales
+    ==========================================================================
+
+  - TypeScale: Last Accessed: 2023-01-22: URL: https://type-scale.com/
+  - Base: 16px (100%/1em)
+  - Scale: 1.333 Perfect Forth: 3:4          Perfect Fith
+  - Font Choice: Affects Visual Size
+  - Font Weight: 400-800
+  - 1rem/16.00px:         Basedline Font
+  - 1.333 rem/21.33px:    H4 Font           1.5rem/24.00px
+  - 1.777 rem/28.43px:    H3 Font           2.2.5/36px
+  - 2.369rem/37.90px:     H2 Font           3.75rem/54px
+  - 3.157rem/50.52px:     H1 Font           5.063/81.00px
+  */
+
+    @layer type-sizes {
+        :root {
+            --size-default: 16px;
+            --scale-small: 1.115rem;
+            --scale-medium: 1.333rem;
+
+            --h1-default: 28px;
+            --h1-max: 7vmax;
+            --h1-prefer: calc(-6vw + var(--scale-medium));
+
+            --h2-default: 22px;
+            --h2-prefer: calc(-4vw + var(--scale-medium));
+            --h2-max: 5vmax;
+
+            --h3-default: 18px;
+            --h3-max: 3.5vmax;
+            --h3-prefer: calc(-1.5vw + var(--scale-small));
+
+            --p-default: var(--size-default, 14px);
+            --p-prefer: calc(-1.5vw + var(--scale-small));
+            --p-max: 2vmax;
+        }
+    } /*Type Size*/
+
+    /* ==========================================================================
+   Fluid Text
+  ========================================================================== */
+
+    @layer fluid-text {
+        h1 {
+            --h1-fluid: clamp(var(--h1-default), var(--h1-prefer), var(--h1-max));
+            font-size: revert;
+            font-size: var(--h1-default); /* Fallback value */
+            font-size: var(--h1-fluid);
+        }
+
+        h2 {
+            --h2-fluid: clamp(var(--h2-default), calc(-2vw + 1rem), var(--h2-max));
+            font-size: revert;
+            font-size: var(--h2-default); /* Fallback value */
+            font-size: var(--h2-fluid);
+        }
+
+        h3 {
+            font-size: clamp(1.125rem, calc(-1vw + 1rem), 1.625rem);
+            font-size: revert;
+            font-size: var(--h2-default); /* /Fallback value */
+            font-size: var(--h2-fluid);
+        }
+
+        p,
+        label,
+        span {
+            --p-fluid: clamp(0.925rem, -2vmax + var(--p-default), 1.15rem);
+            font-size: revert;
+            font-size: var(--p-default);
+            font-size: var(--p-fluid);
+        }
+    }
+} /* Typography */
+
+/** ==========================================================================
+ * Responsiveness & Media Queries for Devices
+ *
+ * [1] Global Variables First
+ * [2] Use custom variable and media queries to switch paremeters for a commpn/shared sty;e
+ * [3] Use subsequent layers for media queries to define more localised, custom variants
+ * -> Therefore use media queries to define parameters for different sizing, and etc
+ * -> And apply these for shared styles.
+ * ========================================================================== */
+
+@layer responsive {
+    /* Device: Standard Mobile: Majority of Usets: Median is 348px;
+  *  [1] Uses notional ranges, not contextual
+   ========================================================================== */
+    /* @media only screen and (288px <= width <= 407.99px) */
+    @media only screen and (max-width: 407.999px) {
+        :root {
+            --portrait: var(--mobile-portait);
+            --landscape: var(--mobile-lanscape);
+
+            --response-min-width: 20rem;
+            --response-max-width: 26rem;
+            --response-prefer-width: 95%;
+
+            --vp-pad-start: 0.2rem;
+            --vp-pad-fb: 2px;
+            --vp-mar-end: 1rem;
+            --vp-mar-fb: 0%;
+
+            --macro-head-w: 96px;
+            --macro-focal-w: 1fr;
+            --macro-foot-w: 96px;
+            --macro-left-w: auto;
+            --macro-center-w: 1fr;
+            --macro-rightt-w: auto;
+        }
+
+        .fo-nav-flex {
+            flex-direction: var(--portrait);
+        }
+    } /* Standard Mobile */
+
+    /* Device: Mobile Large: Ultras & Pro Devices
+  ================================ */
+    /* @media only screen and (408px <= width <= 487.99px) */
+    @media only screen and (min-width: 408px) and (max-width: 487.999px) {
+        :root {
+            --portrait: var(--mobile-portait);
+            --landscape: var(--mobile-lanscape);
+
+            --response-min-width: 26rem;
+            --response-max-width: 30rem;
+            --response-prefer-width: 92%;
+
+            --vp-pad-start: 1.5rem;
+            --vp-pad-fb: 5%;
+            --vp-mar-end: 1.5rem;
+            --vp-mar-fb: 5%;
+
+            --macro-head: 96px;
+            --macro-focal: 1fr;
+            --macro-foot: 96px;
+            --macro-left: auto;
+            --macro-center: 1fr;
+            --macro-rightt: auto;
+        }
+
+        .fo-nav-flex {
+            flex-direction: var(--portrait);
+        }
+    } /* Ultra Mobile */
+
+    /* Standard Tablets
+  ================================ */
+    /* @media only screen and (488px <= width <= 767.99px) */
+    @media only screen and (min-width: 488px) and (max-width: 767.999px) {
+        :root {
+            --vp-pad-start: 3rem;
+            --vp-pad-fb: 10%;
+            --vp-mar-end: 3rem;
+            --vp-mar-fb: 10%;
+
+            --response-min-width: 30rem;
+            --response-max-width: 36rem;
+            --response-prefer-width: 85%;
+
+            --portrait: var(--mobile-portait);
+            --landscape: var(--mobile-lanscape);
+        }
+        .fo-nav-flex {
+            flex-direction: var(--portrait);
+        }
+    } /* Standard Tablets*/
+
+    /* Device: Pro Tablets and Small Laptops
+  ================================ */
+    /* @media only screen and (768px <= width <= 1023.999px) */
+    @media only screen and (min-width: 768px) and (max-width: 1023.999px) {
+        :root {
+            --portrait: var(--fixed-portait);
+            --landscape: var(--fixed-lanscape);
+
+            --vp-pad-start: 10lvmin;
+            --vp-pad-fb: 10%;
+            --vp-mar-end: 10lvmin;
+            --vp-mar-fb: 15%;
+            --gap-default: 4rem;
+
+            --response-min-width: 36rem;
+            --response-max-width: 48rem;
+            --response-prefer-width: 80%;
+
+            --macro-head-w: 96px;
+            --macro-focal-w: 1fr;
+            --macro-foot-w: 96px;
+            --macro-left-w: auto;
+            --macro-center-w: 1fr;
+            --macro-rightt-w: auto;
+        }
+        .fo-nav-flex {
+            flex-direction: var(--landscape);
+        }
+    } /* Pro Tablets & Base Responsive Sizes.
+
+  /* Device: Laptops and Desktops
+  ================================ */
+    /* @media only screen and (1024px >= width <= 1439.999px) */
+    @media only screen and (min-width: 1024px) and (max-width: 1439.999px) {
+        :root {
+            --vp-pad-start: 12rem;
+            --vp-pad-percent: 20%;
+            --vp-mar-end: 12rem;
+            --vp-mar-fb: 20%;
+
+            --response-min-width: 48rem;
+            --response-max-width: 67.5rem;
+            --response-prefer-width: 75%;
+
+            --portrait: var(--fixed-portait);
+            --landscape: var(--fixed-lanscape);
+        }
+
+        .fo-nav-flex {
+            flex-direction: var(--landscape);
+        }
+    } /* Desktops*/
+
+    /* Device: Modern Desktops
+  ================================ */
+    /* @media only screen and (1440px >= width <= 1440px) */
+    @media only screen and (min-width: 1440px) and (max-width: 1440px) {
+        :root {
+            --vp-pad-start: 12rem;
+            --vp-pad-percent: 20%;
+            --vp-mar-end: 12rem;
+            --vp-mar-fb: 20%;
+
+            --response-min-width: 48rem;
+            --response-max-width: 67.5rem;
+            --response-prefer-width: 75%;
+
+            --portrait: var(--fixed-portait);
+            --landscape: var(--fixed-lanscape);
+        }
+
+        .fo-nav-flex {
+            flex-direction: var(--landscape);
+        }
+    } /* Desktops*/
+
+    /* Device: Ultra Screens and TV
+  ================================ */
+    @media only screen and (min-width: 1920px) {
+        :root {
+            --vp-pad-start: 12rem;
+            --vp-pad-percent: 20%;
+            --vp-mar-end: 12rem;
+            --vp-mar-fb: 20%;
+
+            --response-min-width: 48rem;
+            --response-max-width: 67.5rem;
+            --response-prefer-width: 75%;
+
+            --portrait: var(--fixed-portait);
+            --landscape: var(--fixed-lanscape);
+        }
+
+        .fo-nav-flex {
+            flex-direction: var(--landscape);
+        }
+    } /* Desktops*/
+} /*Resposnive*/
+
+/* ==========================================================================
+  Compositon: Canvas: Structure, Layout, Dimensions, Semantics
+  ========================================================================== */
+
+@layer composition {
+    @layer canvas {
+        /* Was not completing the total canvas (initial containing block (?) and was being ignored.*/
+        html {
+            inline-size: min(100%, 150vw);
+            margin: 0 !important;
+        }
+        /* Viewport dimensions with fallbacks from unstable units to stable ones, using css graceful ignore unknown property/valid value facility.*/
+
+        /* Overide the US Margin 8px;*/
+        body {
+            box-sizing: border-box;
+            margin-inline: 5px 0px;
+
+            place-self: start center;
+            text-align: center;
+            vertical-align: top;
+        }
+    } /*Canvas*/
+
+    @layer layout {
+        /* Define the contain layout grid and the canvas alignments*/
+        /* div.fo-layout {
+            box-sizing: var(--box);
+            display: grid;
+            grid-template-columns: [page-layout] 1fr;
+            grid-template-rows: var(--max-nav-ctrl) 1fr;
+            place-self: center center;
+            row-gap: 4rem;
+        } . */
+
+        .fo-layout-macro {
+            border: var(--wf-border1);
+            display: grid;
+            grid-template: [fo-left] auto [fo-center] 1fr [fo-right] auto / [fo-head] 96px [fo-focal] 1fr [fo-foot] 92px;
+            height: 100vh;
+        }
+
+        .fo-layout-macro:is(header, main, footer) {
+            border: var(--wf-border1);
+        }
+        .fo-layout-macro:is(header) {
+            border: var(--wf-border2);
+        }
+        .fo-layout-macro:is(main) {
+            border: var(--wf-border3);
+        }
+        .fo-layout-macro:is(footer) {
+            border: var(--wf-border3);
+        }
+
+        .fo-left,
+        .fo-right {
+            border: var(--wf-border2);
+        }
+
+        /* .fo-layout > nav {
+            block-size: fit-content;
+            border: var(--wf-border2);
+            inline-size: clamp(
+                var(--response-min-width),
+                calc(var(--repsonse-prefer-width) + 1rem),
+                var(--response-max-width)
+            );
+            margin-block-end: min(var(--layout-block-end), 4vh);
+            max-block-size: var(--max-nav-ctrl);
+            max-inline-size: var(--response-max-width);
+            min-block-size: var(--min-nav-ctrl);
+            min-inline-size: fit-content;
+        } . */
+
+        /* .fo-layout,
+        main {
+            block-size: 100vh;
+            inline-size: clamp(
+                var(--response-min-width),
+                calc(var(--response-prefer-width) + 1rem),
+                var(--response-max-width)
+            );
+            max-inline-size: var(--response-max-width);
+            min-block-size: fit-content;
+        } */
+
+        /* Nav & Main Spacing*/
+        /* nav + main { */
+        /* margin-block-start: min(var(--layout-block-end), 8vh); */
+        /* margin-block-start: min(var(--layout-block-end), 8vb); */
+        /* padding-block-start: min(var(--layout-block-end), 8vh); */
+        /* padding-block-start: min(var(--layout-block-end), 8vb);
+        }*/
+    }
+
+    /*
+  Compose Navigation .. Common to all Pages
+  ========================================================================== */
+
+    @layer navigation {
+        /* .fo-nav-grid {
+            block-size: var(--max-nav-ctrl);
+            box-sizing: var(--box);
+            display: grid;
+            inline-size: clamp(
+                var(--response-min-width),
+                calc(var(--repsonse-prefer-width) + 1rem),
+                var(--response-max-width)
+            );
+            margin: none auto;
+            max-block-size: var(--max-nav-ctrl);
+            max-inline-size: var(--response-max-width);
+            min-block-size: var(--min-nav-ctrl);
+            min-inline-size: min(fit-content, min-content);
+            padding: 0%;
+            position: relative;
+        } */
+
+        /* .fo-nav-flex {
+            border: none;
+            box-sizing: var(--box);
+            display: flex;
+            flex: 1 0 auto;
+            flex-wrap: no-wrap;
+            justify-content: space-between;
+            margin: none;
+            max-block-size: var(--min-nav-ctrl);
+            padding: 0%;
+            position: relative;
+        } */
+
+        /* nav > input + label {
+            display: none;
+            inline-size: 1px;
+            margin: none;
+            visibility: hidden;
+        } */
+        /* Navigation Components */
+        /* .fo-nav-holder {
+            block-size: var(--max-nav-ctrl);
+            display: inline-block;
+            inline-size: var(--max-nav-ctrl);
+            margin-block: 0 0.25rem;
+            max-block-size: var(--max-nav-ctrl);
+            max-inline-size: var(--max-nav-ctrl);
+            position: relative;
+            text-align: center;
+            vertical-align: middle;
+        } */
+
+        /* .fo-nav-holder :is(label[hidden="hidden"], input[type="checkbox"]) {
+            display: inline-flex;
+            flex: 0 0 auto;
+        } */
+    }
+
+    @layer menus {
+        /* Menu / Nav Classes for A11y and Site */
+        /* .fo-menu {
+            box-sizing: var(--box);
+            visibility: hidden;
+            z-index: 1;
+        } */
+        /* Menu Components | Controls: Position in Flex row */
+        /* div :is(.fo-a11y-ctrl, .fo-site-ctrl) {
+            border: 0;
+            padding: 0;
+        } */
+
+        /* .fo-a11y-ctrl {
+            place-self: self-start auto;
+        } */
+
+        /* .fo-nav-ctrl {
+            place-self: self-end auto;
+        } */
+
+        /* nav :is(.fo-nav-a11y, .fo-nav-site) {
+            border: inherit;
+            padding: inherit;
+        } */
+
+        /* .fo-menu-site {
+    } */
+
+        /* .fo-nav-site {
+    } */
+    }
+
+    @layer logo {
+        /* Logo */
+
+        /* .fo-logo-holder {
+    } */
+
+        /* img.fo-logo {
+    } */
+
+        /* .fo-logo {
+    } */
+    }
+}

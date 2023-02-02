@@ -1,0 +1,148 @@
+section,
+main,
+footer {
+ border-style: var(--w-dash);
+}
+
+nav {
+}
+
+section {
+ border-color: var(--w-blu);
+}
+
+main {
+ border-color: var(--w-gree);
+}
+
+main section {
+ border-color: var(--w-pur);
+}
+
+main section header {
+ border-color: var(--w-yel);
+}
+
+main section section {
+ border-color: var(--w-pin);
+}
+//
+
+header h1,
+header h2,
+header h3,
+header h4 {
+ display: inline-block;
+}
+
+section section > p {
+ display: block;
+}
+
+footer {
+ display: block;
+}
+
+footer span {
+ display: inline-block;
+}
+
+/* Navigation */
+nav {
+}
+/* Menu Item */
+
+ul,
+ol {
+ block-size: auto;
+}
+
+ul li,
+ol li {
+ block-size: 3rem;
+}
+
+ul li {
+}
+
+ol li {
+}
+
+li {
+}
+
+li:checked {
+}
+
+/* Media */
+picture {
+ border-color: var(--w-bla);
+ display: inline-block;
+}
+
+/* Anchors*/
+
+a[href] {
+}
+
+a:anylink {
+}
+
+a:hover a:link {
+}
+
+a:active {
+}
+
+a:visited {
+}
+
+:target {
+}
+
+/* Forms */
+
+form {
+ block-size: auto;
+}
+
+label {
+ block-size: 3rem;
+}
+input {
+ block-size: 3rem;
+}
+
+input[type="checkbox"] {
+}
+
+input:focus {
+}
+
+input:focus-visible {
+}
+
+input:focus-within {
+}
+
+input:required {
+}
+
+input:valid,
+textarea:valid {
+}
+
+input:invalid,
+textarea:invalid {
+}
+
+input:placeholder-shown {
+}
+
+// Separators
+
+hr {
+ block-size: 2rem;
+ margin-block: 10rem;
+ padding-block: 4rem;
+}

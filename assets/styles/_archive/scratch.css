@@ -1,0 +1,102 @@
+
+
+
+    */
+    @layer
+    navigation {
+    .fo-nav-grid {
+        block-size: var(--max-nav-ctrl);
+        box-sizing: var(--box);
+        display: grid;
+        inline-size: clamp(
+            var(--response-min-width),
+            calc(var(--repsonse-prefer-width) + 1rem),
+            var(--response-max-width)
+        );
+        max-block-size: var(--max-nav-ctrl);
+        max-inline-size: var(--response-max-width);
+        min-block-size: var(--min-nav-ctrl);
+        padding: 0%;
+        position: relative;
+    }
+
+    .fo-nav-flex {
+        border: none;
+        box-sizing: var(--box);
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: space-between;
+        max-block-size: var(--min-nav-ctrl);
+        padding: 0%;
+        position: relative;
+    }
+
+    nav > input + label {
+        display: none;
+        inline-size: 1px;
+        visibility: hidden;
+    }
+    /* Navigation Components */
+    .fo-nav-holder {
+        block-size: var(--max-nav-ctrl);
+        display: inline-block;
+        inline-size: var(--max-nav-ctrl);
+        margin-block: 0 0.25rem;
+        max-block-size: var(--max-nav-ctrl);
+        max-inline-size: var(--max-nav-ctrl);
+        position: relative;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .fo-nav-holder :is(label[hidden="hidden"], input[type="checkbox"]) {
+        display: inline-flex;
+        flex: 0 0 auto;
+    }
+}
+
+@layer menus {
+    /* Menu / Nav Classes for A11y and Site */
+    .fo-menu {
+        box-sizing: var(--box);
+        visibility: hidden;
+        z-index: 1;
+    }
+    /* Menu Components | Controls: Position in Flex row */
+    div :is(.fo-a11y-ctrl, .fo-site-ctrl) {
+        border: 0;
+        padding: 0;
+    }
+
+    .fo-a11y-ctrl {
+        place-self: self-start auto;
+    }
+
+    .fo-nav-ctrl {
+        place-self: self-end auto;
+    }
+
+    nav :is(.fo-nav-a11y, .fo-nav-site) {
+        border: inherit;
+        padding: inherit;
+    }
+
+    /* .fo-menu-site {
+    } */
+
+    /* .fo-nav-site {
+    } */
+}
+
+@layer logo {
+    /* Logo */
+
+    /* .fo-logo-holder {
+    } */
+
+    /* img.fo-logo {
+    } */
+
+    /* .fo-logo {
+    } */
+}
