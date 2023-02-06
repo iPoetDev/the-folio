@@ -34,3 +34,10 @@ features/*
 # Folder config file
 [Dd]esktop.ini
 
+_work/_detail/credibility.html
+_work/_detail/experience.html
+_work/_detail/learning.html
+_work/_detail/skills.html
+_info/_detail/confirm.html
+_info/_detail/partner.html
+assets/styles/_archive/__main.css

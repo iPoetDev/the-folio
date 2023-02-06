@@ -11,10 +11,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 
 ### Added: 00.04.2.01
 
-- Added: Color Palette, aka Branding, to Main.css via a layer custom property system
+- Added: Color Palette, aka Branding, to Main.css via a layer custom property system [01]
   - Intent: to develop a dark mode first scheme, and if feasible, a light mode scheme. Developed both above, and can remove if time and scope do not permit.
 - Created: [Version 1 of the Digital Folio Color Palette](/_documentation/Color/The-Digital-Folio_EightShapes_Contrast_Grid_2023-02-06%2011_17_59-version1.png)
-- Added Contact Form and vanilla CSS validation, in progress via the buildout-contract.html
+- Added Contact Form and vanilla CSS validation, in progress via the buildout-contract.html[02]
 
 Note: Struggling with nested grid layouts and responsiveness and neighbouring grids being aware of context and positioning of inner grid dimensions. See Buildout-landing.html for issues.
 

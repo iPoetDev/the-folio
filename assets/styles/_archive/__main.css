@@ -728,20 +728,19 @@ form:has(header, section) {
 // Input Placing and Positioning
 
 .fo-form-item {
- align-items: start;
  inline-size: max(35vw, 640px);
  /* max-inline-size: max(55vw, 640px); */
 }
 
 .fo-form-item {
- align-items: start;
- margin-block: 3rem;
+ margin-block: 2rem;
  max-inline-size: max(44vw, 640px);
  max-inline-size: fit-content;
+ block-size: 4rem;
  position: relative;
+ padding-block-start: 1rem;
 }
 
-// Input Sizing
 .fo-input {
  --input-block: 3rem;
  --input-height: 24px;
@@ -834,11 +833,6 @@ input#add-subject::placeholder {
  padding-inline-start: 4rem;
 }
 
-/* input:is([type="text"], [type="email"], [type="tel"]):focus,
-textarea:focus {
- border-color: rgb(81, 86, 249);
-} */
-
 input:is([type="text"], [type="email"], [type="tel"]):focus + label,
 textarea:focus + label {
  transform: scale(0.9) translateY(-35px);
@@ -887,7 +881,6 @@ input#add-subject:not(:placeholder-shown) + * + span::after {
  visibility: visible;
 }
 
-// Validation States
 form:not(:focus):invalid,
 input:is(#full-name, #send-email, #send-tel):not(:focus):invalid
 /* input:is([type="text"], [type="email"], [type="tel"]):not(:focus):required,
