@@ -1,4 +1,4 @@
-/* ==========================================================================
+/*  ==========================================================================
   The Folio: Layer Established Ordering
   References: http://css-tricks.com/css-cascade-layers, Last accessed: 2023-01-24
   Why: a) Code Organisation / Ordering; b) Code Browsing using Code Folding in IDE
@@ -11,27 +11,25 @@
   6)                  typography      Site Type & Font Copy style
   7)                  composite        Site Composite Styles: Canvas, Layout, Navigation, Body, Footer
   8)                  ia                    Site IA Styles: Site Regional Style for page group styles/isolation of styles.
-  8)                  utility              Site Cross Uses styles.
-  9)                  blocks             Component specific styles for unique block level styles
-  10)                except             Exceptions / Unqiues / Variants
-  11) Powerful:  unlayer            Unlayers, most closely related / unique styles as needed.
+  9)                  utility              Site Cross Uses styles.
+  10)                blocks             Component specific styles for unique block level styles
+  11)                except             Exceptions / Unqiues / Variants
+  12) Powerful:  unlayer            Unlayers, most closely related / unique styles as needed.
                                             & or most specific styles and powerful styles.
-  ========================================================================== */
-
-@layer reset,  global-defaults,  global-sizes,  brand-folio,  preferences,   typography,  responsive;
-@layer compose,  compose.canvas,   compose.layout,  compose.banner,   compose.navigation,   compose.body,   compose.footer;
-@layer ia,  ia.landing,  ia.info,  ia.clients,  ia.work;
-@layer utilities,  blocks,  except;
+  ==========================================================================  */
+@layer reset, global-defaults, global-sizes, brand-folio, preferences, typography, responsive;
+@layer compose, compose.canvas, compose.layout, compose.banner, compose.navigation, compose.body, compose.footer;
+@layer ia, ia.landing, ia.info, ia.clients, ia.work;
+@layer utilities, blocks, except;
 
 /*
   The Folio: Reset Layer
-  ========================================================================== */
-
+  ==========================================================================  */
 @layer reset {
-    /* Root Resets */
+    /*  Root Resets  */
     @layer root {
-        /* Global Reset
-      /* ==========================================================================
+        /*  Global Reset
+      /*  ==========================================================================
             THE DIGITAL FOLIO: CI SUBMISSION: 3RD PARTY RESETS: CODE SEPARATION OF CONCERNS
             [0] Author: Charles Fowler (Own decisions and adjustments)
             [1] Base Reset: Kevin Powell: URL:https://www.youtube.com/watch?v=2lyDv0wOQuQ,
@@ -45,16 +43,15 @@
                       [a] scope or [b] lack of understanding/familiarity [c] Own opinon.
             Criterion: Code separation of 3rd Party concerns, utilising Layers and Imports.
             Rating: ✮: Minimal, ✮✮: More Opinionated, ✮✮✮: Highly Opinionated
-        ========================================================================== */
-
+        ==========================================================================  */
         *,
         *::before,
         *::after {
             box-sizing: border-box;
         }
 
-        /* [1] Resets margin, padding for explicit. [✮✮]
-        [1] Reset font sizes, font weights. [✮✮] */
+        /*  [1] Resets margin, padding for explicit. [✮✮]
+        [1] Reset font sizes, font weights. [✮✮]  */
         * {
             font: inherit;
             margin: 0;
@@ -63,68 +60,80 @@
 
         /*
         Root Resets
-        ========================================================================== */
-
+        ==========================================================================  */
         html {
             block-size: 100%;
             block-size: calc(100vh + 1rem);
             color-scheme: dark light;
             font-size: 1rem;
             margin: 0;
-            -webkit-text-size-adjust: none;
         }
-    } /*root*/
+        @supports (text-size-adjust;) {
+            html {
+                text-size-adjust: none;
+            }
+        }
+    }
+
+    /* root */
 
     /*
     View Resets
-    ========================================================================== */
-
+    ==========================================================================  */
     @layer view {
-        /* [1] Sets a minimum height on body [✮✮]
-        [2] Allow &sizes on blocks.[✮✮]*/
+        /*  [1] Sets a minimum height on body [✮✮]
+        [2] Allow &sizes on blocks.[✮✮] */
         body {
             margin: unset;
             min-block-size: 100%;
             min-block-size: 100vh;
         }
-    } /*view*/
+    }
+
+    /* view */
 
     /*
     Media Resets
-    ========================================================================== */
-
+    ==========================================================================  */
     @layer media {
-        /* MEDIA
-          [1,2] Ensure all media is responsive, with low specificity. [✮✮]*/
+        /*  MEDIA
+          [1,2] Ensure all media is responsive, with low specificity. [✮✮] */
         :where(img, picture, svg, video, embed, object) {
             display: block;
             max-inline-size: 100%;
         }
 
-        /* [2] Ensure key media has improved defaults. [✮✮]*/
+        /*  [2] Ensure key media has improved defaults. [✮✮] */
         :where(img, svg, video) {
             block-size: auto;
             max-inline-size: 100%;
         }
-    } /*Media*/
+    }
+
+    /* Media */
 
     /*
     Forms Resets
-    ========================================================================== */
-
+    ==========================================================================  */
     @layer forms {
-        /* FORMS
-          [1,2] Standardised forms typograghpy [✮,✮✮✮]*/
+        /*  FORMS
+          [1,2] Standardised forms typograghpy [✮,✮✮✮] */
         :where(input, textarea, button, select) {
-            color: inherit; /*[2]*/
-            font: inherit; /*[1]*/
-            font-size: inherit; /*[2]*/
+            color: inherit;
+
+            /* [2] */
+            font: inherit;
+
+            /* [1] */
+            font-size: inherit;
+
+            /* [2] */
             letter-spacing: inherit;
             word-spacing: inherit;
         }
 
-        /* [2] Textarea to Vertical [✮✮✮]
-              [2] Textaarea to block if browser supports. [✮✮✮]*/
+        /*  [2] Textarea to Vertical [✮✮✮]
+              [2] Textaarea to block if browser supports. [✮✮✮] */
         :where(textarea) {
             resize: vertical;
         }
@@ -133,68 +142,78 @@
             :where(textarea) {
                 resize: block;
             }
-        } /*Supports Resize*/
-    } /*Forms*/
+        }
+
+        /* Supports Resize */
+    }
+
+    /* Forms */
 
     /*
     Semantic Resets
-    ========================================================================== */
-
+    ==========================================================================  */
     @layer semantics {
-        /* HEADERS
-          [2] Headers, all, no text overflow. [✮✮]*/
+        /*  HEADERS
+          [2] Headers, all, no text overflow. [✮✮] */
         :where(p, h1, h2, h3, h4, h5, h6) {
             overflow-wrap: break-word;
         }
 
-        /* 2 Default H1 to 2em inside semantic content. [✮✮✮]*/
+        /*  2 Default H1 to 2em inside semantic content. [✮✮✮] */
         :where(article, nav, aside, section) h1 {
             font-size: 2em;
         }
 
-        /* LISTS, MENU (Navigations)
-        /* [2,0] Position list marker inside [✮✮✮]*/
+        /*  LISTS, MENU (Navigations)
+        /*  [2,0] Position list marker inside [✮✮✮] */
         :where(menu, ul, ol) {
-            list-style-position: outside; /*[0]*/
+            list-style-position: outside;
+
+            /* [0] */
         }
 
-        /* [2] ARIA Menu: remove List Style [✮✮✮],
-            [0] Change Role to menu, was "List" [2], being more specific for a11y navigation patterns.*/
+        /*  [2] ARIA Menu: remove List Style [✮✮✮],
+            [0] Change Role to menu, was "List" [2], being more specific for a11y navigation patterns. */
         :where(menu, ul, ol)[role="menu"] {
             list-style: none;
         }
-    } /*semantics*/
+    }
+
+    /* semantics */
 
     /*
     UI Resets
-    ========================================================================== */
-
+    ==========================================================================  */
     @layer ui {
-        /* INTERACTIVE
-          [2] Anchor tags, no class, readability.*/
+        /*  INTERACTIVE
+          [2] Anchor tags, no class, readability. */
         a:not([class]) {
             text-decoration-skip-ink: auto;
         }
 
-        /* [2] Assure interactive elements are interactive.
-      /* [2] Not Yet: Not including File inputs. Not in scope. #Exception.*/
+        /*  [2] Assure interactive elements are interactive.
+      /*  [2] Not Yet: Not including File inputs. Not in scope. #Exception. */
         :where(a[href], area, button, input, label[for], select, summary, textarea, [tabindex]:not([tabindex*="-"])) {
             appearance: auto;
             cursor: pointer;
             touch-action: manipulation;
         }
-    } /*ui*/
+    }
+
+    /* ui */
 
     /*
     Ineractions Resets
-    ========================================================================== */
-
+    ==========================================================================  */
     @layer interactions {
-        /* NO INTERACTION*/
-        /* [2] Disable Button Text Selection*/
-        /* [0] Removed: File & Webkit Selectors*/
-        /* Validated:
-        */
+        /*  NO INTERACTION */
+
+        /*  [2] Disable Button Text Selection */
+
+        /*  [0] Removed: File & Webkit Selectors */
+
+        /*  Validated:
+         */
         :where(button, button[type], input[type="button"], input[type="submit"], input[type="reset"]) {
             -webkit-tap-highlight-color: transparent;
             text-align: center;
@@ -203,8 +222,6 @@
         }
 
         :where(button, fieldset, input, legend, select, textarea) {
-            -webkit-appearance: none;
-            -moz-appearance: none;
             appearance: none;
             background-color: transparent;
             border: none;
@@ -212,18 +229,21 @@
             margin: 0;
             padding: 0;
         }
-    } /*interactions*/
-} /*Reset*/
+    }
 
-/*  ================================================================================
+    /* interactions */
+}
+
+/* Reset */
+
+/*   ================================================================================
     *   End of Reset Layer
-    *   ===============================================================================*/
+    *   =============================================================================== */
 
-/*  ================================================================================
+/*   ================================================================================
 *       Wireframes:
 *       Set Wiresframe Outlines Colors and Borders
-*   ================================================================================*/
-
+*   ================================================================================ */
 @layer wireframe {
     :root {
         --wf-surface1: #fff;
@@ -235,7 +255,6 @@
         --wf-surface7: #8bff1f;
         --wf-surface8: #ffc56f;
         --wf-surface9: #fd3f3f;
-
         --wf-border1: 2px dotted var(--wf-surface1);
         --wf-border2: 2px dotted var(--wf-surface2);
         --wf-border3: 2px dotted var(--wf-surface3);
@@ -248,32 +267,33 @@
     }
 }
 
-/*  ================================================================================
+/*   ================================================================================
 *   Global Defaults
 *   Defaults are not resets. Purpose: To establish site wide defaults for certain high frequent elements
-*   ================================================================================*/
-
+*   ================================================================================ */
 @layer global-default {
     @layer boxes {
-        /* Box Model: */
+        /*  Box Model:  */
         :root {
             --border-model: content-box;
             --box: var(--border-model, border-box);
         }
     }
-} /*Defaults*/
+}
 
-/* ================================================================================*/
+/* Defaults */
 
+/*  ================================================================================ */
 @layer gloabl-sizes {
     /*
  Root Components Block Sizing
- ========================================================================== */
+ ==========================================================================  */
     @layer sizing-spaces {
-        /* Sizings and Spacing */
+        /*  Sizings and Spacing  */
         :root {
-            /* Global Spacing*/
-            /* https://en.wikipedia.org/wiki/Line_length#Electronic_text*/
+            /*  Global Spacing */
+
+            /*  https://en.wikipedia.org/wiki/Line_length#Electronic_text */
             --global-line-len-em: 33em;
             --global-line-len-ch: 66ch;
             --mobile-line-len-em: 11em;
@@ -281,19 +301,20 @@
             --tablet-line-len-em: 22em;
             --tablet-line-len-ch: 44ch;
 
-            /* Grids */
+            /*  Grids  */
             --macro-head: 4rem;
             --macro-core: 1fr;
             --macro-foot: 4rem;
             --macro-middle: 1fr;
-
             --gap-default: 4rem;
         }
-    } /*Sizing
+    }
+
+    /* Sizing
 
  /*
     Root Components Block Sizing
-    ========================================================================== */
+    ==========================================================================  */
     @layer component-size {
         @layer blocks {
             :root {
@@ -311,104 +332,516 @@
                 --btn-mobheight: 1.45rem;
                 --btn-mobwidth: 20ch;
             }
-        } /* Button */
-    } /* Component Sizing*/
-} /*Global Sizing and Spacing*/
+        }
+
+        /*  Button  */
+    }
+
+    /*  Component Sizing */
+}
+
+/* Global Sizing and Spacing */
 
 /*
 *  The  Digital Folio : Brannding & Styles
-   ========================================================================== */
+   ==========================================================================  */
+@layer brand-digital {
 
-@layer brand-folio {
-    /* Brand: Light Colors */
-    /* @layer brand-light {
-  } Light Mode */
+    @layer brand-palette {
 
-    /* Brand: Dark Colors */
-    @layer brand-dark {
-        /* Root Colors */
-        :root {
-            --col-fordark: var(--col-prime);
-            --col-prime: #e5ddd7;
-            --col-second: #f5e3e3;
-            --col-teritary: #bfbfb7;
-            --col-quartary: #c9bab0;
-            --col-qinary: #ffffff;
+        *, html:root {
 
-            --bkg-ondark: #120707;
-            --bkg-prime: #250e0e;
-            --bkg-second: #3f2222;
-            --bkg-teritary: #413535;
-            --bkg-quartary: #947676;
-            --bkg-qinary: #7d7979;
+            --dark-onlight: #0b0c15;
+            --dark-ondark: #0b0c15;
+
+            --light-ondark: #fefbf7;
+            --light-onlight: #fefbf7;
+
+            --mid-ondark: #464646;
+            --mid-onlight: #464646;
+
+            --deep-green: #12160b;
+            --dark-emerald: #001c1d;
+            --drab-green: #759148;
+            --olive-drab: #759148;
+            --bright-green: #a1e03c;
+            --leaf-green: #b4e06c;
+
+            --deep-orange: #0a0500;
+            --drab-orange: #df622d;
+            --light-orange: #ffdcd2;
+            --peach-orange: #fea37c;
+            --bright-orange: #ff7033;
+
+            --bright-yellow: #fbff00;
+            --soft-yellow: #feffa8;
+
+            --deep-blue: #0b0c15;
+            --bright-blue:#5ab8f7;
+
+            --soft-red: #ff5c5cfd;
+            --bright-red: #fe3636;
+
+            --text-ondark: var(--light-ondark);
+            --text-onlight: var(--dark-onlight);
+
+            --surface-ondark: var(--dark-ondark);
+            --surface-onlight: var(--light-onlight);
+
+            --input-ondark: var(--mid-ondark);
+            --input-onlight: var(--mid-onlight);
+
+            --accent-ondark: var(--peach-orange);
+            --accent-onlight: var(--drab-orange);
+
+            --shaddow-ondark: var(--bright-blue);
+            --shaddow-onlight: var(--deep-blue);
+
+            --hint-ondark: var(--leaf-green);
+            --hint-onlight: var(--drab-green);
+
+            --focus-ondark: var(--drab-orange);
+            --focus-onlight: var(--bright-orange);
+
+            --valid-ondark: var(--leaf-green);
+            --valid-onlight: var(--bright-green);
+
+            --invalid-ondark: var(--soft-red);
+            --invalid-onlight: var(--bright-red);
         }
-    } /*Dark Mode*/
-} /*Brand*/
+
+    }
+
+    @layer brand-defaults {
+        html:where(:root) {
+            --surface-prime: var(--dark-ondark);
+            --text-prime: var(--light-ondark);
+            --head-prime: var(--text-prime);
+            --input-prime: var(--input-ondark);
+            --accent-prime: var(--accent-ondark);
+            --shaddow-prime: var(--shaddow-ondark);
+            --hint-prime: var(--hint-ondark);
+            --valid-prime: var(--valid-ondark);
+            --invalid-prime: var(--valid-ondark);
+
+            --dark-contrast: contrast(.8);
+            --dark-bright: contrast(1.15);
+        }
+
+    body {
+            background-color: var(--surface-prime);
+            color: var(--text-prime);
+        }
+    }
+}
 
 /*
   Global Preferences
-  ========================================================================== */
-
+  ==========================================================================  */
 @layer preferences {
-    /* [2] A11y: Smooth Scrolling to reduce motion: Credit: Adam Argyle [✮✮] */
+    /*  [2] A11y: Smooth Scrolling to reduce motion: Credit: Adam Argyle [✮✮]  */
     @media (prefers-reduced-motion: no-preference) {
         html:focus-within {
             scroll-behavior: smooth;
         }
     }
 
-    /* Color Scheme
+    /*  Color Scheme
  [0] Dark Mode
- [0] Light Mode */
-
+ [0] Light Mode  */
     @layer color-schemes {
-        /* switch to dark mode color */
+        @media(prefers-color-scheme: no-preference) {
 
+             :root {
+                --dark-scheme: dark;
+                --only-dark: only dark;
+                --scheme-prime: var(--dark-scheme);
+                color-scheme: var(--scheme-prime);
+            }
+
+            @layer brand-palette {}
+
+            @layer brand-cta {
+                :root {
+                    --cta-surface-ondark:  var(--olive-drab);
+                    --cta-surface-accent-dark: var(--dark-emerald);
+                    --cta-text-ondark: var(--deep-green);
+                    --cta-head-ondark: var(--cta-text-ondark);
+                    --cta-accent-ondark: var(--drab-orange);
+                    --cta-hint-ondark: var(--peach-orange);
+                    --cta-hint-accent-ondark: var(--light-ondark);
+                    --cta-focus-ondark: var(--bright-orange);
+                }
+            }
+
+            @layer brand-info {
+                :root {
+                    --info-surface-ondark: var(--dark-emerald);
+                    --info-surface-accent-ondark: var(--light-orange);
+                    --info-text-ondark: var(--light-ondark);
+                    --info-head-ondark: var(--info-text-ondark);
+                    --info-accent-ondark: var(--deep-orange);
+                    --info-hint-ondark: var(--peach-orange);
+                    --info-focus-ondark: var(--peach-orange);
+                }
+            }
+
+            @layer brand-work {
+                :root {
+                    --work-surface-ondark: var(--deep-blue);
+                    --work-surface-accent-dark: var(--soft-yellow);
+                    --work-text-ondark: var(--light-ondark);
+                    --work-head-ondark: var(--work-text-ondark);
+                    --work-accent-ondark: var(--drab-orange);
+                    --work-hint-ondark: var(--peach-orange);
+                    --work-focus-ondark: var(--bright-orange);
+                }
+            }
+            @layer brand-folio {
+                :root {
+                    --folio-surface-ondark: var(--soft-yellow);
+                    --folio-surface-accent-dark: var(--dark-emerald);
+                    --folio-text-ondark: var(--dark-ondark);
+                    --folio-head-ondark: var(--folio-text-ondark);
+                    --folio-accent-ondark: var(--deep-green);
+                    --folio-hint-ondark: var(--leaf-green);
+                    --folio-focus-ondark: var(--bright-green)
+                }
+            }
+
+            @layer brand-defaults {
+                *, html:root {
+
+                    --surface-prime: var(--dark-ondark);
+                    --text-prime: var(--light-ondark);
+                    --head-prime: var(--text-prime);
+                    --input-prime: var(--input-ondark);
+                    --accent-prime: var(--accent-ondark);
+                    --shaddow-prime: var(--shaddow-ondark);
+                    --hint-prime: var(--hint-ondark);
+                    --valid-prime: var(--valid-ondark);
+                    --invalid-prime: var(--valid-ondark);
+
+                    --cta-surface:  var(--cta-surface-ondark);
+                    --cta-surface-accent: var(--cta-surface-accent-dark);
+                    --cta-text: var(--cta-text-ondark);
+                    --cta-head: var(--cta-head-ondark);
+                    --cta-accent: var(--cta-accent-ondark);
+                    --cta-hint: var( --cta-hint-ondark);
+                    --cta-hint-accent: var(--cta-hint-accent-ondark);
+                    --cta-focus: var(--cta-focus-ondark);
+
+                    --info-surface: var(--info-surface-ondark);
+                    --info-surface-accent: var(--info-surface-accent-ondark);
+                    --info-text: var(--info-text-ondark);
+                    --info-headtext: var(--info-head-ondark);
+                    --info-accent: var(--info-accent-ondark);
+                    --info-hint: var(--info-hint-ondark);
+                    --info-focus: var(--info-focus-ondark);
+
+                    --work-surface: var(--work-surface-ondark);
+                    --work-surface-accent: var(--soft-yellow);
+                    --work-text: var(--light-ondark);
+                    --work-headtext: var(--work-text-ondark);
+                    --work-accent: var(--work-accent-ondark);
+                    --work-hint: var(--work-hint-ondark);
+                    --work-focus: var(--work-focus-ondark);
+
+                    --folio-surface: var(--folio-surface-ondark);
+                    --folio-surface-accent: var(--folio-surface-accent-dark);
+                    --folio-text: var(--folio-text-ondark);
+                    --folio-headtext: var(--folio-head-ondark);
+                    --folio-accent: var(--folio-accent-ondark);
+                    --folio-hint: var(--folio-hint-ondark);
+                    --folio-focus: var(--folio-hint-ondark)
+
+                    --dark-contrast: contrast(.8);
+                    --dark-bright: contrast(1.15);
+                }
+
+                body {
+                    background-color: var(--surface-prime);
+                    color: var(--text-prime);
+                }
+
+                input:not([type=submit]), textarea {
+                    background-color: var(--input-prime) !important;
+                }
+            }
+
+        }
+
+        /*  switch to dark mode color  */
         @media (prefers-color-scheme: dark) {
-            body {
-                background-color: var(--bkg-ondark);
-                color: var(--col-fordark);
-            }
-        } /*Dark*/
 
-        @media (prefers-color-scheme: light) {
-            body {
-                background-color: var(--bkg-onlight);
-                color: var(--col-forlight);
+            :root {
+                --dark-scheme: dark;
+                --only-dark: only dark;
+                --scheme-prime: var(--dark-scheme);
+                color-scheme: var(--scheme-prime);
             }
-        } /*Light*/
-    } /*Color Schemes*/
+
+            @layer brand-palette {}
+
+            @layer brand-cta {
+                :root {
+                    --cta-surface-ondark:  var(--olive-drab);
+                    --cta-surface-accent-dark: var(--dark-emerald);
+                    --cta-text-ondark: var(--deep-green);
+                    --cta-head-ondark: var(--cta-text-ondark);
+                    --cta-accent-ondark: var(--drab-orange);
+                    --cta-hint-ondark: var(--peach-orange);
+                    --cta-hint-accent-ondark: var(--light-ondark);
+                    --cta-focus-ondark: var(--bright-orange);
+                }
+            }
+
+            @layer brand-info {
+                :root {
+                    --info-surface-ondark: var(--dark-emerald);
+                    --info-surface-accent-ondark: var(--light-orange);
+                    --info-text-ondark: var(--light-ondark);
+                    --info-head-ondark: var(--info-text-ondark);
+                    --info-accent-ondark: var(--deep-orange);
+                    --info-hint-ondark: var(--peach-orange);
+                    --info-focus-ondark: var(--peach-orange);
+                }
+            }
+
+            @layer brand-work {
+                :root {
+                    --work-surface-ondark: var(--deep-blue);
+                    --work-surface-accent-dark: var(--soft-yellow);
+                    --work-text-ondark: var(--light-ondark);
+                    --work-head-ondark: var(--work-text-ondark);
+                    --work-accent-ondark: var(--drab-orange);
+                    --work-hint-ondark: var(--peach-orange);
+                    --work-focus-ondark: var(--bright-orange);
+                }
+            }
+            @layer brand-folio {
+                :root {
+                    --folio-surface-ondark: var(--soft-yellow);
+                    --folio-surface-accent-dark: var(--dark-emerald);
+                    --folio-text-ondark: var(--dark-ondark);
+                    --folio-head-ondark: var(--folio-text-ondark);
+                    --folio-accent-ondark: var(--deep-green);
+                    --folio-hint-ondark: var(--leaf-green);
+                    --folio-focus-ondark: var(--bright-green)
+                }
+            }
+
+            @layer brand-defaults {
+                *, html:root {
+
+                    --surface-prime: var(--dark-ondark);
+                    --text-prime: var(--light-ondark);
+                    --head-prime: var(--text-prime);
+                    --input-prime: var(--input-ondark);
+                    --accent-prime: var(--accent-ondark);
+                    --shaddow-prime: var(--shaddow-ondark);
+                    --hint-prime: var(--hint-ondark);
+                    --valid-prime: var(--valid-ondark);
+                    --invalid-prime: var(--valid-ondark);
+
+                    --cta-surface:  var(--cta-surface-ondark);
+                    --cta-surface-accent: var(--cta-surface-accent-dark);
+                    --cta-text: var(--cta-text-ondark);
+                    --cta-head: var(--cta-head-ondark);
+                    --cta-accent: var(--cta-accent-ondark);
+                    --cta-hint: var( --cta-hint-ondark);
+                    --cta-hint-accent: var(--cta-hint-accent-ondark);
+                    --cta-focus: var(--cta-focus-ondark);
+
+                    --info-surface: var(--info-surface-ondark);
+                    --info-surface-accent: var(--info-surface-accent-ondark);
+                    --info-text: var(--info-text-ondark);
+                    --info-headtext: var(--info-head-ondark);
+                    --info-accent: var(--info-accent-ondark);
+                    --info-hint: var(--info-hint-ondark);
+                    --info-focus: var(--info-focus-ondark);
+
+                    --work-surface: var(--work-surface-ondark);
+                    --work-surface-accent: var(--soft-yellow);
+                    --work-text: var(--light-ondark);
+                    --work-headtext: var(--work-text-ondark);
+                    --work-accent: var(--work-accent-ondark);
+                    --work-hint: var(--work-hint-ondark);
+                    --work-focus: var(--work-focus-ondark);
+
+                    --folio-surface: var(--folio-surface-ondark);
+                    --folio-surface-accent: var(--folio-surface-accent-dark);
+                    --folio-text: var(--folio-text-ondark);
+                    --folio-headtext: var(--folio-head-ondark);
+                    --folio-accent: var(--folio-accent-ondark);
+                    --folio-hint: var(--folio-hint-ondark);
+                    --folio-focus: var(--folio-hint-ondark)
+
+                    --dark-contrast: contrast(.8);
+                    --dark-bright: contrast(1.15);
+                }
+
+                body {
+                    background-color: var(--surface-prime);
+                    color: var(--text-prime);
+                }
+            }
+        }
+
+        /* Dark */
+        @media (prefers-color-scheme: light) {
+
+            :root {
+                --light-scheme: light;
+                --only-light: only light;
+                --scheme-prime: var(--light-scheme);
+                color-scheme: var(--scheme-prime);
+            }
+
+            @layer brand-palette {
+                :root {
+                    --text-onlight: var(--dark-onlight);
+                    --surface-onlight: var(--light-onlight);
+                    --input-onlight: #464646;
+                    --accent-onlight: var(--drab-orange);
+                    --shaddow-onlight: var(--deep-blue);
+                    --hint-onlight: var(--drab-green);
+                    --invalid-onlight: var(--bright-red);
+
+                }
+            }
+
+            @layer brand-cta {
+                :root {
+                    --cta-surface-onlight: var(--deep-green);
+                    --cta-surface-accent-light: #759148;
+                    --cta-text-onlight: var(--light-onlight);
+                    --cta-head-onlight: var(--cta-text-onlight);
+                    --cta-accent-onlight: #759148;
+                    --cta-hint-onlight: #b4e06c;
+                    --cta-focus-onlight: #a1e03c;
+                }
+            }
+            @layer brand-info {
+                :root {
+                    --info-surface-onlight:#fefbf7;
+                    --info-surface-accent-ondark: #001c1d;
+                    --info-text-onlight: #131422;
+                    --info-head-onlight: var(--info-text-onlight);
+                    --info-accent-onlight: #fea37c;
+                    --info-hint-onlight: #df622d;
+                    --info-focus-onlight: #fea37c;
+                }
+            }
+            @layer brand-work {
+                :root {
+                    --work-surface-onlight: #fefbf7;
+                    --work-surface-accent-dark: #759148;
+                    --work-text-onlight: var(--dark-onlight);
+                    --work-head-onlight: var(--work-text-onlight);
+                    --work-accent-onlight: #fea37c;
+                    --work-hint-onlight: #df622d;
+                    --work-focus-onlight: #fea37c;
+                }
+            }
+            @layer brand-folio {
+                :root {
+                    --folio-surface-onlight: #fefbf7;
+                    --folio-surface-accent-light: #001c1d;
+                    --folio-text-onlight: var(--dark-onlight);
+                    --folio-head-onlight: var(--folio-text-onlight);
+                    --folio-accent-onlight: #e6e791;
+                    --folio-hint-onlight: #fdff73;
+                    --folio-focus-onlight: #fcff3a;
+                }
+            }
+
+            *, html:root {
+                --surface-prime: var(--surface-onlight);
+                --text-prime: var(--text-onlight);
+                --head-prime: var(--text-onlight);
+                --input-prime: var(--input-onlight);
+                --accent-prime: var(--accent-onlight);
+                --shaddow-prime: var(--shaddow-onlight);
+                --hint-prime: var(--hint-onlight);
+                --valid-prime: var(--valid-onlight);
+                --invalid-prime: var(--valid-onlight);
+
+                --light-contrast: contrast(1.1);
+                --light-bright: contrast(0.9);
+            }
+
+            body {
+                background-color: var(--surface-prime);
+                color: var(--text-prime);
+
+            }
+        }
+    }
+
+@layer brand-digital {
+    @layer brand-core {
+
+    *, :root {
+
+            --link-prime: var(--hint-prime);
+            --visted-prime: var(--hint-prime);
+
+            --active-prime: var(--accent-prime);
+            --target-prime: var(--accent-prime);
+
+            --hover-prime:  var(--focus-prime);
+            --focusin-prime: var(--focus-prime);
+
+            --border-prime: var(--accent-prime);
+            --caret-prime: var(--accent-prime);
+
+            --outline-prime: var(--focus-prime);
+
+            --underline-prime: var(--hint-prime);
+            --emphasis-prime: var(--hint-prime);
+
+            --shaddow-prime: var(--accent-prime);
+            --text-shaddow-prime: var(--shaddow-prime);
+        }
+    }
+}
 
     /*
   Animate
-  ========================================================================== */
+  ==========================================================================  */
 
-    /* ANIMATE
+    /*  ANIMATE
     [2] Form focus Outlines
     [2] A11y: Reduce motion for transitions
-  */
+   */
     @layer animate {
         @media (prefers-reduced-motion: no-preference) {
             :focus-visible {
                 transition: outline-offset 105ms cubic-bezier(0.25, 0, 0.4, 1);
             }
+
             :where(:not(:active)):focus-visible {
                 transition-duration: 0.275s;
             }
         }
-        /* [2] Use offset to highlight visible interactive focus.*/
+
+        /*  [2] Use offset to highlight visible interactive focus. */
         :where(:not(:active)):focus-visible {
             outline-offset: 5px;
         }
-    } /*Animate*/
-} /*Preferences*/
+    }
+
+    /* Animate */
+}
+
+/* Preferences */
 
 /*
 *
-*  ================================================================= */
-
+*  =================================================================  */
 @layer typography {
-    /* ==========================================================================
+    /*  ==========================================================================
     Typoggraphic Sizes: Font: Line-Hieghts, Type Scales
     ==========================================================================
 
@@ -422,55 +855,59 @@
   - 1.777 rem/28.43px:    H3 Font           2.2.5/36px
   - 2.369rem/37.90px:     H2 Font           3.75rem/54px
   - 3.157rem/50.52px:     H1 Font           5.063/81.00px
-  */
-
+   */
     @layer type-sizes {
         :root {
             --size-default: 16px;
             --scale-small: 1.115rem;
             --scale-medium: 1.333rem;
-
             --h1-default: 28px;
             --h1-max: 7vmax;
             --h1-prefer: calc(-6vw + var(--scale-medium));
-
             --h2-default: 22px;
             --h2-prefer: calc(-4vw + var(--scale-medium));
             --h2-max: 5vmax;
-
             --h3-default: 18px;
             --h3-max: 3.5vmax;
             --h3-prefer: calc(-1.5vw + var(--scale-small));
-
             --p-default: var(--size-default, 14px);
             --p-prefer: calc(-1.5vw + var(--scale-small));
             --p-max: 2vmax;
         }
-    } /*Type Size*/
+    }
 
-    /* ==========================================================================
+    /* Type Size */
+
+    /*  ==========================================================================
    Fluid Text
-  ========================================================================== */
-
+  ==========================================================================  */
     @layer fluid-text {
         h1 {
             --h1-fluid: clamp(var(--h1-default), var(--h1-prefer), var(--h1-max));
+
             font-size: revert;
-            font-size: var(--h1-default); /* Fallback value */
+            font-size: var(--h1-default);
+
+            /*  Fallback value  */
             font-size: var(--h1-fluid);
         }
 
         h2 {
             --h2-fluid: clamp(var(--h2-default), calc(-2vw + 1rem), var(--h2-max));
+
             font-size: revert;
-            font-size: var(--h2-default); /* Fallback value */
+            font-size: var(--h2-default);
+
+            /*  Fallback value  */
             font-size: var(--h2-fluid);
         }
 
         h3 {
             font-size: clamp(1.125rem, calc(-1vw + 1rem), 1.625rem);
             font-size: revert;
-            font-size: var(--h2-default); /* /Fallback value */
+            font-size: var(--h2-default);
+
+            /*  /Fallback value  */
             font-size: var(--h2-fluid);
         }
 
@@ -478,14 +915,17 @@
         label,
         span {
             --p-fluid: clamp(0.925rem, -2vmax + var(--p-default), 1.15rem);
+
             font-size: revert;
             font-size: var(--p-default);
             font-size: var(--p-fluid);
         }
     }
-} /* Typography */
+}
 
-/** ==========================================================================
+/*  Typography  */
+
+/* * ==========================================================================
  * Responsiveness & Media Queries for Devices
  *
  * [1] Global Variables First
@@ -493,13 +933,13 @@
  * [3] Use subsequent layers for media queries to define more localised, custom variants
  * -> Therefore use media queries to define parameters for different sizing, and etc
  * -> And apply these for shared styles.
- * ========================================================================== */
-
+ * ==========================================================================  */
 @layer responsive {
-    /* Device: Base  Mobile:
+    /*  Device: Base  Mobile:
   *  [1] Uses notional ranges, not contextual
-   ========================================================================== */
-    /* @media only screen and (288px <= width <= 408.99px) */
+   ==========================================================================  */
+
+    /*  @media only screen and (288px <= width <= 408.99px)  */
     @media screen and (max-width: 359.999px) {
         :root {
             --macro-head: 3rem;
@@ -510,14 +950,19 @@
             --macro-height: 300dvw;
             --macro-wrap-inline: ;
         }
-        /* body {
+
+        /*  body {
             min-width: 100dvw;
-        } */
-    } /* Base Mobile */
-    /* Device: Standard Mobile: Majority of Usets: Median is 348px;
+        }  */
+    }
+
+    /*  Base Mobile  */
+
+    /*  Device: Standard Mobile: Majority of Usets: Median is 348px;
   *  [1] Uses notional ranges, not contextual
-   ========================================================================== */
-    /* @media only screen and (288px <= width <= 408.99px) */
+   ==========================================================================  */
+
+    /*  @media only screen and (288px <= width <= 408.99px)  */
     @media screen and (min-width: 360px) and (max-width: 408.999px) {
         :root {
             --macro-head: 4rem;
@@ -528,14 +973,18 @@
             --macro-height: 300dvw;
             --macro-wrap-inline: ;
         }
-        /* body {
-            min-width: 100dvw;
-        } */
-    } /* Standard Mobile */
 
-    /* Device: Mobile Large: Ultras & Pro Devices
-  ================================ */
-    /* @media only screen and (409px <= width <= 488.99px) */
+        /*  body {
+            min-width: 100dvw;
+        }  */
+    }
+
+    /*  Standard Mobile  */
+
+    /*  Device: Mobile Large: Ultras & Pro Devices
+  ================================  */
+
+    /*  @media only screen and (409px <= width <= 488.99px)  */
     @media screen and (min-width: 409px) and (max-width: 488.999px) {
         :root {
             --macro-head: 4rem;
@@ -547,11 +996,14 @@
             --macro-wrap-mid-size: ;
             --macro-wrap-inline: ;
         }
-    } /* Ultra Mobile */
+    }
 
-    /* Standard Tablets
-  ================================ */
-    /* @media only screen and (489px <= width <= 768.99px) */
+    /*  Ultra Mobile  */
+
+    /*  Standard Tablets
+  ================================  */
+
+    /*  @media only screen and (489px <= width <= 768.99px)  */
     @media screen and (min-width: 489px) and (max-width: 768.999px) {
         :root {
             --macro-head: 5rem;
@@ -562,11 +1014,14 @@
             --macro-height: fit-content;
             --macro-wrap-inline: ;
         }
-    } /* Standard Tablets*/
+    }
 
-    /* Device: Pro Tablets and Small Laptops
-  ================================ */
-    /* @media only screen and (769px <= width <= 1024.999px) */
+    /*  Standard Tablets */
+
+    /*  Device: Pro Tablets and Small Laptops
+  ================================  */
+
+    /*  @media only screen and (769px <= width <= 1024.999px)  */
     @media screen and (min-width: 769px) and (max-width: 1024.999px) {
         :root {
             --macro-head: 5rem;
@@ -577,11 +1032,14 @@
             --macro-height: fit-content;
             --macro-wrap-inline: ;
         }
-    } /* Pro Tablets & Base Responsive Sizes.
+    }
 
-  /* Device: Laptops and Desktops
-  ================================ */
-    /* @media only screen and (1025px >= width <= 1336.999px) */
+    /*  Pro Tablets & Base Responsive Sizes.
+
+  /*  Device: Laptops and Desktops
+  ================================  */
+
+    /*  @media only screen and (1025px >= width <= 1336.999px)  */
     @media screen and (min-width: 1025px) and (max-width: 1336.999px) {
         :root {
             --macro-head: 5rem;
@@ -592,11 +1050,14 @@
             --macro-height: fit-content;
             --macro-wrap-inline: ;
         }
-    } /* Desktops*/
+    }
 
-    /* Device: Laptops and Desktops
-  ================================ */
-    /* @media only screen and (1337px >= width <= 1439.999px) */
+    /*  Desktops */
+
+    /*  Device: Laptops and Desktops
+  ================================  */
+
+    /*  @media only screen and (1337px >= width <= 1439.999px)  */
     @media screen and (min-width: 1337px) and (max-width: 1440.999px) {
         :root {
             --macro-head: 5rem;
@@ -607,11 +1068,14 @@
             --macro-height: fit-content;
             --macro-wrap-inline: ;
         }
-    } /* Desktops*/
+    }
 
-    /* Device: Modern Desktops
-  ================================ */
-    /* @media only screen and (1440px >= width <= 1440px) */
+    /*  Desktops */
+
+    /*  Device: Modern Desktops
+  ================================  */
+
+    /*  @media only screen and (1440px >= width <= 1440px)  */
     @media screen and (min-width: 1441px) and (max-width: 1920.999px) {
         :root {
             --macro-head: 5rem;
@@ -622,10 +1086,12 @@
             --macro-height: fit-content;
             --macro-wrap-inline: ;
         }
-    } /* Desktops*/
+    }
 
-    /* Device: Ultra Screens and TV
-  ================================ */
+    /*  Desktops */
+
+    /*  Device: Ultra Screens and TV
+  ================================  */
     @media screen and (min-width: 1921px) and (max-width: 2561.999px) {
         :root {
             --macro-head: 5rem;
@@ -636,12 +1102,16 @@
             --macro-height: fit-content;
             --macro-wrap-inline: ;
         }
-    } /* Desktops*/
-} /*Resposnive*/
+    }
 
-/* ==========================================================================
+    /*  Desktops */
+}
+
+/* Resposnive */
+
+/*  ==========================================================================
   Compositon: Canvas: Structure, Layout, Dimensions, Semantics
-  ========================================================================== */
+  ==========================================================================  */
 @layer composition {
     @layer canvas {
         html {
@@ -651,10 +1121,10 @@
 
         body {
             box-sizing: border-box;
-            height: var(--macro-height);
-            inline-size: 100vw;
-            margin-block-start: 0px !important;
-            margin-inline-start: 0px !important;
+            height: auto;
+            inline-size: auto;
+            margin-block-start: 0 !important;
+            margin-inline-start: 0 !important;
             max-block-size: fit-content;
             max-inline-size: 100dvw;
             place-self: start center;
@@ -662,106 +1132,92 @@
             text-align: center;
             vertical-align: top;
         }
-    } /*Canvas*/
+    }
 
-        @layer macro {
-            .fo-layout-macro {
-                /* background-color: var(--wf-surface6); */
-                border: var(--wf-border2);
-                column-gap: 0;
-                display: grid;
-                /*Track Names, -s: start, -e: end*/
-                grid-template:
-                /*Row */
-                    [fo-head-s] var(--macro-head) [fo-head-e fo-focal-s] var(--macro-core) [fo-focal-e fo-foot-s] var(
-                        --macro-foot
-                    )
-                    [fo-foot-e] / /*Col*/
-                    [fo-left-s] var(--macro-side) [fo-left-e fo-focal-s] var(--macro-middle) [fo-focal-e fo-right-s] var(
-                        --macro-side
-                    )
-                    [fo-foot-e]; /*MDN Guide on Tracknames*/
-                row-gap: 0;
-            }
-            /*Row Names, Positions*/
-            .fo-head {
-                background-color: var(--wf-surface3);
-                grid-area: fo-head;
-                grid-column: fo-focal-s / fo-focal-e;
-                grid-row: fo-head-s / fo-head-e;
-                margin-block-end: 1rem;
-            }
+    /* Canvas */
+    @layer macro {
+        .fo-layout-macro {
+            border: var(--wf-border2);
+            column-gap: 0;
+            display: grid;
 
-            .fo-focal {
-                /* background-color: var(--wf-surface8); */
-                grid-area: fo-focal;
-                grid-column: fo-focal-s / fo-focal-e;
-                grid-row: fo-focal-s / fo-focal-e;
-            }
+            /* Track Names, -s: start, -e: end */
+            grid-template:
+                /* Row  */
+                [fo-head-s] var(--macro-head) [fo-head-e fo-focal-s] var(--macro-core) [fo-focal-e fo-foot-s] var(
+                    --macro-foot
+                )
+                [fo-foot-e] /
+                /* Col */
+                [fo-left-s] var(--macro-side) [fo-left-e fo-focal-s] var(--macro-middle) [fo-focal-e fo-right-s] var(
+                    --macro-side
+                )
+                [fo-foot-e];
 
-            .fo-foot {
-                /* background-color: var(--wf-surface5); */
-                grid-area: fo-foot;
-                grid-column: fo-focal-s / fo-focal-e;
-                grid-row: fo-foot-s / fo-foot-e;
-                margin-block-start: 1rem;
-            }
-
-            /*Column Names, Positions*/
-            .fo-left {
-                background-color: var(--wf-surface2);
-                box-sizing: var(--box);
-                display: block;
-                grid-area: fo-left;
-                grid-column: fo-left-s / fo-left-e;
-                grid-row: 1 / 4;
-            }
-
-            /* .fo-center {
-                background-color: var(--wf-surface4);
-                grid-area: fo-focal;
-                grid-column:  fo-focal-s / fo-focal-e;
-                grid-row:  fo-focal-s / fo-focal-e;
-            } */
-
-            /*.fo-main-wrap {
-                box-sizing: var(--box);
-                display: block;
-                max-block-size: var(--macro-height); */
-                /* max-height: ; */
-                /* max-inline-size: calc(var(--macro-wrap-inline) * 1vw);
-                max-inline-size: calc(var(--macro-wrap-inline) * 1svw);
-                max-inline-size: calc(var(--macro-wrap-inline) * 1lvw);
-                max-inline-size: calc(var(--macro-wrap-inline) * 1dvi);
-                max-inline-size: calc(var(--macro-wrap-inline) * 1dvw);
-                max-inline-size: 90vw;
-                max-inline-size: 90svw;
-                max-inline-size: 90lvw;
-                max-inline-size: 90dvi;
-                max-inline-size: 90dvw;
-                position: relative; */
-            /* } */
-
-            .fo-right {
-                background-color: var(--wf-surface2);
-                box-sizing: var(--box);
-                display: block;
-                grid-area: fo-right;
-                grid-column: fo-right-s / fo-right-e;
-                grid-row: 1 / -1;
-            }
+            /* MDN Guide on Tracknames */
+            row-gap: 0;
         }
+
+        /* Row Names, Positions */
+        .fo-head {
+            background-color: var(--wf-surface3);
+            grid-area: fo-head;
+            grid-column: fo-focal-s / fo-focal-e;
+            grid-row: fo-head-s / fo-head-e;
+            margin-block-end: 1rem;
+        }
+
+        .fo-foot {
+            /*  background-color: var(--wf-surface5);   */
+            grid-area: fo-foot;
+            grid-column: fo-focal-s / fo-focal-e;
+            grid-row: fo-foot-s / fo-foot-e;
+            margin-block-start: 1rem;
+        }
+
+        .fo-focal {
+            /*  background-color: var(--wf-surface8);  */
+            grid-area: fo-focal;
+            grid-column: fo-focal-s / fo-focal-e;
+            grid-row: fo-focal-s / fo-focal-e;
+        }
+
+        /* Column Names, Positions */
+        .fo-left {
+            background-color: var(--wf-surface2);
+            box-sizing: var(--box);
+            display: block;
+            grid-area: fo-left;
+            grid-column: fo-left-s / fo-left-e;
+            grid-row: 1 / 4;
+        }
+
+        .fo-right {
+            background-color: var(--wf-surface2);
+            box-sizing: var(--box);
+            display: block;
+            grid-area: fo-right;
+            grid-column: fo-right-s / fo-right-e;
+            grid-row: 1 / -1;
+        }
+    }
 }
 
 @layer ia {
-    /*Main for all Pages*/
-    main, #main-base, #main-info, #main-contact, #main-folio, #main-work {
-        /* background-color: var(--wf-surface7); */
-        border: var(--wf-border1);
+    /* Main for all Pages */
+
+    /* main, */
+    #main-base,
+    #main-land,
+    #main-info,
+    #main-contact,
+    #main-folio,
+    #main-work {
         display: grid;
-        max-block-size: var(--macro-height);
+        max-block-size: fit-content;
         max-inline-size: 100%;
-        /* max-height: ; */
+
+        /*  max-width: ;  */
         max-inline-size: calc(var(--macro-wrap-inline) * 1vw);
         max-inline-size: calc(var(--macro-wrap-inline) * 1svw);
         max-inline-size: calc(var(--macro-wrap-inline) * 1lvw);
@@ -773,143 +1229,166 @@
         max-inline-size: 90dvi;
         max-inline-size: 90dvw;
         min-block-size: 100%;
+        width: auto;
         position: relative;
     }
 
-        @layer landing {
-            @media screen and (max-width: 768px) {
-                /*Mobile:  4x1 Row:Column: by Line Place Placement*/
-                #main-land {
-                    /*Client Position*/
-                    --fo-client-r-start: 1;
-                    --fo-client-r-end: 2;
-                    --fo-client-c-start: 1;
-                    --fo-client-c-end: 2;
-                    /*Info Position*/
-                    --fo-info-r-start: 2;
-                    --fo-info-r-end: 3;
-                    --fo-info-c-start: 1;
-                    --fo-info-c-end: 2;
-                    /*Work Position*/
-                    --fo-work-r-start: 3;
-                    --fo-work-r-end: 4;
-                    --fo-work-c-start: 1;
-                    --fo-work-c-end: 2;
-                    /* CTA Position*/
-                    --fo-cta-r-start: 4;
-                    --fo-cta-r-end: 4;
-                    --fo-cta-c-start: 1;
-                    --fo-cta-c-end: 2;
-                }
-                #main-base,#main-land {
-                    column-gap: 1rem;
-                    grid-template: repeat(4, 50%) / 100%;
-                    grid-template-areas:
-                        "fo-client"
-                        "fo-info"
-                        "fo-work"
-                        "fo-cta";
-                    row-gap: 1rem;
-                }
-                #main-base section, #main-land section {
-                    min-block-size: 25rem;
-                    min-inline-size: 90%;
-                    /* grid-auto-rows: minmax(25rem, auto); */
-                }
+    @layer landing {
+        @media screen and (max-width: 768px) {
+            /* Mobile:  4x1 Row:Column: by Line Place Placement */
+            #main-base,
+            #main-land {
+                /* Client Position */
+                --fo-client-r-start: 1;
+                --fo-client-r-end: 2;
+                --fo-client-c-start: 1;
+                --fo-client-c-end: 2;
+
+                /* Info Position */
+                --fo-info-r-start: 2;
+                --fo-info-r-end: 3;
+                --fo-info-c-start: 1;
+                --fo-info-c-end: 2;
+
+                /* Work Position */
+                --fo-work-r-start: 3;
+                --fo-work-r-end: 4;
+                --fo-work-c-start: 1;
+                --fo-work-c-end: 2;
+
+                /*  CTA Position */
+                --fo-cta-r-start: 4;
+                --fo-cta-r-end: 4;
+                --fo-cta-c-start: 1;
+                --fo-cta-c-end: 2;
             }
 
-            @media screen and (min-width: 768px) {
-                /*Mobile:  4x1 Row:Column: by Line Place Placement*/
-                #main-base section, #main-land section {
-                    /*Client Position*/
-                    --fo-client-r-start: 1;
-                    --fo-client-r-end: 2;
-                    --fo-client-c-start: 1;
-                    --fo-client-c-end: 2;
-                    /*Info Position*/
-                    --fo-info-r-start: 1;
-                    --fo-info-r-end: 2;
-                    --fo-info-c-start: 2;
-                    --fo-info-c-end: 3;
-                    /*Work Position*/
-                    --fo-work-r-start: 2;
-                    --fo-work-r-end: 3;
-                    --fo-work-c-start: 1;
-                    --fo-work-c-end: 2;
-                    /* CTA Position*/
-                    --fo-cta-r-start: 2;
-                    --fo-cta-r-end: 3;
-                    --fo-cta-c-start: 2;
-                    --fo-cta-c-end: 3;
-                }
-                #main-base,#main-land {
-                    column-gap: 1rem;
-                    grid-template: [fo-client] 1fr [fo-info] 1fr / [fo-work] 1fr [fo-cta] 1fr;
-                    grid-template-areas:
-                        "fo-client fo-info"
-                        "fo-work fo-cta";
-                    row-gap: 1.5rem;
-                }
-                #main-base section, #main-land section {
-                    min-block-size: 25rem;
-                    min-inline-size: 90%;
-                    /* grid-auto-rows: minmax(25rem, auto); */
-                }
+            #main-base,
+            #main-land {
+                column-gap: 1rem;
+                grid-template: repeat(4, 50%) / 100%;
+                grid-template-areas:
+                    "fo-client"
+                    "fo-info"
+                    "fo-work"
+                    "fo-cta";
+                row-gap: 1rem;
             }
 
-            .fo-client {
-                background-color: var(--wf-surface9);
-                grid-area: fo-client;
-                grid-column: var(--fo-client-c-start) / var(--fo-client-c-end);
-                grid-row: var(--fo-client-r-start) / var(--fo-client-r-end);
-            }
+            #main-base > section,
+            #main-land > section {
+                /* block-size: auto; */
+                min-block-size: 25rem;
+                min-inline-size: 90%;
 
-            .fo-info {
-                background-color: var(--wf-surface4);
-                grid-area: fo-info;
-                grid-column: var(--fo-info-c-start) / var(--fo-info-c-end);
-                grid-row: var(--fo-info-r-start) / var(--fo-info-r-end);
-            }
-
-            .fo-work {
-                background-color: var(--wf-surface3);
-                grid-area: fo-work;
-                grid-column: var(--fo-work-c-start) / var(--fo-work-c-end);
-                grid-row: var(--fo-work-r-start) / var(--fo-work-r-end);
-            }
-
-            .fo-cta {
-                background-color: var(--wf-surface5);
-                grid-area: fo-cta;
-                grid-column: var(--fo-cta-c-start) / var(--fo-cta-c-end);
-                grid-row: var(--fo-cta-r-start) / var(--fo-cta-r-end);
+                /*  grid-auto-rows: minmax(25rem, auto);  */
             }
         }
 
-        @layer info {
-            @layer about {
-                @media screen and (max-width: 768px) {
-                /*Mobile:  4x1 Row:Column: by Line Place Placement*/
+        @media screen and (min-width: 768px) {
+            /* Mobile:  4x1 Row:Column: by Line Place Placement */
+            #main-base > section,
+            #main-land > section {
+                /* Client Position */
+                --fo-client-r-start: 1;
+                --fo-client-r-end: 2;
+                --fo-client-c-start: 1;
+                --fo-client-c-end: 2;
+
+                /* Info Position */
+                --fo-info-r-start: 1;
+                --fo-info-r-end: 2;
+                --fo-info-c-start: 2;
+                --fo-info-c-end: 3;
+
+                /* Work Position */
+                --fo-work-r-start: 2;
+                --fo-work-r-end: 3;
+                --fo-work-c-start: 1;
+                --fo-work-c-end: 2;
+
+                /*  CTA Position */
+                --fo-cta-r-start: 2;
+                --fo-cta-r-end: 3;
+                --fo-cta-c-start: 2;
+                --fo-cta-c-end: 3;
+            }
+
+            #main-base,
+            #main-land {
+                column-gap: 1rem;
+                grid-template: [fo-client] 1fr [fo-info] 1fr / [fo-work] 1fr [fo-cta] 1fr;
+                grid-template-areas:
+                    "fo-client fo-info"
+                    "fo-work fo-cta";
+                row-gap: 1.5rem;
+            }
+
+            #main-base > section,
+            #main-land > section {
+                min-block-size: 25rem;
+                min-inline-size: 90%;
+
+                /*  grid-auto-rows: minmax(25rem, auto);  */
+            }
+        }
+
+        .fo-client {
+            background-color: --folio-prime;
+            grid-area: fo-client;
+            grid-column: var(--fo-client-c-start) / var(--fo-client-c-end);
+            grid-row: var(--fo-client-r-start) / var(--fo-client-r-end);
+        }
+
+        .fo-info {
+            background-color: var(--wf-surface4);
+            grid-area: fo-info;
+            grid-column: var(--fo-info-c-start) / var(--fo-info-c-end);
+            grid-row: var(--fo-info-r-start) / var(--fo-info-r-end);
+        }
+
+        .fo-work {
+            background-color: var(--wf-surface3);
+            grid-area: fo-work;
+            grid-column: var(--fo-work-c-start) / var(--fo-work-c-end);
+            grid-row: var(--fo-work-r-start) / var(--fo-work-r-end);
+            position: relative;
+        }
+
+        .fo-cta {
+            background-color: var(--wf-surface5);
+            grid-area: fo-cta;
+            grid-column: var(--fo-cta-c-start) / var(--fo-cta-c-end);
+            grid-row: var(--fo-cta-r-start) / var(--fo-cta-r-end);
+        }
+    }
+
+    @layer info {
+        @layer about {
+            @media screen and (max-width: 768px) {
+                /* Mobile:  4x1 Row:Column: by Line Place Placement */
                 #main-info {
-                    /*Info Intro Position*/
+                    /* Info Intro Position */
                     --fo-info-intro-r-s: 1;
                     --fo-info-intro-r-e: 2;
                     --fo-info-intro-c-s: 1;
                     --fo-info-intro-c-e: 2;
-                    /*Info Image Position*/
+
+                    /* Info Image Position */
                     --fo-info-img-r-s: 2;
                     --fo-info-img-r-e: 3;
                     --fo-info-img-c-s: 1;
                     --fo-info-img-c-e: 2;
-                    /*Info About Me Position, spans 2 column*/
+
+                    /* Info About Me Position, spans 2 column */
                     --fo-info-aboutme-r-s: 2;
                     --fo-info-aboutme-r-e: 3;
                     --fo-info-aboutme-c-s: 3;
                     --fo-info-aboutme-c-e: 3;
-
                     --fo-info-detail-row: 400px;
                     --fo-info-aboutme-row: 250px;
                 }
+
                 #main-info {
                     column-gap: 2rem;
                     grid-template-areas:
@@ -917,35 +1396,41 @@
                         "fo-info-img"
                         "fo-info-about";
                     grid-template-rows: 1fr 15vh;
-                    row-gap: 1rem
+                    row-gap: 1rem;
                 }
-                /* #main-info {
+
+                /*  #main-info {
                     min-block-size: 25rem;
                     min-inline-size: 90%;
-                    grid-auto-rows: minmax(25rem, auto); */
-                }
-                @media screen and (min-width: 768px) {
-                /*Mobile:  3x1 Row:Column: by Line Place Placement*/
+                    grid-auto-rows: minmax(25rem, auto);  */
+            }
+
+            @media screen and (min-width: 768px) {
+                /* Mobile:  3x1 Row:Column: by Line Place Placement */
                 #main-info {
-                    /* Start: Intro Info */
+                    /*  Start: Intro Info  */
                     --fo-info-intro-r-s: 1;
                     --fo-info-intro-r-e: 2;
                     --fo-info-intro-c-s: 1;
                     --fo-info-intro-c-e: 2;
-                    /*Info Image End*/
+
+                    /* Info Image End */
                     --fo-info-img-r-s: 1;
                     --fo-info-img-r-e: 1;
                     --fo-info-img-c-s: 2;
                     --fo-info-img-c-e: 3;
-                    /*Info About Span 2*/
+
+                    /* Info About Span 2 */
                     --fo-info-aboutme-r-s: 2;
                     --fo-info-aboutme-r-e: 3;
                     --fo-info-aboutme-c-s: 1;
                     --fo-info-aboutme-c-e: 3;
-                    /* Row Dimensions */
+
+                    /*  Row Dimensions  */
                     --fo-info-detail-row: 25rem;
                     --fo-info-aboutme-row: 8vh;
                 }
+
                 #main-info {
                     column-gap: 2rem;
                     grid-template-areas:
@@ -957,56 +1442,59 @@
                 }
             }
 
-                .fo-info-intro {
-                    background-color: var(--wf-surface9);
-                    grid-area: fo-info-intro;
-                    grid-column: var(--fo-info-intro-c-s) / var(--fo-info-intro-c-e);
-                    grid-row: var(--fo-info-intro-r-s) / var(--fo-info-intro-r-s);
-                    min-block-size: var(--fo-info-detail-row);
-                }
-
-                .fo-info-image {
-                    background-color: var(--wf-surface8);
-                    grid-area: fo-info-img;
-                    grid-column: var(--fo-info-img-c-s) / var(--fo-info-img-c-e);
-                    grid-row: var(--fo-info-imgl-r-s) / var(--fo-info-dimg-r-s);
-                    min-block-size:  var(--fo-info-detail-row);
-                }
-
-                .fo-info-aboutme {
-                    background-color: var(--wf-surface7);
-                    grid-area: fo-info-about;
-                    grid-column: var(--fo-info-aboutme-c-s) / var(--fo-info-aboutme-c-e);
-                    grid-row: var(--fo-info-aboutme-r-s) / var(--fo-info-aboutme-r-e);
-                    max-block-size: max-content;
-                    min-block-size:  var(--fo-info-aboutme-row);
-                }
-
+            .fo-info-intro {
+                background-color: var(--wf-surface9);
+                grid-area: fo-info-intro;
+                grid-column: var(--fo-info-intro-c-s) / var(--fo-info-intro-c-e);
+                grid-row: var(--fo-info-intro-r-s) / var(--fo-info-intro-r-s);
+                min-block-size: var(--fo-info-detail-row);
             }
 
-            @layer contact {
-                /*In Portrait: Mobile: By Rows*/
-                 @media screen and (max-width: 768px) {
-                /*Mobile:  2x1 Row:Column: by Line Place Placement*/
+            .fo-info-image {
+                background-color: var(--wf-surface8);
+                grid-area: fo-info-img;
+                grid-column: var(--fo-info-img-c-s) / var(--fo-info-img-c-e);
+                grid-row: var(--fo-info-imgl-r-s) / var(--fo-info-dimg-r-s);
+                min-block-size: var(--fo-info-detail-row);
+            }
+
+            .fo-info-aboutme {
+                background-color: var(--wf-surface7);
+                grid-area: fo-info-about;
+                grid-column: var(--fo-info-aboutme-c-s) / var(--fo-info-aboutme-c-e);
+                grid-row: var(--fo-info-aboutme-r-s) / var(--fo-info-aboutme-r-e);
+                max-block-size: max-content;
+                min-block-size: var(--fo-info-aboutme-row);
+            }
+        }
+
+        @layer contact {
+            /* In Portrait: Mobile: By Rows */
+            @media screen and (max-width: 768px) {
+                /* Mobile:  2x1 Row:Column: by Line Place Placement */
                 #main-contact {
-                    /*Info Intro Position, */
+                    /* Info Intro Position,  */
                     --fo-info-form-r-s: 1;
                     --fo-info-form-r-e: 2;
                     --fo-info-form-c-s: 1;
                     --fo-info-form-c-e: 2;
-                    /*Info Card Position, 2nd Row, 1 Col*/
+
+                    /* Info Card Position, 2nd Row, 1 Col */
                     --fo-info-card-r-s: 2;
                     --fo-info-card-r-e: 3;
                     --fo-info-card-c-s: 1;
                     --fo-info-card-c-e: 2;
-                    /*Blocks/Components Dimensions*/
+
+                    /* Blocks/Components Dimensions */
                     --fo-info-form-block: 400px;
                     --fo-info-card-block: 150px;
                     --fo-info-form-inline: ;
                     --fo-info-card-inline: ;
                 }
+
                 #main-contact {
                     column-gap: 0;
+                    height: auto;
                     grid-auto-columns: auto;
                     grid-template-areas:
                         "fo-info-form"
@@ -1017,298 +1505,920 @@
                 }
             }
 
-                            /*Landscape: Fixed+: Columnar*/
-                @media screen and (min-width: 1000px) and (max-width: 1201px) and (orientation: portrait) {
-                /*Fixed+:  1x2  Row:Column: by Line Place Placement*/
-                    #main-contact {
-                        /*Info Intro Position*/
-                        --fo-info-form-r-s: 1;
-                        --fo-info-form-r-e: 2;
-                        --fo-info-form-c-s: 1;
-                        --fo-info-form-c-e: 2;
-                        /*Info Image Position*/
-                        --fo-info-card-r-s: 1;
-                        --fo-info-card-r-e: 2;
-                        --fo-info-card-c-s: 2;
-                        --fo-info-card-c-e: 3;
-                        /*Column Width*/
-                        --fo-info-form-block: ;
-                        --fo-info-card-block: ;
-                        /* --fo-info-form-inline: 400px;
-                        --fo-info-card-inline: 150px; */
-                    }
-                    #main-contact {
-                        column-gap: 0rem;
-                        grid-auto-columns: auto;
-                        grid-auto-rows: auto;
-                        grid-template: 1fr / 1fr 15vh;
-                        grid-template-areas:
-                            "fo-info-form"
-                            "fo-info-card";
-                        /* grid-template-columns: 1fr 47vh; */
-                        row-gap: 0;
-                    }
-                }
-                /*Landscape: Fixed+: Columnar*/
-                @media screen and (min-width: 768px) {
-                /*Fixed+:  1x2  Row:Column: by Line Place Placement*/
-                    #main-contact {
-                        /*Info Intro Position*/
-                        --fo-info-form-r-s: 1;
-                        --fo-info-form-r-e: 2;
-                        --fo-info-form-c-s: 1;
-                        --fo-info-form-c-e: 2;
-                        /*Info Image Position*/
-                        --fo-info-card-r-s: 1;
-                        --fo-info-card-r-e: 2;
-                        --fo-info-card-c-s: 2;
-                        --fo-info-card-c-e: 3;
-                        /*Column Width*/
-                        --fo-info-form-block: ;
-                        --fo-info-card-block: ;
-                        --fo-info-form-inline: 400px;
-                        --fo-info-card-inline: 150px;
-                    }
-                    #main-contact {
-                        column-gap: 2rem;
-                        grid-auto-rows: auto;
-                        /* grid-template: 1fr 15vh / 1fr; */
-                        grid-template-areas:
-                            "fo-info-form fo-info-card";
-                        /* grid-template-columns: 1fr 47vh; */
-                        row-gap: 0;
-                    }
-                }
-                /* #main-contact {
-                min-block-size: 25rem;
-                min-inline-size: 90%;
-                grid-auto-rows: minmax(25rem, auto);} */
+            /* Landscape: Fixed+: Columnar */
+            /* @media screen and (min-width: 1000px) and (max-width: 1201px) and (orientation: portrait) {
+                #main-contact {
 
-                .fo-info-form {
-                    background-color: var(--wf-surface9);
-                    grid-area: fo-info-form;
-                    grid-column: var(--fo-info-form-c-s) / var(--fo-info-form-c-e);
-                    grid-row: var(--fo-info-form-r-s) / var(--fo-info-form-r-s);
-                    min-block-size:  var(--fo-info-form-block);
-                    min-inline-size:  var(--fo-info-form-inline);
-                    position: relative;
+                    --fo-info-form-r-s: 1;
+                    --fo-info-form-r-e: 2;
+                    --fo-info-form-c-s: 1;
+                    --fo-info-form-c-e: 2;
+
+                    --fo-info-card-r-s: 1;
+                    --fo-info-card-r-e: 2;
+                    --fo-info-card-c-s: 2;
+                    --fo-info-card-c-e: 3;
+
+                    --fo-info-form-block: ;
+                    --fo-info-card-block: ;
                 }
 
-                .fo-info-card {
-                    background-color: var(--wf-surface8);
-                    grid-area: fo-info-card;
-                    grid-column: var(--fo-info-card-c-s) / var(--fo-info-card-c-e);
-                    grid-row: var(--fo-info-card-r-s) / var(--fo-info-card-r-s);
-                    min-block-size:  var(--fo-info-card-block);
-                    min-inline-size:  var(--fo-info-card-inline);
-                    position: relative;
+                #main-contact {
+                    height: auto;
+                    column-gap: 0;
+                    grid-auto-columns: auto;
+                    grid-auto-rows: auto;
+                    grid-template: 1fr / 1fr 15vh;
+                    grid-template-areas:
+                        "fo-info-form"
+                        "fo-info-card";
+                    row-gap: 0;
+                }
+            } */
+
+            /* Landscape: Fixed+: Columnar */
+            @media screen and (min-width: 768px) {
+                /* Fixed+:  1x2  Row:Column: by Line Place Placement */
+                #main-contact {
+                    /* Info Intro Position */
+                    --fo-info-form-r-s: 1;
+                    --fo-info-form-r-e: 2;
+                    --fo-info-form-c-s: 1;
+                    --fo-info-form-c-e: 2;
+
+                    /* Info Image Position */
+                    --fo-info-card-r-s: 1;
+                    --fo-info-card-r-e: 2;
+                    --fo-info-card-c-s: 2;
+                    --fo-info-card-c-e: 3;
+
+                    /* Column Width */
+                    --fo-info-form-block: ;
+                    --fo-info-card-block: ;
+                    --fo-info-form-inline: 400px;
+                    --fo-info-card-inline: 150px;
+                }
+
+                #main-contact {
+                    column-gap: 2rem;
+                    grid-auto-rows: auto;
+
+                    /*  grid-template: 1fr 15vh / 1fr;  */
+                    grid-template-areas: "fo-info-form fo-info-card";
+
+                    /*  grid-template-columns: 1fr 47vh;  */
+                    row-gap: 0;
                 }
             }
-        }
-        @layer folio {
-            @layer clients {
 
-                @media screen and (max-width: 768px) {
-                /*Mobile:  2x1 Row:Column: by Line Place Placement*/
+            .fo-info-form {
+                /* background-color: var(--wf-surface9); */
+                grid-area: fo-info-form;
+                grid-column: var(--fo-info-form-c-s) / var(--fo-info-form-c-e);
+                grid-row: var(--fo-info-form-r-s) / var(--fo-info-form-r-s);
+                min-block-size: var(--fo-info-form-block);
+                min-inline-size: var(--fo-info-form-inline);
+                text-align: left;
+            }
+
+            .fo-info-card {
+                background-color: var(--wf-surface8);
+                grid-area: fo-info-card;
+                grid-column: var(--fo-info-card-c-s) / var(--fo-info-card-c-e);
+                grid-row: var(--fo-info-card-r-s) / var(--fo-info-card-r-s);
+                min-block-size: var(--fo-info-card-block);
+                min-inline-size: var(--fo-info-card-inline);
+            }
+        }
+    }
+
+    @layer folio {
+        @layer clients {
+            @media screen and (max-width: 768px) {
+                /* Mobile:  2x1 Row:Column: by Line Place Placement */
                 #main-clients {
-                        /*Work Summary Position*/
-                        --fo-folio-client1-r-s: 1;
-                        --fo-folio-client1-r-e: 2;
-                        --fo-folio-client1-c-s: 1;
-                        --fo-folio-client1-c-e: 2;
-                        /*Work Education Position*/
-                        --fo-folio-client2-r-s: 2;
-                        --fo-folio-client2-r-e: 3;
-                        --fo-folio-client2-c-s: 1;
-                        --fo-folio-client2-c-e: 2;
-                        /*Work Tools Position*/
-                        /* --fo-folio-client3-r-s: 3;
+                    /* Work Summary Position */
+                    --fo-folio-client1-r-s: 1;
+                    --fo-folio-client1-r-e: 2;
+                    --fo-folio-client1-c-s: 1;
+                    --fo-folio-client1-c-e: 2;
+
+                    /* Work Education Position */
+                    --fo-folio-client2-r-s: 2;
+                    --fo-folio-client2-r-e: 3;
+                    --fo-folio-client2-c-s: 1;
+                    --fo-folio-client2-c-e: 2;
+
+                    /* Work Tools Position */
+
+                    /*  --fo-folio-client3-r-s: 3;
                         --fo-folio-client3-r-e: 4;
                         --fo-folio-client3-c-s: 1;
-                        --fo-folio-client3-c-e: 2; */
-                        /*Blocks/Components Dimensions*/
-                        /* --fo-folio-client1-block: ;
+                        --fo-folio-client3-c-e: 2;  */
+
+                    /* Blocks/Components Dimensions */
+
+                    /*  --fo-folio-client1-block: ;
                         --fo-folio-client2-block: ;
-                        --fo-folio-client3-block: ; */
-                        /* --fo-folio-client1-inline: 400px;
+                        --fo-folio-client3-block: ;  */
+
+                    /*  --fo-folio-client1-inline: 400px;
                         --fo-folio-client2-inline: 150px;
-                        --fo-folio-client3-inline: 150px; */
+                        --fo-folio-client3-inline: 150px;  */
                 }
-                #main-contact {
+
+                #main-client {
                     column-gap: 0;
                     grid-template-areas:
-                            "fo-folio-client1"
-                            "fo-folio-client2";
-                            /* "fo-folio-client3"; */
+                        "fo-folio-client1"
+                        "fo-folio-client2";
+
+                    /*  "fo-folio-client3";  */
                     grid-template-columns: 1fr;
-                    row-gap: 1rem
+                    row-gap: 1rem;
                 }
+
                 #main-contact {
                 }
             }
-             /*Landscape: Fixed+: Columnar*/
+
+            /* Landscape: Fixed+: Columnar */
             @media screen and (min-width: 768px) {
-                /*Fixed+:  1x2  Row:Column: by Line Place Placement*/
-                    #main-folio {
-                        /*Work Summary Position*/
-                        --fo-folio-client1-r-s: 1;
-                        --fo-folio-client1-r-e: 2;
-                        --fo-folio-client1-c-s: 1;
-                        --fo-folio-client1-c-e: 2;
-                        /*Work Education Position*/
-                        --fo-folio-client2-r-s: 2;
-                        --fo-folio-client2-r-e: 3;
-                        --fo-folio-client2-c-s: 1;
-                        --fo-folio-client2-c-e: 2;
-                        /*Work Tools Position*/
-                        /* --fo-folio-client3-r-s: 3;
+                /* Fixed+:  1x2  Row:Column: by Line Place Placement */
+                #main-folio {
+                    /* Work Summary Position */
+                    --fo-folio-client1-r-s: 1;
+                    --fo-folio-client1-r-e: 2;
+                    --fo-folio-client1-c-s: 1;
+                    --fo-folio-client1-c-e: 2;
+
+                    /* Work Education Position */
+                    --fo-folio-client2-r-s: 2;
+                    --fo-folio-client2-r-e: 3;
+                    --fo-folio-client2-c-s: 1;
+                    --fo-folio-client2-c-e: 2;
+
+                    /* Work Tools Position */
+
+                    /*  --fo-folio-client3-r-s: 3;
                         --fo-folio-client3-r-e: 4;
                         --fo-folio-client3-c-s: 1;
-                        --fo-folio-client3-c-e: 2; */
-                        /*Blocks/Components Dimensions*/
-                        /* --fo-folio-client1-block: ;
+                        --fo-folio-client3-c-e: 2;  */
+
+                    /* Blocks/Components Dimensions */
+
+                    /*  --fo-folio-client1-block: ;
                         --fo-folio-client2-block: ;
-                        --fo-folio-client3-block: ; */
-                        /* --fo-folio-client1-inline: 400px;
+                        --fo-folio-client3-block: ;  */
+
+                    /*  --fo-folio-client1-inline: 400px;
                         --fo-folio-client2-inline: 150px;
-                        --fo-folio-client3-inline: 150px; */
-                    }
-                    #main-folio {
-                        column-gap: 0;
-                        grid-auto-rows: auto;
-                        grid-template-areas:
-                            "fo-folio-client1"
-                            "fo-folio-client2";
-                            /* "fo-folio-client3"; */
-                        row-gap: 2rem;
-                    }
+                        --fo-folio-client3-inline: 150px;  */
                 }
 
-                .fo-folio-client1 {
-                    background-color: var(--wf-surface9);
-                    grid-area: fo-work-sum;
-                    grid-column: var(--fo-work-sum-c-s) / var(--fo-work-sum-c-e);
-                    grid-row: var(--fo-work-sum-r-s) / var(--fo-work-sum-r-s);
-                    min-block-size:  var(--fo-work-sum-block);
-                    min-inline-size:  var(--fo-work-sum-inline);
-                    position: relative;
-                }
+                #main-folio {
+                    column-gap: 0;
+                    grid-auto-rows: auto;
+                    grid-template-areas:
+                        "fo-folio-client1"
+                        "fo-folio-client2";
 
-                .fo-folio-client2 {
-                    background-color: var(--wf-surface8);
-                    grid-area: fo-folio-client2;
-                    grid-column: var(--fo-folio-client2-c-s) / var(--fo-folio-client2-c-e);
-                    grid-row: var(--fo-folio-client2-r-s) / var(--fo-folio-client2-r-s);
-                    min-block-size:  var(--fo-folio-client2-block);
-                    min-inline-size:  var(--fo-folio-client2-inline);
-                    position: relative;
+                    /*  "fo-folio-client3";  */
+                    row-gap: 2rem;
                 }
+            }
 
+            .fo-folio-client1 {
+                background-color: var(--wf-surface9);
+                grid-area: fo-work-sum;
+                grid-column: var(--fo-work-sum-c-s) / var(--fo-work-sum-c-e);
+                grid-row: var(--fo-work-sum-r-s) / var(--fo-work-sum-r-s);
+                min-block-size: var(--fo-work-sum-block);
+                min-inline-size: var(--fo-work-sum-inline);
+                position: relative;
+            }
+
+            .fo-folio-client2 {
+                background-color: var(--wf-surface8);
+                grid-area: fo-folio-client2;
+                grid-column: var(--fo-folio-client2-c-s) / var(--fo-folio-client2-c-e);
+                grid-row: var(--fo-folio-client2-r-s) / var(--fo-folio-client2-r-s);
+                min-block-size: var(--fo-folio-client2-block);
+                min-inline-size: var(--fo-folio-client2-inline);
+                position: relative;
             }
         }
-        @layer work {
-            @layer profile {
-                @media screen and (max-width: 768px) {
-                /*Mobile:  2x1 Row:Column: by Line Place Placement*/
+    }
+
+    @layer work {
+        @layer profile {
+            @media screen and (max-width: 768px) {
+                /* Mobile:  2x1 Row:Column: by Line Place Placement */
                 #main-work {
-                        /*Work Summary Position*/
-                        --fo-work-sum-r-s: 1;
-                        --fo-work-sum-r-e: 2;
-                        --fo-work-sum-c-s: 1;
-                        --fo-work-sum-c-e: 2;
-                        /*Work Education Position*/
-                        --fo-work-edu-r-s: 2;
-                        --fo-work-edu-r-e: 3;
-                        --fo-work-edu-c-s: 1;
-                        --fo-work-edu-c-e: 2;
-                        /*Work Tools Position*/
-                        --fo-work-tools-r-s: 3;
-                        --fo-work-tools-r-e: 4;
-                        --fo-work-tools-c-s: 1;
-                        --fo-work-tools-c-e: 2;
-                    /*Blocks/Components Dimensions*/
+                    /* Work Summary Position */
+                    --fo-work-sum-r-s: 1;
+                    --fo-work-sum-r-e: 2;
+                    --fo-work-sum-c-s: 1;
+                    --fo-work-sum-c-e: 2;
+
+                    /* Work Education Position */
+                    --fo-work-edu-r-s: 2;
+                    --fo-work-edu-r-e: 3;
+                    --fo-work-edu-c-s: 1;
+                    --fo-work-edu-c-e: 2;
+
+                    /* Work Tools Position */
+                    --fo-work-tools-r-s: 3;
+                    --fo-work-tools-r-e: 4;
+                    --fo-work-tools-c-s: 1;
+                    --fo-work-tools-c-e: 2;
+
+                    /* Blocks/Components Dimensions */
                     --fo-info-form-block: 400px;
                     --fo-info-card-block: 150px;
                     --fo-info-form-inline: ;
                     --fo-info-card-inline: ;
                 }
-                #main-workt {
+
+                #main-work {
                     column-gap: 0;
-                    /* grid-auto-columns: auto; */
+
+                    /*  grid-auto-columns: auto;  */
                     grid-template-areas:
-                            "fo-work-sum"
-                            "fo-work-edu"
-                            "fo-work-tools";
+                        "fo-work-sum"
+                        "fo-work-edu"
+                        "fo-work-tools";
                     grid-template-columns: 1fr;
-                    row-gap: 1rem
+                    row-gap: 1rem;
                 }
             }
-             /*Landscape: Fixed+: Columnar*/
+
+            /* Landscape: Fixed+: Columnar */
             @media screen and (min-width: 768px) {
-                /*Fixed+:  1x2  Row:Column: by Line Place Placement*/
-                    #main-work {
-                        /*Work Summary Position*/
-                        --fo-work-sum-r-s: 1;
-                        --fo-work-sum-r-e: 2;
-                        --fo-work-sum-c-s: 1;
-                        --fo-work-sum-c-e: 2;
-                        /*Work Education Position*/
-                        --fo-work-edu-r-s: 2;
-                        --fo-work-edu-r-e: 3;
-                        --fo-work-edu-c-s: 1;
-                        --fo-work-edu-c-e: 2;
-                        /*Work Tools Position*/
-                        --fo-work-tools-r-s: 3;
-                        --fo-work-tools-r-e: 4;
-                        --fo-work-tools-c-s: 1;
-                        --fo-work-tools-c-e: 2;
-                        /*Column Width*/
-                        /* --fo-work-sum-block: ;
-                        --fo-work-edu-block: ; */
-                        /* --fo-work-sum-inline: 400px;
-                        --fo-work-edu-inline: 150px; */
+                /* Fixed+:  1x2  Row:Column: by Line Place Placement */
+                #main-work {
+                    /* Work Summary Position */
+                    --fo-work-sum-r-s: 1;
+                    --fo-work-sum-r-e: 2;
+                    --fo-work-sum-c-s: 1;
+                    --fo-work-sum-c-e: 2;
+
+                    /* Work Education Position */
+                    --fo-work-edu-r-s: 2;
+                    --fo-work-edu-r-e: 3;
+                    --fo-work-edu-c-s: 1;
+                    --fo-work-edu-c-e: 2;
+
+                    /* Work Tools Position */
+                    --fo-work-tools-r-s: 3;
+                    --fo-work-tools-r-e: 4;
+                    --fo-work-tools-c-s: 1;
+                    --fo-work-tools-c-e: 2;
+
+                    /* Column Width */
+
+                    /*  --fo-work-sum-block: ;
+                        --fo-work-edu-block: ;  */
+
+                    /*  --fo-work-sum-inline: 400px;
+                        --fo-work-edu-inline: 150px;  */
+                }
+
+                #main-work {
+                    column-gap: 0;
+
+                    /* grid-auto-rows: auto; */
+
+                    /*  grid-template: 1fr 15vh / 1fr;  */
+                    grid-template-areas:
+                        "fo-work-sum"
+                        "fo-work-edu"
+                        "fo-work-tools";
+                    row-gap: 2rem;
+                }
+            }
+
+            .fo-work-sum {
+                background-color: var(--wf-surface9);
+                grid-area: fo-work-sum;
+                grid-column: var(--fo-work-sum-c-s) / var(--fo-work-sum-c-e);
+                grid-row: var(--fo-work-sum-r-s) / var(--fo-work-sum-r-s);
+                min-block-size: var(--fo-work-sum-block);
+                min-inline-size: var(--fo-work-sum-inline);
+                position: relative;
+            }
+
+            .fo-work-edu {
+                background-color: var(--wf-surface8);
+                grid-area: fo-work-edu;
+                grid-column: var(--fo-work-edu-c-s) / var(--fo-work-edu-c-e);
+                grid-row: var(--fo-work-edu-r-s) / var(--fo-work-edu-r-s);
+                min-block-size: var(--fo-work-edu-block);
+                min-inline-size: var(--fo-work-edu-inline);
+                position: relative;
+            }
+
+            .fo-work-tools {
+                background-color: var(--wf-surface6);
+                grid-area: fo-work-tools;
+                grid-column: var(--fo-work-tools-c-s) / var(--fo-work-tools-c-e);
+                grid-row: var(--fo-work-tools-r-s) / var(--fo-work-tools-r-s);
+                min-block-size: var(--fo-work-tools-block);
+                min-inline-size: var(--fo-work-tools-inline);
+                position: relative;
+            }
+        }
+    }
+}
+
+@layer blocks {
+    @layer land-clients {
+        .fo-land-clients {
+            position: relative;
+        }
+
+        .fo-land-client {
+        }
+
+        .fo-land-client-card {
+            max-block-size: 100%;
+            max-inline-size: 100%;
+            position: relative;
+        }
+
+        .fo-land-client-head {
+        }
+
+        .fo-land-client-block {
+        }
+
+        .fo-land-client-hero {
+        }
+
+        .fo-land-client-hero > figcaption {
+        }
+
+        .fo-land-client-siteshot {
+        }
+
+        .fo-land-client-detail {
+        }
+    }
+    @layer land-about {
+        .fo-info {
+            position: relative;
+        }
+
+        /* https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01 */
+        .fo-land-info {
+            color: #1b1a1a;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-items: flex-end;
+            width: 100%;
+            height: ;
+        }
+
+        .fo-land-card {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-items: flex-end;
+            max-block-size: 100%;
+            max-inline-size: 100%;
+            position: relative;
+        }
+
+        .fo-land-card > header,
+        .fo-land-card > picture {
+            display: flex;
+            flex: 0 1;
+            flex-flow: column wrap;
+            padding-block: 4rem;
+            position: relative;
+        }
+
+        .fo-land-card > header {
+            min-inline-size: 55%;
+
+            /* position: absolute;
+            z-index: 1; */
+        }
+
+        .fo-land-card > picture,
+        .fo-land-card > picture > img {
+            min-inline-size: 40%;
+        }
+
+        .fo-land-card > picture > img {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-items: flex-end;
+            justify-self: flex-end;
+            max-inline-size: 100%;
+            min-inline-size: 40%;
+        }
+    }
+    @layer land-work {
+        #land-work-card {
+            align-content: space-between;
+            align-items: start;
+            background-color: var(--wf-surface7);
+            color: #070505;
+            row-gap: 1rem;
+        }
+
+        #land-work-card.fo-card-grid {
+            display: grid;
+            height: auto;
+            max-inline-size: 100%;
+            position: relative;
+            width: auto;
+        }
+
+        #land-work-card > header,
+        #land-work-card > section {
+        }
+
+        .fo-card-grid h1 {
+            display: inline;
+            justify-self: start;
+
+            /* margin-right: auto; */
+            max-inline-size: 33%;
+            width: calc(26ch + 1rem);
+        }
+
+        .fo-card-gri p {
+            display: inline;
+            justify-self: end;
+
+            /* margin-left: auto; */
+            max-inline-size: 67%;
+        }
+
+        .fo-link {
+            max-block-size: 5rem;
+            text-align: left;
+        }
+
+        .fo-card-r1 {
+            background-color: var(--wf-surface4);
+            grid-area: card-head;
+            grid-row: 1 / 2;
+            position: relative;
+        }
+
+        .fo-card-r2 {
+            background-color: var(--wf-surface9);
+            grid-area: card-edu;
+            grid-row: 2 / 3;
+            position: relative;
+        }
+
+        .fo-card-r3 {
+            grid-area: card-cred;
+            grid-row: 3 / 4;
+            position: relative;
+        }
+
+        .fo-card-r4 {
+            grid-area: card-tools;
+            grid-row: 4 / 5;
+            position: relative;
+        }
+
+        .fo-card-r5 {
+            grid-area: card-cta;
+            grid-row: 5 / 6;
+            position: relative;
+        }
+
+        p.fo-cta {
+            text-align: right;
+        }
+    }
+    @layer land-cta {
+    }
+    @layer info-intro {
+    }
+    @layer info-img {
+    }
+    @layer info-aboutme {
+    }
+    @layer info-form {
+        #main-contact {
+            inline-size: auto;
+        }
+
+        #folio-form {
+            /* background-color: var(--bkg-second); */
+            width: 100%;
+            height: 657px;
+            display: grid;
+            grid-template-columns: [section-form-start] 100% [section-form-end];
+            align-self: stretch;
+            justify-self: start;
+        }
+
+        #info-form {
+            background-color: var(--bkg-quartary);
+            border: 2px dashed Var(--wf-surface7);
+        }
+
+        #full-name {
+        }
+
+        #send-email {
+        }
+
+        #send-tel {
+        }
+
+        #new-subject {
+        }
+
+        #create-message {
+        }
+
+        @layer form-elements {
+
+            :root {
+                --input-block: 3rem;
+            }
+
+            @media screen and (max-width: 767.999px) {
+                :root {
+                    --form-block: auto;
+                    --form-inline: auto ;
+                    --input-block: 3rem;
+                    --input-inline: min(88%, 360px);
+                    --textarea-block: 20vh;
+                    --textarea-inline: 66%;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                :root {
+                    --form-block: auto;
+                    --form-inline: 100% ;
+                    --input-block: 3rem;
+                    --input-inline: 90%;
+                    --textarea-block: 20vh;
+                    --textarea-inline: 66%;
+
+                    --min-form-block: fit-content;
+                }
+            }
+
+            form {
+                align-items: start;
+                block-size: var(--form-block);
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-auto-flow: column;
+                line-height: 1.5;
+                margin-inline: 3%;
+                min-block-size: var(--min-form-block);
+                max-block-size: max(35rem);
+                inline-size: var(--form-inline);
+                position: relative;
+            }
+
+            fieldset {
+                border: none;
+                padding-block: 1rem 0;
+                position: relative;
+                height: auto;
+                height: 100%;
+            }
+
+            label {
+                appearance: none;
+                background-color: transparent;
+                /* border: 1px dashed var(--wf-surface2); */
+                block-size: auto;
+                box-sizing: border-box;
+                display: inline-block;
+                inline-size: 38ch;
+                padding-inline: 0.5rem 0.75rem;
+                position: relative;
+                padding-block:  1.4% 1%;
+                margin: 1.7% 0;
+            }
+
+            input:is([type="text"], [type="email"], [type="tel"]) {
+                    resize: vertical;
+                    block-size: var(--input-block);
+                    padding-block: 1.4% 0.5%;
+                    line-height: 2;
+                }
+
+            input:is([type="text"], [type="email"], [type="tel"]),
+            textarea {
+                display: block;
+                appearance: none;
+                border-bottom: 1px solid #ffffff;
+                border-radius: 5px;
+                background-color: var(--bkg-ondark);
+                box-sizing: border-box;
+                outline: none;
+                padding-block: 0;
+                padding-inline: 0.5rem 0.75rem;
+                line-height: 1.65;
+                /* transition: border-color 300ms; */
+                width: var(--input-inline);
+            }
+
+            textarea {
+                block-size: 20vh;
+                min-block-size: 8vh;
+                min-inline-size: 22ch;
+                padding-inline-start: 1rem;
+                line-height: 2;
+                width: 100%;
+                resize: both;
+            }
+         }
+        @layer form-layout {
+
+            .fo-form-item {
+                inline-size: max(22vw, 88%);
+                margin-block-start: 1.5rem;
+                padding-block: 0.5rem;
+                position: relative;
+                vertical-align: middle;
+                /* transition: all 3000ms ease-in-out; */
+            }
+
+             .fo-form-item:focus-within {
+                 transform: scale(1.00,1.01);
+                 transform-origin: 0 0;
+                 transition: transform 5000ms ease-out;
+             }
+
+            ::placeholder {
+                color: transparent;
+            }
+
+            .fo-input {
+                margin-inline: 0;
+                max-inline-size: 57ch;
+                min-block-size: var(--input-block);
+                min-inline-size: var(--input-inline);
+                position: relative;
+            }
+
+            .fo-form-area + label,
+            .fo-input + label {
+                left: 0;
+                opacity: 1;
+                pointer-events: none;
+                position: absolute;
+                top: 0px;
+                /* transform-origin: 0 0;
+                transition: transform 7000ms;
+                transition: all 7000ms; */
+                margin-block-start: 0px;
+                width: min-content;
+                z-index: 2;
+            }
+
+            .fo-button {
+                height: 2rem;
+                width: 4rem;
+            }
+
+        }
+
+        @layer form-visuals {
+
+            input:focus {
+                outline: none;
+            }
+            input:focus-within {
+                border: none;
+                outline: none;
+            }
+
+            input#new-subject:focus + label,
+            input#new-subject:not(:placeholder-shown) + label {
+                font-weight:700;
+                transition: font-weight 0.7s ease-out;
+            }
+
+             input:placeholder-shown
+             textarea:placeholder-shown {
+                color: transparent;
+             }
+
+             input:not(placeholder-shown)
+             input:not(placeholder-shown) {
+                background-color: var(--bkg-ondark);
+             }
+        }
+
+        @layer form-validation {
+
+            label + span {
+                appearance: none;
+                background-color: transparent;
+                block-size: auto;
+                box-sizing: border-box;
+                inline-size: 38ch;
+            }
+
+            textarea.fo-form-area ~ span.warning,
+            textarea.fo-form-area ~ span.valid,
+            textarea.fo-form-area ~ span.info,
+            input.fo-input ~ span.warning,
+            input.fo-input ~ span.valid,
+            input.fo-input ~ span.info {
+                display: none;
+            }
+
+            .required::after {
+            }
+
+            .optional::after {
+            }
+
+             input:focus:not(:placeholder-shown), textarea:focus:not(:placeholder-shown) {
+                box-shadow: 5px 2.5px 2.5px var(--bkg-quartary);
+                transition: box-shaddow 1000ms ease-in;
+            }
+
+            input:not([type=submit]):not(:focus):not(:placeholder-shown):valid, textarea:not(:focus):not(:placeholder-shown):valid {
+                border-color: hsla(110, 95%, 78%, 99.2%);
+                box-shadow: 5px 1.5px 1.5px hsla(110, 95%, 78%, 99.2%);
+            }
+
+            input:not(:focus):not(:placeholder-shown):invalid, textarea:not(:focus):not(:placeholder-shown):invalid {
+                border-color: #ff5c5cfd;
+                box-shadow: 5px 1.5px 1.5px #ff5c5cfd;
+            }
+
+            input:not(:focus):not(:placeholder-shown):invalid ~ span.fo-hint.warning::before,
+            textarea:not(:focus):not(:placeholder-shown):invalid ~ span.fo-hint.warning::before {
+                content '';
+            }
+
+            textarea:not(:focus):not(:placeholder-shown):invalid ~ span.fo-hint.warning,
+            input:not(:focus):not(:placeholder-shown):invalid ~ span.fo-hint.warning  {
+                display: inline-block;
+                margin-top: 0.5rem;
+                left: 0;
+                opacity: 1;
+                pointer-events: none;
+                padding-inline: 0.5rem 0.75rem;
+                padding-block:  0.8% 1%;
+                position: absolute;
+                top: 3.5rem;
+                transform-origin: 0 0;
+                transform: scale(.8);
+                transition: transform 3000ms ease;
+                width: fit-content;
+                z-index: 2;
+            }
+
+            textarea:not(:focus):not(:placeholder-shown):valid ~ span.fo-hint.valid,
+            input:not(:focus):not(:placeholder-shown):valid ~ span.fo-hint.valid  {
+                display: inline-block;
+                margin-top: 0.5rem;
+                left: 0;
+                opacity: 1;
+                pointer-events: none;
+                padding-inline: 0.5rem 0.75rem;
+                padding-block:  0.8% 1%;
+                position: absolute;
+                top: 3.5rem;
+                transform-origin: 0 0;
+                transform: scale(.8);
+                transition: transform 3000ms ease;
+                width: fit-content;
+                z-index: 2;
+            }
+
+        }
+
+    }
+
+    @layer info-details {
+
+        @media screen and (max-width: 767.999px) and (orientation: portrait) {
+            #contact-card {
+                --contact-card-inline: 100%;
+
+                --contact-card-block: 90%;
+                --contact-min-block: 125px;
+                --contact-max-block: 240px;
+
+                --contact-margin-start: 1.5%;
+            }
+        }
+
+        #contact-card {
+            background-color: var(--wf-surface1);
+            border-radius: 10px;
+            height: var(--contact-card-block);
+            width: var(--contact-card-inline);
+            margin: auto auto;
+            margin-block-start: var(--contact-margin-start);
+            min-block-size: var(--contact-margin-start);
+            display: grid;
+            position: relative;
+        }
+
+       #contact-card  ul  {
+        list-style: none;
+       }
+
+       @media (prefers-color-scheme: dark) {
+
+           :root {
+               --surface-prime: var(--surface-dark);
+               --text-prime: var(--text-dark);
+               --shaddow-prime: ;
+           }
+       }
+
+       @layer info-contact {
+
+           .fo-card-typog{}
+        }
+
+
+        .fo-card-icons{
+            --icon-weight: 600;
+            --icon-size: clamp(1.5rem, -1vw +1rem, 1.25rem);
+            --icon-surface: var(--surface-prime);
+            --icon-text: var(--text-prime);
+            --icon-shaddow: var(--shaddow-prime);
+            font-weight: var(--icon-weight);
+            font-size: var(--iconsize);
+            background-color: var(--icon-surface);
+            color: var(--icon-text);
+            text-shadow: var(--icon-shaddow) ;
+        }
+
+        @layer info-social {
+
+                    ul.fo-social-group {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        flex: 1 0 80px;
+                        place-items: center;
+                        justify-content: space-around;
+                        height: auto;
+                        width: auto;
                     }
-                    #main-work {
-                        column-gap: 0;
-                        grid-auto-rows: auto;
-                        /* grid-template: 1fr 15vh / 1fr; */
-                        grid-template-areas:
-                            "fo-work-sum"
-                            "fo-work-edu"
-                            "fo-work-tools";
-                        row-gap: 2rem;
+
+                    li.fo-social-inline {
+                        display: inline-block;
+                        width: 15%;
+                        position: relative;
                     }
-                }
 
-                .fo-work-sum {
-                    background-color: var(--wf-surface9);
-                    grid-area: fo-work-sum;
-                    grid-column: var(--fo-work-sum-c-s) / var(--fo-work-sum-c-e);
-                    grid-row: var(--fo-work-sum-r-s) / var(--fo-work-sum-r-s);
-                    min-block-size:  var(--fo-work-sum-block);
-                    min-inline-size:  var(--fo-work-sum-inline);
-                    position: relative;
-                }
+                    a.fo-social-link {
+                        position: relative;
+                        text-decoration: none;
+                    }
 
-                .fo-work-edu {
-                    background-color: var(--wf-surface8);
-                    grid-area: fo-work-edu;
-                    grid-column: var(--fo-work-edu-c-s) / var(--fo-work-edu-c-e);
-                    grid-row: var(--fo-work-edu-r-s) / var(--fo-work-edu-r-s);
-                    min-block-size:  var(--fo-work-edu-block);
-                    min-inline-size:  var(--fo-work-edu-inline);
-                    position: relative;
-                }
+                    .fo-social-link:link {
+                        color: var(--icon-text);
+                    }
+                    .fo-social-link:hover {}
+                    .fo-social-link:target {}
+                    .fo-social-link:visited {}
 
-                .fo-work-tools {
-                    background-color: var(--wf-surface6);
-                    grid-area: fo-work-tools;
-                    grid-column: var(--fo-work-tools-c-s) / var(--fo-work-tools-c-e);
-                    grid-row: var(--fo-work-tools-r-s) / var(--fo-work-tools-r-s);
-                    min-block-size:  var(--fo-work-tools-block);
-                    min-inline-size:  var(--fo-work-tools-inline);
-                    position: relative;
-                }
+                    .fo-socal {}
+
+                    .fa {
+                        padding: 0.5%;
+                        width: 50px;
+                        text-align: center;
+                    }
+
+                    #fa-li {}
+                    #fa-mast{}
+                    #fa-inst{}
+                    #fa-fb{}
+
+        }
+
+    }
+    @layer folio-clients {
+        @layer folio-client {
+        }
+    }
+    @layer work-item {
+        @layer work-sum {
+        }
+
+        @layer work-edu {
+        }
+
+        @layer work-tools {
         }
     }
 }

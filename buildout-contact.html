@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <!-- Head: Viewport Scaling; b) External Stylesheet; c) Favicons-->
+
+    <head title="Contact Options | Welcome to the Digital Folio. By CJ, an inclusive Digital Developer's Portfolio">
+        <!-- Meta Tags-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="origin" content="https://ipoetdev.github.io/the-folio/" />
+        <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028" />
+        <meta name="author" content="Charles J Fowler, @iPoetDev.github.com" />
+        <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com" />
+        <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com" />
+        <meta name="contact" content="Github: @iPoetDev" />
+        <meta name="geo.lmk" content="Dublin, Ireland; Europe" />
+        <meta name="geo.country" content="Ireland" />
+        <meta name="revision" content="#CommitShortHashOfSubmission" />
+        <meta name="semver" content="0.0.5.01 | 2023.01.15" />
+        <meta name="color-scheme" content="dark" />
+        <meta
+            name="keywords"
+            content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web
+		Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS" />
+        <meta name="description" content="lorem5" />
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
+        <!-- Link: External Resources-->
+        <link type="text/css" href="assets/styles/main.css" rel="stylesheet" />
+        <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+        <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon" />
+        <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon" />
+        <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon" />
+
+        <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest" />
+        <!-- Page: Home-->
+        <title title="Contact Options of the Digital Folio. Contact &amp Details.">
+            Contact Options of the Digital Folio. Contact &amp Details
+        </title>
+        <!--  0] Namespace F: Folio: Namespace for The Digital Folio. Alias: fo-.
+		1] Alias:    C: Composition Comment -> Semantics & Layout
+		2] Alias:    U: Utility Comment     -  Core Styling, Typography
+		3] Alias:    B: Block/Component/Widget Comment
+		4] Alias:    E: Exception/Variant Comment
+  	-->
+        <!-- Body: contact: Home: Magazine 2x2 Box Layout-->
+    </head>
+    <body class="fo-layout-macro">
+        <header class="fo-head">
+            <nav>#</nav>
+        </header>
+        <div class="fo-left">££</div>
+        <main class="fo-main-wrap fo-focal" id="main-contact">
+            <section class="fo-info-form" id="folio-form">
+                <form
+                    class="fo-formgrid"
+                    id="info-form"
+                    name="folio-form"
+                    method="post"
+                    action="/"
+                    rel="opener"
+                    target="_blank">
+                    <fieldset class="fo-forminput">
+                        <div class="fo-form-item" role="none">
+                            <input
+                                class="fo-input fo-name required"
+                                id="full-name"
+                                type="text"
+                                minlength="4"
+                                maxlength="30"
+                                placeholder="                  ..."
+                                required="required"
+                                aria-label="input name"
+                                aria-labelledby="contact-full" />
+                                <label for="full-name">
+                                    <span class="fo-label" id="contact-full">Name:</span>
+                                </label>
+                            <span class="fo-hint warning">A full name is desired.<br> Length &gt; 4 and &lt; 30</span>
+                            <span class="fo-hint valid">&nbsp;Valid</span>
+                        </div>
+                        <div class="fo-form-item" role="none">
+                            <input
+                                class="fo-input required"
+                                id="send-email"
+                                type="email"
+                                pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/"
+                                minlength="7"
+                                placeholder="                  ..."
+                                required="required"
+                                aria-label="input email"
+                                aria-labelledby="contact-email" />
+                                <label for="send-email">
+                                    <span class="fo-label" id="contact-email">Email:</span>
+                                </label>
+                            <span class="fo-hint warning">Enter an valid email address: e.g., you@domain.com</span>
+                            <span class="fo-hint valid">&nbsp;Valid</span>
+                        </div>
+                        <div class="fo-form-item" role="none">
+                            <input
+                                class="fo-input required"
+                                id="send-tel"
+                                type="tel"
+                                title="Optional: i.e. +Country Prefix Number and/or (Extension)"
+                                placeholder="                  ..."
+                                minlength="9"
+                                maxlength="18"
+                                aria-label="input email" />
+                                <label for="send-tel">
+                                    <span class="fo-label" id="contact-tel">Phone:</span>
+                                </label>
+                            <span class="fo-hint warning">Option: +country &amp; number</span>
+                            <span class="fo-hint valid">&nbsp;Valid</span>
+                        </div>
+                        <div class="fo-form-item" role="none">
+                            <input
+                            class="fo-input optional"
+                            id="new-subject"
+                            type="text"
+                            minlength="5"
+                            maxlength="35"
+                            placeholder="                  ..."
+                            required="required"
+                            aria-label="input subject" />
+                            <label for="add-subject">
+                                <span class="fo-label" id="contact-subject">Subject:</span>
+                            </label>
+                            <span class="fo-hint valid">&nbsp;Valid</span>
+                        </div>
+                        <div class="fo-form-item" role="none">
+                            <textarea
+                                class="fo-form-area required"
+                                id="create-message"
+                                name="contact-message"
+                                title="Please complete your message. &#10;You can resize this area for more writing space"
+                                spellcheck="true"
+                                cols=""
+                                minlength="50"
+                                maxlength="3000"
+                                placeholder="Create a brief request:&#10; - More than 50 chars. &#10; - Less than 3000 chars"
+                                required="required"
+                                wrap="soft"
+                                aria-label="textarea"
+                                aria-labelledby="contact-message"
+                                aria-multiline="true"></textarea>
+                            <label for="body-message">
+                                <span class="fo-label" id="contact-message">Message:</span>
+                            </label>
+                           <span class="fo-hint warning">More than 50 and less than 3000.</span>
+                           <span class="fo-hint valid">&nbsp;Valid</span>
+                        </div>
+                        <div class="fo-form-button" role="none">
+                            <input
+                                class="fo-button"
+                                id="submit-send"
+                                type="submit"
+                                aria-label="submit button" />
+                            <label for="submit-send">
+                            </label>
+                            <span class="fo-label"> or press Enter</span>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+            <section class="fo-info-card" id="folio-details">
+                <article  id="contact-card">
+                    <h2 title="Contact Card" hidden="hidden">Contact Card</h2>
+                    <div class="contact-card-inner">
+                        <ul>
+                            <li>Contact</li>
+                            <li>Mob: +353 (0)85 1096990</li>
+                            <li>
+                                <a href="mailto:#?subject=A%20Digital%20Folio%20initial%20contact"
+                                    title="Send CJ, of The Digital Folio, a request, or an enquiry or a message">
+                                    Email: folio-enquire@the-folio.digital
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Find me in: </li>
+                            <li>Dublin, Ireland</li>
+                        </ul>
+                        <ul>
+                            <li>Serving: </li>
+                            <li>Europe (for GDPR)</li>
+                        </ul>
+                        <ul class="fo-social-group fo-card-icons">
+                            <li class="fo-social-inline"><a class="fo-social-link" href="http://" target="_blank"><span class="fo-social fa" id="fa-li">Li</span></a></li>
+                            <li class="fo-social-inline"><a class="fo-social-link" href="http://" target="_blank"><span class="fo-social fa" id="fa-mast">Mast</span></a></li>
+                            <li class="fo-social-inline"><a class="fo-social-link" href="http://" target="_blank"><span class="fo-social fa" id="fa-Insta">Insta</span></a></li>
+                            <li class="fo-social-inline"><a class="fo-social-link" href="http://" target="_blank"><span class="fo-social fa" id="fa-fb">FB</span></a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <div class="fo-right">$$</div>
+        <footer class="fo-foot">###</footer>
+    </body>
+</html>
