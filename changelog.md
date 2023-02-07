@@ -7,6 +7,32 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 > -   Modified, by incrementing and counting the index of commits on a daily basis
 > -   (Major.Minor.Patch.CommitIndex) (By CJ)
 
+## Changelog: v0.4.3.03 2023.01.07 - Folio.html
+
+### Expected/ToDo: - Folio.html
+
+- ToDo: Add a CTA to link to the form
+- ToDo: Add the content per client
+    Client 1: CI Love Running Project (link to the GitHub Pages version of these)
+    Client 2: CI Coder Coffee House (link to the GitHub Pages version of these)
+- ToDo: Add the Accessibility / Aria Tags/Roles
+- ToDo: Add/Update the Dark Mode Folio client Themes, and measure with the image in use.
+- ToDo: Size and style each of the clients images for responsive sizes and organise the scaling
+- ToDo:
+
+### Added v0.4.3.03 - Folio.html
+
+- Added: Responsiveness for a 2x1 landscape for all devices.
+- Added: Responsiveness for a 2x1 portrait for all devices.
+- Used 4 breakpoints,
+    - All Mobile up to 968px portrait for flex column
+    - All Mobile up to 968px landscape for flex row
+    - All Mobile up to 408px portrait for handing smaller images, and other like flex column
+    - All Fixed from 968 px for flex row.
+- Used Custom properties for DRY code over the media queries
+- Added Placeholder text and image (to be replaced with content)
+
+
 ## Changelog: v0.4.3.01 2023.01.07 - About.html
 
 ### Expected/ToDo:
@@ -38,9 +64,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
     - `ToDo: Fonts & Typography
     - Define the wireframes for page.
 
-### Moved: 00.04.3.02
+### Moved: 00.04.3.02, 04
 
-- Moved: all layout-*.html to /_archive/_layouts
+- Moved: all layout-*.html to /_archive/_layouts [02]
+- Moved buildout-[folio | info].html to  /_archive/_buildouts [04]
 
 ## Changelog: v0.4.2.01-02 2023.01.06
 
