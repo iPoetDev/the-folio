@@ -42,7 +42,7 @@
   	-->
         <!-- Body: contact: Home: Magazine 2x2 Box Layout-->
     </head>
-    <body class="fo-layout-macro">
+    <body class="fo-layout-macro" id="contact">
         <header class="fo-head">
             <nav>#</nav>
         </header>
@@ -58,6 +58,7 @@
                     rel="opener"
                     target="_blank">
                     <fieldset class="fo-forminput">
+                        <legend>Required</legend>
                         <div class="fo-form-item" role="none">
                             <input
                                 class="fo-input fo-name required"
@@ -66,14 +67,17 @@
                                 minlength="4"
                                 maxlength="30"
                                 placeholder="                  ..."
-                                required="required"
+                                required
                                 aria-label="input name"
                                 aria-labelledby="contact-full" />
-                                <label for="full-name">
-                                    <span class="fo-label" id="contact-full">Name:</span>
-                                </label>
-                            <span class="fo-hint warning">A full name is desired.<br> Length &gt; 4 and &lt; 30</span>
-                            <span class="fo-hint valid">&nbsp;Valid</span>
+                            <label for="full-name">
+                                <span class="fo-input-label" id="contact-full">Name:</span>
+                            </label>
+                            <span class="fo-hint warning"
+                                >A full name is desired.<br />
+                                Length &gt; 4 and &lt; 30</span
+                            >
+                            <span class="fo-hint valid">&nbsp;Ok</span>
                         </div>
                         <div class="fo-form-item" role="none">
                             <input
@@ -83,14 +87,14 @@
                                 pattern="/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/"
                                 minlength="7"
                                 placeholder="                  ..."
-                                required="required"
+                                required
                                 aria-label="input email"
                                 aria-labelledby="contact-email" />
-                                <label for="send-email">
-                                    <span class="fo-label" id="contact-email">Email:</span>
-                                </label>
-                            <span class="fo-hint warning">Enter an valid email address: e.g., you@domain.com</span>
-                            <span class="fo-hint valid">&nbsp;Valid</span>
+                            <label for="send-email">
+                                <span class="fo-input-label" id="contact-email">Email:</span>
+                            </label>
+                            <span class="fo-hint warning">Enter an valid email address</span>
+                            <span class="fo-hint valid">&nbsp;Ok</span>
                         </div>
                         <div class="fo-form-item" role="none">
                             <input
@@ -101,12 +105,12 @@
                                 placeholder="                  ..."
                                 minlength="9"
                                 maxlength="18"
-                                aria-label="input email" />
-                                <label for="send-tel">
-                                    <span class="fo-label" id="contact-tel">Phone:</span>
-                                </label>
+                                aria-label="input email"/>
+                            <label for="send-tel">
+                                <span class="fo-input-label" id="contact-tel">Phone:</span>
+                            </label>
                             <span class="fo-hint warning">Option: +country &amp; number</span>
-                            <span class="fo-hint valid">&nbsp;Valid</span>
+                            <span class="fo-hint valid">&nbsp;Ok</span>
                         </div>
                         <div class="fo-form-item" role="none">
                             <input
@@ -114,80 +118,110 @@
                             id="new-subject"
                             type="text"
                             minlength="5"
-                            maxlength="35"
+                            maxlength="100"
                             placeholder="                  ..."
-                            required="required"
+                            required
                             aria-label="input subject" />
                             <label for="add-subject">
-                                <span class="fo-label" id="contact-subject">Subject:</span>
+                                <span class="fo-input-label" id="contact-subject">Subject:</span>
                             </label>
-                            <span class="fo-hint valid">&nbsp;Valid</span>
+                            <span class="fo-hint valid">&nbsp;Ok</span>
                         </div>
                         <div class="fo-form-item" role="none">
                             <textarea
-                                class="fo-form-area required"
-                                id="create-message"
-                                name="contact-message"
-                                title="Please complete your message. &#10;You can resize this area for more writing space"
-                                spellcheck="true"
-                                cols=""
-                                minlength="50"
-                                maxlength="3000"
-                                placeholder="Create a brief request:&#10; - More than 50 chars. &#10; - Less than 3000 chars"
-                                required="required"
-                                wrap="soft"
-                                aria-label="textarea"
-                                aria-labelledby="contact-message"
-                                aria-multiline="true"></textarea>
+                            class="fo-form-area required"
+                            id="create-message"
+                            name="contact-message"
+                            title="Please complete your message. &#10;You can resize this area for more writing space"
+                            spellcheck="true"
+                            minlength="50"
+                            maxlength="6000"
+                            placeholder="Create a brief request:&#10; - More than 50 chars. &#10; - Less than 3000 chars"
+                            required
+                            wrap="soft"
+                            aria-label="textarea"
+                            aria-labelledby="contact-message"
+                            aria-multiline="true"></textarea>
                             <label for="body-message">
-                                <span class="fo-label" id="contact-message">Message:</span>
+                                <span class="fo-input-label" id="contact-message">Message:</span>
                             </label>
-                           <span class="fo-hint warning">More than 50 and less than 3000.</span>
-                           <span class="fo-hint valid">&nbsp;Valid</span>
+                            <span class="fo-hint warning">More than 50 and less than 6000.</span>
+                            <span class="fo-hint valid">&nbsp;Ok</span>
                         </div>
                         <div class="fo-form-button" role="none">
-                            <input
-                                class="fo-button"
-                                id="submit-send"
-                                type="submit"
-                                aria-label="submit button" />
-                            <label for="submit-send">
-                            </label>
+                            <input class="fo-button" id="submit-send" type="submit" aria-label="submit button" />
                             <span class="fo-label"> or press Enter</span>
                         </div>
                     </fieldset>
-                </form>
-            </section>
-            <section class="fo-info-card" id="folio-details">
-                <article  id="contact-card">
-                    <h2 title="Contact Card" hidden="hidden">Contact Card</h2>
-                    <div class="contact-card-inner">
-                        <ul>
-                            <li>Contact</li>
-                            <li>Mob: +353 (0)85 1096990</li>
-                            <li>
-                                <a href="mailto:#?subject=A%20Digital%20Folio%20initial%20contact"
-                                    title="Send CJ, of The Digital Folio, a request, or an enquiry or a message">
-                                    Email: folio-enquire@the-folio.digital
-                                </a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>Find me in: </li>
-                            <li>Dublin, Ireland</li>
-                        </ul>
-                        <ul>
-                            <li>Serving: </li>
-                            <li>Europe (for GDPR)</li>
-                        </ul>
-                        <ul class="fo-social-group fo-card-icons">
-                            <li class="fo-social-inline"><a class="fo-social-link" href="http://" target="_blank"><span class="fo-social fa" id="fa-li">Li</span></a></li>
-                            <li class="fo-social-inline"><a class="fo-social-link" href="http://" target="_blank"><span class="fo-social fa" id="fa-mast">Mast</span></a></li>
-                            <li class="fo-social-inline"><a class="fo-social-link" href="http://" target="_blank"><span class="fo-social fa" id="fa-Insta">Insta</span></a></li>
-                            <li class="fo-social-inline"><a class="fo-social-link" href="http://" target="_blank"><span class="fo-social fa" id="fa-fb">FB</span></a></li>
-                        </ul>
-                    </div>
-                </article>
+                    </form>
+                </section>
+                <section class="fo-info-card" id="folio-details">
+                <div class="fo-card-place">
+                    <article id="contact-card">
+                        <h2 title="Contact Card" hidden>Contact Card</h2>
+                        <div class="contact-card-inner">
+                            <ul class="fo-card-detail" id="card-contact">
+                                <li>Contact</li>
+                                <li>
+                                    <ul class="fo-card-item" id="card-mobile">
+                                        <li class="fo-label">Mob:</li>
+                                        <li class="fo-card-data">+353 (0)85 1096990</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="fo-card-item" id="card-email">
+                                        <li class="fo-card-label">Email:</li>
+                                        <li class="fo-card-data">
+                                            <a
+                                                href="mailto:#?subject=A%20Digital%20Folio%20initial%20contact"
+                                                title="Send CJ, of The Digital Folio, a request, or an enquiry or a message">
+                                                folio-enquire@the-folio.digital
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="fo-card-detail" id="card-location">
+                                <li>
+                                    <ul class="fo-card-item">
+                                        <li class="fo-card-label">Find me in:</li>
+                                        <li class="fo-card-data">Dublin, Ireland</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="fo-card-detail" id="card-serving">
+                                <li>
+                                    <ul class="fo-card-item">
+                                        <li class="fo-card-label">Serving:</li>
+                                        <li class="fo-card-data">Europe (for GDPR)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="fo-social-group fo-card-icons">
+                                <li class="fo-social-inline">
+                                    <a class="fo-social-link" href="http://" target="_blank"
+                                        ><span class="fo-social fa" id="fa-li">Li</span></a
+                                    >
+                                </li>
+                                <li class="fo-social-inline">
+                                    <a class="fo-social-link" href="http://" target="_blank"
+                                        ><span class="fo-social fa" id="fa-mast">Mast</span></a
+                                    >
+                                </li>
+                                <li class="fo-social-inline">
+                                    <a class="fo-social-link" href="http://" target="_blank"
+                                        ><span class="fo-social fa" id="fa-Insta">Insta</span></a
+                                    >
+                                </li>
+                                <li class="fo-social-inline">
+                                    <a class="fo-social-link" href="http://" target="_blank"
+                                        ><span class="fo-social fa" id="fa-fb">FB</span></a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
             </section>
         </main>
         <div class="fo-right">$$</div>
