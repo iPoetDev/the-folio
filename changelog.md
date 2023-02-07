@@ -7,7 +7,42 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 > -   Modified, by incrementing and counting the index of commits on a daily basis
 > -   (Major.Minor.Patch.CommitIndex) (By CJ)
 
-## Changelog: v0.4.1.01-02 2023.01.06
+## Changelog: v0.4.3.01 2023.01.07 - About.html
+
+### Expected/ToDo:
+
+- ToDo: Style the download button for the CV and text the CV
+    - Develop a 1 Page CV for as an artefact (take a 1 page example for current cvs).
+- ToDo: Add the About Me copy for content. Research for inspiration.
+- ToDo: Add the Accessibility / Aria Tags/Roles
+- ToDo: Add/Update the Dark Mode Info Themes, and measure with the image in use.
+- ToDo: Add a image embellem/ background to hero image. (Extra and make the image backgrond of source image)
+
+### Added: 00.04.3.01
+
+- Added: Media Responsive Pictures
+    - `ToDo: Adjust the image scaling and sources.
+- Added: CSS Layer: info-blocks and associated styles for the about.html
+    - These blocks detail the resposnsive layouts from from desktop down to mobile (Graceful degradation);
+    - Three grid areas named: Info-Intro (Page Banner), Info-Image (Page Hero) on the Info-Main row (top), with the bottom row and grid area Info-About(me).
+    - Bugs/Issues/ToDo:
+        1. Lack control of flexbox height/blocksize in Info-Intro. A fustrate and maybe a documented issue.
+        2. Intro-about runs out of grid flow (to the left). Fix-in with position absolute. Future work: Grid flow and alignment instead of position absolute.
+
+### Updated: 00.04.3.01
+
+- Updated: Switched from buildout-info.html (the working file) and merged into about.html as an style ready page ( for pre submission evaluation and styling.)
+    - `ToDo`: Test the CSS with Jigsaw
+    - `ToDo: Comment  the CSS for the relevant @layer
+    - `ToDo: Decide on Color Theme for Page
+    - `ToDo: Fonts & Typography
+    - Define the wireframes for page.
+
+### Moved: 00.04.3.02
+
+- Moved: all layout-*.html to /_archive/_layouts
+
+## Changelog: v0.4.2.01-02 2023.01.06
 
 ### Added: 00.04.2.01
 
