@@ -7,6 +7,31 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 > -   Modified, by incrementing and counting the index of commits on a daily basis
 > -   (Major.Minor.Patch.CommitIndex) (By CJ)
 
+## Changelog: v0.5.01 2023.01.09 - Bump a Patch: Site Naviagtion
+
+### Added v0.5.01 - Site Navigation - Top - Level
+
+- Added: Top Level Navigation from prior built components
+    To Do: Test from all pages. Local testing works.
+    To Do: Style the links and link behaviours
+    Fix: Absolute Form Labels - on the Navigation surface (z-index)
+    To Do: Style and position other links and elements on the navigation.
+    To Do : Style and space the logo or textual logo.
+    To Do: Test on Github pages.
+
+- Changed: Index.html, about.html,  contact.html, profile.html and folio.html with theme classes
+    - Current bold primary colors, and decisions pending on approaches and final palettes
+    - Thinking of adding a contrastinh header of opposing/complementary color
+    - Idea is the Mondrian style color blocking approaches mixed with a dribbble inspired bold theme and layout.
+    - Navigation overlay the same as the section page
+    - To Do: add a breadcrumb indicator to the naviagtion page and or icon indicator
+
+## Changelog: v0.4.5.01 2023.01.08 - Work.html
+
+### Added v0.4.3.03 - Folio.html
+
+- Added: Responsiveness to a collapsable grid layout of card components of 1row x 3 columns into a 3 by 1 orrientation. A few bugs, largely passable.
+
 ## Changelog: v0.4.3.03 2023.01.07 - Folio.html
 
 ### Expected/ToDo: - Folio.html

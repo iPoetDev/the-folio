@@ -43,8 +43,103 @@
         <!-- Body: contact: Home: Magazine 2x2 Box Layout-->
     </head>
     <body class="fo-layout-macro info-style" id="info">
-        <header class="fo-head info-style">
-            <nav>#</nav>
+        <header class="fo-head">
+                <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
+                <div class="fo-nav">
+                <div class="fo-nav-grid" role="presentation">
+                    <div class="fo-nav-flex" role="presentation">
+
+                    <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center"
+                        role="region">
+                        <picture>
+                        <source srcset="assets/img/logo-placeholder135x68.png"
+                            media="(max-width: 412px)">
+                        <source srcset="assets/img/logo-placeholder.png"
+                            media="(max-width: 720px)">
+                        <source srcset="assets/img/logo-placeholder.png"
+                            media="(max-width: 960px)">
+                        <source srcset="assets/img/logo-placeholder.png"
+                            media="(max-width: 1268px)">
+                        <img src="assets/img/logo-placeholder.png" alt="Digital Folio Logo & Brand" aria-label="Site
+                            Logo,Company Brand">
+                        </picture>
+                    </div>
+                    <!-- Site Logo-->
+
+                    <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
+                        <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
+                        <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
+                        <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu" aria-label="Site Nav Menu">
+                        <label for="toggle-menu" id="navigation">
+                            Menu
+                        </label>
+                        <input id="toggle-menu" type="checkbox">
+                        <!-- Open a full viewport overlay and list the menu options; in large strong text -->
+                        <!-- <div class="fo-menu" role="none"> -->
+                            <div class="fo-menu-overlay  nav-surface-info" role="none">
+                            <div class="fo-menu-layout" role="none">
+                                <!-- Menu Options -->
+                                <ul role="menu" aria-label="Menu List">
+                                <li role="menuitem">
+                                    <span class="fo-menu-style">
+                                    <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
+                                        aria-label="Navigation Home"  rel="noreferrer,noopener">
+                                        Home
+                                    </a>
+                                    </span>
+                                </li>
+                                <li role="menuitem">
+                                    <span class="fo-menu-style"><a
+                                        id="site-folio"
+                                        href="folio.html"
+                                        title="The Digital Folio: Folio & Clients | Portfolio by CJ"
+                                        aria-label="Navigation Portfolio"
+
+                                        rel="noreferrer,noopener">Portfolio</a></span>
+                                </li>
+                                <li role="menuitem">
+                                    <span class="fo-menu-style"><a
+                                        id="site-work"
+                                        href="profile.html"
+                                        title="The Digital Folio: Work & Profile | Journey by CJ"
+                                        aria-label="Navigation Profile"
+
+                                        rel="noreferrer,noopener">Journey</a></span>
+                                </li>
+                                <li role="menuitem">
+                                    <span class="fo-menu-style"><a
+                                        id="site-about"
+                                        href="about.html"
+                                        title="The Digital Folio: Info & More | About Me by CJ"
+                                        aria-label="Navigation About Me"
+
+                                        rel="noreferrer,noopener">About</a></span>
+                                </li>
+                                <li role="menuitem">
+                                    <span class="fo-menu-style"><a
+                                        id="site-contact"
+                                        href="contact.html"
+                                        title="The Digital Folio: Info & More | Contact by CJ"
+                                        aria-label="Navigation Contact Options"
+
+                                        rel="noreferrer,noopener">Contact</a></span>
+                                </li>
+                                </ul>
+                            </div>
+                            </div>
+                        <!-- </div> -->
+                        </nav>
+                        <!-- Site Menu -->
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </nav>
+            <!-- <section class="fo-nav-cover" id="nav-cover">
+                <div class="fo-cover-placer">
+
+                </div>
+            </section> -->
         </header>
         <div class="fo-left">&nbsp;</div>
         <!-- <div class="fo-main-wrap fo-focal">
@@ -99,7 +194,7 @@
                             <button>
                                 <a class="fo-button fo-download" id="download-resume" type="application/pdf"
                                      href="assets/files/cv.pdf" title="Download a copy of CJ's CV [PDF]" download="download"
-                                     target="_blank">
+                                     >
                             </a>
                             </button>
                         </p>

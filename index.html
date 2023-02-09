@@ -48,118 +48,107 @@
   </head>
   <!-- Body: Landing: Home: Magazine 2x2 Box Layout-->
 
-  <body class="fo-canvas" id="home-canvas" title="Digital Folio's Landing: Home Page">
+  <body class="fo-canvas home-style" id="home-canvas" title="Digital Folio's Landing: Home Page">
     <div class="fo-layout" id="home-layout" role="presentation">
 
-      <!-- Nav: Site Navigation -->
+        <header class="fo-head">
+                <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
+                <div class="fo-nav">
+                <div class="fo-nav-grid" role="presentation">
+                    <div class="fo-nav-flex" role="presentation">
 
-      <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
-        <div class="fo-nav">
-          <div class="fo-nav-grid" role="presentation">
-            <div class="fo-nav-flex" role="presentation">
-              <div class="fo-nav-holder fo-a11y-ctrl" role="group">
-                <nav class="fo-nav-a11y" id="site-a11y" title="A11y Accessibility Controls" role="menu">
-                  <label for="fo-toggle-a11y" hidden="hidden">A11y Options</label>
-
-                  <input id="fo-toggle-a11y" type="checkbox">
-
-                  <div class="fo-nav-a11y" id="site-menu" role="none">
-                    <div class="fo-a11y-overlay" role="none">
-                      <div class="fo-a11y-layout" role="none">
-                        <ul role="menu" aria-label="Menu A11y Controls"></ul>
-                      </div>
+                    <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center"
+                        role="region">
+                        <picture>
+                        <source srcset="assets/img/logo-placeholder135x68.png"
+                            media="(max-width: 412px)">
+                        <source srcset="assets/img/logo-placeholder.png"
+                            media="(max-width: 720px)">
+                        <source srcset="assets/img/logo-placeholder.png"
+                            media="(max-width: 960px)">
+                        <source srcset="assets/img/logo-placeholder.png"
+                            media="(max-width: 1268px)">
+                        <img src="assets/img/logo-placeholder.png" alt="Digital Folio Logo & Brand" aria-label="Site
+                            Logo,Company Brand">
+                        </picture>
                     </div>
-                  </div>
-                  <!-- A11y Controls -->
-                </nav>
-              </div>
+                    <!-- Site Logo-->
 
-              <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center"
-                role="region">
-                <picture>
-                  <source srcset="assets/img/logo-placeholder135x68.png"
-                    media="(max-width: 412px)">
-                  <source srcset="assets/img/logo-placeholder.png"
-                    media="(max-width: 720px)">
-                  <source srcset="assets/img/logo-placeholder.png"
-                    media="(max-width: 960px)">
-                  <source srcset="assets/img/logo-placeholder.png"
-                    media="(max-width: 1268px)">
-                  <img src="assets/img/logo-placeholder.png" alt="Digital Folio Logo & Brand" aria-label="Site
-                    Logo,Company Brand">
-                </picture>
-              </div>
-              <!-- Site Logo-->
+                    <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
+                        <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
+                        <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
+                        <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu" aria-label="Site Nav Menu">
+                        <label for="toggle-menu" id="navigation" style="color:darkslateblue">
+                            Menu
+                        </label>
+                        <input id="toggle-menu" type="checkbox">
+                        <!-- Open a full viewport overlay and list the menu options; in large strong text -->
+                        <!-- <div class="fo-menu" role="none"> -->
+                            <div class="fo-menu-overlay  nav-surface-cta" role="none">
+                            <div class="fo-menu-layout" role="none">
+                                <!-- Menu Options -->
+                                <ul role="menu" aria-label="Menu List">
+                                <li role="menuitem">
+                                    <span class="fo-menu-style">
+                                    <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
+                                        aria-label="Navigation Home"  rel="noreferrer,noopener">
+                                        Home
+                                    </a>
+                                    </span>
+                                </li>
+                                <li role="menuitem">
+                                    <span class="fo-menu-style"><a
+                                        id="site-folio"
+                                        href="folio.html"
+                                        title="The Digital Folio: Folio & Clients | Portfolio by CJ"
+                                        aria-label="Navigation Portfolio"
 
-              <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
-                <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
-                <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
-                <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu" aria-label="Site Nav Menu">
-                  <label for="fo-toggle-site" hidden="hidden"></label>
-                  <input id="fo-toggle-site" type="checkbox">
-                  <!-- Open a full viewport overlay and list the menu options; in large strong text -->
-                  <div class="fo-menu fo-site-menu" role="none">
-                    <div class="fo-menu-overlay" role="none">
-                      <div class="fo-menu-layout" role="none">
-                        <!-- Menu Options -->
-                        <ul role="menu" aria-label="Menu List">
-                          <li role="menuitem">
-                            <span class="fo-menu-text fo-scale-text fo-menu-typog">
-                              <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
-                                aria-label="Navigation Home" target="_blank" rel="noreferrer,noopener">
-                                Home
-                              </a>
-                            </span>
-                          </li>
-                          <li role="menuitem">
-                            <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
-                                id="site-folio"
-                                href="folio.html"
-                                title="The Digital Folio: Folio & Clients | Portfolio by CJ"
-                                aria-label="Navigation Portfolio"
-                                target="_blank"
-                                rel="noreferrer,noopener">Portfolio</a></span>
-                          </li>
-                          <li role="menuitem">
-                            <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
-                                id="site-work"
-                                href="profile.html"
-                                title="The Digital Folio: Work & Profile | Journey by CJ"
-                                aria-label="Navigation Profile"
-                                target="_blank"
-                                rel="noreferrer,noopener">Journey</a></span>
-                          </li>
-                          <li role="menuitem">
-                            <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
-                                id="site-about"
-                                href="about.html"
-                                title="The Digital Folio: Info & More | About Me by CJ"
-                                aria-label="Navigation About Me"
-                                target="_blank"
-                                rel="noreferrer,noopener">About</a></span>
-                          </li>
-                          <li role="menuitem">
-                            <span class="fo-menu-text fo-scale-text fo-menu-typog"><a
-                                id="site-contact"
-                                href="contact.html"
-                                title="The Digital Folio: Info & More | Contact by CJ"
-                                aria-label="Navigation Contact Options"
-                                target="_blank"
-                                rel="noreferrer,noopener">Contact</a></span>
-                          </li>
-                        </ul>
-                      </div>
+                                        rel="noreferrer,noopener">Portfolio</a></span>
+                                </li>
+                                <li role="menuitem">
+                                    <span class="fo-menu-style"><a
+                                        id="site-work"
+                                        href="profile.html"
+                                        title="The Digital Folio: Work & Profile | Journey by CJ"
+                                        aria-label="Navigation Profile"
+
+                                        rel="noreferrer,noopener">Journey</a></span>
+                                </li>
+                                <li role="menuitem">
+                                    <span class="fo-menu-style"><a
+                                        id="site-about"
+                                        href="about.html"
+                                        title="The Digital Folio: Info & More | About Me by CJ"
+                                        aria-label="Navigation About Me"
+
+                                        rel="noreferrer,noopener">About</a></span>
+                                </li>
+                                <li role="menuitem">
+                                    <span class="fo-menu-style"><a
+                                        id="site-contact"
+                                        href="contact.html"
+                                        title="The Digital Folio: Info & More | Contact by CJ"
+                                        aria-label="Navigation Contact Options"
+
+                                        rel="noreferrer,noopener">Contact</a></span>
+                                </li>
+                                </ul>
+                            </div>
+                            </div>
+                        <!-- </div> -->
+                        </nav>
+                        <!-- Site Menu -->
                     </div>
-                  </div>
-                </nav>
-                <!-- Site Menu -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+                    </div>
+                </div>
+                </div>
+            </nav>
+            <!-- <section class="fo-nav-cover" id="nav-cover">
+                <div class="fo-cover-placer">
 
-      <!-- Top Nav Bar -->
+                </div>
+            </section> -->
+        </header>
 
       <main id="home-main" aria-label="Body Section">
         <div class="fo-grid" role="presentation">
@@ -203,7 +192,7 @@
                             href="porfolio.html"
                             title="Folio: See more of client's projects"
                             aria-label="Link to Folio Section: Client Projects"
-                            target="_blank">
+                            >
                             <span class="fo-linkstyle">Folio See more of Client projects</span>
                           </a>
                         </p>
@@ -290,7 +279,7 @@
                       href="porfolio.html"
                       title="Folio: See more of client's projects"
                       aria-label="Link to CJ Professional Profile: Recent Learnings, Experience and Accreditation"
-                      target="_blank"><span>Learn about CJ profile</span></a>
+                      ><span>Learn about CJ profile</span></a>
                   </p>
                 </div>
               </section>
