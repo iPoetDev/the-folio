@@ -404,9 +404,7 @@ main {
  max-inline-size: 1224px;
  min-block-size: 3vmin;
  min-inline-size: fit-content;
-}
 
-.fo-nav {
  align-items: space-around];
  display: inline;
  text-align: justify;
