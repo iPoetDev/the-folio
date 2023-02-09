@@ -754,6 +754,9 @@
             --macro-side: 0;
             --macro-middle: 1fr;
         }
+        body {
+            height: 100% !important;
+        }
     }
 
     /*  Standard Tablets */
@@ -769,6 +772,9 @@
             --macro-foot: 3rem;
             --macro-side: 0vw;
             --macro-middle: 1fr;
+        }
+        body {
+            height: 100% !important;
         }
     }
 
@@ -786,6 +792,9 @@
             --macro-side: 0dvw;
             --macro-middle: 1fr;
         }
+        body {
+            height: 100% !important;
+        }
     }
 
     /*  Desktops */
@@ -801,6 +810,10 @@
             --macro-foot: 5rem;
             --macro-side: 0dvw;
             --macro-middle: 1fr;
+        }
+
+        body {
+            height: 100% !important;
         }
     }
 
@@ -818,6 +831,9 @@
             --macro-side: 0dvw;
             --macro-middle: 1fr;
         }
+        body {
+            height: 100% !important;
+        }
     }
 
     /*  Desktops */
@@ -832,6 +848,9 @@
             --macro-side: 0dvw;
             --macro-middle: 1fr;
             --macro-wrap-inline: ;
+        }
+        body {
+            height: 100% !important;
         }
     }
 
