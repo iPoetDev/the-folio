@@ -832,7 +832,8 @@
             --macro-middle: 1fr;
         }
         body {
-            height: 100% !important;
+            height:max-content !important;
+            max-block-size: 100% !important;;
         }
     }
 
