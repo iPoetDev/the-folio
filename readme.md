@@ -53,14 +53,6 @@ The website is created with the following in target audience(s) in mind.
     - A contact form for online enquiries f
     - Social Media contact icons
 
-#### Enhancements to User Requirements [Future]
-
-- A websi
-
-### User Stories
-
-> Arguably a form of decision records that are focused on the user profile and user flow and activities. Both are linked by shared/paired acceptanc criteria
-
 ## User Experience (UXD)
 
 ### Accessibility
@@ -69,30 +61,43 @@ The website is created with the following in target audience(s) in mind.
 
 ### Usability
 
-> <div style="text-align:right"><b>Information Architecture | Skeleton Plane</b></div>
+ - Sitemap version 1
+  > ![](https://mermaid.ink/img/pako:eNptT80KwjAMfpWQ8zx43UEQPXhQEBUEWw9xjd1wbUbtBHG-u_VnB2HJJfn-SB5YiGHM0QZqStjNtYdUU7UQx7Amy8cfAqPRpFvyjWsYd1CotYR4lrqSP8GGndzYdMBqJj5SEYf9Vu0lXIY5o6YnaXuj_ZArDvYda7T_NgBm6Dg4qkw6__FGNMaSHWvM02goXDRq_0w6aqNs777APIaWM2wbQ5HnFaWvHeZnqq8JbcgfRPr9-QL6p1rE?type=png)
 
--   Similar parts, similar ways
--   Progressive disclosure (plit and navigation)
--   Visual prioritisation
--   Feature v Usability
--   Hick-Hyman Law
--   Navigation ( browse, searching, pagination, filters,)
--   Representitional Icons
--   Lower Cognition Friction (color, text, icons, same behaviours)
+  - Sitemap version 2
+    > ![](https://mermaid.ink/img/pako:eNptjr0OwjAMhF_F8twOrBmQKnVgYKgEEw2Dadwf0cRVmiChtu9OELBhL3efTzov2IhhVNh5mno4l9pBmqI-iGWoqOPrl0Ce79cjP3iE3QpNXYkPrYyD_A-YurhJDOn4WQDM0LK3NJhUt7yJxtCzZY0qSUP-rlG7LeUoBjk9XYMq-MgZxslQ4HKg9KVF1dI4JzqRu4j8_PYCZzZCDw?type=png)
+
 
 ### Metaphors
 
 > <div style="text-align:right"><b>Information Design | Skeleton Plane</b></div>
+####   Navigation
 
--   Navigation
--   Invisible
--   Quality
--   Minimal
--   Context & Order (Alphabetical, Categorical, Locational, Time Ordering (fix duration), form order)
+- A full viewport/screen overlay
+- Is hidden for minimalist approach.
+- Has a large call to action to find the menu
+- Acts like a dynamic secondary page.
+- Has a footer of its own for secondary content.
+- Has A list of links as a menu
+- Is called a menu
+- Some informational artefacts are placed in the footer, like contact details and or any small nugets of text.
 
-### Wireframes
-<div style="text-align:right"><b>Modeling | Skelton Plane</b></div>
 
+## Wireframes
+
+### Wireframes (Desktop)
+
+#### Home | Landing: index-html
+
+![](_documentation\Wireframes\The-folio--Wireframe-Index.html.png)
+
+#### Portfolio | Clients: folio.html
+
+![](_documentation\Wireframes\The-folio--Wireframe-Folio.html.png)
+
+#### About | Profile: about.html
+
+![](_documentation\Wireframes\The-folio--Wireframe-About.html.png)
 
 ---
 
@@ -248,6 +253,10 @@ The website is created with the following in target audience(s) in mind.
 
 ## Deployment
 
+- Github & GitHub User Account
+- VSCode with Gitlens
+- Github Pages with a domain of Github.io
+
 ### Repository Service
 
 - Github.com is the remote code repository service being used.
@@ -255,17 +264,27 @@ The website is created with the following in target audience(s) in mind.
   > - `@iPoetDev`
 - The repository name is
   > - `the-folio`
-The repository domain uri is
+- The repository domain uri is
   > - `https://github.com/iPoetDev/the-folio`
 
+### Local Git Service / IDE
+
+- VSCode configured witth Github account for Local development environment.
+- VSCode extention: Gitlens installed and enabled for local developmemt and deployment.
+- Utilisied a Changelog format to document the changes, a la, [Keep a Changelog](http://keepachangelog.com/).
+  - Intent here was to catelog in longer more human readable format a more contextual change history. Greater than the 50 chars of a commit 1st line.
+  - Additionally, utilsied gthe changelog as a summation effort to shorted and be precisie on the commit description.
+- Most adhered to [Semantic Versioning](http://semver.org/) approach.
+  - Minor adjustment was to put a double digit index for each separate commit if several occured on one day.
 
 ### Deployment Environment
 
 - Github Pages via the inbuilt Github Actions workflows of:
-  i) Deploy a static web page off every commit
-  ii) Once the commit is built, then deploy the new website and pushes to hosted domain URI.
+  1. Deploy a static web page off every commit.
+  2. Once the commit is built, then deploy the new website and pushes to hosted domain URI.
 - Github.io is the hosted domain URI and service.
--
+- The final URI is
+  > `https://github.com/iPoetDev/the-folio`
 
 ---
 
