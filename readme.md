@@ -227,15 +227,15 @@ Revised: Version 2.0 (Designed 13th Feburary). There was no version 1.
 
 #### Home | Landing: index-html
 
-![](_documentation\Wireframes\The-folio--Wireframe-Index.html.png)
+![](_documentation/Wireframes/The-folio--Wireframe-Index.html.png)
 
 #### Portfolio | Clients: folio.html
 
-![](_documentation\Wireframes\The-folio--Wireframe-Folio.html.png)
+![](_documentation/Wireframes/The-folio--Wireframe-Folio.html.png)
 
 #### About | Profile: about.html
 
-![](_documentation\Wireframes\The-folio--Wireframe-About.html.png)
+![](_documentation/Wireframes/The-folio--Wireframe-About.html.png)
 
 ---
 ---
