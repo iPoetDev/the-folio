@@ -1,27 +1,46 @@
 # **The Digital Folio**
 
+<!-- This site is based on a hypothetical proof of concept. With refinement, it could be a production level site, demonstrating technqiue, UX and UI and quality. However not for this version.  -->
+
 The Digital Folio is a portfolio template site that could be used to showcase the work and clients of myself, Charles J Fowler (aka CJ) as a web developer and UX advisor. The site will be focused on promoting the past and current client projects, like Love Runnning and Codes Coffeehouse as examples of potential services rendered. This site showcases the potential for hosting references to other hosted projects and deliverables.
 
-Screenshot
+`Screenshot`
 
 > Visit: [The Digital Folio](https://ipoetdev.github.io/the-folio/ "The Digital Folio: https://ipoetdev.github.io/the-folio/ by Charles J Fowler (@ipoetdev)") | [https://ipoetdev.github.io/the-folio/](https://ipoetdev.github.io/the-folio/)
 
-### **Project Goals**
+## **Project Goals**
 
  - Provide a showcase for future projects online for prospective clients to view past work.
  - Provide a high level profile of who I am professionally and personally to prospective clients and/or employers.
- - Provide a contact point for business and contracting enquiries by a contact form.active
+ - Provide a contact point for business and contracting enquiries by a contact form.
 
  ### **Website Owner Goals**
 
  The site is dual purpose, as a showcase of past initiatives has two key audiences: Potential clients seeking a solition and potential employers seeking an experienced hire.
 
- - Reach new clients and
- - Establish a web project freelancing footing
- - Create new employment opportunities
- - Increase revenue and income
----
+ - Reach new clients and/or new employers.
+ - Establish a web project freelancing footing.
+ - Create new employment opportunities.
+ - Increase revenue and income.
 
+  ### **User Goals**
+
+  The site should have easy to spot user goals or address user concerns as presented.
+
+As a prospective client:
+  - Does the web developer know their clients?
+  - Have he produced evidence of past work and demonstrate value?
+  - Does he present his clients in a high quality showcase?
+  - Can a user find how to contact owner quickly and easily?
+
+As a prospective employer/recuiter:
+  - Can a recuiter/decison maker find evidence of past experience?
+  - Can a recuiter/decison maker view high level history of current and recent activity?
+  - Does user have option to download a resume to take away?
+  - Can a user find how to contact owner quickly and easily?
+
+---
+---
 ## **User Experience**
 
 
@@ -38,7 +57,7 @@ The website is created with the following in target audience(s) in mind.
 
 - A block level landing page with 4 jump points.
 - A website that showcases projects.
-  - [Use Cases] For a gallery view of past & current projects.
+  - *[Use Case]* For a gallery view of past & current projects.
     - A collection of past projects and client as a basic gallery.
     - External links to past projects.
     - Brief project synopsis
@@ -48,30 +67,123 @@ The website is created with the following in target audience(s) in mind.
 - A responsive layout for most common devices.
 - A clear and spacious layout, minimalist in content presentation.
 - Clear and unambigious call to actions (one of every page).
-  - [Use Case] For new business or new leads.
+  - *[Use Case]* For new business or new leads.
     - A contact card to initiate direct phone call or an email .
-    - A contact form for online enquiries f
-    - Social Media contact icons
+    - A quick contact form for online enquiries located in the footer off all pages as a call to actoion.
+    - Social Media contact icons.
 
-## User Experience (UXD)
+---
+---
+## **Design (UXD)**
+
+> Overall: This site is design based less on large image centric graphical designs, but on a bolder but more simpler typo*graphical* design. Hopefull effective use of typesetting gives a brand identity and personalisation to the site. Achiving this is challenging, as this requires a deeper knowledge of fonts, spacing, and design + brand identity impact.
+
+### Typography
+
+ - A note: The orginal intention behind this site was to emphasise the graphic nature of fonts and type as a core part of the design metaphor around the foolscape paper size and typesetting.
+
+#### *Font Families*
+
+- Therefore the selection of fonts was a time well invested.  The following font categories where used in the design.
+
+   - Title Fonts - Site Logo Texx
+   - Header Fonts - Site h2-h3 fonts
+   - Navigation Fonts - Large Impactful Navigation Links.
+   - Signature/Initals Font - Handwriting stylistic font
+   - Text Fonts - Body, Link and h5,h6 fonts.
+
+1. Title/Hero Font: [Lobster Two] (Source: Google, Font Squirel, downloaded) - Title Fonts. Hero fonts are  in the logo as well used  in equivalent areas here a hero graphic is expected by UX principles.
+2. Header Font:   (Source: Font Squirrel, downloaded)
+3. Navigation Font:  As Per Title Font above.
+4. Signature/Initials Font: [Babylonica](https://fonts.google.com/specimen/Babylonica "Designed by Robert Leuschke") (Source: Google Fonts, downloaded) On About Page, used once.
+5. Text/Body/Link font: [Kanit](https://fonts.google.com/specimen/Kanit). Sans-serif.
+6. Fallback Fonts, primarily as Sans-seif, as so to match primary body font above: As identified by https://www.cssfontstack.com/
+    - Trebuchet MS is widely supported:  Win: 99.67% Mac: 97.12%
+    - Lucida Grande, Lucida Sans Unicode, Lucida Sans, are common with iOS and MacOS system, with Win: 0% Mac: 100%.
+    - "Tahoma" as it like Arial, widely supported with Win: 99.95% Mac: 91.71%
+    - Liberation Sans, Liberation Serif are common and widely used with Linux systems.
+7. Android is notorious for being tricky, so a wide range of fallback fonts where selected.
+
+
+#### *Reasons for Fonts*
+
+**** was chosen for. This font identifies the site and creates an strong impression on the user, inliue of using a graphic design or image, and keeps aligned with the foolscape paper and typesetting metaphor that gave rise to the concept of the site. This is used in title fonts, hero fonts
+
+**Babylonica** was chosen for as it had *a dry brush style with hand written calligraphic brush characteristics. It's italicized approach is sometimes interrupted by upright or even back-slanted forms giving it an interrupted stress. This stress gives Babylonica that truly hand lettered appeal.* [Google](https://fonts.google.com/specimen/Babylonica/about). This identified a nice way to create an identifible signature out of my initials "C J" standing in for Charles James.
+
+**Kanit** was chosen for its *"notable detail is that the stroke terminals have flat angles, which allows the design to enjoy decreased spacing between letters while preserving readability and legibility at smaller point sizes."* [Google](https://fonts.google.com/specimen/Kanit/about). This idenitified a requirement for clear leigibility of text on mobile devices as well as good zoom/user scaling functionlity. Additional benefits where identified as having a similar ex/x-height of Trebucet MS, the chosen primary fallback font for Windows and Mac operating systems.
+
+
+ > It is notable that time would be a constraint in choosing, testing and matching a triad of fonts for the project submission, so best efforts were made.
+
+#### Type Responsiveness: Fluid, Responsive (@media) or a mixture of both.
+
+> Following Design concerns where addressed
+
+- **Should fonts be fluid in responsiveness? Yes.**
+  - Such that fonts should scale proportionally and relatively to the screen device size and the average distance between the user's eye and the screen surface/viewport.
+  - Solution: Used [Fluid Type Scale Calculator](https://www.fluid-type-scale.com/ " Aleksandr Hovhannisyan (2021-Present), Fluid Type Scale Calculator, version 1.2.1, Last Accessed: 2023-02-13:  https://www.fluid-type-scale.com/") by Aleksandr Hovhannisyan
+
+      ```css
+        --font-size-sm: clamp(0.8rem, 0.09vw + 0.78rem, 0.89rem);
+        --font-size-base: clamp(1rem, 0.19vw + 0.95rem, 1.19rem);
+        --font-size-md: clamp(1.25rem, 0.34vw + 1.16rem, 1.58rem);
+        --font-size-lg: clamp(1.56rem, 0.56vw + 1.42rem, 2.11rem);
+        --font-size-xl: clamp(1.95rem, 0.88vw + 1.73rem, 2.81rem);
+        --font-size-xxl: clamp(2.44rem, 1.34vw + 2.11rem, 3.75rem);
+        --font-size-xxxl: clamp(3.05rem, 2vw + 2.55rem, 5rem);
+        --font-size-xxxxl: clamp(2.81rem, 1.92vw + 2.08rem, 4.66rem);
+        --font-size-xxxxxl: clamp(3.81rem, 4.03vw + 4.45rem, 11.84rem);
+      ```
+      - Note: I added two more greater sizes and adjusted the preferred and max values for scaling on larger desktop screens and to adjust for these at smaller screen sizes using media queries.
+      - URL: https://www.fluid-type-scale.com/
+
+- **Should fluid fonts be used in all cases? No**.
+  - While further refinement is needed, a future enhancement, @media queries where used to change the fluid font step to meet the requirements of small screen mobile devices, particularly when in portrait mode and where title/logo space was limited.
+#### How it Works
+> Author: Aleksandr Hovhannisyan (2021-Present)
+
+> A modular type scale consists of a baseline font size and proportionally smaller and larger font sizes. Traditionally, design systems used static type scales, where each step has a fixed font size at every viewport width.
+
+> By contrast, in a fluid type scale, each modular step has a minimum, maximum, and variable font size. We can leverage CSS clamp and viewport width (vw) units to generate a set of font size variables that scale linearly between their minimum and maximum sizes, with mathematical precision.
+
+> This is done by solving the equation y = mx + b, which corresponds to the preferred value in a CSS clamp declaration.
+
+
+### Iconography
+
+- Use of FontAwesome *Free* (Version 6, January 2023) icons
+- Downloaded icons for social media in the placement of the footer of the page.
+
+#### *Future Enhancements*
+
+- Additional use of icons, as future enhancements, would be to give user affordances to:
+   - Links i.e. this is a link to an external site, not being a social media one.
+   - Navigation button clues to internal navigation panel/internal site links.
+   - Download a document on a button hint.
+   - Contact details/input references to validation, field names/labels etc
+   - Interactive elements not listed above.
+
+### Color Choices
+
+
 
 ### Accessibility
 
 > <div style="text-align:right"><b>Interaction | Informatiom Architecture | Structure Plane</b></div>
 
-### Usability
+### Information Architecture & Hierarchy
 
  - Sitemap version 1
   > ![](https://mermaid.ink/img/pako:eNptT80KwjAMfpWQ8zx43UEQPXhQEBUEWw9xjd1wbUbtBHG-u_VnB2HJJfn-SB5YiGHM0QZqStjNtYdUU7UQx7Amy8cfAqPRpFvyjWsYd1CotYR4lrqSP8GGndzYdMBqJj5SEYf9Vu0lXIY5o6YnaXuj_ZArDvYda7T_NgBm6Dg4qkw6__FGNMaSHWvM02goXDRq_0w6aqNs777APIaWM2wbQ5HnFaWvHeZnqq8JbcgfRPr9-QL6p1rE?type=png)
 
   - Sitemap version 2
-    > ![](https://mermaid.ink/img/pako:eNptjr0OwjAMhF_F8twOrBmQKnVgYKgEEw2Dadwf0cRVmiChtu9OELBhL3efTzov2IhhVNh5mno4l9pBmqI-iGWoqOPrl0Ce79cjP3iE3QpNXYkPrYyD_A-YurhJDOn4WQDM0LK3NJhUt7yJxtCzZY0qSUP-rlG7LeUoBjk9XYMq-MgZxslQ4HKg9KVF1dI4JzqRu4j8_PYCZzZCDw?type=png)
+    > ![](https://mermaid.ink/img/pako:eNptjr0OwjAMhF_F8twOrBmQKnVgYKgEEw2Dadwf0cRVmiChtu9OELBhL3efTzov2IhhVNh5mno4l9pBmqI-iGWoqOPrl0Ce79cjP3iE3QpNXYkPrYyD_A-YurhJDOn4WQDM0LK3NJhUt7yJxtCzZY0qSUP-rlG7LeUoBjk9XYMq-MgZxslQ4HKg9KVF1dI4JzqRu4j8_PYCZzZCDw?type=png).active
 
 
 ### Metaphors
 
-> <div style="text-align:right"><b>Information Design | Skeleton Plane</b></div>
-####   Navigation
+#### *Navigation*
 
 - A full viewport/screen overlay
 - Is hidden for minimalist approach.
@@ -79,13 +191,39 @@ The website is created with the following in target audience(s) in mind.
 - Acts like a dynamic secondary page.
 - Has a footer of its own for secondary content.
 - Has A list of links as a menu
-- Is called a menu
+- Is called a menu with a large landing area/oval border signalling the affordance that this an action area.
 - Some informational artefacts are placed in the footer, like contact details and or any small nugets of text.
 
+1. On desktop this naviation and text logo are fully styled
+2. On mobile this navigation and text logo have their styles rediced and simplified due to the smaller screen sizes.
+
+- Bottom Navigation is contains a quick contact form, in lieu of the removed full page contract form.
+
+#### *Site Intents*
+
+- A porfolio website does two things
+  - Showcases, in the best possible light, the quality of past efforts a validation and proof of expertise and delievery to clients expectations, i.e. social proof, professional proof
+  - Provides a online presence and face to prospective clients who is the name and the person behind the delivery. i.e. identity and relationship opportunities.
+
+#### *Page Intents*
+
+1. Home Page | Landing (index.html)
+   - This is the first impression of The Digital Folio.
+   - Is a 2 row x 2 colum desktop view graceful degradation grid that slips into a 1 column to 4 row mobile  view.
+   - Top row is the client showcase for version 1 of the site. Future enhancements would increase the sophication and interactivity of the showcase for a featured client.
+   - Second row is an bredakout of the about section, with clues and brief highlights of the more detailed secondary level 1 page.
+      - Left most is are hints to the working Profile with inter page jumps.
+      - Right most are a headshot and introduction and a brief bio text.
+
+2. Portfolio Page | Clients (folio.html)
+
+3. About Page | Information (about.html)
 
 ## Wireframes
 
 ### Wireframes (Desktop)
+
+Revised: Version 2.0 (Designed 13th Feburary). There was no version 1.
 
 #### Home | Landing: index-html
 
@@ -100,21 +238,22 @@ The website is created with the following in target audience(s) in mind.
 ![](_documentation\Wireframes\The-folio--Wireframe-About.html.png)
 
 ---
+---
 
-# BUILD
+## BUILD
 
-<!-- > N.B: Developer laptop was rebuilt midst project and reconfigured. So the following applies from the 26th of January. -->
+<!-- > N.B: Developer laptop was rebuilt midst project (23-30th January) and reconfigured. So the following applies from the 26th of January. -->
 
-## Environments
+### Environments
 
 <!-- > Did not use Gitpod, too high a friction and high context switching costs. -->
 
 - VSCode Insiders - Local
 - LiveServer: http://127.0.0.1
 
-- Github Pages
+- Github Pages from Github.com
 
-## Browsers
+### Browsers
 
 - Google Chrome (Dev) versions 111-112
 - Firefox Developer Edition versions 110.0 beta
@@ -123,30 +262,29 @@ The website is created with the following in target audience(s) in mind.
 
 > <sub>[*] DevTools extenions</sub>
 
-- AxeDevTools, version 4.49.0
+- AxeDevTools, version 4.49.0*
 - Responsiveviewer, version 1.0.20
 
-## Languages
+### Languages
 
 -   HTML5
-<!-- -   WAI-ARIA and Web Content Accessibility Guidelines (WCAG) -->
 -   CSS3
 
 ### IDE
 
-> Extensions
+> Extensions: A brief summary of a few key ones.
 
--
+- HTML Language Server (VSCode)
+- CSS Language Server (VSCode)
 - HTML Validate (html-validate.vscode-html-validate, 2020-2023), version 7.13.2
 - Stylelint (stylelint.vscode-stylelint, 2019-2022), version 1.2.3
 - PostCSS Language Support (csstools.postcss), version 1.0.9
 - PostCSS Intellisense and Highlighting (vunguyentuan.vscode-postcss), version 2.0.2
 - PostCSS Sorting(mrmlnc.vscode-postcss-sorting, 2016-2017 (*Last commit: 5 years ago*)), version 3.0.1.
 
-
 ### Repository
 
-<!-- > Packages used for developer quality of life and delivery purposes -->
+<!-- Packages used for developer quality of life and delivery purposes -->
 
 -   Javascript (Node, pnpm and npmregistry packages)
 -   YAML (configuration files for NPM packages)
@@ -154,7 +292,7 @@ The website is created with the following in target audience(s) in mind.
 
 #### *NPM Plugins*
 
-<!-- > These were removed prior to submission -->
+<!-- These were used during the build but removed prior to submission -->
 
 - Prettier
 - Editorconfig
@@ -164,75 +302,208 @@ The website is created with the following in target audience(s) in mind.
 
 ### Frameworks Used
 
-> Programs, Packages and Libraries used in different workflows.
+> Programs, Packages and Libraries used in different workflows, and where code was generated and then adapted for use in the html or the css as a component.
 
+- [Font Squirels Web Font Generator](https://www.fontsquirrel.com/tools/webfont-generator "Font Squirrel: A free font collection for web safe fonts, within in reason, and request to ask for respect to each font's licence"). FAQ: https://www.fontsquirrel.com/faq
+    - Use of the Expert Mode to:
+      - Generate WOFF/WOFF2 fonts from OTT/TTP formats using Fontsquirrels TrueType Hinting.
+      - Fix rendering issues like fixing the GASP Table for better DirectWrite rendering.
+      - Adjust and replace missing vertical metrics, spaces, hyphens, as well as match for some fonts (Kanit to Trebuchet, i.e. Font Style Matching for FOUC issues) the x-height by resizing againt Trebucet.
+      - Basic Subsetting to redice the size/options/features of the font's files. Custom subsetting is possible.
+      - Auto Generation of CSS @font-family code and a custom stylesheet name (not used).
+      - Other options was to suffix the font file name with a custon suffix, dquare the em value and no adjust the glyph spacing.
 - [Responsive Viewer](https://github.com/skmail/responsive-viewer "@Skmail, https://github.com/skmail/responsive-viewer")
-- [Responsive Image Breakpoings Generator](https://www.responsivebreakpoints.com/ " https://www.responsivebreakpoints.com/")
+- [Responsive Image Breakpoings Generator](https://www.responsivebreakpoints.com/ " https://www.responsivebreakpoints.com/") with use of the customisation to:
+    - Base 1rem = 16 pixels and no support for older browsers as no fall back CSS included (future enhancement).
+    - Select a minimum mobile font size and viewport width for your type scale's baseline step.
+    - Select a maximum font size and viewport width for your type scale's baseline step.
+    - Select a comma-separated list of names for each step in your type scale.
+        - `Small: sm`:
+        - `Base: base`:
+        - `Medium: md`:
+        - `Large: lg`:
+        - `Extra Large: xl`:
+        - `Extra Extra (..) Large: xxl and xxxl, xxxxl and xxxxl`.
+           - `xxxxl` & `xxxxxl` used for signature/identity title text, e.g., initals.
 - [Fluid Type Scale Calculator](https://www.fluid-type-scale.com/ " Aleksandr Hovhannisyan (2021-Present), Fluid Type Scale Calculator, version 1.2.1, Last Accessed: 2023-02-13:  https://www.fluid-type-scale.com/") by Aleksandr Hovhannisyan (2021-Present), Fluid Type Scale Calculator, version 1.2.1, Last Accessed: 2023-02-13:  https://www.fluid-type-scale.com/
 
+#### Readme Tooling
 
+- [Mermaid Live Editor](https://mermaid.live/) for Sitemap and Page hierarchy.
 
 #### Design Workflows
 
-<!-- > Started to use these. Then ceased to to opportunity cost (of learning) verses benefit for project.  Not central to submission. -->
+-  (Balsmiq Desktop)[https://balsamiq.com/]
 
--   Figma (Free, Student and Education plan).
--   Fidget: Figma plugin (Paid).
+<br>
+<br>
+
 
 ---
+---
+<br>
 
-# RELIABILITY
+## RELIABILITY
 
+### CanIUse.com & Browser Interop (2022)
+
+> About: " *'Can I use' provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers*". https://caniuse.com/ciu/about
+
+This service was used regularly to check the browser support of selected CSS features that have browser interoperability and parity. Having such does not guarrantee that such css features are in the current Working Draft Specifications for each CSS Component, thus by extension, would not be detected by the CSS Jigsaw validator.
+
+- CSS Snapshot 2022 is the [latest stable CSS overview of CSS for 2022](https://www.w3.org/TR/CSS).
+
+- Candidate Recommendations not yet part of Working Drafts and are still not validated by [W3C CSS Jigsaw](https://jigsaw.w3.org/css-validator/), inclusive of a feature I used:
+   - CSS Layers/CSS Layering, as part of [CSS Cascading and Inheritance Level 5, Section 6.4 (13 January 2022)](https://www.w3.org/TR/css-cascade-5/#layering)
+
+### Targeted Browsers
+
+For the submission: Chrome was the defeacto browser. However this was jointly used side by side with Firefox Dev 110 as it had better grid and flexbox developer tools and easier to inspect.
+
+Source: [Can I Use's Compare Browsers](https://caniuse.com/?compare=chrome+104&compareCats=all) and [Browser Usage Tables](https://caniuse.com/usage-table)
+
+Use an N for Current Version and formula of N-4 for Full Browsers and N-5 for Dev Versions for the browsers, the follow browsers were targeted.
+
+- Chrome 110.405 and N-4 versions.
+- Firefox 119.382 and N-4 versions
+- Safari 16.3: 375 and N-4 versions (16.3 -> 16.0).
+
+#### ***Future Testing***
+
+Future testing for better desktop cross browsing support would be focusing on
+
+- Edge 109 and N-4: (109 - 106).
+- Opera 94 and N-4: (94 - 91).
+
+- Additionally, development and testing would also include the Chromium open source version as a testing platform.
+- Employing a cross browser testing platform like BrowserStack is an option for automation and scalling across multiple browser types. This is beyond scope here, and is a future enhancement to the build, test and deploy process..
+
+**Mobile Browsers**
+
+- Chrome for Android: 109. Though it is assumed that Chrome for Android has feature partity with Chrome for desktop where reasonable assumed.
+- Firefox for Android: 109.
+- Safari for iOS 16.3 and N-4: (16.3-16.0). Is feature/version partity.
+- Samsung Internet
+
+> IE is exluded as it was sunsetted by Microsoft in June 2022 for Windows, and is no longer supported, and is to be removed from Windows 10 this month. However this exluded many of potential business users (who are my target audience who by enterprise policy, maybe still using IE 11 - 9, in edge use cases on long term support agreements).
+
+---
 ## Testing & Verification
-
-### Testing
 
 ### Verification
 
-#### Validation
+> Verifies responsiveness in all common devices.
 
-##### HTML
+---
+### Validation
 
-##### CSS
+#### *HTML*
+
+#### *CSS*
+
+Use of [W3C Validation Service, CSS Jigsaw](https://jigsaw.w3.org/css-validator/)
 
 - CSS @layer is not in the current working draft specification, as of Feburay 17th 2023, though is supported by all modern browsers as per Interop 2022.
 
-    As such causes CSS Jigsaw to invalidate this syntax
+    As such causes CSS Jigsaw to invalidate this syntax. See [Issues > Unresolved below](#Issues)
 
-##### Lighthouse
+#### Lighthouse
 
-###### Index
+**Home**
 
-###### About
+**Folio**
 
-###### Folio
+**About**
 
+---
 ### Issues
 
+#### ***Bugs***
+
+- Did not record and track issues, and fixes, throughout the lifecycle of the project. Just had an issue and then fixed them. The bugs/issues at submission are recorded.
+
+#### ***Unresolved***
+
+The following Bugs were know at time of submission:
+
+- Unable to complete first version of the information architecture of 5 pages. Refactored design into 3 pages and attempts to reuse code from prior efforts at time of submission. *[Design | UX Process]*
+    - `Severity: Major` **|** `Priority: High` **|** `User Impact: Unknown/TBC`
+- `@layer` (CSS) caused invalidation errors in CSS Jigsaw due to CSS Layers not being a full working draft spec; though it is widely supported on all modern browsers from March - June 2022 as part of the CSS Interop efforts. This code is a developer feature and is not a visual interface bug and thus is invisible to the user. *[Build | CSS Syntax]*
+    - `Severity: Minor` **|** `Priority: Low` **|** `User Impact: Neglible`
+
+<br>
+<br>
 
 
 ---
+---
+<br>
 
 # DEPLOY
 
 ## Features
 
+### Logo & Navigation Bar:
 
+- Large typographical logo, reliting on the styling of the logo's font for its minimal but essential graphical qualities.
+- Consistency in useing font for Menu button/toggle as a call to action to user to click on the menu.
+- Broad Navigation bar that is responsive across all devices.
 
+### Navigation Panel
+
+- Use of a full screen navigation panel, acting like a magic page of content and large, accessible text (selected typography is part of site identity) for all users.
+- Use of space to give roomy, if basic/minimalism, look and feel. Consistency of space is a feature and a challenge across all devices.
+- Ensuring consistent bradning by Logo and Menu in Navigation Panel as well as on each page.
+- Remove and scale certain style elements on mobile views that are present on desktop views (borders, lines and scaling down of font sizes for certain smaller screen widths).
+- Addition of a navigation footer, idenitical to page footer, for consistency and for minor twisting of convention.
+
+### Grid-like Layouts for Content
+
+- Use of grid like layouts for complex, side by side card components to be arranged across the page in various grid patterns and with spacing/gaps in between.
+- Challenge was to get these macro layouts and their respective card components (micro/mid components) to be responsive across selected screen sizes and orrientations (portrait and landscape).
+- Top row of grid to showcase current/previous projects.
+### Hero Client Showcase Images
+
+- Display two large hero images of previous projects on top row of home page grid layout.
+- Have a project label and a internal jump link to folio.html
+
+### Display About Details
+
+- Have a hero/headshot image with a strong color border frame on right most bottom panel of page with some light marketing bio copy text describing the owner.
+
+### Display Versed Details
+
+- Have a light details hints and clues to what the site owner in currently learning, recently awarded and have proof off having skills in tools or services to be available.
+
+### Larger Footer with Contact Quik Form
+
+- A large bold footer of constrasting | complementary | consistent color to page.
+- Uses same, if smaller, title/logo or heading fonts for key features like links or just identity.
+- Has a small form, of 3 fields for a quick message as a call to action where user inputs a name, an email and chooses a topic to contact the site owner about.
+- Send to an email address (nominally info@folio.digital, but for submission, authors current email address.) when user clicks send.
+
+### Resume Download Button
+
+-
 ### Future Enhancements
+
+#### Defintion of Done Requirements to be Delivered
+
+- Required input indicators
+-
 
 #### ***[Context]* Home Page**
 
-- Combine the two project hero cards (top row) into a all-in-one carousel.
+- Combine the two project hero cards (top row) into an all-in-one carousel.
 - Create a modal dialog for a quick contact form as a on page CTA instead of asking user to fill out a larger form.
 
 #### ***[Context]* About | Info**
 
 - Redesign using @container queries and try flex box for macro page layouts.
-    > Issue: Refactor page too many times, and regressed technique and design, that ended using absolute positioning regessivel for all macro layouts. Pixel perfect design is flawed but roughly responsive.
+    > Issue: Refactored page too many times, and regressed technique and design, that ended using absolute positioning regessivel for all macro layouts. Pixel perfect design is flawed but roughly responsive.
 - Create a 2-3 step/page (A see more) inner page user flow to dive into the work experience,
 
-#### [Context] Folio
+#### ***[Context]* Folio**
 
 - With only two projects showcases, this is a very simple gallery. As projects grow, and more content is possible, the  a redesign for page would be preferable, giving each project its own showcase item page from a gallery view page.
 - Repeat the carousel as a hero banner on top of Folio with a internal jump link to each client page.
@@ -248,14 +519,20 @@ The website is created with the following in target audience(s) in mind.
 - Add an accessibility navigation control to allow users to control the following preferences
     - Reduce Motion
     - Color Contrast (additional color schemes)
-    -
-  >This is out fo scope of the course and is super extra nuanced.
+- Start cross-browser testing for N-4 browsers across desktop and mobile
+- Start backward compatibility by using pollyfills and -moz- and -webkit- and -o- variants of css properties.
+- Support retina screens and DPI for media queries and responsive images/media.
+- Improve support for media queries for mobile landscape orrientation.
+- Add back in the Contact form page and align functionality withe the quick form.
+- Refresh and design the look and feel.
+
+---
 
 ## Deployment
 
-- Github & GitHub User Account
-- VSCode with Gitlens
-- Github Pages with a domain of Github.io
+- Github & GitHub User Account.
+- VSCode with Gitlens.
+- Github Pages with a domain of Github.io.
 
 ### Repository Service
 
@@ -288,33 +565,48 @@ The website is created with the following in target audience(s) in mind.
 
 ---
 
-# LAUNCH
+## LAUNCH
 
-## Live Site
+### Live Site
 
+In deploying to Github;s website hosting service, GitHub pages, the website was created. The steps to deploy are as follows:
+- Login to Github and search for the Github repository 'the-folio' by `@iPoetDev`
+- Click on the `Settings` cog ico at the top of the repository.
+- Click on `Pages` on the left hand side navigation menu.
+- Select `Deploy` from a branch' under `Source` if this is not already selected.
+- Under the `Branch` drop down menus, select 'main' and 'root'
+- Click `Save`
+- Once the page refreshes, the live link should appear underneath the 'Github Pages' title.
 
+The latest version, and prior versions, of the site can be found under the `Actions` tab and in the latest version of the workflow `pages build and deployment` as well as above.
 
-## Forking this repository
+Live link is: [https://ipoetdev.github.io/the-folio/](https://ipoetdev.github.io/the-folio/)
 
-## Cloning this repository
+<!-- ### Forking this repository -->
+
+### Cloning this repository
+
+This repository is not for cloning. Upon request, it will be made private for future reference.
+<br>
+<br>
+
 
 ---
+---
+<br>
 
-# Assesment
+## Assesment
 
-## Credits
+### Credits
 
-### Process
-
-
-### Frameworks/Tooling
+#### Frameworks/Tooling
 
 -   ResponsiveViewer.org (Oct 2022) "About Responsive Viewer - Chrome Extension". Last Accessed: 2023-02-16 from https://github.com/skmail/responsive-viewer
 -   Deque (2023), "axeDevTools". https://www.deque.com/axe/devtools/
 -   Cloudinary (2023) "Responsive Images in HTML: A Practical Guide", Last Accessed: 2023-02-13. https://cloudinary.com/guides/responsive-images/responsive-images-in-html-a-practical-guide from https://github.com/cloudinary/responsive_breakpoints_generator.
 -   Aleksandr Hovhannisyan (2021-Present), "Fluid Type Scale Calculator: version 1.2.1", Last Accessed: 2023-02-13:  https://www.fluid-type-scale.com/
 
-#### *IDE Extensions*
+##### *IDE Extensions*
 
 > *A selection of key extensions that touched the code.*
 
@@ -323,31 +615,37 @@ The website is created with the following in target audience(s) in mind.
 - Vu Nguyen,"PostCSS Intellisense and Highlighting" https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-postcss from https://github.com/vunguyentuan/vscode-postcss
 - mrmlnc, "PostCSS Sorting".  https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-postcss-sorting from https://github.com/mrmlnc/vscode-postcss-sorting
 
-### Design
+#### Design
 
 - MDN, Mozilla.org (1998-2023) "MDN Web Docs". Last Access: 2023-02-17. https://developer.mozilla.org/en-US/
 
-#### Fonts
+##### Fonts
 
-> Downloaded.
+> Downloaded fonts locally and hosted those that where needed.
 
-- Google Fonts (2000-2023). ""
-- FontSquirel
+- [Babylonica](https://fonts.google.com/specimen/Babylonica "Designed by Robert Leuschke"), designed by [Robert Leuschke](https://fonts.google.com/?query=Robert%20Leuschke)
+- [Kanit](https://fonts.google.com/specimen/Kanit "Designed by Cadson Demak"), designed by [Cadson Demak](https://fonts.google.com/?query=Cadson%20Demak)
+
+**Font Services**
+- Google Fonts (2000-2023). Downloaded thes only.
+- [FontSquirel (2023)](https://www.fontsquirrel.com/ "Font Squirrel: Free Fonts: https://www.fontsquirrel.com/faq"). [Read FAQ](https://www.fontsquirrel.com/faq)
+- [Font Style Matcher](https://meowni.ca/font-style-matcher/index.html) for webfonts and flash of unstyled text (or FOUC) concerns.
 
 #### Color
 
+-
 - Contrast Grid (2017-2021). "Contrast Grid, version 1.1.0". Last Accessed: 2023-02-16.https://contrast-grid.eightshapes.com/?version=1.1.0, from https://github.com/EightShapes/contrast-grid.
 
 #### Art Direction  & Images
 
 - Cloudinary, as above, for Responsive Images Breakpoint Generator.
--
 
-### Content
+
+#### Content
 
 - All content copy is self created and authored.
 
-### Media
+#### Media
 
 - Charles J Fowler, (2015) "Looking Forward". Private use.
 - Jan Andraschko, (2018) "About Who?". Private use.
@@ -356,19 +654,12 @@ The website is created with the following in target audience(s) in mind.
 
 ## Acknowledgements
 
-### Research
-
--
-
 ### Code Repository
 
 -  Elly Loel "A modern css reset" Last Accessed: 2023-01-11. Last Updated: 2023-02-11. https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522 ✮✮✮
 
 
-### Tutorials
-
-
-
+<!-- ### Tutorials -->
 
 ### Guides
 
