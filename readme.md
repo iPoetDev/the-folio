@@ -343,6 +343,73 @@ Revised: Version 2.0 (Designed 13th Feburary). There was no version 1.
 ---
 <br>
 
+## CODE
+
+### Features
+
+#### *CSS Layers*
+
+- Use of `@layers` of CSS Cascade & Layering [recommended candidate](https://www.w3.org/TR/css-cascade-5/ "CSS Cascading and Inheritance Level 5") for the following benefits.
+
+    **Benefits**
+  - Pseudo-modularisation: Essentially assigning code blocks to certain casade layers due to information architecture and information hierarchy.
+  - Loosely coupled, and highly cohessive architecture is a target for many software developers and layers brings this to css implicity.
+  - Code level Information architecture: Organising by layers, depending on the strategy choosen to layout the code, allows for demonsatrating code as documentation principle by using named layers and nesting these layers in parent layers, giving the CSS a semantic meaning and ease of maintainbility.
+  - IDE Code Folding: A developer quality of life improvement as large sections of code blocks of related content can be hidden from the developer in large code files, such as in the `core.css` file.
+
+  **Constraints**
+    - Generates invalid results with W3C Jigsaw, the CSS validator service as it is part of CSS Cascading and Inheritance Level 5. While this was in the CSS 2022 Snapshot, it is not at Working Draft status, though is on track to be ratified.
+        - See [Issues](#Issues) for the severity, priority and user impact assessment of this known issue.
+
+#### *CSS Resets*
+
+- Use of external and modern CSS resets is a contentious topic, with some say why give the extra work and others, who like me, what to control as much of the design and not give the UA stylesheet prescendce.
+  > *Interesting note: The Browser stylesheet (User Agent), according to Adam Argyle, has, or had, code and code smells from Google Chrome's webkit origins from 30 years ago.*
+   - Used Kevin Powells slimed down minimal resets: https://codepen.io/kevinpowell/pen/QWxBgZX, along with [video](https://www.youtube.com/watch?v=2lyDv0wOQuQ "Kevin Powell 30 Nov 2022) Simplest CSS reset to prevent headaches. Last Accessed: 2023 January 11").
+   - Applied Elly Loel;s modern css reset, witj her acrediting Josh W Comau, Andy Bell, Adam Argyle for their approaches. [Github Gist]( https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522 "Ely Loel (June 2022) Modern CSS Reset. Last Accessed: 2023 January 11"). Article: https://www.ellyloel.com/projects/modern-css-reset/
+
+#### *Media Queries &amp; Responsiveness*
+
+#### *CSS Container Queries*
+
+- Given a [CUBE-like method](https://cube.fyi/) approach to macro layouts and micro layouts, i.e. component based blocks of content and layout, it was very challenging to have these self contained content panels (aka blocks), be responsive, across all viewport/breakpoint and devices, to:
+    - (a) the section panel they were asigned to and respect the intrinici height of the child content and elements as they resized ...
+    - (b) to the macro layouts and respond to size of viewport using media queries.
+- Negative impacts on layout where lack of intrinsic height awareness of the parent container by the contents of the child container. The intent of the block level approach was to have discrete panels of presentation/content that would be responsive, however, such lack of a size aware container meant content overlfowed into neighbouring content.
+- This gave rise to a very poor code smell of overuse of media queries for containment of block components through out the code or alternatively trying to make a page absolutely positon, using magic numbers and calc() to calculate relative positioning of neighbouring elements.
+
+  **Benefits**
+    - Gives indepence styling based on size, layout, paint and content style of a block based component, e.g., a panel or a card block, and have control over the layout of the block at different screen sizes.
+    - Has good browser support in most modern browsers of Chrome/Edge, Chrome for Android and Safari on Desktop.
+
+  **Constraints**
+    - Firefox version 109, released in January 14 2023, does not support `@container`. This is a known issue.
+    - As of Feburary 14th, 2023, Firefox Developer Edition, (110) now supports @container and container query units by default. For assessment, please install @latest Firefox Developer edition.
+        - Firefox  111 is due for release on March 14th 2023.
+    - Fallback solution for those browser who do not support this feature, for backward compatibility:
+
+        ```css
+        //For example: Checks if supported in Firefox and fallsback. Only implemented if time permits.
+
+          @supports (@conatiner) or (contain) {
+              @media (max-width: 584px) {
+                  ...
+              }
+          }
+
+        ```
+ #### *Grids &amp; Flexbox for Layout Patterns*
+
+<br>
+<br>
+
+
+---
+---
+<br>
+
+
+
 ## RELIABILITY
 
 ### CanIUse.com & Browser Interop (2022)
