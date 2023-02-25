@@ -19,6 +19,8 @@ src/*
 scripts/*
 features/*
 
+*.lnk
+
 ## Specific Files
 .bash*
 .gitmoijrc.json

@@ -7,7 +7,32 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
 > -   Modified, by incrementing and counting the index of commits on a daily basis
 > -   (Major.Minor.Patch.CommitIndex) (By CJ)
 
-## Changelog: v0.5.01 2023.01.09 - Bump a Patch: Site Naviagtion
+## Changelog: v0.7.01.01 2023.02.25 - Profile Page: MVP.
+
+### Added:
+
+- Added: Responsive Images for Fluid Responsive Images.
+- Added: Added folder Profile under '/assets/img/' -> '/assets/img/profile'
+- Added: Hero Banner for profile.
+- Added: Styled the Initial.
+- Added: Navigation Banner.
+
+### Change:
+
+- Changed: Moved page specific css from core.css to profile.css.
+- Changed: Merged About.html into Profile.html (Hero Section).
+
+### ToDo:
+
+- Style the Page's Navigaton.
+- Complete the Page Navigation.
+- Testing HTML.
+- Testing CSS.
+- Testing on Github Profile.
+
+## Changelog: v6.01 2023-02-10-24: Update Later: Gap in Record
+
+## Changelog: v0.5.01 2023.02.09 - Bump a Patch: Site Naviagtion
 
 ### Added v0.5.01 - Site Navigation - Top - Level
 
@@ -26,7 +51,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and adhere
     - Navigation overlay the same as the section page
     - To Do: add a breadcrumb indicator to the naviagtion page and or icon indicator
 
-## Changelog: v0.4.5.01 2023.01.08 - Work.html
+## Changelog: v0.4.5.01 2023.02.08 - Work.html
 
 ### Added v0.4.3.03 - Folio.html
 

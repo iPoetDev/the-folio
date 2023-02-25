@@ -14,7 +14,7 @@ The Digital Folio is a portfolio template site that could be used to showcase th
  - Provide a high level profile of who I am professionally and personally to prospective clients and/or employers.
  - Provide a contact point for business and contracting enquiries by a contact form.
 
- ### **Website Owner Goals**
+ ### <ins>Website Owner Goals</ins>
 
  The site is dual purpose, as a showcase of past initiatives has two key audiences: Potential clients seeking a solition and potential employers seeking an experienced hire.
 
@@ -23,7 +23,7 @@ The Digital Folio is a portfolio template site that could be used to showcase th
  - Create new employment opportunities.
  - Increase revenue and income.
 
-  ### **User Goals**
+  ### <ins>User Goals</ins>
 
   The site should have easy to spot user goals or address user concerns as presented.
 
@@ -44,7 +44,7 @@ As a prospective employer/recuiter:
 ## **User Experience**
 
 
-### Audience(s)
+### <ins>Audience(s)</ins>
 
 The website is created with the following in target audience(s) in mind.
 
@@ -53,7 +53,7 @@ The website is created with the following in target audience(s) in mind.
 - A recruiter seeking a hire for a post.
 - A decision maker seeking to validate a hire's experience and past work.
 
-### User requirements or expectations
+### <ins>User requirements or expectations</ins>
 
 - A block level landing page with 4 jump points.
 - A website that showcases projects.
@@ -78,11 +78,11 @@ The website is created with the following in target audience(s) in mind.
 
 > Overall: This site is design based less on large image centric graphical designs, but on a bolder but more simpler typo*graphical* design. Hopefull effective use of typesetting gives a brand identity and personalisation to the site. Achiving this is challenging, as this requires a deeper knowledge of fonts, spacing, and design + brand identity impact.
 
-### Typography
+### <ins>Typography</ins>
 
  - A note: The orginal intention behind this site was to emphasise the graphic nature of fonts and type as a core part of the design metaphor around the foolscape paper size and typesetting.
 
-#### *Font Families*
+#### <ins>*Font Families*</ins>
 
 - Therefore the selection of fonts was a time well invested.  The following font categories where used in the design.
 
@@ -105,7 +105,7 @@ The website is created with the following in target audience(s) in mind.
 7. Android is notorious for being tricky, so a wide range of fallback fonts where selected.
 
 
-#### *Reasons for Fonts*
+#### <ins>*Reasons for Fonts*</ins>
 
 **** was chosen for. This font identifies the site and creates an strong impression on the user, inliue of using a graphic design or image, and keeps aligned with the foolscape paper and typesetting metaphor that gave rise to the concept of the site. This is used in title fonts, hero fonts
 
@@ -116,7 +116,7 @@ The website is created with the following in target audience(s) in mind.
 
  > It is notable that time would be a constraint in choosing, testing and matching a triad of fonts for the project submission, so best efforts were made.
 
-#### Type Responsiveness: Fluid, Responsive (@media) or a mixture of both.
+#### <ins>*Type Responsiveness: Fluid, Responsive (@media) or a mixture of both.*</ins>
 
 > Following Design concerns where addressed
 
@@ -140,7 +140,7 @@ The website is created with the following in target audience(s) in mind.
 
 - **Should fluid fonts be used in all cases? No**.
   - While further refinement is needed, a future enhancement, @media queries where used to change the fluid font step to meet the requirements of small screen mobile devices, particularly when in portrait mode and where title/logo space was limited.
-#### How it Works
+#### *<ins>How it Works</ins>*
 > Author: Aleksandr Hovhannisyan (2021-Present)
 
 > A modular type scale consists of a baseline font size and proportionally smaller and larger font sizes. Traditionally, design systems used static type scales, where each step has a fixed font size at every viewport width.
@@ -150,12 +150,12 @@ The website is created with the following in target audience(s) in mind.
 > This is done by solving the equation y = mx + b, which corresponds to the preferred value in a CSS clamp declaration.
 
 
-### Iconography
+### <ins>Iconography</ins>
 
 - Use of FontAwesome *Free* (Version 6, January 2023) icons
 - Downloaded icons for social media in the placement of the footer of the page.
 
-#### *Future Enhancements*
+#### *<ins>Future Enhancements</ins>*
 
 - Additional use of icons, as future enhancements, would be to give user affordances to:
    - Links i.e. this is a link to an external site, not being a social media one.
@@ -164,15 +164,15 @@ The website is created with the following in target audience(s) in mind.
    - Contact details/input references to validation, field names/labels etc
    - Interactive elements not listed above.
 
-### Color Choices
+### <ins>Color Choices</ins>
 
 
 
-### Accessibility
+### <ins>Accessibility</ins>
 
 > <div style="text-align:right"><b>Interaction | Informatiom Architecture | Structure Plane</b></div>
 
-### Information Architecture & Hierarchy
+### *<ins>Information Architecture & Hierarchy</ins>*
 
  - Sitemap version 1
   > ![](https://mermaid.ink/img/pako:eNptT80KwjAMfpWQ8zx43UEQPXhQEBUEWw9xjd1wbUbtBHG-u_VnB2HJJfn-SB5YiGHM0QZqStjNtYdUU7UQx7Amy8cfAqPRpFvyjWsYd1CotYR4lrqSP8GGndzYdMBqJj5SEYf9Vu0lXIY5o6YnaXuj_ZArDvYda7T_NgBm6Dg4qkw6__FGNMaSHWvM02goXDRq_0w6aqNs777APIaWM2wbQ5HnFaWvHeZnqq8JbcgfRPr9-QL6p1rE?type=png)
@@ -180,6 +180,87 @@ The website is created with the following in target audience(s) in mind.
   - Sitemap version 2
     > ![](https://mermaid.ink/img/pako:eNptjr0OwjAMhF_F8twOrBmQKnVgYKgEEw2Dadwf0cRVmiChtu9OELBhL3efTzov2IhhVNh5mno4l9pBmqI-iGWoqOPrl0Ce79cjP3iE3QpNXYkPrYyD_A-YurhJDOn4WQDM0LK3NJhUt7yJxtCzZY0qSUP-rlG7LeUoBjk9XYMq-MgZxslQ4HKg9KVF1dI4JzqRu4j8_PYCZzZCDw?type=png).active
 
+
+### **<ins>Images</ins>**
+
+#### *<ins>Art Direction</ins>*
+
+> Art Direction is the practice/technique of styleing/sizing images to be repsonsive to the layout / orientation of the viewport, once the image is not 100% of the viewport, i.e. it has whitespace on all axes and does not stretch the full width of the viewport.active
+
+#### *<ins>Client Hero Images (Home Page)</ins>*
+
+> The follow is a example reference for the image layout and scaling across all device screen types. The image is from one client, Love Running, and is only used here as a sample example for image art direction purposes.
+
+*Requirement*
+- Have a landing page showcase for one or more clients on the index.html page that is a) fluid to all screen sizes and b) is responsive in aspect ratio to the device orientation and c) changes aspect ratio acordingly to device orientation using Art Direction.
+
+**Mobile: Portrait**
+
+![](assets/clients/loverunning/Love-running,mobile,portrait,w_365,1,1.png)
+> Image naming was instrumental in the process for alignment with idenitication, sizing and usage.
+
+- Art Direction for this content is for:
+  - *Image Aspect Ratio*: 1 / 1
+  - *Alignment*: Square, top and center to the client display card/panel with caption directly below it.
+  - *Page Layout*: In a 1x Column, Nx Row layout respecting the aspect of the mobile portrait: *height greater than device width*.
+  - *Design*: One  1/ 1 square image that is 75% of viewport, croped and focused on the central subject of the image, and keeping some image text in view.
+  - *Breakpoints/Devices*:
+      - Mobile
+        - Standard ( > 360.999px width): Width:
+        - Pro (< 361px, > 408.999px): Width:
+        - Ultra (< 408, >488.999px): Width:
+        - **All (> 548.999px)**:
+   - Less than 548 px width Breakpoint is in use for all mobile in this orientation, as it covers all uses cases at a smaller size with fluid images and responsively downloaded images.
+
+**Mobile: Landscape**
+
+![](assets/clients/loverunning/Love-running,mobile,portrait,w_365,1,1.png)
+
+- Art Direction for this content is for:
+  - *Image Aspect Ratio*: 1 / 1
+  - *Alignment*: Square, top and center to the client display card/panel with caption directly below it.
+  - *Page Layout*: In a 1x Column, Nx Row layout respecting the aspect of the mobile landscape: *width greater than device height*.
+  - *Design*: 1 16x9 image in 1 columns, to 75% of the device viewport, not croped and constrains the full width of the image
+  - *Breakpoints/Devices*:
+      - Mobile
+        - Standard (< 640.999px width): Width: ; (height < 360.999px): Height: ;
+        - Pro (> 641px, < 726.999px): Width:
+        - Ultra (> 727px, < 834.999px): Width:
+        - All (< 834.999px in width, < 500px in height).
+
+**Tablet: Portrait**
+
+
+- Art Direction for this content is for:
+  - *Aspect Ratio*: 1 / 1
+  - *Alignment*: Square, top and center to the client display card/panel with caption directly below it.
+  - *Breakpoints/Devices*:
+      - Tablet
+        - Standard (> 360.999px width): Width:
+        - Pro (< 361px, > 408.999px): Width:
+        - Ultra (< 408, >488.999px): Width:
+        - All (> 548.999px).
+
+**Tablet: Landscape**
+
+![](assets/clients/loverunning/Love-running,tablet,landscape,w_404,h_252,16,10.png)
+
+- Art Direction for this content is for:
+  - *Image Aspect Ratio*: 16 / 10
+  - *Alignment*: Wide, 16 / 10, top and center to the client display card/panel with caption _____directly below it_____.
+  - *Page Layout*: In a 2x Column, 2x Row layout respecting the aspect of the tablet landscape: *width greater than device height*.
+  - *Design*: 2 16x9 image in 2 columns, to 45% of the device viewport, not croped and has the full width of the image
+  - *Breakpoints/Devices*:
+      - Tablet
+        - Standard: (width: > 768.999px): Width: ; (height > 548px): Height: 1024;
+        - Pro: (width: > 980px, < 1200.999px): Width: 405px
+        - All: (width: > 768.px, < 1200.999px ): Width: 405px
+
+#### **Image Compression**
+
+- Used [TinyPNG][#Frameworks Used] to reduce overall image size by selective color compression.
+  - > "... uses smart lossy compression techniques to reduce the file size of your WEBP, JPEG and PNG files. By selectively decreasing the number of colors in the image, fewer bytes are required to store the data. The effect is nearly invisible but it makes a very large difference in file size!" [TinyPNG home page](https://tinypng.com/)
+- By compressing these images, it is expected to use less bandwidth and load images faster.
 
 ### Metaphors
 
@@ -312,6 +393,7 @@ Revised: Version 2.0 (Designed 13th Feburary). There was no version 1.
       - Basic Subsetting to redice the size/options/features of the font's files. Custom subsetting is possible.
       - Auto Generation of CSS @font-family code and a custom stylesheet name (not used).
       - Other options was to suffix the font file name with a custon suffix, dquare the em value and no adjust the glyph spacing.
+- [Fluid Type Scale Calculator](https://www.fluid-type-scale.com/ " Aleksandr Hovhannisyan (2021-Present), Fluid Type Scale Calculator, version 1.2.1, Last Accessed: 2023-02-13:  https://www.fluid-type-scale.com/") by Aleksandr Hovhannisyan (2021-Present), Fluid Type Scale Calculator, version 1.2.1, Last Accessed: 2023-02-13:  https://www.fluid-type-scale.com/
 - [Responsive Viewer](https://github.com/skmail/responsive-viewer "@Skmail, https://github.com/skmail/responsive-viewer")
 - [Responsive Image Breakpoings Generator](https://www.responsivebreakpoints.com/ " https://www.responsivebreakpoints.com/") with use of the customisation to:
     - Base 1rem = 16 pixels and no support for older browsers as no fall back CSS included (future enhancement).
@@ -325,7 +407,9 @@ Revised: Version 2.0 (Designed 13th Feburary). There was no version 1.
         - `Extra Large: xl`:
         - `Extra Extra (..) Large: xxl and xxxl, xxxxl and xxxxl`.
            - `xxxxl` & `xxxxxl` used for signature/identity title text, e.g., initals.
-- [Fluid Type Scale Calculator](https://www.fluid-type-scale.com/ " Aleksandr Hovhannisyan (2021-Present), Fluid Type Scale Calculator, version 1.2.1, Last Accessed: 2023-02-13:  https://www.fluid-type-scale.com/") by Aleksandr Hovhannisyan (2021-Present), Fluid Type Scale Calculator, version 1.2.1, Last Accessed: 2023-02-13:  https://www.fluid-type-scale.com/
+- [TinyPNG](https://tinypng.com/ "https://tinypng.com/: TinyPNG uses smart lossy compression techniques to reduce the file size of your WEBP, JPEG and PNG files")
+  - TinyPNG uses smart lossy compression techniques to reduce the file size of your WEBP, JPEG and PNG files.
+  - [Use Case] Reduced image size by 73% from mean of 200kb, to mean of 50kb for performance concerns.
 
 #### Readme Tooling
 
