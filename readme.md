@@ -591,6 +591,8 @@ Future testing for better desktop cross browsing support would be focusing on
 
 > Verifies responsiveness in all common devices.
 
+- ["AmiResponsive: https://ui.dev/amiresponsive?url=https://ipoetdev.github.io/the-folio/"](https://ui.dev/amiresponsive?url=https://ipoetdev.github.io/the-folio/ "Visit the Proof of Responsiveness: The Digital Folio") - And see the verification
+
 ---
 ### Validation
 
@@ -598,18 +600,29 @@ Future testing for better desktop cross browsing support would be focusing on
 
 |     Page     |   Checked  | Issues           . | Resolved | Passed |
 | :----------: | :------: | :----: | :---------: | :-----------: |
-| Home.html | February 28th |  |             |               |
-|  Folio.html  | February 28th |  |             |               |
-|  Profile.html   | February 28th | Article missing H2-H6 <br>H2 Empty |      ☑️       |        ☑️       |
+| Home.html | February 28th |  Article missing H2-H6 |      ❓       |      ☑️, with warnings         |
+|  Folio.html  | February 28th | ☑️   |     ☑️         |      ☑️          |
+|  Profile.html   | February 28th | Article missing H2-H6  |      ☑️       |        ☑️       |
 
+- ❓ : *Article missing H2-H6*
+  > - Note: Due to micro-architectures and design choices, using card based component approach, these warnings are treated as suggestions, and not mandatory.
+  >  [MDN's Article: " any other independent item of content."](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article "Alternative use of `<article>`").
+  >    - From line 150, column 21; to line 150, column 78
+  >    - From line 183, column 21; to line 183, column 68
 
 #### *CSS*
 
 Use of [W3C Validation Service, CSS Jigsaw](https://jigsaw.w3.org/CSS-validator/)
 
-- CSS @layer is not in the current working draft specification, as of February 17th 2023, though is supported by all modern browsers as per Interop 2022.
 
-    As such causes CSS Jigsaw to invalidate this syntax. See [Issues > Unresolved below](#Issues)
+|      Page      |    Checked    |        Issues           .        | Resolved |                Passed                | Impact                                                                                             | CanIUse                                        |
+| :------------: | :-----------: | :------------------------------: | :------: | :----------------------------------: | -------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+|  `Home.html`   | February 28th | `@layer` is unrecognised at-rule |    ❌    | ☑️, with warning error, see Impact | No Impact on User, Author's convenience. Supported by all modern browsers since 2023 February 14th. | [@layer](https://caniuse.com/?search=%40layer) |
+|  `Folio.html`  | February 28th | `@layer` is unrecognised at-rule |    ❌    | ☑️, with warning error, see Impact | No Impact on User, Author's convenience. Supported by all modern browsers since 2023 February 14th. | [@layer](https://caniuse.com/?search=%40layer) |
+| `Profile.html` | February 28th | `@layer` is unrecognised at-rule |    ❌    | ☑️, with warning error, see Impact | No Impact on User, Author's convenience. Supported by all modern browsers since 2023 February 14th. | [@layer](https://caniuse.com/?search=%40layer) |
+|                |               |                                  |          |                                      |                                                                                                    |                                                |
+
+- CSS @layer is not in the current working draft specification, as of February 17th 2023, though is supported by all modern browsers as per Interop 2022.
 
 #### Lighthouse
 
@@ -617,11 +630,8 @@ Use of [W3C Validation Service, CSS Jigsaw](https://jigsaw.w3.org/CSS-validator/
 
 |     Page     |   Mode   | Device  | Performance | Accessibility | Best Practices |  SEO  |
 | :----------: | :------: | :-----: | :---------: | :-----------: | :------------: | :---: |
-|  Home.html   | Snapshot | Mobile  |             |               |                |       |
-|  Folio.html  | Snapshot | Mobile  |             |               |                |       |
-| Profile.html | Snapshot | Mobile  |             |               |                |       |
 |  Home.html   | Snapshot | Desktop |    2 / 4    |    12 / 13    |     4 / 4      | 6 / 7 |
-|  Folio.html  | Snapshot | Desktop |             |               |                |       |
+|  Folio.html  | Snapshot | Desktop |             |       13/14        |        4 /4        |  6 /7     |
 | Profile.html | Snapshot | Desktop |    3 / 4    |    14 / 14    |     4 / 4      | 5 / 7 |
 
 
@@ -630,7 +640,8 @@ Use of [W3C Validation Service, CSS Jigsaw](https://jigsaw.w3.org/CSS-validator/
 
 #### ***Bugs***
 
-- Did not record and track issues, and fixes, throughout the lifecycle of the project. Just had an issue and then fixed them. The bugs/issues at submission are recorded.
+- Menu Control has shifted at last minute. Minor bug.
+- Download button did not get styled in time.
 
 #### ***Unresolved***
 
@@ -659,48 +670,60 @@ The following Bugs were know at time of submission:
 - Consistency in using font for Menu button/toggle as a call to action to user to click on the menu.
 - Broad Navigation bar that is responsive across all devices.
 
+![](_documentation/Screenshots/Navigatoon_Bar.png)
+
 ### Navigation Panel
 
 - Use of a full screen navigation panel, acting like a magic page of content and large, accessible text (selected typography is part of site identity) for all users.
 - Use of space to give roomy, if basic/minimalism, look and feel. Consistency of space is a feature and a challenge across all devices.
 - Ensuring consistent branding by Logo and Menu in Navigation Panel as well as on each page.
 - Remove and scale certain style elements on mobile views that are present on desktop views (borders, lines and scaling down of font sizes for certain smaller screen widths).
-- Addition of a navigation footer, identical to page footer, for consistency and for minor twisting of convention.
+- Addition of a social icons navigation footer, identical to social media content elsewhere  for consistency.
+
+![](_documentation/Screenshots/Menu_Overlay.png)
 
 ### Grid-like Layouts for Content
 
 - Use of grid like layouts for complex, side by side card components to be arranged across the page in various grid patterns and with spacing/gaps in between.
 - Challenge was to get these macro layouts and their respective card components (micro/mid components) to be responsive across selected screen sizes and orientations (portrait and landscape).
 - Top row of grid to showcase current/previous projects.
-### Hero Client Showcase Images
 
-- Display two large hero images of previous projects on top row of home page grid layout.
+![](_documentation/Screenshots/HomePage_-_Magzine_Grid_Card_Layout.png)
+### Hero Client Showcase Images & Client Brief
+
+- Display two large hero images of previous projects on top row of home page grid layout. (see Above)
 - Have a project label and a internal jump link to folio.html
 
-### Display About Details
+![](_documentation/Screenshots/Client_Showcase.png)
+
+- Clicking on either one of these leads to a Client Brief
+
+![](_documentation/Screenshots/Client_Project_Brief.png)
+
+### Display About/Profile Details
 
 - Have a hero/headshot image with a strong colour border frame on right most bottom panel of page with some light marketing bio copy text describing the owner.
 
-### Display Versed Details
+![](_documentation/Screenshots/Profile_Page_Hero.png)
 
-- Have a light details hints and clues to what the site owner in currently learning, recently awarded and have proof off having skills in tools or services to be available.
-
-### Larger Footer with Contact Quick Form
-
-- A large bold footer of contrasting | complementary | consistent colour to page.
-- Uses same, if smaller, title/logo or heading fonts for key features like links or just identity.
-- Has a small form, of 3 fields for a quick message as a call to action where user inputs a name, an email and chooses a topic to contact the site owner about.
-- Send to an email address (nominally info@folio.digital, but for submission, authors current email address.) when user clicks send.
 
 ### Resume Download Button
 
+- Links to a File download of a PDF as a call to action (a takeaway) for recruiters, employers, and propspective clients. as above, tthe download button.
 -
 ### Future Enhancements
 
 #### Definition of Done Requirements to be Delivered
 
-- Required input indicators
--
+See the [Definition of Done-log](_documentation/done.md)
+
+#### *<ins>Code Refactoring</ins>*
+
+> Due to time management and scoping, the following refactoring, i.e. re-organising the code, without impacting the functionality, is scheduled to reduce the technical debt built up as different approaches and learning styles clashed as knowledge and confidence improved.active
+
+- Landing.css: A medly of media queries used to tackle the complex and responsive card component layout. Much repetition, verbose and not DRY, so dedupelication of code is a planned activity.
+- Centralisation and refinement of surface level styling like color schemes and localised font sizing per media querys.active
+- Media query range conditional statements. The breakpoints used in this project varied widely until a consistent pattern was adopted.
 
 #### ***[Context]* Home Page**
 
@@ -777,6 +800,10 @@ The following Bugs were know at time of submission:
 
 ## LAUNCH
 
+### Author Note:
+
+This submisson is a fundamental, proof of concept, which will be expanded and developed further a hot bed to develop and text modern CSS techqniues.
+
 ### Live Site
 
 In deploying to Github;s website hosting service, GitHub pages, the website was created. The steps to deploy are as follows:
@@ -791,19 +818,6 @@ In deploying to Github;s website hosting service, GitHub pages, the website was 
 The latest version, and prior versions, of the site can be found under the `Actions` tab and in the latest version of the workflow `pages build and deployment` as well as above.
 
 Live link is: [https://ipoetdev.github.io/the-folio/](https://ipoetdev.github.io/the-folio/)
-
-<!-- ### Forking this repository -->
-
-### Cloning this repository
-
-This repository is not for cloning. Upon request, it will be made private for future reference.
-<br>
-<br>
-
-
----
----
-<br>
 
 ## Assessment
 
@@ -843,13 +857,12 @@ This repository is not for cloning. Upon request, it will be made private for fu
 
 #### Colour
 
--
+- Coolor Palettes - Custom Coolor Palettes:
 - Contrast Grid (2017-2021). "Contrast Grid, version 1.1.0". Last Accessed: 2023-02-16.https://contrast-grid.eightshapes.com/?version=1.1.0, from https://github.com/EightShapes/contrast-grid.
 
 #### Art Direction  & Images
 
 - Cloudinary, as above, for Responsive Images Breakpoint Generator.
-
 
 #### Content
 
@@ -863,13 +876,6 @@ This repository is not for cloning. Upon request, it will be made private for fu
 - Code Institute (2020-2023). "Coders Coffeehouse - "
 
 ## Acknowledgements
-
-### Code Repository
-
--  Elly Loel "A modern CSS reset" Last Accessed: 2023-01-11. Last Updated: 2023-02-11. https://gist.github.com/EllyLoel/4ff8a6472247e6dd2315fd4038926522 ✮✮✮
-
-
-<!-- ### Tutorials -->
 
 ### Guides
 

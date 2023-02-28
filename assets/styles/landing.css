@@ -131,8 +131,10 @@
 		box-shadow: 5px 2px 10px 0.5px #fafafa
 	}
 	#about-card .fo-inner-card {
-		box-shadow:  5px 2px 10px 1px #fafafa, 5px 2px 10px 0.5px #90776F;;
+		box-shadow:  5px 2px 10px 1px #fafafa, 5px 2px 10px 0.5px #90776F;
 	}
+
+
 
 	#client2-panel.fo-top-panels {
 					margin-top: 1rem;
