@@ -67,42 +67,42 @@
                 font-family: 'lobster2';
                 font-style: italic;
                 font-weight: bold;
-                src: url('../webfonts/titles/lobstertwo-bolditalic-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-bolditalic-webfont.woff') format('woff');
+                src: url('webfonts/body/lobstertwo-bolditalic-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-bolditalic-webfont.woff') format('woff');
             }
 
             @font-face {
                 font-family: 'lobster2';
                 font-style: italic;
                 font-weight: normal;
-                src: url('../webfonts/titles/lobstertwo-italic-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-italic-webfont.woff') format('woff');
+                src: url('webfonts/body/lobstertwo-italic-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-italic-webfont.woff') format('woff');
             }
 
             @font-face {
                 font-family: 'lobster2';
                 font-style: normal;
                 font-weight: normal;
-                src: url('../webfonts/titles/lobstertwo-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-regular-webfont.woff') format('woff');
+                src: url('webfonts/body/lobstertwo-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-regular-webfont.woff') format('woff');
             }
 
             @font-face {
                 font-family: 'speakeasy';
                 font-style: normal;
                 font-weight: normal;
-                src: url('../webfonts/titles/sf_speakeasy-webfont.woff2') format('woff2'), url('sf_speakeasy-webfont.woff') format('woff');
+                src: url('webfonts/titles/sf_speakeasy-webfont.woff2') format('woff2'), url('sf_speakeasy-webfont.woff') format('woff');
             }
 
             @font-face {
                 font-family: 'vastshadow';
                 font-style: normal;
                 font-weight: normal;
-                src: url('../webfonts/titles/vastshadow-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/vastshadow-regular-webfont.woff') format('woff');
+                src: url('webfonts/titles/vastshadow-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/vastshadow-regular-webfont.woff') format('woff');
             }
 
             @font-face {
                 font-family: 'MegalopolisXR';
                 font-style: normal;
                 font-weight: normal;
-                src: url('../webfonts/titles/MegalopolisExtra-Regular.woff2') format('woff2'), url('../webfonts/titles/MegalopolisExtra-Regular.woff') format('woff');
+                src: url('webfonts/titles/MegalopolisExtra-Regular.woff2') format('woff2'), url('../webfonts/titles/MegalopolisExtra-Regular.woff') format('woff');
             }
         }
 
@@ -111,7 +111,7 @@
                 font-family: 'babylonica';
                 font-style: normal;
                 font-weight: bold;
-                src: url('../webfonts/babylonica-regular-sigfont.woff2') format('woff2'), url('../webfonts/babylonica-regular-sigfont.woff') format('woff');
+                src: url('webfonts/babylonica-regular-sigfont.woff2') format('woff2'), url('../webfonts/babylonica-regular-sigfont.woff') format('woff');
             }
 
             @layer body-fonts {
@@ -123,7 +123,7 @@
                     font-family: 'kanit';
                     font-style: normal;
                     font-weight: normal;
-                    src: url('../webfonts/kanit-black-webfont.woff2') format('woff2'), url('../webfonts/titles/kanit-black-webfont.woff') format('woff');
+                    src: url('webfonts/kanit-black-webfont.woff2') format('woff2'), url('../webfonts/titles/kanit-black-webfont.woff') format('woff');
                 }
 
                 @font-face {
@@ -131,7 +131,7 @@
                     font-family: 'kanit';
                     font-style: normal;
                     font-weight: bold;
-                    src: url('../webfonts/kanit-bold-webfont.woff2') format('woff2'), url('../webfonts/titles/kanit-bold-webfont.woff') format('woff');
+                    src: url('webfonts/kanit-bold-webfont.woff2') format('woff2'), url('../webfonts/titles/kanit-bold-webfont.woff') format('woff');
                 }
 
                 @font-face {
@@ -139,7 +139,7 @@
                     font-family: 'kanit';
                     font-style: normal;
                     font-weight: normal;
-                    src: url('../webfonts/kanit-medium-webfont.woff2') format('woff2'), url('../webfonts/titles/kanit-medium-webfont.woff') format('woff');
+                    src: url('webfonts/kanit-medium-webfont.woff2') format('woff2'), url('../webfonts/titles/kanit-medium-webfont.woff') format('woff');
                 }
 
                 @font-face {
@@ -147,7 +147,7 @@
                     font-family: 'kanit';
                     font-style: normal;
                     font-weight: normal;
-                    src: url('../webfonts/kanit-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/kanit-regular-webfont.woff') format('woff');
+                    src: url('webfonts/kanit-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/kanit-regular-webfont.woff') format('woff');
                 }
             }
 
