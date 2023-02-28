@@ -209,6 +209,11 @@ Accessible Colours, as by [WCAG 2.0 contrast](https://www.w3.org/TR/UNDERSTANDIN
 
 ### <ins>Accessibility</ins>
 
+- Added Alt attributes and titles to Anchors.
+- Did not include Aria Labels
+- Did not test for screen readers
+- Assume visally impaired users can understand the descriptive alt tags.
+- - Future enchancement: Improve on this.
 
 ### *<ins>Information Architecture & Hierarchy</ins>*
 
