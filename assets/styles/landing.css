@@ -3,7 +3,7 @@
 		#main-land {
 				background-color: hsl(20, 13%, 9%);
 				display: grid;
-				padding-inline: clamp(2rem, 5%, 3.125rem);
+				padding-inline-end: clamp(2rem, 5%, 3.125rem);
 				padding-top: clamp(2rem, 3%, 4rem);
 		}
 
@@ -116,10 +116,6 @@
 	}
 	#client2-card .fo-client-hero-img {
 		box-shadow: 5px 3px 4px 1px #90776F;
-	}
-
-	:is(#client1-card, #client2-card)  aside {
-		inline-size: 25dvw;
 	}
 	:is(#client1-card, #client2-card)  {
 		box-shadow: 5px 1px 2px 4px #F0C955
@@ -1047,6 +1043,15 @@
 			object-position: left;
 		}
 
+		@container client-hero (inline-size < 300px) {
+
+			:is(#client1-panel, #client2-panel) .fo-client-hero-img {
+				max-inline-size: var(--mobile-section-width);
+				object-fit:  var(--hero-cover, contain);
+				width: 240px;
+
+			}
+		}
 		@container client-hero (inline-size < 330px) {
 
 			:is(#client1-panel, #client2-panel) .fo-client-hero-img {

@@ -203,7 +203,7 @@
                 color: #faf4f4;
                 font-family: lobster2 sans-serif;
                 font-family: var(--logo-lobster2);
-/*                 font-size: var(--font-size-xxxxl); */
+                font-size: var(--font-size-xl);
                 font-weight: 900;
                 letter-spacing: 0px;
                 line-height: 1.5;
@@ -228,9 +228,13 @@
                     font-size: var(--font-size-xxxl);
                 }
 
+                label#navigation.fo-sitename {
+                    font-size: var(--font-size-xl);
+                }
+
             }
 
-            @media (max-width: 409px) {
+            @media (max-width: 489px) {
                 h1#sitelogo.fo-sitename {
                     font-size: calc(var(--font-size-lg) * 1.3);
                 }
@@ -251,10 +255,9 @@
                 h1#sitelogo.fo-sitename {
                     font-size: calc(var(--font-size-md) * 1.3);
                 }
-
-                #navigation, #toggle-menu {
-/*                     font-size: calc(var(--font-size-md) * 0.9); */
-                    /* padding-top: 1rem; */
+                label#navigation.fo-sitename {
+                    font-size: var(--font-size-lg);
+                    padding-top: 6px;
                 }
             }
 
@@ -327,7 +330,6 @@
     #main-land, #main-portfolio, #main-work {
         background-color: hsl(20, 13%, 9%);
         display: grid;
-        margin-right: -8px;
     }
 
     @layer ia.navigation {
@@ -664,7 +666,6 @@
                     box-sizing: border-box;
                     height: 90%;
                     isolation: isolate;
-                    padding-block-start: 10%;
                     position: absolute;
                     width: 100%;
                     z-index: 10;
