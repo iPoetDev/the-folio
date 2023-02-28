@@ -4,45 +4,32 @@
 ## Github's gitignore's repo: https://github.com/github/gitignore
 
 ## Deploy / Commit Hide
-docs/**
-assets/styles/utilities.css
 the-folio.code-workspace
 
 ## Exclude Files
 
 ## SECURITY
 
-### Repo
-## Folder
-src/*
-.vscode/*
-scripts/*
-features/*
-
 *.lnk
 
 ## Specific Files
-.bash*
-.gitmoijrc.json
-.zshrc
-.pnpm*
-.shell.sh
 .gitattributes
-
-# .github/*
-# .vscode/*
-.github/dependabot.yml
 
 # Folder config file
 [Dd]esktop.ini
 
-_work/_detail/credibility.html
-_work/_detail/experience.html
-_work/_detail/learning.html
-_work/_detail/skills.html
-_info/_detail/confirm.html
-_info/_detail/partner.html
-assets/styles/_archive/__main.css
-assets/styles/_archive/animated forms.css
-.cspell/custom-dictionary-folder-the-folio.txt
 .prettier.yaml
+*.png.xmp
+assets/clients/coderscoffee/coders-coffeehouse-drinksmenu.png
+assets/clients/coderscoffee/coders-coffeehouse-project-1.jpg
+assets/clients/coderscoffee/coders-coffeehouse-project-1.jpg.xmp
+assets/clients/coderscoffee/coffeehouse.jpg
+assets/clients/coderscoffee/learn.codeinstitute.net_sandbox_api_challenges_60338cca9c4983ac5d855130_files_index.html(Nest Hub Max).png
+assets/clients/coderscoffee/msedge_5aDk3bdYRs.png
+assets/clients/coderscoffee/msedge_EHfu8UF0UN.png
+assets/clients/coderscoffee/msedge_iqI4jnCXla.png
+assets/clients/coderscoffee/msedge_iY5FKbct3T.png
+assets/clients/coderscoffee/msedge_pJ6vqhmJMv.png
+assets/clients/coderscoffee/msedge_pJ6vqhmJMv.xcf
+assets/clients/coderscoffee/msedge_tGKWUU0raw.png
+assets/clients/coderscoffee/msedge_zvMNqOkHg6.png
