@@ -9,38 +9,38 @@ and may align with to [Semantic Versioning](http://semver.org/).
 
 Due
 
-  - [❓] ☑️❌ Based on the principles of accessibility.
-  - [❓] ☑️❌1.1.1. Incorporates a main navigation menu
-  - [❓] ☑️❌1.2 Design a website that meets accessibility guidelines
-  - [ ] ☑️❌1.2.1.e.g. contrast between background and foreground colours
-  - [ ] ☑️❌1.2.2.e.g. non-text elements have planned alt text equivalentsto cater for the visually impaired
-  - [❓] ☑️❌1.3 Design the organisation of information on the page following the principles of user experience design
-  - [❓] ❓1.6 Design the site to allow the user to initiate and control actions such as the playing of audio/video.
-  - [❓]☑️❌ 2.1.1  Create and match the design and
-  - [❓] ☑️❌2.1.2  Create a site to meet its stated purpose
-  - [❓]☑️❌ 2.2 Write custom HTML code that passes through the official W3C validator with no issues.
-  - [❓]☑️❌ 2.3 Write custom CSS code that passes through the official (Jigsaw) validator with no issues
-  - [❓] ☑️❌ 2.7 Present the finished website
-  - [❓] ☑️❌ 2.7.1 With clearly understandable site-specific content
-  - [❓] ☑️❌ 2.8 Implement clear navigation
-  - [❓] ☑️❌3.1.1 Test to ensure it matches the development version
-  - [❓] ☑️❌ 3.3 Remove commented-out code before pushing final changes to version control and deploying.
-  - [❓] ☑️❌ 3.4 Ensure that there are no broken internal links
-  - [❓] ☑️❌ 3.5 Insert screenshots of the finished project in the README
-  - [❓] ☑️❌ 4.2. 	Insert screenshots ,
-  - [❓] ☑️❌ 4.2.1 Insert screenshots of the project features,
-  - [❓] ☑️❌ 4.2.2 Give a brief description of what each feature does
-  - [❓] ☑️❌ 4.2.3 Explain its value to the user..
-  - [❓] ☑️❌ 4.3 Attribute all code from external sources to its original source
-  - [❓] ☑️❌ 4.3.1  via comments above the code
-  - [❓] ☑️❌ 4.3.2 &amp; for larger dependencies in the README.
-  - [❓] ☑️❌ 4.4 Clearly separate and identify code written for the website .
-  - [❓] ☑️❌ 4.4.1 Identify code from external sources (e.g. libraries or tutorials).
-  - [❓] ☑️❌ 4.5 Organise HTML and CSS code into well-defined and commented sections.
-  - [❓] ☑️❌ 4.6 Place CSS code in external files linked to the HTML page in the HEAD element.
-  - [❓] ☑️❌ 4.7 Write code that meets at least minimum standards for readability.
-  - [❓] ☑️❌ 4.7.1 Write code consistent indentation.
-  - [❓] ☑️❌ 5.1.4 Has few grammatical errors.
+  - [x] ☑️ Based on the principles of accessibility.
+  - [x] ☑️1.1.1. Incorporates a main navigation menu
+  - [x] ☑️1.2 Design a website that meets accessibility guidelines
+  - [x] ☑️1.2.1.e.g. contrast between background and foreground colours
+  - [x] ☑️1.2.2.e.g. non-text elements have planned alt text equivalents to cater for the visually impaired
+  - [x] ☑️1.3 Design the organisation of information on the page following the principles of user experience design
+  - [-] ❓1.6 Design the site to allow the user to initiate and control actions such as the playing of audio/video.
+  - [x]☑️ 2.1.1  Create and match the design and
+  - [x] ☑️2.1.2  Create a site to meet its stated purpose
+  - [?]☑️❌ 2.2 Write custom HTML code that passes through the official W3C validator with no issues.
+  - [?]☑️❌ 2.3 Write custom CSS code that passes through the official (Jigsaw) validator with no issues
+  - [x] ☑️ 2.7 Present the finished website
+  - [x] ☑️ 2.7.1 With clearly understandable site-specific content
+  - [x] ☑️ 2.8 Implement clear navigation
+  - [x] ☑️3.1.1 Test to ensure it matches the development version
+  - [x] ☑️ 3.3 Remove commented-out code before pushing final changes to version control and deploying.
+  - [?] ☑️❌ 3.4 Ensure that there are no broken internal links
+  - [x] ☑️ 3.5 Insert screenshots of the finished project in the README
+  - [x] ☑️ 4.2. 	Insert screenshots ,
+  - [x] ☑️ 4.2.1 Insert screenshots of the project features,
+  - [x] ☑️ 4.2.2 Give a brief description of what each feature does
+  - [x] ☑️ 4.2.3 Explain its value to the user..
+  - [x] ☑️ 4.3 Attribute all code from external sources to its original source
+  - [x] ☑️ 4.3.1  via comments above the code
+  - [x] ☑️ 4.3.2 &amp; for larger dependencies in the README.
+  - [x] ☑️ 4.4 Clearly separate and identify code written for the website .
+  - [x] ☑️ 4.4.1 Identify code from external sources (e.g. libraries or tutorials).
+  - [x] ☑️ 4.5 Organise HTML and CSS code into well-defined and commented sections.
+  - [?] ☑️❌ 4.6 Place CSS code in external files linked to the HTML page in the HEAD element.
+  - [x] ☑️ 4.7 Write code that meets at least minimum standards for readability.
+  - [x] ☑️ 4.7.1 Write code consistent indentation.
+  - [?] ☑️❌ 5.1.4 Has few grammatical errors.
 ## Definition of Done: v0.5, 2023.02.26
 
 Added - Portfolio Project 1 - HTML/CSS Essentials - Pass Criteria and those met (☑️) by 26th of Feburary
@@ -136,7 +136,7 @@ Added - Portfolio Project 1 - HTML/CSS Essentials - Pass Criteria and those not 
       - [x] ☑️ 5.1.1 Use consistent and effective markdown formatting.
       - [x] ☑️ 5.1.2 Produce one that is well-structured.
       - [x] ☑️ 5.1.3 Produce one easy to follow.
-      - [❓] ☑️❌ 5.1.4 Has few grammatical errors.
+      - [x] ☑️ 5.1.4 Has few grammatical errors.
 
 
 ## Definition of Done: v0.0.2, 2023.01.09
