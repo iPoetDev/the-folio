@@ -302,6 +302,11 @@
         }
     }
 
+    #main-work a:any-link {
+        color: #fafafa;
+        font-weight: 700;
+        text-decoration: underline;
+    }
 
     @layer work-item {
 
