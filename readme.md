@@ -606,11 +606,17 @@ Use of [W3C Validation Service, CSS Jigsaw](https://jigsaw.w3.org/CSS-validator/
 
 #### Lighthouse
 
-**Home**
+**Conditions**
 
-**Folio**
+|     Page     |   Mode   | Device  | Performance | Accessibility | Best Practices |  SEO  |
+| :----------: | :------: | :-----: | :---------: | :-----------: | :------------: | :---: |
+|  Home.html   | Snapshot | Mobile  |             |               |                |       |
+|  Folio.html  | Snapshot | Mobile  |             |               |                |       |
+| Profile.html | Snapshot | Mobile  |             |               |                |       |
+|  Home.html   | Snapshot | Desktop |    2 / 4    |    12 / 13    |     4 / 4      | 6 / 7 |
+|  Folio.html  | Snapshot | Desktop |             |               |                |       |
+| Profile.html | Snapshot | Desktop |    3 / 4    |    14 / 14    |     4 / 4      | 5 / 7 |
 
-**About**
 
 ---
 ### Issues
