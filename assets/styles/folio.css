@@ -3,7 +3,7 @@
   @layer folio-layout {
 
         html, #portfolio {
-          background-color: hsl(103, 31%, 60%);
+          background-color: #1A1614;
 
           box-sizing: border-box;
 /*           max-width: 99.5dvw !important; */
@@ -11,7 +11,7 @@
 
 
         #main-portfolio {
-          background-color: hsl(103, 31%, 60%);
+          background-color: #1A1614;
           box-sizing: border-box;
           display: grid;
 /*           grid-auto-columns: 99dvw; */
@@ -29,7 +29,6 @@
         #portfolio .fo-hero {
           display: flex;
           height: 80%;;
-          outline: 1px solid rgb(30, 255, 0);
           overflow: hidden;
           place-content: center;
           position: relative;

@@ -596,6 +596,13 @@ Future testing for better desktop cross browsing support would be focusing on
 
 #### *HTML*
 
+|     Page     |   Checked  | Issues           . | Resolved | Passed |
+| :----------: | :------: | :----: | :---------: | :-----------: |
+| Home.html | February 28th |  |             |               |
+|  Folio.html  | February 28th |  |             |               |
+|  Profile.html   | February 28th | Article missing H2-H6 <br>H2 Empty |      ☑️       |        ☑️       |
+
+
 #### *CSS*
 
 Use of [W3C Validation Service, CSS Jigsaw](https://jigsaw.w3.org/CSS-validator/)
