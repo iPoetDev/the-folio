@@ -1,162 +1,153 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-    <!-- Head: Viewport Scaling; b) External Stylesheet; c) Favicons-->
-
-    <head title="Home | Welcome to the Digital Folio. By CJ, an inclusive Digital Developer's Portfolio">
-        <!-- Meta Tags-->
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="origin" content="https://ipoetdev.github.io/the-folio/"/>
-        <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028"/>
-        <meta name="author" content="Charles J Fowler, @iPoetDev.github.com"/>
-        <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com"/>
-        <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com"/>
-        <meta name="contact" content="Github: @iPoetDev"/>
-        <meta name="geo.lmk" content="Dublin, Ireland; Europe"/>
-        <meta name="geo.country" content="Ireland"/>
-        <meta name="revision" content="#CommitShortHashOfSubmission"/>
-        <meta name="semver" content="0.0.5.01 | 2023.01.15"/>
-        <meta name="color-scheme" content="dark"/>
+    <head title="Home | Welcome to the Digital Folio. By CJ, an Digital Developer's Portfolio">
+        <meta charset="utf-8">
+        <!--Meta Tags-->
+        <meta name="origin" content="https://ipoetdev.github.io/the-folio/">
+        <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028">
+        <meta name="author" content="Charles J Fowler, @iPoetDev.github.com">
+        <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com">
+        <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com">
+        <meta name="contact" content="Github: @iPoetDev">
+        <meta name="geo.lmk" content="Dublin, Ireland; Europe">
+        <meta name="geo.country" content="Ireland">
+        <meta name="version" content="Version 1.0-beta">
+        <meta name="color-scheme" content="dark">
         <meta
             name="keywords"
             content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web
-            Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS"/>
-        <meta name="description" content="lorem5"/>
-        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0"/>
+            Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Link: External Resources-->
-        <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon"/>
-        <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon"/>
-        <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon"/>
-
-        <!-- Link: External CSS
-               Separate Files for Targetted CSS and to Breakdown the Core CSS for
-               1) Not Essentail CSS Resets
-               2) Per page  performance and
-               3) Per page customisations
-               See Readme for more.
-        -->
-        <link type="text/css" href="assets/styles/reset.css" rel="stylesheet"/>
-        <link type="text/css" href="assets/styles/core.css" rel="stylesheet" />
-        <link type="text/css" href="assets/styles/blocks-landing.css" rel="stylesheet" />
-
-        <!-- External Font Awesome Resources: Font Awesome v6 Free
-                Alyternate is to just download the individual SVG.
-                All depends on uses pseudo-elememts
-        -->
-        <link href="assets/icons/css/fontawesome.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/icons/css/brands.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/icons/css/solid.css" rel="stylesheet"  type="text/css"/>
+        <link type="text/css" href="assets/styles/theme.css" rel="stylesheet" >
+        <link type="text/css" href="assets/styles/core.css" rel="stylesheet" >
+        <link type="text/css" href="assets/styles/landing.css" rel="stylesheet" >
 
         <!-- Page: Home-->
-        <title title="Home | Welcome to the Digital Folio. Landing & Home">
-            Home | Welcome to the Digital Folio. Landing &amp; Home.
+        <title title="Welcome to the Digital Folio. Landing & Home">
+           Welcome to the Digital Folio. Landing &amp; Home.
         </title>
     </head>
     <body id="landing">
+        <!--Global Navigation: Header  -->
         <header class="fo-head">
             <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
                 <div class="fo-nav">
-                <div class="fo-nav-grid" role="presentation">
-                    <div class="fo-nav-flex" role="presentation">
-
-                    <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo"
-                        role="region">
-                        <!-- <picture>
-                        <source srcset="assets/img/logo-placeholder135x68.png"
-                            media="(max-width: 407.999px)">
-                        <source srcset="assets/img/logo-placeholder.png"
-                            media="(max-width: 720px)">
-                        <source srcset="assets/img/logo-placeholder.png"
-                            media="(max-width: 967.999px)">
-                        <source srcset="assets/img/logo-placeholder.png"
-                            media="(max-width: 1380.999px)">
-                        <img src="assets/img/logo-placeholder.png" alt="Digital Folio Logo & Brand" aria-label="Site
-                            Logo,Company Brand">
-                        </picture> -->
-                        <h1 class="sitename" id="sitelogo" style="color:black">The Digital Folio</h1>
-                    </div>
-                    <!-- Site Logo-->
-
-                    <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
-                        <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
-                        <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
-                        <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu" aria-label="Site Nav Menu">
-                        <label for="toggle-menu sitename" id="navigation">
-                            Menu
-                        </label>
-                        <input id="toggle-menu" type="checkbox">
-                        <!-- Open a full viewport overlay and list the menu options; in large strong text -->
-                        <!-- <div class="fo-menu" role="none"> -->
-                            <div class="fo-menu-overlay  nav-surface-folio" role="none">
-                            <div class="fo-menu-layout" role="none">
-                                <!-- Menu Options -->
-                                <ul role="menu" aria-label="Menu List">
-                                <li role="menuitem">
-                                    <span class="fo-menu-style">
-                                    <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
-                                        aria-label="Navigation Home"  rel="noreferrer,noopener">
-                                        Home
-                                    </a>
-                                    </span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-folio"
-                                        href="folio.html"
-                                        title="The Digital Folio: Folio & Clients | Portfolio by CJ"
-                                        aria-label="Navigation Portfolio"
-
-                                        rel="noreferrer,noopener">Portfolio</a></span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-work"
-                                        href="profile.html"
-                                        title="The Digital Folio: Work & Profile | Journey by CJ"
-                                        aria-label="Navigation Profile"
-
-                                        rel="noreferrer,noopener">Journey</a></span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-about"
-                                        href="about.html"
-                                        title="The Digital Folio: Info & More | About Me by CJ"
-                                        aria-label="Navigation About Me"
-
-                                        rel="noreferrer,noopener">About</a></span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-contact"
-                                        href="contact.html"
-                                        title="The Digital Folio: Info & More | Contact by CJ"
-                                        aria-label="Navigation Contact Options"
-
-                                        rel="noreferrer,noopener">Contact</a></span>
-                                </li>
-                                </ul>
+                    <div class="fo-nav-grid">
+                        <div class="fo-nav-flex">
+                            <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo">
+                                <h1 class="fo-sitename" id="sitelogo">The Digital Folio</h1>
                             </div>
+                            <div class="fo-nav-holder |  fo-site-ctrl" id="site-nav-anchor">
+                                <!-- Technique: Pure CSS Hamburger Menu Overlay. Last Accessed: 2023.01.18 -->
+                                <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
+                                <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu">
+                                <label class="fo-sitename" for="toggle-menu" id="navigation">
+                                    Menu
+                                </label>
+                                <!-- Exceptional(not-valid)Use of Input to Enable a Pure CSS Dropdown without JavaScript: State & CSS Selectors -->
+                                <input class="fo-toggle" id="toggle-menu" type="checkbox">
+                                <!-- Open a full viewport overlay and list the menu options; in large strong text -->
+                                    <div class="fo-menu">
+                                        <div class="fo-menu-layout">
+                                            <!-- Menu Options -->
+                                            <ul>
+                                                <li>
+                                                        <a class="fo-nav-link" id="site-home"
+                                                            href="index.html"
+                                                            title="The Digital Folio: Home &amp; Landing | by CJ"
+                                                            rel="noreferrer,noopener">
+                                                            Home.
+                                                        </a>
+                                                </li>
+                                                <li class="fo-nav-dotted"></li>
+                                                <li>
+                                                    <a class="fo-nav-link" id="site-folio"
+                                                        href="folio.html"
+                                                        title="The Digital Folio: Folio &amp; Clients | Portfolio by CJ"
+                                                        rel="noreferrer,noopener">
+                                                        Portfolio.
+                                                    </a>
+                                            </li>
+                                            <li class="fo-nav-dotted"></li>
+                                            <li>
+                                                <a class="fo-nav-link"
+                                                     id="site-work"
+                                                    href="profile.html"
+                                                    title="The Digital Folio: About &amp; Work | Profile by CJ"
+                                                    rel="noreferrer,noopener">
+                                                    Profile.
+                                                </a>
+                                            </li>
+                                            <li class="fo-nav-dotted"></li>
+                                                </ul>
+                                        </div>
+                                    <div class="fo-menu-social-icons">
+                                        <ul class="fo-social-comms">
+                                        <li class="fo-social-icon">
+                                            <a class="fo-social-link" href="https://ie.linkedin.com/in/CharlesJFowler" rel="noopener" target="_blank" title="See more of CJ's profile on LInkedin and contact him">
+                                                <img src="assets/icons/linkedin.svg"
+                                                title="See more of CJ's professional profile and experience"
+                                                alt="Social Media Icon for LinkedIn. Links CJ's profile on LInkedin"
+                                                width="40"
+                                                height="40">
+                                            </a>
+                                            </li>
+                                        <li class="fo-social-icon">
+                                            <a class="fo-social-link" href="https://github.com/iPoetDev" rel="noopener"  target="_blank">
+                                                <img src="assets/icons/github.svg"
+                                                title="See more of CJ's development activities and projects"
+                                                alt="Social Media Icon for Github, a developer platform. Links CJ's profile on GitHub"
+                                                width="40"
+                                                height="40">
+                                            </a>
+                                        </li>
+                                        <li class="fo-social-icon">
+                                            <a class="fo-social-link" href="https://www.twitter.com/MobileRahin" rel="noopener"  target="_blank">
+                                                <img src="assets/icons/twitter.svg"
+                                                title="See more of CJ's commentary in the digital town square on Twitter"
+                                                alt="Social Media Icon for Twitter. Links CJ's profile on Twitter"
+                                                width="40"
+                                                height="40">
+                                            </a>
+                                        </li>
+                                        <li class="fo-social-icon">
+                                            <a class="fo-social-link" href="www.tidycal.com/CharlesJFowler" rel="noopener"  target="_blank">
+                                                <img src="assets/icons/calendar-xmark-solid.svg"
+                                                title="Schedule a Video Call by Calendar Invite "
+                                                alt="Social Media Icon for Calendar Booking. Find a slot in CJ's Calendar, by Tidycal.com "
+                                                width="40"
+                                                height="40">
+                                            </a>
+                                        </li>
+                                        <li class="fo-social-icon">
+                                            <a class="fo-social-link" href="mailto:enquiries@thefolio.digital" rel="noopener"  target="_blank">
+                                                <img src="assets/icons/at-solid.svg"
+                                                title="Email CJ at enquiries@thefolio.digital or write it down (see right)"
+                                                alt="Email Icon (@ symbol). Contact CJ by email: enquiries@thefolio.digital"
+                                                width="40"
+                                                height="40">
+                                            </a>
+                                        </li>
+                                     </ul>
+                                    </div>
+                                    </div>
+                                </nav>
                             </div>
-                        <!-- </div> -->
-                        </nav>
-                        <!-- Site Menu -->
+                        </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </nav>
         </header>
         <main class="" id="main-land">
-              <section class="fo-home-section" id="land-client1">
-                    <div class="fo-home-container">
-                      <!-- <article class="fo-home-card" id="folio-card"> -->
-                      <article class="fo-home-card">
-                          <figure class="fo-home-card-blead">
-                              <picture>
-                                    <img class="fo-client-hero-img"
-                                        sizes="(max-width: 619px) 100vw, 619px"
-                                        srcset="
+            <section class="fo-home-section | fo-home-panel | fo-top-panels" id="client1-panel">
+                <div class="fo-home-container">
+                    <article class="fo-card | fo-home-card" id="client1-card">
+                        <figure class="fo-home-card-blead | fo-inner-card">
+                                <picture  class="fo-client-picpanel">
+                                    <img class="fo-client-hero-img" sizes="(max-width: 619px) 100vw, 619px"
+                                    srcset="
                                         assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_200.png 200w,
                                         assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_260.png 260w,
                                         assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_313.png 313w,
@@ -170,171 +161,180 @@
                                         assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_619.png 619w"
                                         src="assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_619.png"
                                         alt="Hero image. Client: Phoniex Park Running Club's Love Running website cover image"
-                                        loading="lazy"
-                                        decoding="auto"
-                                        fetchpriority="high">
-                                  </picture>
-                                  <figcaption>
-                                  <a href="folio.html#client1" class="captionlink">
-                                      <h3 class="fo-card-caption">Love Running</h3>
-                                      <p> A running club from central Dublin<br><span class="fo-text-decor">Learn more about the client.</span></p>
-                                  </a>
-                              </figcaption>
-                              </figure>
-                              <p>This is some text</p>
-                      </article>
-                    </div>
-              </section>
-              <section class="fo-home-section" id="land-client2">
-                    <div class="fo-home-container">
-                      <article class="fo-home-card">
-                          <figure class="fo-home-card-blead">
-                              <picture>
-                                      <img class="fo-client-hero-img"
-                                          sizes="(max-width: 619px) 100vw, 619px"
-                                          srcset="
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_200.png 200w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_260.png 260w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_313.png 313w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_356.png 356w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_407.png 407w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_452.png 452w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_490.png 490w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_533.png 533w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_571.png 571w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_608.png 608w,
-                                          assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_619.png 619w"
-                                          src="assets/clients/loverun/Love-running-cover_bfyxx2_c_scale,w_619.png"
-                                          alt=""
-                                          loading="lazy"
-                                          decoding="auto"
-                                          fetchpriority="high">
-                                  </picture>
-                                  <figcaption>
-                                  <a href="folio.html#client2" class="fo-captionlink">
-                                      <h3 class="fo-card-caption">Coders Coffeehouse</h2>
-                                      <p>A cafe in northside of Dublin. <br> <span class="fo-text-decor">Learn more about the client.</span></p>
-                                  </a>
-                              </figcaption>
-                              </figure>
-                              <p>This is some text</p>
-                      </article>
-                    </div>
-              </section>
-
-                    <!-- <section class="fo-land-section" id="land-work">
-                        <article class="fo-land-card" id="profile-card">
-                            <header>
-                                <h2>Versed</h2>
-                                <h2>In</h2> -->
-                                <!-- <img hidden src="assets/img/joanna-kosinska-1_CMoFsPfso-unsplash-180rotate.jpg" alt="" height="600">
-                                <p hidden title="Unsplash image credit">
-                                    <a title="Joanna Kosinska, https://unsplash.com/@joannakosinska, ID" href="https://unsplash.com/@joannakosinska?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joanna Kosinska</a>
-                                        on <a href="https://unsplash.com/photos/1_CMoFsPfso?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                                </p>-->
-                            <!-- </header>
-                        <section>
-                            <a href="">
-                                <div class="fo-exp-header">
-                                    <div class="fo-exp-hideimg"></div>
-                                    <h3>Learnings</h3>
-                                </div>
-                                <div class="fo-exp-micro-card">
-                                    <p class="fo-exp-icon">Icon</p>
-                                    <div class="fo-exp-tags">
-                                        <h4>CURRENT</h4>
-                                        <h5>CODE INSTITUTE</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </section>
-                        <section class="fo-land-section">
-                            <a href="">
-                                <div class="fo-exp-header">
-                                    <div class="fo-exp-hideimg"></div>
-                                    <h3>Proven</h3>
-                                </div>
-                                <div class="fo-exp-micro-card">
-                                    <p class="fo-exp-icon">Icon</p>
-                                    <div class="fo-exp-tags">
-                                        <h4>RECENT</h4>
-                                        <h5>SCRUM.org</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </section>
-                        <section class="fo-land-section">
-                            <a href="">
-                                <div class="fo-exp-header">
-                                    <div class="fo-exp-hideimg"></div>
-                                    <h3>Abilities</h3>
-                                </div>
-                                <div class="fo-exp-micro-card">
-                                    <p class="fo-exp-icon">Icon</p>
-                                    <div class="fo-exp-tags">
-                                        <h4>RECENT</h4>
-                                        <h5>SCRUM.org</h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </section>
-                  </article>
-              </section>
-              <section class="fo-land-section" id="land-about">
-                    <article class="fo-land-card" id="about-card">
-                        <div class="fo-land-owner">
-                            <h2 id="id" hidden></h2>
-                            <h2 id="id"></h2>
-                        </div>
-                        <div class="fo-land-headshot">
-                            <picture class="fo-image-frame">
-                                    <source
-                                        media="(max-width: 408px)"
-                                        sizes="(max-width: 408px) 30vw, 231px"
-                                        srcset="
-                                            assets/img/landing/lookinngout,w_231-1-1.jpg 231w,
-                                            assets/img/landing/lookinngout,w_280-1-1.jpg 280w"
-                                        type="image/jpeg">
-                                    <source
-                                        media="(max-width: 76.9997px)"
-                                        sizes="(max-width: 767.999px) 60vw, 461px"
-                                        srcset="
-                                            assets/img/landing/lookinngout,w_280-1-1.jpg 280w,
-                                            assets/img/landing/lookinngout,w_461-1-1.jpg 461w"
-                                        type="image/jpeg">
-                                    <source
-                                        media="(min-width: 768px) and (max-width: 967.999px)"
-                                        sizes="(max-width: 967.999px) 30vw, 298px"
-                                        srcset="
-                                            assets/img/landing/lookinngout,w_231-1-1.jpg 231w,
-                                            assets/img/landing/lookinngout,w_298-1-1.jpg 298w"
-                                        type="image/jpeg">
-                                    <source
-                                        media="(min-width: 992px) and (max-width: 1279.999px)"
-                                        sizes="(max-width: 1279.999px) 20vw, 360px"
-                                        srcset="
-                                            assets/img/landing/lookinngout,w_231-1-1.jpg 231w,
-                                            assets/img/landing/lookinngout,w_298-1-1.jpg 298w"
-                                        type="image/jpeg">
-                                    <img
-                                        sizes="(max-width: 1920px) 15vw,360px"
-                                            srcset="
-                                            assets/img/landing/lookinngout,w_231-1-1.jpg 231w,
-                                            assets/img/landing/lookinngout,w_298-1-1.jpg 298w"
-                                        src="assets/img/landing/lookinngout,w_960-1-1.jpg"
-                                        alt=""
-                                        loading="lazy"
-                                        decoding="auto"
-                                        fetchpriority="auto" >
+                                         loading="lazy" decoding="auto" fetchpriority="high">
                                 </picture>
-                            </div>
-                            <div class="fo-land-bio">
+                        </figure>
+                        <aside>
+                            <a href="folio.html#client1" class="captionlink">
+                                      <h3 class="fo-card-caption">Love Running</h3>
+                                      <p> A running club from central Dublin<br><span class="fo-text-decor">
+                                        Learn more about the client.</span></p>
+                            </a>
+                        </aside>
+                    </article>
+                </div>
+            </section>
+            <section class="fo-home-section | fo-home-panel | fo-top-panels" id="client2-panel">
+                <div class="fo-home-container">
+                    <article class="fo-home-card" id="client2-card">
+                        <figure class="fo-card | fo-home-card-blead | fo-inner-card">
+                            <picture class="fo-client-picpanel">
+                                    <img class="fo-client-hero-img"
+                                        sizes="(max-width: 739px) 100vw, 739px"
+                                        srcset="
+                                        assets/clients/coffee/coffee_pJ6vqhmJMv_k569vy_c_scale,w_200.png 200w,
+                                        assets/clients/coffee/coffee_pJ6vqhmJMv_k569vy_c_scale,w_337.png 337w,
+                                        assets/clients/coffee/coffee_pJ6vqhmJMv_k569vy_c_scale,w_440.png 440w,
+                                        assets/clients/coffee/coffee_pJ6vqhmJMv_k569vy_c_scale,w_529.png 529w,
+                                        assets/clients/coffee/coffee_pJ6vqhmJMv_k569vy_c_scale,w_617.png 617w,
+                                        assets/clients/coffee/coffee_pJ6vqhmJMv_k569vy_c_scale,w_693.png 693w,
+                                        assets/clients/coffee/coffee_pJ6vqhmJMv_k569vy_c_scale,w_739.png 739w"
+                                        src="assets/clients/coffee/coffee_pJ6vqhmJMv_k569vy_c_scale,w_739.png"
+                                        alt=""Hero image. Client: Phoniex Park Running Club's Love Running website cover image""
+                                         loading="lazy" decoding="auto" fetchpriority="high">
+                            </picture>
+                        </figure>
+                        <aside>
+                             <a href="folio.html#client2" class="fo-captionlink">
+                                    <h3 class="fo-card-caption">Coders Coffeehouse</h3>
+                                    <p>A cafe in northside of Dublin. <br> <span class="fo-text-decor">Learn more about the client.</span></p>
+                            </a>
+                        </aside>
+                    </article>
+                </div>
+            </section>
+            <section class="fo-home-section | fo-home-panel | fo-bottom-panels" id="exp-panel">
+                <div class="fo-home-container">
+                    <article class="fo-card | fo-home-card" id="exp-card">
+                        <section class="fo-card | fo-home-card-bleed | fo-inner-card">
+                            <header class="fo-card-head | fo-exp-header">
+                                <h2>Versed</h2>
+                                <h2>In</h2>
+                            </header>
+                            <section class="fo-card-section">
+                                    <a href="profile.html#current-focus" class="fo-card-interact" title="Read on: about Full Stack Software Development Diploma course">
+                                        <div class="fo-exp-header">
+                                            <h3>Learning</h3>
+                                        </div>
+                                        <div class="fo-exp-micro-card">
+                                            <p class="fo-exp-icon">Icon</p>
+                                            <div class="fo-exp-tags">
+                                                <h5>CURRENT</h5>
+                                                <h4>CODE INSTITUTE</h4>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </section>
+                                 <section class="fo-card-section">
+                                    <a href="profile.html#proven" class="fo-card-interact">
+                                        <div class="fo-exp-header">
+                                            <div class="fo-exp-hideimg"></div>
+                                            <h3>Proven</h3>
+                                        </div>
+                                        <div class="fo-exp-micro-card">
+                                            <p class="fo-exp-icon">Icon</p>
+                                            <div class="fo-exp-tags">
+                                                <h5>RECENT</h4>
+                                                <h4>SCRUM.org</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </section>
+                                <section class="fo-card-section">
+                                    <a href="profile.html#able-for" class="fo-card-interact">
+                                        <div class="fo-exp-header">
+                                            <div class="fo-exp-hideimg"></div>
+                                            <h3>Able For</h3>
+                                        </div>
+                                        <div class="fo-exp-micro-card">
+                                            <p class="fo-exp-icon">Icon</p>
+                                            <div class="fo-exp-tags">
+                                                <h4>DELIVERS</h4>
+                                                <h5>WEB DESIGN & SITES</h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                            </section>
+                        </section>
+                    </article>
+                </div>
+            </section>
+            <section class="fo-home-section | fo-home-panel  | fo-bottom-panels" id="about-panel">
+                <div class="fo-home-container">
+                    <article class="fo-card | fo-home-card" id="about-card">
+                        <section class="fo-card | fo-home-card-bleed | fo-inner-card">
+                            <picture class="fo-home-picpanel">
+                            <img
+                                src="assets/img/LookingOut_All_162px_1-1.png"
+                                alt="Image. A profile of Digital Folio's owner/creator/developer. Looking to the horizion in profile and shading his eyes."
+                                loading="lazy"
+                                decoding="auto"
+                                fetchpriority="auto" >
+                            </picture>
+                            <header  class="fo-card-head | fo-about-header">
+                                <h2>Who's</h2>
+                                <h2>Me?</h2>
+                            </header>
+                            <section class="fo-card-section | fo-card-row">
+                            <header class="fo-about-herotext">
+                                    <p>Hiya, I am ...</p>
+                                    <h1 class="fo-initials">CJ</h1>
+                                </header>
+                            </section>
+                            <div class="fo-about-bio">
                                 <p>Looking ahead to create inclusive and well built solutions.</p>
-                                <p>Hi, am CJ, welcome to The Digital Folio</p>
+                                <ul class="fo-social-comms">
+                                    <li class="fo-social-icon">
+                                        <a class="fo-social-link" href="https://ie.linkedin.com/in/CharlesJFowler" rel="noopener" target="_blank" title="See more of CJ's profile on LInkedin and contact him">
+                                            <img src="assets/icons/linkedin.svg"
+                                            title="See more of CJ's professional profile and experience"
+                                            alt="Social Media Icon for LinkedIn. Links CJ's profile on LInkedin"
+                                            width="30"
+                                            height="30">
+                                        </a>
+                                        </li>
+                                    <li class="fo-social-icon">
+                                        <a class="fo-social-link" href="https://github.com/iPoetDev" rel="noopener"  target="_blank">
+                                            <img src="assets/icons/github.svg"
+                                            title="See more of CJ's development activities and projects"
+                                            alt="Social Media Icon for Github, a developer platform. Links CJ's profile on GitHub"
+                                            width="30"
+                                            height="30">
+                                        </a>
+                                    </li>
+                                    <li class="fo-social-icon">
+                                        <a class="fo-social-link" href="https://www.twitter.com/MobileRahin" rel="noopener"  target="_blank">
+                                            <img src="assets/icons/twitter.svg"
+                                            title="See more of CJ's commentary in the digital town square on Twitter"
+                                            alt="Social Media Icon for Twitter. Links CJ's profile on Twitter"
+                                            width="30"
+                                            height="30">
+                                        </a>
+                                    </li>
+                                    <li class="fo-social-icon">
+                                        <a class="fo-social-link" href="www.tidycal.com/CharlesJFowler" rel="noopener"  target="_blank">
+                                            <img src="assets/icons/calendar-xmark-solid.svg"
+                                            title="Schedule a Video Call by Calendar Invite "
+                                            alt="Social Media Icon for Calendar Booking. Find a slot in CJ's Calendar, by Tidycal.com "
+                                            width="30"
+                                            height="30">
+                                        </a>
+                                    </li>
+                                    <li class="fo-social-icon">
+                                        <a class="fo-social-link" href="mailto:enquiries@thefolio.digital" rel="noopener"  target="_blank">
+                                            <img src="assets/icons/at-solid.svg"
+                                            title="Email CJ at enquiries@thefolio.digital or write it down (see right)"
+                                            alt="Email Icon (@ symbol). Contact CJ by email: enquiries@thefolio.digital"
+                                            width="30"
+                                            height="30">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                             </div>
                         </article>
-               </section> -->
-          </main>
-        <footer class="fo-foot">&nbsp;</footer>
+                </div>
+            </section>
+        </main>
     </body>
 </html>

@@ -2,255 +2,271 @@
 <html lang="en-GB">
   <!-- Head: Viewport Scaling; b) External Stylesheet; c) Favicons-->
 
-  <head title="Portfolio | Welcome to the Digital Folio. By CJ, an inclusive Digital Developer's Portfolio">
+  <head title="Portfolio | Welcome to the Digital Folio. By CJ, an Digital Developer's Portfolio">
+      <meta charset="utf-8">
     <!-- Meta Tags-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="origin" content="https://ipoetdev.github.io/the-folio/" />
-    <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028" />
-    <meta name="author" content="Charles J Fowler, @iPoetDev.github.com" />
-    <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com" />
-    <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com" />
-    <meta name="contact" content="Github: @iPoetDev" />
-    <meta name="geo.lmk" content="Dublin, Ireland; Europe" />
-    <meta name="geo.country" content="Ireland" />
-    <meta name="revision" content="#CommitShortHashOfSubmission" />
-    <meta name="semver" content="0.0.5.01 | 2023.01.15" />
-    <meta name="color-scheme" content="dark" />
+    <meta name="origin" content="https://ipoetdev.github.io/the-folio/">
+    <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028">
+    <meta name="author" content="Charles J Fowler, @iPoetDev.github.com">
+    <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com">
+    <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com">
+    <meta name="contact" content="Github: @iPoetDev">
+    <meta name="geo.lmk" content="Dublin, Ireland; Europe">
+    <meta name="version" content="Version 1.0-beta">
+    <meta name="color-scheme" content="dark">
     <meta
       name="keywords"
       content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web
-      Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS" />
-    <meta name="description" content="lorem5" />
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0" />
-    <!-- Link: External Resources-->
-    <link type="text/css" href="assets/styles/main.css" rel="stylesheet" />
-    <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-    <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon" />
-    <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon" />
-    <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon" />
+      Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest" />
+    <!-- Link: External Resources-->
+    <link type="text/css" href="assets/styles/core.css" rel="stylesheet">
+    <link type="text/css" href="assets/styles/folio.css" rel="stylesheet">
     <!-- Page: Home-->
     <title title="Clients of the Digital Folio. Portfolio &amp; Current">
-      Clients of the Digital Folio. Portfolio &amp; Current.
+      Clients of the Digital Folio. Portfolio &amp; Current Projects.
     </title>
-    <!--  0] Namespace F: Folio: Namespace for The Digital Folio. Alias: fo-.
-      1] Alias:    C: Composition Comment -> Semantics & Layout
-      2] Alias:    U: Utility Comment     -  Core Styling, Typography
-      3] Alias:    B: Block/Component/Widget Comment
-      4] Alias:    E: Exception/Variant Comment
-  -->
-    <!-- Body: contact: Home: Magazine 2x2 Box Layout-->
   </head>
-  <body class="fo-layout-macro folio-main">
+  <body id="portfolio">
+        <!--Global Navigation: Header  -->
         <header class="fo-head">
-                <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
+            <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
                 <div class="fo-nav">
-                <div class="fo-nav-grid" role="presentation">
-                    <div class="fo-nav-flex" role="presentation">
-
-                    <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo: Location: Page Center"
-                        role="region">
-                        <picture>
-                        <source srcset="assets/img/logo-placeholder135x68.png"
-                            media="(max-width: 412px)">
-                        <source srcset="assets/img/logo-placeholder.png"
-                            media="(max-width: 720px)">
-                        <source srcset="assets/img/logo-placeholder.png"
-                            media="(max-width: 960px)">
-                        <source srcset="assets/img/logo-placeholder.png"
-                            media="(max-width: 1268px)">
-                        <img src="assets/img/logo-placeholder.png" alt="Digital Folio Logo & Brand" aria-label="Site
-                            Logo,Company Brand">
-                        </picture>
-                    </div>
-                    <!-- Site Logo-->
-
-                    <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
-                        <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
-                        <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
-                        <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu" aria-label="Site Nav Menu">
-                        <label for="toggle-menu" id="navigation">
-                            Menu
-                        </label>
-                        <input id="toggle-menu" type="checkbox">
-                        <!-- Open a full viewport overlay and list the menu options; in large strong text -->
-                        <!-- <div class="fo-menu" role="none"> -->
-                            <div class="fo-menu-overlay  nav-surface-folio" role="none">
-                            <div class="fo-menu-layout" role="none">
-                                <!-- Menu Options -->
-                                <ul role="menu" aria-label="Menu List">
-                                <li role="menuitem">
-                                    <span class="fo-menu-style">
-                                    <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
-                                        aria-label="Navigation Home"  rel="noreferrer,noopener">
-                                        Home
-                                    </a>
-                                    </span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-folio"
-                                        href="folio.html"
-                                        title="The Digital Folio: Folio & Clients | Portfolio by CJ"
-                                        aria-label="Navigation Portfolio"
-
-                                        rel="noreferrer,noopener">Portfolio</a></span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-work"
-                                        href="profile.html"
-                                        title="The Digital Folio: Work & Profile | Journey by CJ"
-                                        aria-label="Navigation Profile"
-
-                                        rel="noreferrer,noopener">Journey</a></span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-about"
-                                        href="about.html"
-                                        title="The Digital Folio: Info & More | About Me by CJ"
-                                        aria-label="Navigation About Me"
-
-                                        rel="noreferrer,noopener">About</a></span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-contact"
-                                        href="contact.html"
-                                        title="The Digital Folio: Info & More | Contact by CJ"
-                                        aria-label="Navigation Contact Options"
-
-                                        rel="noreferrer,noopener">Contact</a></span>
-                                </li>
-                                </ul>
+                    <div class="fo-nav-grid">
+                        <div class="fo-nav-flex">
+                            <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo">
+                                <h1 class="fo-sitename" id="sitelogo">The Digital Folio</h1>
                             </div>
+                            <div class="fo-nav-holder |  fo-site-ctrl" id="site-nav-anchor">
+                                <!-- Technique: Pure CSS Hamburger Menu Overlay. Last Accessed: 2023.01.18 -->
+                                <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
+                                <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu">
+                                <label class="fo-sitename" for="toggle-menu" id="navigation">
+                                    Menu
+                                </label>
+                                <!-- Exceptional(no-valid)Use of Input to Enable a Pure CSS Dropdown without JavaScript: State & CSS Selectors -->
+                                <input  class="fo-toggle" id="toggle-menu" type="checkbox">
+                                <!-- Open a full viewport overlay and list the menu options; in large strong text -->
+                                    <div class="fo-menu" role="none">
+                                        <div class="fo-menu-layout" role="none">
+                                            <!-- Menu Options -->
+                                            <ul>
+                                                <li>
+                                                    <a class="fo-nav-link" id="site-home"
+                                                        href="index.html"
+                                                        title="The Digital Folio: Home &amp; Landing | by CJ"
+                                                        rel="noreferrer,noopener">
+                                                        Home.
+                                                    </a>
+                                                </li>
+                                                <li class="fo-nav-dotted"></li>
+                                                <li>
+                                                        <a class="fo-nav-link" id="site-folio"
+                                                            href="folio.html"
+                                                            title="The Digital Folio: Folio &amp; Clients | Portfolio by CJ"
+                                                            rel="noreferrer,noopener">
+                                                            Portfolio.
+                                                        </a>
+                                                </li>
+                                                <li class="fo-nav-dotted"></li>
+                                                <li>
+                                                    <a class="fo-nav-link" id="site-work"
+                                                        href="profile.html"
+                                                        title="The Digital Folio: About &amp; Work | Profile by CJ"
+                                                        rel="noreferrer,noopener">
+                                                        Profile.
+                                                    </a>
+                                                </li>
+                                                <li class="fo-nav-dotted"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
                             </div>
-                        <!-- </div> -->
-                        </nav>
-                        <!-- Site Menu -->
+                        </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </nav>
-            <!-- <section class="fo-nav-cover" id="nav-cover">
-                <div class="fo-cover-placer">
-
-                </div>
-            </section> -->
         </header>
-    <div class="fo-left">££</div>
-    <!-- <div class="fo-main-wrap fo-focal">
-            <main> -->
-    <main class="fo-main-wrap fo-focal" id="main-client">
+    <!-- <div class="fo-hero">
+        <picture>
+          <source srcset="assets/img/banners/clark-van-der-beken-IQeBZm8F-M4-unsplash-small.jpg"
+                      media="(max-width: 548px)" class="fo-hero-cover">
+          <source srcset="assets/img/banners/clark-van-der-beken-IQeBZm8F-M4-unsplash.jpg"
+                      media="(min-width: 1027px)" class="fo-hero-cover">
+          <img src="assets/img/banners/clark-van-der-beken-IQeBZm8F-M4-unsplash.jpg" alt="." class="fo-hero-cover">
+      </picture> -->
+     <!-- <img src="assets/img/banners/clark-van-der-beken-IQeBZm8F-M4-unsplash.jpg" alt="" class="fo-hero-cover"> -->
+     <!-- <p class="fo-image-credit" hidden>Photo by <a href="https://unsplash.com/@snapsbyclark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"   rel="noopener" target="_blank" title="Hidden: Credit: Copt Text: Author: Clark Van Der Beken.">Clark Van Der Beken</a>
+       on <a href="https://unsplash.com/wallpapers/design/pattern?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"   rel="noopener"  target="_blank" title="Hidden: Credit: Copt Text: Source: Unspalsh.com: Wallpaper, Editorial,">Unsplash</a>.
+    </p>
+    <p class="fo-image-credit" hidden>Free to use under the <a href="https://unsplash.com/license" rel="noopener" target="_blank">Unsplash License</a></p>
+    </div> -->
+    <!-- <div class="fo-main-wrap fo-focal"> -->
+    <main class="" id="main-portfolio">
       <section class="fo-folio-client" id="clients-client-1">
-        <div class="fo-folio-place">
-          <article class="fo-client-card">
-            <div class="fo-card-img">
-              <picture>
-                  <source srcset=" ../assets/img/about-self-outline183x183.png"
-                              media="(max-width: 412px)">
-                  <source srcset="assets/img/about-self-outline250x250.png"
-                              media="(max-width: 720px)">
-                  <source srcset=" ../assets/img/about-self-outline375x375.png"
-                              media="(max-width: 1026.999px)">
-                  <source srcset=" ../assets/img/about-self-outline563x563.png"
-                              media="(min-width: 1027px)">
-                  <img src="assets/img/about-self-outline563x563.png" alt=".">
+        <div class="fo-folio-container">
+          <article class="fo-client-card" id="card-client-1">
+            <div class="fo-card-images">
+              <picture class="fo-card-img">
+                  <img
+                  sizes=" (max-width: 548px) 83vw, 428px"
+                  srcset="
+                  assets/clients/love-run-profile/Loverunning-secondary_ggkqbc_c_scale,w_200.png 200w,
+                  assets/clients/love-run-profile/Loverunning-secondary_ggkqbc_c_scale,w_343.png 343w,
+                  assets/clients/love-run-profile/Loverunning-secondary_ggkqbc_c_scale,w_428.png 428w,
+                  assets/clients/love-run-profile/Loverunning-secondary_ggkqbc_c_scale,w_518.png 518w,
+                  assets/clients/love-run-profile/Loverunning-secondary_ggkqbc_c_scale,w_636.png 636w"
+                  src="assets/clients/love-run-profile/Loverunning-secondary_ggkqbc_c_scale,w_636.png"
+                  alt="">
               </picture>
+              <p class="fo-h3-small">View of a Secondary Hero Profile, www.loverunning.com</p>
             </div>
             <div class="fo-card-details">
-            <header class="fo-client-row" id="client-bio">
-              <h1>A Running Club</h1>
-              <h2>Love Running: A club website</h2>
+            <header class="fo-client-row" id="bio-client-1">
+              <h1 class="fo-h1-large">Love Running</h1>
             </header>
-            <section class="fo-client-row" id="client-brief">
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="type-client-1">
+              <h2 title="" hidden>Project Type</h2>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small">Project:</li>
+                <li class="fo-client-data">A club website, in style of a brochure and principle contact point.</li>
+              </ul>
+            </section>
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="brief-client-1">
               <h2 title="" hidden>Project Brief</h2>
-              <ul>
-                <li class="fo-client-label">Brief:</li>
-                <li class="fo-client-data">Brief:</li>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small">Brief:</li>
+                <li class="fo-client-data">Our client sought a 3 page brochure site. The site targeted runners in Dublin seeking to socialise and keep themselves fit while living in the city center.</li>
               </ul>
             </section>
-            <section class="fo-client-row" id="client-outline">
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="outline-client-1">
               <h2 title="" hidden>Project Outline</h2>
-              <ul>
-                <li class="fo-client-label">Outline:</li>
-                <li class="fo-client-data">Outline:</li>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-smalll | fo-align-start">Features:</li>
+                <li class="fo-client-data">
+                  <ul class="fo-client-row | fo-list-style">
+                    <li>3 Pages: A landing page, a gallery and a contact page</li>
+                    <li>Landing Page: 3 Sections: Brand Images, Club Ethos and Meeting Times</li>
+                    <li>Gallery: Supporting Images to aid activity identification</li>
+                    <li>Form: Simple, and validating, contact form on top of a hero image</li>
+                    <li>Navigation &amp; Footer: Simple global navigation, with Social Links</li>
+                    <li>Responsiveness: Visible on all media/device typed</li>
+                  </ul></li>
               </ul>
             </section>
-            <section class="fo-client-row" id="client-url">
-              <h2 title="" hidden>Project URL </h2>
-              <ul>
-                <li class="fo-client-label">URL:</li>
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="url-client-1">
+              <h2 title="" hidden>Live Site URL </h2>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small">URL:</li>
                 <li class="fo-client-data">
-                  <a href="">Client 1 URL </a>
+                  <a href="https://code-institute-org.github.io/love-running-2.0/index.html" target="_blank">Love Running (2nd Edition)</a>
                 </li>
               </ul>
             </section>
-            <section class="fo-client-row" id="client-delivery">
-              <h2 title="" hidden>Project Delivery</h2>
-              <ul>
-                <li class="fo-client-label">Delivery:</>
-                <li class="fo-client-data">dsfkjdshkjfhakjhsdfkjhdsakjhfkjsdhfkjds
-                  hakjfhdakjhsdfkjhasfkjhakjsdhkasjdhfkjsdakjfhkdsja
-                  lfskdnjklfdsalkjsdflkjdsflkjdfslkj0</li>
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="github-client-1">
+              <h2 title="" hidden>Github URL </h2>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small">GitHub:</li>
+                <li class="fo-client-data">
+                  <a href="https://github.com/Wings30306/love-running-3.0"
+                  target="_blank" title="View and Inspect the project's source code">View Source Code (Public)</a>
+                </li>
+              </ul>
+            </section>
+            <section class="fo-client-row" id="services-client-1">
+              <h2 title="" hidden>Project URL </h2>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small | fo-align-start">Services:</li>
+                <li class="fo-client-data">
+                  <ul class="fo-client-row | fo-list-style">
+                    <li>Project Scoping &amp; Quotes</li>
+                    <li>Usability &amp; Design</li>
+                    <li>Web &amp; Hosting</li>
+                  </ul>
+                </li>
               </ul>
             </section>
             </div>
           </article>
         </div>
       </section>
-      <section class="fo-folio-client" id="clients-client-2">
-        <div class="fo-folio-place">
-         <article class="fo-client-card">
-            <div class="fo-card-img">
-              <picture>
-                  <source srcset=" ../assets/img/about-self-outline183x183.png"
-                            media="(max-width: 412px)">
-                  <source srcset="assets/img/about-self-outline250x250.png"
-                            media="(max-width: 720px)">
-                  <source srcset=" ../assets/img/about-self-outline375x375.png"
-                              media="(max-width: 1026.999px)">
-                  <source srcset=" ../assets/img/about-self-outline563x563.png"
-                              media="(min-width: 1027px)">
-                  <img src="assets/img/about-self-outline563x563.png" alt=".">
-              </picture>
+       <section class="fo-folio-client" id="clients-client-2">
+        <div class="fo-folio-container">
+          <article class="fo-client-card" id="card-client-2">
+            <div class="fo-card-images">
+                <picture class="fo-card-img">
+                  <img
+                  sizes="(max-width: 548px) 80vw, 478px"
+                  srcset="
+                  assets/clients/coders-coffee-drinks-profile/coders-coffeehouse-drinksmenu_j1wuab_c_scale,w_200.png 200w,
+                  assets/clients/coders-coffee-drinks-profile/coders-coffeehouse-drinksmenu_j1wuab_c_scale,w_359.png 359w,
+                  assets/clients/coders-coffee-drinks-profile/coders-coffeehouse-drinksmenu_j1wuab_c_scale,w_478.png 478w,
+                  assets/clients/coders-coffee-drinks-profile/coders-coffeehouse-drinksmenu_j1wuab_c_scale,w_581.png 581w,
+                  assets/clients/coders-coffee-drinks-profile/coders-coffeehouse-drinksmenu_j1wuab_c_scale,w_630.png 630w"
+                  src="assets/clients/coders-coffee-drinks-profile/coders-coffeehouse-drinksmenu_j1wuab_c_scale,w_630.png"
+                  alt="">
+                </picture>
+                 <p class="fo-h3-small">View of a Drinks menu mid-page section, www.coderscoffee.ie</p>
             </div>
             <div class="fo-card-details">
-            <header class="fo-client-row" id="client-bio">
-              <h1>A Running Club</h1>
-              <h2>Love Running: A club website</h2>
+            <header class="fo-client-row" id="bio-client-2">
+              <h1 class="fo-h1-large">Coders Coffeehouse</h1>
+              <!-- <h2 class="fo-h3-small">Love Running</h2> -->
             </header>
-            <section class="fo-client-row" id="client-brief">
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="type-client-2">
+              <h2 title="" hidden>Project Type</h2>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small">Project:</li>
+                <li class="fo-client-data">A club website</li>
+              </ul>
+            </section>
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="brief-client-2">
               <h2 title="" hidden>Project Brief</h2>
-              <ul>
-                <li class="fo-client-label">Brief:</li>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small">Brief:</li>
                 <li class="fo-client-data">Brief:</li>
               </ul>
             </section>
-            <section class="fo-client-row" id="client-outline">
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="outline-client-2">
               <h2 title="" hidden>Project Outline</h2>
-              <ul>
-                <li class="fo-client-label">Outline:</li>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-smalll | fo-align-start">Features</li>
                 <li class="fo-client-data">Outline:</li>
               </ul>
             </section>
-            <section class="fo-client-row" id="client-url">
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="url-client-2">
               <h2 title="" hidden>Project URL </h2>
-              <ul>
-                <li class="fo-client-label">URL:</li>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small">URL:</li>
                 <li class="fo-client-data">
-                  <a href="">Client 1 URL </a>
+                  <a href="">Client 2 URL </a>
                 </li>
               </ul>
             </section>
-            <section class="fo-client-row" id="client-delivery">
-              <h2 title="" hidden>Project Delivery</h2>
-              <ul>
-                <li class="fo-client-label">Delivery:</>
-                <li class="fo-client-data">Delivery:</>
+            <div class="dotted"></div>
+            <section class="fo-client-row" id="services-client-2">
+              <h2 title="" hidden>Billable Services </h2>
+              <ul class="fo-client-row">
+                <li class="fo-client-label | fo-h3-small | fo-align-start">Services:</li>
+                <li class="fo-client-data">
+                  <ul class="fo-client-row | fo-list-style">
+                    <li>Project Scoping &amp; Quotes</li>
+                    <li>Usability &amp; Design</li>
+                    <li>Web &amp; Hosting</li>
+                  </ul>
+                </li>
               </ul>
             </section>
             </div>
@@ -259,7 +275,7 @@
       </section>
     </main>
     <!-- </div> -->
-    <div class="fo-right">$$</div>
-    <footer class="fo-foot">###</footer>
+    <div class="fo-right"></div>
+    <footer class="fo-foot"></footer>
   </body>
 </html>

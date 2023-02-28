@@ -1,141 +1,120 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-    <!-- Head: Viewport Scaling; b) External Stylesheet; c) Favicons-->
-
-    <head title="Profile of the Digital Folio. By CJ, an inclusive Digital Developer's Portfolio">
-        <!-- Meta Tags-->
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="origin" content="https://ipoetdev.github.io/the-folio/"/>
-        <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028"/>
-        <meta name="author" content="Charles J Fowler, @iPoetDev.github.com"/>
+    <head title="Profile | Welcome to the Digital Folio. By CJ, an Digital Developer's Portfolio">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="origin" content="https://ipoetdev.github.io/the-folio/">
+        <meta name="copyright" content="The Digital Folio is the copyright of Charles J Fowler, 2023-2028">
+        <meta name="author" content="Charles J Fowler, @iPoetDev.github.com">
         <meta name="creator" content="Charles J Fowler, @iPoetDev.github.com">
-        <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com"/>
-        <meta name="contact" content="Github: @iPoetDev"/>
-        <meta name="geo.lmk" content="Dublin, Ireland; Europe"/>
+        <meta name="designer" content="Charles J Fowler, @iPoetDev.github.com">
+        <meta name="contact" content="Github: @iPoetDev">
+        <meta name="geo.lmk" content="Dublin, Ireland; Europe">
         <meta name="geo.country" content="Ireland">
-        <meta name="revision" content="#CommitShortHashOfSubmission"/>
-        <meta name="revision" content="#CommitShortHashOfSubmission"/>
-        <meta name="color-scheme" content="dark"/>
+        <meta name="version" content="Version 1.0-beta">
+        <meta name="color-scheme" content="dark">
         <meta
             name="keywords"
             content="Fowler,Charles,Clients,Designer,Web Designer,Developer,Software, Web
-            Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS"/>
-        <meta name="description" content="lorem5">
-        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0"/>
-        <!-- Link: External Resources-->
-        <link type="text/css" href="assets/styles/core.css" rel="stylesheet"/>
-        <link type="text/css" href="assets/styles/profile.css" rel="stylesheet"/>
-        <!-- FavIcon Resources-->
-        <link type="image/png" href="assets/ico/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-        <link type="image/x-icon" href="assets/ico/favicon.ico" sizes="48x48" rel="icon"/>
-        <link type="image/png" href="assets/ico/favicon-32x32.png" sizes="32x32" rel="icon"/>
-        <link type="image/png" href="assets/ico/favicon-16x16.png" sizes="16x16" rel="icon"/>
-
-        <!-- <link href="assets/ico/site.webmanifest" title="Android Favicons" rel="manifest"> -->
+            Devekoper,Frontend Developer,Code Institute,HTML,CSS,Modern CSS">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--   Link: External Resources
+                1) Core Styles | Common Styles for All Pages
+                2) Profile | Per Page Style: Layout and for Performance
+        -->
+        <link type="text/css" href="assets/styles/core.css" rel="stylesheet">
+        <link type="text/css" href="assets/styles/profile.css" rel="stylesheet">
         <!-- Page: Home-->
-        <title title="Profile of the Digital Folio's Owner. Work &amp; Experiences.">
-            Profile of the Digital Folio's Owner. Work &amp; Experiences.
+        <title title="Profile of the Digital Folio's Owner">
+            Profile of the Digital Folio's Owner | by CJ.
         </title>
-        <!--  0] Namespace F: Folio: Namespace for The Digital Folio. Alias: fo-.
-      1] Alias:    C: Composition Comment -> Semantics & Layout
-      2] Alias:    U: Utility Comment     -  Core Styling, Typography
-      3] Alias:    B: Block/Component/Widget Comment
-      4] Alias:    E: Exception/Variant Comment
-  -->
-        <!-- Body: contact: Home: Magazine 2x2 Box Layout-->
     </head>
-    <body class="fo-layout-macro work-style" id="work">
+    <body class="work-style" id="work">
+        <!--Global Navigation: Header  -->
         <header class="fo-head">
             <nav class="fo-banner" id="hero-nav-block" title="Site Navigation">
                 <div class="fo-nav">
-                <div class="fo-nav-grid" role="presentation">
-                    <div class="fo-nav-flex" role="presentation">
-
-                    <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo"
-                        role="region">
-                        <h1 class="sitename" id="sitelogo" style="color:black">The Digital Folio</h1>
-                    </div>
-                    <!-- Site Logo-->
-
-                    <div class="fo-nav-holder fo-site-ctrl" id="site-nav-anchor" role="menu">
-                        <!-- Technique: Pure CSS Hamburgder Menu Overlay. Last Accessed: 2023.01.18 -->
-                        <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
-                        <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu" aria-label="Site Nav Menu">
-                        <label for="toggle-menu sitename" id="navigation">
-                            Menu
-                        </label>
-                        <input id="toggle-menu" type="checkbox">
-                        <!-- Open a full viewport overlay and list the menu options; in large strong text -->
-                        <!-- <div class="fo-menu" role="none"> -->
-                            <div class="fo-menu-overlay  nav-surface-folio" role="none">
-                            <div class="fo-menu-layout" role="none">
-                                <!-- Menu Options -->
-                                <ul role="menu" aria-label="Menu List">
-                                <li role="menuitem">
-                                    <span class="fo-menu-style">
-                                    <a id="site-home" href="index.html" title="The Digital Folio: Home page by CJ"
-                                        aria-label="Navigation Home"  rel="noreferrer,noopener">
-                                        Home
-                                    </a>
-                                    </span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-folio"
-                                        href="folio.html"
-                                        title="The Digital Folio: Folio & Clients | Portfolio by CJ"
-                                        aria-label="Navigation Portfolio"
-
-                                        rel="noreferrer,noopener">Portfolio</a></span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-work"
-                                        href="profile.html"
-                                        title="The Digital Folio: Work & Profile | Journey by CJ"
-                                        aria-label="Navigation Profile"
-
-                                        rel="noreferrer,noopener">Journey</a></span>
-                                </li>
-                                <li role="menuitem">
-                                    <span class="fo-menu-style"><a
-                                        id="site-about"
-                                        href="about.html"
-                                        title="The Digital Folio: Info & More | About Me by CJ"
-                                        aria-label="Navigation About Me"
-
-                                        rel="noreferrer,noopener">About</a></span>
-                                </li>
-                                </ul>
+                    <div class="fo-nav-grid">
+                        <div class="fo-nav-flex">
+                            <div class="fo-logo-holder" id="site-logo" title="The Digital Folio's Logo">
+                                <h1 class="fo-sitename" id="sitelogo">The Digital Folio</h1>
                             </div>
+                            <div class="fo-nav-holder |  fo-site-ctrl" id="site-nav-anchor">
+                                <!-- Technique: Pure CSS Hamburger Menu Overlay. Last Accessed: 2023.01.18 -->
+                                <!-- Reference: Input Checkbox without JS to open Menu: https://codepen.io/bradtraversy/pen/vMGBjQ -->
+                                <nav class="fo-nav-site" id="site-navmenu" title="Site Navigation Menu">
+                                <label  class="fo-sitename" for="toggle-menu" id="navigation">
+                                    Menu
+                                </label>
+                                <!-- Exceptional(no-valid)Use of Input to Enable a Pure CSS Dropdown without JavaScript: State & CSS Selectors -->
+                                <input  class="fo-toggle" id="toggle-menu" type="checkbox">
+                                <!-- Open a full viewport overlay and list the menu options; in large strong text -->
+                                    <div class="fo-menu" role="none">
+                                        <div class="fo-menu-layout" role="none">
+                                            <!-- Menu Options -->
+                                            <ul>
+                                                <li>
+                                                    <a class="fo-nav-link" id="site-home"
+                                                        href="index.html"
+                                                        title="The Digital Folio: Home &amp; Landing | by CJ"
+                                                        rel="noreferrer,noopener">
+                                                        Home.
+                                                    </a>
+                                                </li>
+                                                <li class="fo-nav-dotted"></li>
+                                                <li>
+                                                    <a class="fo-nav-link" id="site-folio"
+                                                        href="folio.html"
+                                                        title="The Digital Folio: Folio &amp; Clients | Portfolio by CJ"
+                                                        rel="noreferrer,noopener">
+                                                        Portfolio.
+                                                    </a>
+                                                </li>
+                                                <li class="fo-nav-dotted"></li>
+                                                <li>
+                                                    <a class="fo-nav-link" id="site-work"
+                                                        href="profile.html"
+                                                        title="The Digital Folio: About &amp; Work | Profile by CJ"
+                                                        rel="noreferrer,noopener">
+                                                        Profile.
+                                                    </a>
+                                                </li>
+                                                <li class="fo-nav-dotted"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
                             </div>
-                        <!-- </div> -->
-                        </nav>
-                        <!-- Site Menu -->
+                        </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </nav>
         </header>
+        <!-- Hero Section  -->
         <section class="fo-hero">
             <header class="fo-hero-text">
                 <p>I am ...</p>
                 <h1 class="fo-initials">CJ</h1>
                 <h2>A Front-End Developer</h2>
-                <h3>& Web Privacy Specialist</h3>
+                <h3>&amp; Web Privacy Specialist</h3>
                 <p class="fo-owner">And owner of The Digital Folio</p>
+                <!-- Recruiter/Client/Employer Call to Action-->
                 <p class="fo-copy"><span class="fo-label"> Resume </span>
-                <a class="fo-button fo-download" id="download-resume" type="application/pdf"
-                    href="assets/files/cv.pdf" title="Download a copy of CJ's CV [PDF]" download="download">
+                <a class="fo-button | fo-download"
+                    id="download-resume"
+                    type="application/pdf"
+                    href="assets/files/cv.pdf"
+                    title="Download a copy of CJ's CV [PDF]"
+                    download="download">
                             Download
                 </a>
                 </p>
             </header>
+            <!-- Hero Image : Responsive  -->
             <picture class="fo-hero-picture">
                 <source
-                media="(max-width: 767px)"
-                sizes="(max-width: 768px) 50vw, 384px"
+                    media="(max-width: 767px)"
+                    sizes="(max-width: 768px) 50vw, 384px"
                     srcset="
                     assets/img/profile/Folio-AboutCJ_w_200.png 200w,
                     assets/img/profile/Folio-AboutCJ_w_293.png 293w,
@@ -156,152 +135,157 @@
                     srcset="
                     assets/img/profile/Folio-AboutCJ_w_397.png 397w"
                     src="assets/img/profile/Folio-AboutCJ_w_397.png"
-            alt="">
+                alt="">
             </picture>
-
         </section>
-        <div class="fo-focal">
-            <main class="fo-main-wrap" id="main-work">
-                <section class="fo-work-section" id="work-header">
-                    <div class="dotted-full"></div>
-                    <div class="fo-work-place">
-                        <h1 title="Work experience Introduction" hidden>Professional Statement</h1>
-                        <article class="fo-work-card" id="statement">
-                            <div class="fo-work-title" hidden>
-                                <h2 class="fo-h2-small" hidden>&nbsp;</h2>
-                                <h3 class="fo-h3-small" hidden>&nbsp;</h3>
-                            </div>
-                            <div class="fo-work-info" hidden>
-                                <h2 class="fo-h2-small" hidden>&nbsp;</h2>
-                            </div>
-                            <div class="fo-work-content">
-                                <p class="fo-text-xxl">In putting forward the accumilated know-how, and mission driven ethos, of 20 years in technology, I present myself.</p>
-                                <p class="fo-text-xxl">Experiences acrosss web dev, project delivery (Agile) compliance (GDPR) and keeping the enterprise lights on (BAU)..</p>
-                                <p class="fo-text-xl">Please check my portfolio for current and past projects.   </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="dotted-full"></div>
-                </section>
-                <section class="fo-work-section" id="work-summ">
-                    <div class="fo-work-place">
-                        <h1 title="Work experience Introduction" hidden>Current Focus</h1>
-                        <article class="fo-work-card">
-                            <div class="fo-work-title">
-                                <h2 class="fo-h2-small">Currently</h2>
-                                <h3 class="fo-h3-small">Code Institute</h3>
-                            </div>
-                            <div class="fo-work-info">
-                                <h2 class="fo-h2-small">2023</h2>
-                            </div>
-                            <div class="fo-work-content">
-                                <p class="fo-text-l">Full Stack Software Development<br>(Diploma, NFQ5)</p>
-                            </div>
-                        </article>
-                        <div class="dotted"></div>
-                    </div>
-                </section>
-                <section class="fo-work-section" id="work-edu">
-                    <div class="fo-work-place">
-                        <h1 title="Work experience Introduction" hidden>Education &amp; Courses</h1>
-                        <article class="fo-work-card" id="full-card">
-                            <div class="fo-work-title">
-                                <h2 class="fo-h2-small">Education</h2>
-                                <h3 class="fo-h3-small">Completed</h3>
-                            </div>
-                            <div class="fo-work-info">
-                                <h2 class="fo-h2-small">2022</h2>
-                            </div>
-                            <div class="fo-work-content">
-                                <p class="fo-text-l">Project Management<br> (Prince2)</p>
-                            </div>
-                        </article>
-                        <div class="dotted"></div>
-                        <article class="fo-work-card">
-                            <div class="fo-work-info">
-                                <h2 class="fo-h2-small">2022</h2>
-                            </div>
-                            <div class="fo-work-content">
-                                <p class="fo-text-l">GDPR & EU Institution Privacy<br>(Data Protection)</p>
-                            </div>
-                        </article>
-                        <div class="dotted"></div>
-                        <article class="fo-work-card">
-                            <div class="fo-work-info">
-                                <h2 class="fo-h2-small">2021</h2>
-                            </div>
-                            <div class="fo-work-content">
-                                <p class="fo-text-l">Agile Software Delivery <br>(PSM1, CSM)</p>
-                            </div>
-                        </article>
-                        <div class="dotted"></div>
-                        <article class="fo-work-card">
-                            <div class="fo-work-info">
-                                <h2 class="fo-h2-small">2020</h2>
-                            </div>
-                            <div class="fo-work-content">
-                                <p class="fo-text-l">Cloud Computing <br>(Azure)</p>
-                            </div>
-                        </article>
-                        <div class="dotted"></div>
-                    </div>
-                </section>
-                <section class="fo-work-section" id="work-tools">
-                    <div class="fo-work-place">
-                        <h1 title="Work experience Introduction" hidden>Tooling &amp; Skills</h1>
-                        <article class="fo-work-card">
-                            <div class="fo-work-title">
-                                <h2 class="fo-h2-small">Abilities</h2>
-                                <h3 class="fo-h3-small">Coding</h3>
-                            </div>
-                            <div class="fo-work-info">
-                                <h2 class="fo-h2-small">HTML/CSS</h2>
-                            </div>
-                            <div class="fo-work-content">
-                                <ul class="fo-text-l">
-                                    <li>Front-End & User Experience Design</li>
-                                    <li>HTML5 & WAI-WCAG2 Guidelines</li>
-                                    <li>Modern CSS & Ascessible Design</li>
-                                    <li>Fluid Typopgraphy & Graphics</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <div class="dotted"></div>
-                        <article class="fo-work-card">
-                            <div class="fo-work-info">
-                                <h2 class="fo-h2-small">JavaScript</h2>
-                            </div>
-                            <div class="fo-work-content">
-                                <ul class="fo-text-l">
-                                    <li>Front-End Interaction Computing</li>
-                                    <li>Modern Javascript (EcmaScript v5)</li>
-                                    <li>Web & Browser Programing</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <div class="dotted"></div>
-                        <article class="fo-work-card">
-                            <div class="fo-work-info">
-                                <h2 class="fo-h2-small">Hosting</h2>
-                            </div>
-                            <div class="fo-work-content">
+        <!--Main Body-->
+        <main class="fo-main-wrap" id="main-work">
+            <!-- Section: Professional Statement -->
+            <section class="fo-work-section" id="work-header">
+                <div class="dotted-full"></div>
+                <div class="fo-work-place">
+                    <h1 title="Work experience Introduction" hidden><a id="professional-statement">Professional Statement</a></h1>
+                    <article class="fo-work-card" id="statement">
+                        <div class="fo-work-title" hidden>
+                        </div>
+                        <div class="fo-work-info" hidden>
+                        </div>
+                        <div class="fo-work-content">
+                            <p class="fo-text-xxl">In putting forward the accumulated know-how, and mission driven ethos, of 20 years in technology, I present myself.</p>
+                            <p class="fo-text-xxl">Experiences across web dev, project delivery (Agile) compliance (GDPR) and keeping the web hosting and enterprise ICT lights on (BAU)..</p>
+                            <p class="fo-text-xl">Please check <a href="folio.html" title="Current projects and past clients">my portfolio for current and past projects</a>.</p>
+                            <p class="fo-text-xl"><strong>LinkedIn:</strong> <a href="https://ie.linkedin.com/in/CharlesJFowler" target="_blank" title="Charles J Fowler's LinkedIn" rel="noopener">CJ LinkedIn Profile</a>.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="dotted-full"></div>
+            </section>
+        <!-- Section: Work Summary -->
+            <section class="fo-work-section" id="work-summ">
+                <div class="fo-work-place">
+                    <h1 title="Work Current Focus" hidden>Current Focus</a></h1>
+                    <article class="fo-work-card">
+                        <div class="fo-work-title">
+                            <h2 class="fo-h2-small"><a id="current-focus">Currently</a></h2>
+                            <h3 class="fo-h3-small">Code Institute</h3>
+                        </div>
+                        <div class="fo-work-info">
+                            <h2 class="fo-h2-small">2023</h2>
+                        </div>
+                        <div class="fo-work-content">
+                            <p class="fo-text-l">Full Stack Software Development<br>(Diploma, NFQ5)</p>
+                        </div>
+                    </article>
+                    <div class="dotted"></div>
+                </div>
+            </section>
+        <!-- Section: Work Education  -->
+            <section class="fo-work-section" id="work-edu">
+                <div class="fo-work-place">
+                    <h1 title="Work Education" hidden>Courses &amp; Certificates</h1>
+                    <article class="fo-work-card" id="full-card">
+                        <div class="fo-work-title">
+                            <h2 class="fo-h2-small"><a id="proven" title="Jump Link from Home Page.">Education</a></h2>
+                            <h3 class="fo-h3-small">Completed</h3>
+                        </div>
+                        <div class="fo-work-info">
+                            <h2 class="fo-h2-small">2022</h2>
+                        </div>
+                        <div class="fo-work-content">
+                            <p class="fo-text-l">Project Management<br> (Prince2)</p>
+                        </div>
+                    </article>
+                    <div class="dotted"></div>
+                    <article class="fo-work-card">
+                        <div class="fo-work-info">
+                            <h2 class="fo-h2-small">2022</h2>
+                        </div>
+                        <div class="fo-work-content">
+                            <p class="fo-text-l">GDPR &amp; EU Institution Privacy<br>(Data Protection)</p>
+                        </div>
+                    </article>
+                    <div class="dotted"></div>
+                    <article class="fo-work-card">
+                        <div class="fo-work-info">
+                            <h2 class="fo-h2-small">2021</h2>
+                        </div>
+                        <div class="fo-work-content">
+                            <p class="fo-text-l">Agile Software Delivery <br>(PSM1, CSM)</p>
+                        </div>
+                    </article>
+                    <div class="dotted"></div>
+                    <article class="fo-work-card">
+                        <div class="fo-work-info">
+                            <h2 class="fo-h2-small">2020</h2>
+                        </div>
+                        <div class="fo-work-content">
+                            <p class="fo-text-l">Cloud Computing <br>(Azure)</p>
+                        </div>
+                    </article>
+                    <div class="dotted"></div>
+                </div>
+            </section>
+        <!-- Section: Work Tools/Abilities -->
+            <section class="fo-work-section" id="work-tools">
+                <div class="fo-work-place">
+                    <h1 title="Work Abilities and Skills" hidden>Abilities &amp; Skills</h1>
+                    <article class="fo-work-card">
+                        <div class="fo-work-title">
+                            <h2 class="fo-h2-small"><a id="able-for" title="Jump Link from Home Page." >Abilities</a></h2>
+                            <h3 class="fo-h3-small">Coding</h3>
+                        </div>
+                        <div class="fo-work-info">
+                            <h2 class="fo-h2-small">HTML/CSS</h2>
+                        </div>
+                        <div class="fo-work-content">
                             <ul class="fo-text-l">
-                                <li>Domain Names & Secure DNS Management</li>
-                                <li>Web Hosting & Infrastructure</li>
-                                <li>Web Traffic & Usage Cost Management </li>
+                                <li>Front-End &amp; User Experience Design</li>
+                                <li>HTML5 &amp; WAI-WCAG2 Guidelines</li>
+                                <li>Modern CSS &amp; Accessible Design</li>
+                                <li>Fluid Typography &amp; Graphics</li>
                             </ul>
-                            </div>
-                        </article>
-                        <div class="dotted"></div>
-                        <p class="fo-copy" style="margin-left: 20px"><span class="fo-label"> Resume </span>
-                        <a class="fo-button fo-download" id="download-resume" type="application/pdf"
-                            href="assets/files/cv.pdf" title="Download a copy of CJ's CV [PDF]" download="download">
-                                    Download
+                        </div>
+                    </article>
+                    <div class="dotted"></div>
+                    <article class="fo-work-card">
+                        <div class="fo-work-info">
+                            <h2 class="fo-h2-small">JavaScript</h2>
+                        </div>
+                        <div class="fo-work-content">
+                            <ul class="fo-text-l">
+                                <li>Front-End Interaction Computing</li>
+                                <li>Modern JavaScript (ECMAScript v5)</li>
+                                <li>Web &amp; Browser Programming</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <div class="dotted"></div>
+                    <article class="fo-work-card">
+                        <div class="fo-work-info">
+                            <h2 class="fo-h2-small">Hosting</h2>
+                        </div>
+                        <div class="fo-work-content">
+                        <ul class="fo-text-l">
+                            <li>Domain Names &amp; Secure DNS Management</li>
+                            <li>Web Hosting &amp; Infrastructure</li>
+                            <li>Web Traffic &amp; Usage Cost Management </li>
+                        </ul>
+                        </div>
+                    </article>
+                    <div class="dotted"></div>
+                    <p class="fo-copy">
+                        <span class="fo-label"> Resume </span>
+                        <a class="fo-button fo-download" type="application/pdf"
+                            href="assets/files/cv.pdf"
+                            title="Download a copy of CJ's CV [PDF]"
+                            download="download"
+                            rel="noreferrer,noopener">
+                                Download
                         </a>
-                        </p>
-                    </div>
-                </section>
-            </div>
+                    </p>
+                </div>
+            </section>
+        </main>
         <div class="fo-right">&nbsp;</div>
         <footer class="fo-foot">&nbsp;</footer>
     </body>
