@@ -116,10 +116,19 @@
                 --infocard-direction: row;
                 /* --card-aspect: 9 / 21; */
                 --card-row-gap: 0;
-                /* --card-col-gap: 4rem; */
+                --card-col-gap: 4rem;
                 --client-detail-inline: 85%;
             }
+
+          .fo-card-images {
+            margin-block: 10%;;
+            transform: scale(0.9);
+          }
+          .fo-card-img {
+          }
         }
+
+
 
         @media (max-height: 548.999px) and (max-width: 834px) and (orientation: landscape) {
             :root {
@@ -137,6 +146,21 @@
                 --card-row-gap: 4rem;
                 --card-col-gap: 0;
                 --client-detail-inline: 65%;
+                --card-margin-left: 10%;
+                --card-margin-right: 10%;
+                --card-scale-down: 0.9;
+            }
+        }
+
+
+        @media (min-width: 835px)or (min-height 768px) {
+
+            #card-client-2 > .fo-card-images {
+              order: 2;
+
+            }
+            #card-client-2 > .fo-card-details {
+              order: 1;
             }
         }
 
@@ -154,36 +178,92 @@
             display: flow-root;
         }
 
-        article.fo-client-card {
+        .fo-client-card {
             align-content: center;
-            background-color: #faf4f4;
-             border-radius: var(--card-corners, 20px);
+            /* background-color: blue; */
+            border-radius: var(--card-corners, 20px);
             color: #1d1d1d;
             column-gap: var(--card-col-gap);
             display: flex;
-            flex-flow: var(--infocard-direction) wrap;;
+            flex-flow: var(--infocard-direction) wrap;
             min-block-size: 360px;
             row-gap: var(--card-row-gap);
-        }
+          }
 
-        .fo-card-img, .fo-card-details {
+          #card-client-1.fo-client-card{
+            background-color: #B15A5A;
+          }
+          #card-client-2.fo-client-card{
+            background-color: #F0C955;
+          }
+          #card-client-1.fo-client-card .fo-card-images {
+            background-color: #B15A5A;
+             transform: scale(0.9);
+            }
+            #card-client-2.fo-client-card .fo-card-images{
+              background-color: #F0C955;
+              transform: scale(var(--card-scale-down, 1));
+              transform: scale(0.9);
+          }
+
+          :is(#card-client-1, #card-client-2)  aside {
+            align-content: space-around;
+            align-items: center;
+            background-color: #ACADB0;
+            border-radius: 4px;
+            box-shadow:
+                2.5px 1px 8px 0.5px #fafafa,
+                3px 2px 4px 1px hsla(20, 13%, 9%, 0.477);
+            display: flex;
+            inline-size: auto;
+            justify-content: center;;
+            margin-inline: auto;
+            max-inline-size: 66%;
+            min-height: 4rem;
+          }
+
+          :is(#card-client-1, #card-client-2)  aside p {
+            font-size: var(--font-size-base);
+            text-align: center;
+            width: 75%;
+          }
+
+          @media (max-width: 408px) {
+             :is(#card-client-1, #card-client-2)  aside p {
+                    font-size:calc( var(--font-size-base) * 0.8 );
+                    font-weight: 700;
+                    hyphens: manual;
+                    min-inline-size: min-content;
+                    overflow-wrap: break-word;;
+             }
+          }
+
+          .fo-card-img, .fo-card-details {
+            border-radius: 20px;
             inline-size: 100%;
 
-        }
+          }
 
-        .fo-card-details {
-                          background-color: #dbcdcd;
+          .fo-card-details :is(header, h1) {
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+          }
+
+
+          .fo-card-details {
+          /* background-color: #B15A5A;; */
+          background-color: #ACADB0;
           min-inline-size: 40dvw;
         }
 
         .fo-card-images {
-            background-color: #dbcdcd;
             border-radius: var(--card-corners, 20px);;
             display: flow-root;
             margin-inline: auto;
             min-inline-size: 50dvw;
             place-content: center;
             place-self: center;
+
         }
 
         .fo-card-img {
