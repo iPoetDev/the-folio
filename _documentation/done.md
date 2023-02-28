@@ -25,7 +25,7 @@ Due
   - [x] ☑️ 2.8 Implement clear navigation
   - [x] ☑️3.1.1 Test to ensure it matches the development version
   - [x] ☑️ 3.3 Remove commented-out code before pushing final changes to version control and deploying.
-  - [?] ☑️❌ 3.4 Ensure that there are no broken internal links
+  - [x] ☑️ 3.4 Ensure that there are no broken internal links
   - [x] ☑️ 3.5 Insert screenshots of the finished project in the README
   - [x] ☑️ 4.2. 	Insert screenshots ,
   - [x] ☑️ 4.2.1 Insert screenshots of the project features,
@@ -37,7 +37,7 @@ Due
   - [x] ☑️ 4.4 Clearly separate and identify code written for the website .
   - [x] ☑️ 4.4.1 Identify code from external sources (e.g. libraries or tutorials).
   - [x] ☑️ 4.5 Organise HTML and CSS code into well-defined and commented sections.
-  - [?] ☑️❌ 4.6 Place CSS code in external files linked to the HTML page in the HEAD element.
+  - [x] ☑️ 4.6 Place CSS code in external files linked to the HTML page in the HEAD element.
   - [x] ☑️ 4.7 Write code that meets at least minimum standards for readability.
   - [x] ☑️ 4.7.1 Write code consistent indentation.
   - [?] ☑️❌ 5.1.4 Has few grammatical errors.
