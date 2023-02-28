@@ -74,44 +74,22 @@
                 font-family: 'lobster2';
                 font-style: italic;
                 font-weight: normal;
-                src: url('webfonts/body/lobstertwo-italic-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-italic-webfont.woff') format('woff');
+                src: url('../webfonts/body/lobstertwo-italic-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-italic-webfont.woff') format('woff');
             }
 
             @font-face {
                 font-family: 'lobster2';
                 font-style: normal;
                 font-weight: normal;
-                src: url('webfonts/body/lobstertwo-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-regular-webfont.woff') format('woff');
+                src: url('../webfonts/body/lobstertwo-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/lobstertwo-regular-webfont.woff') format('woff');
             }
-
-            @font-face {
-                font-family: 'speakeasy';
-                font-style: normal;
-                font-weight: normal;
-                src: url('webfonts/titles/sf_speakeasy-webfont.woff2') format('woff2'), url('sf_speakeasy-webfont.woff') format('woff');
-            }
-
-            @font-face {
-                font-family: 'vastshadow';
-                font-style: normal;
-                font-weight: normal;
-                src: url('webfonts/titles/vastshadow-regular-webfont.woff2') format('woff2'), url('../webfonts/titles/vastshadow-regular-webfont.woff') format('woff');
-            }
-
-            @font-face {
-                font-family: 'MegalopolisXR';
-                font-style: normal;
-                font-weight: normal;
-                src: url('webfonts/titles/MegalopolisExtra-Regular.woff2') format('woff2'), url('../webfonts/titles/MegalopolisExtra-Regular.woff') format('woff');
-            }
-        }
 
         @layer style-font {
             @font-face {
                 font-family: 'babylonica';
                 font-style: normal;
                 font-weight: bold;
-                src: url('webfonts/babylonica-regular-sigfont.woff2') format('woff2'), url('../webfonts/babylonica-regular-sigfont.woff') format('woff');
+                src: url('../webfonts/babylonica-regular-sigfont.woff2') format('woff2'), url('../webfonts/babylonica-regular-sigfont.woff') format('woff');
             }
 
             @layer body-fonts {
@@ -152,18 +130,15 @@
             }
 
             :root {
-                /*
-                        Reference: Masa Kudamatsu,23-10-2021; "Which fallback fonts should we choose to make FOUT less jarring"
-                        URL: https://dev.to/masakudamatsu/which-fallback-fonts-should-we-choose-to-make-fout-less-jarring-3d8d
-                        Last Accessed: 2023-02-11:
-                    */
+            /*
+                    Reference: Masa Kudamatsu,23-10-2021; "Which fallback fonts should we choose to make FOUT less jarring"
+                    URL: https://dev.to/masakudamatsu/which-fallback-fonts-should-we-choose-to-make-fout-less-jarring-3d8d
+                    Last Accessed: 2023-02-11:
+                */
                 --title-fallback-fonts: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Tahoma", "Liberation Sans", "Liberation Serif" ;
                 --title-family-generics: fantasy cursive serif;
 
                 --logo-lobster2: "lobster2" ;
-                --logo-speakeasy: "sf_speakeasy";
-                --logo-vastshadow: "'vastshadow" ;
-                --logo-megaopolisXR: "MegalopolisXR" ;
                 --logo-custom-font: var(--logo-lobster2);
 
                 --script-font: babylonica;
@@ -852,4 +827,4 @@
                         font-size: 1.3rem;
                     }
             }
-}}
+}}}

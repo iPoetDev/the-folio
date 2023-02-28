@@ -4,7 +4,7 @@
 
 The Digital Folio is a portfolio template site that could be used to showcase the work and clients of myself, Charles J Fowler (aka CJ) as a web developer and UX advisor. The site will be focused on promoting the past and current client projects, like Love Running and Codes Coffeehouse as examples of potential services rendered. This site showcases the potential for hosting references to other hosted projects and deliverables.
 
-`Screenshot`
+[![](_documentation/Screenshots/The_Digital-Folio-AmIResponsive.jpg "AmiResponsive: https://ui.dev/amiresponsive?url=https://ipoetdev.github.io/the-folio/")](https://ui.dev/amiresponsive?url=https://ipoetdev.github.io/the-folio/ "Visit the Proof of Responsiveness: The Digital Folio")
 
 > Visit: [The Digital Folio](https://ipoetdev.github.io/the-folio/ "The Digital Folio: https://ipoetdev.github.io/the-folio/ by Charles J Fowler (@ipoetdev)") | [https://ipoetdev.github.io/the-folio/](https://ipoetdev.github.io/the-folio/)
 
